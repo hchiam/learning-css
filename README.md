@@ -81,3 +81,6 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
         - example: <https://codepen.io/hchiam/pen/LYRQWOx>
         - btw, [matrix3d is faster than translate](https://stackoverflow.com/questions/23573621/why-is-css-matrix3d-rendered-faster-than-css-position)
+- Check/debug performance of animations/load/speed:
+  - <https://developer.chrome.com/docs/devtools/evaluate-performance>
+  - <https://www.debugbear.com/blog/devtools-performance#cpu-flame-chart>
