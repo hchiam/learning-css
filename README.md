@@ -84,3 +84,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - Check/debug performance of animations/load/speed:
   - <https://developer.chrome.com/docs/devtools/evaluate-performance>
   - <https://www.debugbear.com/blog/devtools-performance#cpu-flame-chart>
+- CSS flexbox, hand-written visual summary on one sticky note:
+  - <https://drive.google.com/file/d/1FT-EEwIou3rGAuripb-SMPyTNwhXhG0F/view>
