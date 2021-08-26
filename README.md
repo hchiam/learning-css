@@ -52,3 +52,32 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - Painting Optimizations:
     - don't add elements hidden underneath
     - paint deltas of bitmap rectangles
+- <https://www.slideshare.net/ysaw/html5-touch-interfaces-sxsw-extended-version>
+  - touch: pinch: use CSS matrix transforms (instead of native pinch)
+    - why:
+      - to minimize DOM touches
+      - to simplify transforms in the long run
+    - how to use matrix transform to do pinch:
+      - get center of touch points as scale center, get scale factor → scale element (use `matrix` or hardware accelerate with `matrix3d`) and translateX = scalePoint * (newWidth - oldWidth) / newWidth
+      - nice: `transform: matrix(a, b, c, d, e, f);`
+        - a = wider
+        - d = taller
+        - b = skew clockwise, as if your hands are on left/right sides
+        - c = skew counter-clockwise, hands on the top and bottom
+        - e = move right
+        - f = move down
+        - example: `transform: matrix(1, 0, 0, 1, 10, 10);`
+      - EVEN BETTER: hardware acceleration with `transform: matrix3d`
+        - example:
+
+          ```css
+          transform: matrix3d(
+              1,0,0,1,
+              0,1,0,0,
+              0,0,1,0,
+              xOffset,yOffset,zOffset,1
+          ); 
+          ```
+
+        - example: <https://codepen.io/hchiam/pen/LYRQWOx>
+        - btw, [matrix3d is faster than translate](https://stackoverflow.com/questions/23573621/why-is-css-matrix3d-rendered-faster-than-css-position)
