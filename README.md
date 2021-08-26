@@ -139,6 +139,9 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
     ```
 
 - Visual Hierarchy
-  - .
+  - visual hierarchy guides the user's eyes (start → end) <https://www.pinterest.ca/pin/362680576233403543>
+  - <https://visme.co/blog/visual-hierarchy>
+  - big to small. top to bottom. main to details. visually grouped = mentally grouped. <https://moakgroup.com/2018/04/design-with-typography-on-your-mind>
+  - improve things like business card or resume. SIZE! Colour! Different fonts! <https://visme.co/blog/visual-hierarchy>
 - <https://youtu.be/Qhaz36TZG5Y?t=263>
   - .
