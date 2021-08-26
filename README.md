@@ -144,4 +144,58 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - big to small. top to bottom. main to details. visually grouped = mentally grouped. <https://moakgroup.com/2018/04/design-with-typography-on-your-mind>
   - improve things like business card or resume. SIZE! Colour! Different fonts! <https://visme.co/blog/visual-hierarchy>
 - <https://youtu.be/Qhaz36TZG5Y?t=263>
-  - .
+  - flexbox for lines → CSS grid for bigger picture
+  - replace media queries with clamp:
+
+    ```css
+    /* clamp isn't supported in IE */
+    /* replace a bunch of media queries with clamp() */
+    article {
+    width: clamp(200px, 50%, 600px);
+    }
+    ```
+
+  - number headers like h1 without manually typing numbers:
+
+    ```css
+    :root {
+      counter-reset: some-name; /* 0 by default */
+      /* you can also set initial value: */
+      /* counter-reset: some-name -1; will have first number show in UI as 0 */
+    }
+    h1 {
+      /* increment by 1 right away */
+      counter-increment: some-name;
+    }
+    h1::before {
+      content: counter(some-name);
+    }
+    ```
+
+  - `button:focus-within {}`
+  - PostCSS lets you use modern features even if not (currently) supported.
+  - extra: clamp(minimum, preferred, maximum)
+
+    ```css
+    something {
+      width: clamp(45ch, 50%, 75ch);
+      scroll-padding: 1rem 0 0 0;
+    }
+    ```
+
+  - generate colour themes more easily:
+
+    ```css
+    /* same saturation and lightness,
+    but vary hue,
+    and the colours will look like they go together: */
+    .theme-one {
+    background: hsl(25, 50%, 50%);
+    }
+    .theme-two {
+    background: hsl(50, 50%, 50%);
+    }
+    .theme-three {
+    background: hsl(75, 50%, 50%);
+    }
+    ```
