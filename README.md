@@ -86,3 +86,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - <https://www.debugbear.com/blog/devtools-performance#cpu-flame-chart>
 - CSS flexbox, hand-written visual summary on one sticky note:
   - <https://drive.google.com/file/d/1FT-EEwIou3rGAuripb-SMPyTNwhXhG0F/view>
+- [12 Common CSS Mistakes](https://www.webfx.com/blog/web-design/12-common-css-mistakes-web-developers-make)
+  - use CSS Reset
+  - use hex instead of color names (color names have value decided by the browser)
+  - remember print stylesheets: `<link rel="stylesheet" href="print.css" media="print" />`
