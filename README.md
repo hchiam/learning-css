@@ -91,7 +91,53 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - use hex instead of color names (color names have value decided by the browser)
   - remember print stylesheets: `<link rel="stylesheet" href="print.css" media="print" />`
 - <https://adamschwartz.co/magic-of-css>
-  - .
+  - box-sizing:
+
+    ```css
+    html { /* for more intuitive widths and paddings: */
+        box-sizing: border-box
+    }
+    *, *::before, *::after {
+        box-sizing: inherit
+    }
+    ```
+
+  - `display: inline-block; /* for better horizontal scrolling */`
+    - <https://www.w3schools.com/css/css_inline-block.asp>
+    - vs inline, inline-block lets you set width/height and margin/padding
+    - vs block, inline-block lets the element sit next to other elements
+  - vertical centering content with unknown height:
+    - `display: table;`
+    - `display: table-cell; vertical-align: middle;`
+  - another way to create a grid:
+    - `display: inline-block;`
+    - `text-align: justify;`
+  - best practice: DRY CSS:
+    - Avoid specifying specific sizes.
+    - Aim let content determine size. = flexible, more use cases, less future bugs.
+      - example:
+        - bad, specific sizes: `height: 2.5em; top: -2.5em;`
+        - good, content determines size: `bottom: 100%; /* dynamic! */`
+        - how?: think "shift up 100% from bottom" instead of "shift up by a negative top"
+  - avoid using `<table>`s for non-table data (the table layout engine is confusing)
+    - if you have to use a `<table>`, then wrap each table cell (`<td>`) in a `<div>`
+  - colours are rendered/perceived differently by different devices, environments, & people
+  - colours have psychological effects but also perceptual quirks that must be accounted for, like how light-coloured text on dark feels thicker than it actually is
+  - (random: `font-variant` can make text all capitals but small-caps letters, like Bible)
+  - (random: `white-space: pre;` lets you make a `<p>` behave like a `<pre>`)
+    - (there's also a `white-space: pre-wrap;` option that combines wrap & pre)
+  - (random: `word-spacing: 100px;` to size the spaces to the right of words)
+  - you can use radio buttons + divs as accordions:
+
+    ```css
+    .baffle{
+        height: 0;
+    }
+    input[type="radio"]:checked + .baffle { /*when check radio!*/
+        height: 10em;
+    }
+    ```
+
 - Visual Hierarchy
   - .
 - <https://youtu.be/Qhaz36TZG5Y?t=263>
