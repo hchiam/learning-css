@@ -208,7 +208,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - display: none
   - display: contents = not the box but just its children
   - display: flex vs display: grid
-    - display: flex = linear. think in terms of main axis and cross axis (can be reversed, so it’s differen terms than for grid).
+    - display: flex = linear. think in terms of main axis and cross axis (can be reversed, so it’s different terms than for grid).
       - flex: flex-grow flex-shrink flex-basis = share-of-growth share-of-shrink start-size = 1 1 0 (for example)
     - display: grid = 2d. think in terms of inline axis and block axis.
       - grid-template-columns (and let grid to create rows as required) : 1fr 100px 2fr (for example).
