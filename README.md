@@ -199,3 +199,30 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
     background: hsl(75, 50%, 50%);
     }
     ```
+
+- <https://www.smashingmagazine.com/2018/05/guide-css-layout>
+  - float
+    - clear float
+  - position: relative parent, absolute child
+    - position: sticky > fixed
+  - display: none
+  - display: contents = not the box but just its children
+  - display: flex vs display: grid
+    - display: flex = linear. think in terms of main axis and cross axis (can be reversed, so it’s differen terms than for grid).
+      - flex: flex-grow flex-shrink flex-basis = share-of-growth share-of-shrink start-size = 1 1 0 (for example)
+    - display: grid = 2d. think in terms of inline axis and block axis.
+      - grid-template-columns (and let grid to create rows as required) : 1fr 100px 2fr (for example).
+      - grid-gap: 20px (for example).
+      - .container > div:nth-child(3n) { grid-row-end: span 2; } = every 3rd div takes up 2 rows (but may only take up 1 column)
+
+      ```css
+      .item {
+          grid-column: 1 / 3; = start-line end-line
+          grid-row: 1 / 3; = start-line end-line
+      } /* = spans 2 column tracks and 2 column rows = covers 4 grid cells */
+      ```
+
+      - grid items can occupy the same cells -> enables overlapping content in a grid
+      - grid-template-areas (to show “map” of the grid layout) uses grid-area (which “name” elements used in the “map”)
+- more info on CSS Grid: <https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-row-to-control-spacing>
+- more info on CSS Flexbox: <https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox>
