@@ -217,8 +217,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
       ```css
       .item {
-          grid-column: 1 / 3; = start-line end-line
-          grid-row: 1 / 3; = start-line end-line
+          grid-column: 1 / 3; /* = start-line end-line */
+          grid-row: 1 / 3; /* = start-line end-line */
       } /* = spans 2 column tracks and 2 column rows = covers 4 grid cells */
       ```
 
