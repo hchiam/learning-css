@@ -228,3 +228,4 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - more info on CSS Flexbox: <https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox>
 - Responsive Design: <https://web.dev/learn/design/>
 - Keep [learning CSS](https://web.dev/learn/css/), including CSS selector specificity calculation: <https://web.dev/learn/css/specificity/#visualizing-specificity>
+- CSS variables and `:root` in `@media` for cleaner globally reduced motion in 1 spot <https://codepen.io/hchiam/full/wvqEQob>
