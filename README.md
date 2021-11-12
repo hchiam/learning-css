@@ -8,6 +8,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 ## Miscellaneous notes
 
+(Make VSCode ignore auto-formatting with `prettier.setting` > Prettier: Require Config)
+
 - <https://speakerdeck.com/dmosher/so-you-want-to-be-a-front-end-engineer>
   - Cascade Priority:
     - Browser defaults < WithOUT `!important` (user < author) < With `!important` (author < user)
