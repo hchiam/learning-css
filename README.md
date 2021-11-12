@@ -8,7 +8,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 ## Miscellaneous notes
 
-(Make VSCode ignore auto-formatting with `prettier.setting` > Prettier: Require Config)
+(Make VSCode ignore auto-formatting with `prettier.setting` > Prettier: Require Config. Or try <https://stackoverflow.com/questions/54681506/vscode-turn-off-format-on-save-only-in-specific-directory>)
 
 - <https://speakerdeck.com/dmosher/so-you-want-to-be-a-front-end-engineer>
   - Cascade Priority:
