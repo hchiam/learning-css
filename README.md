@@ -226,3 +226,4 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
       - grid-template-areas (to show “map” of the grid layout) uses grid-area (which “name” elements used in the “map”)
 - more info on CSS Grid: <https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-row-to-control-spacing>
 - more info on CSS Flexbox: <https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox>
+- Responsive Design: <https://web.dev/learn/design/>
