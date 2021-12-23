@@ -252,4 +252,4 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - Fancy hover link (but must be one-liner link): https://codepen.io/hchiam/pen/LYzzaow (Note that `display: inline` elements act weird because they're treated like text: extra line-height spacing underneath, automatically filling the width, not responding to top/bottom margins.)
 
-- CSS fit-content: https://codepen.io/hchiam/pen/eYGGoNQ
+- CSS fit-content: https://codepen.io/hchiam/pen/eYGGoNQ (`fit-content` is an intelligent in-between for `min-content` and `max-content`)
