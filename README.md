@@ -239,3 +239,13 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - `grid-column` goes on the children inside the container that you set `display: grid` on. It tells CSS the start / end columns of the item inside the grid. For example: `grid-column: 1 / span 3;` means it'll span columns 1 and 3, while just `grid-column: 1 / 3;` means it'll go from column line 1 (left-most) to column line 3 (which makes it look like it's spanning columns 1 and 2).
   - relatedly, `grid-template-areas` lets you map out grid children in a more visual way. It also goes on the container that you set `display: grid` on. You can assign something like `grid-area: A;` to each child item.
   - <https://codepen.io/hchiam/pen/PoKdVya?editors=1100>
+
+## more recent CodePen experiments made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
+
+- CSS shadow via "box-shadow" vs via "filter: drop-shadow": https://codepen.io/hchiam/pen/YzrrVGL
+
+- CSS `filter: saturate(#);`: https://codepen.io/hchiam/pen/mdBBmOG
+
+- CSS horizontal radiuses / vertical radiuses: https://codepen.io/hchiam/pen/bGoorOm
+
+- CSS border auto-uses text color. Also CSS has `currentColor` keyword: https://codepen.io/hchiam/pen/qBPPQVg
