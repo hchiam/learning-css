@@ -251,3 +251,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - CSS border auto-uses text color. Also CSS has `currentColor` keyword: https://codepen.io/hchiam/pen/qBPPQVg
 
 - Fancy hover link (but must be one-liner link): https://codepen.io/hchiam/pen/LYzzaow (Note that `display: inline` elements act weird because they're treated like text: extra line-height spacing underneath, automatically filling the width, not responding to top/bottom margins.)
+
+- CSS fit-content: https://codepen.io/hchiam/pen/eYGGoNQ
