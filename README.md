@@ -249,3 +249,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - CSS horizontal radiuses / vertical radiuses: https://codepen.io/hchiam/pen/bGoorOm
 
 - CSS border auto-uses text color. Also CSS has `currentColor` keyword: https://codepen.io/hchiam/pen/qBPPQVg
+
+- Fancy hover link (but must be one-liner link): https://codepen.io/hchiam/pen/LYzzaow
