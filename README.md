@@ -268,3 +268,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
       - When one is positive and one is negative, they'll be added together to cancel each other out (instead of comparing absolute values).
       - Similarly, if there's multiple positive and negative margins to overlap, take the most positive and most negative margins and add those.
       - So if you want a child to be lower down inside its parent, you might want to add top padding to the parent instead of trying to incorrectly add top margin to the child.
+
+- https://github.com/hchiam/huckleberry
