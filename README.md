@@ -242,7 +242,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - relatedly, `grid-template-areas` lets you map out grid children in a more visual way. It also goes on the container that you set `display: grid` on. You can assign something like `grid-area: A;` to each child item.
   - <https://codepen.io/hchiam/pen/PoKdVya?editors=1100>
 
-## more recent CodePen experiments made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
+## more recent CodePen experiments and notes made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
 
 - CSS shadow via "box-shadow" vs via "filter: drop-shadow": https://codepen.io/hchiam/pen/YzrrVGL
 
@@ -259,3 +259,12 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - `.max-width-wrapper`: https://codepen.io/hchiam/pen/dyVVLqN
 
 - `100vh` isn't always 100% of viewport for mobile because of scrolling and browsers trying to avoid flickering issues. Instead of `100vh`, use `height: 100%` on `html` and on `body`.
+
+- CSS margin collapse rules weirdness: https://codepen.io/hchiam/pen/WNZZqjo
+  - overlapping inline-direction margins don't collapse, but
+  - overlapping block-direction margins DO collapse, but only in the default flow layout (flow != flex), and only if there's no elements between them (nesting / a parent's closing tag doesn't count as blocking collapsing margins!), and no padding/border/height gap directly between (between siblings, or between parent/child depending on the side of the parent's border).
+    - The bigger margin (absolute value) will be used (think personal space or physical distancing during COVID), whether we're talking siblings or parent/child. One less intuitive example is a child with larger block-direction margin than its parent will make it look like its parent has the large margin. This means a parent with 0 block-direction margin can take on its child's block-direction margin, because whatever number >0 is a bigger absolute value than 0.
+      - The "bigger absolute value" means a more negative margin will be used when both are negative.
+      - When one is positive and one is negative, they'll be added together to cancel each other out (instead of comparing absolute values).
+      - Similarly, if there's multiple positive and negative margins to overlap, take the most positive and most negative margins and add those.
+      - So if you want a child to be lower down inside its parent, you might want to add top padding to the parent instead of trying to incorrectly add top margin to the child.
