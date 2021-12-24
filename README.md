@@ -257,3 +257,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - CSS fit-content: https://codepen.io/hchiam/pen/eYGGoNQ (`fit-content` is an intelligent in-between for `min-content` and `max-content`)
 
 - `.max-width-wrapper`: https://codepen.io/hchiam/pen/dyVVLqN
+
+- `100vh` isn't always 100% of viewport for mobile because of scrolling and browsers trying to avoid flickering issues. Instead of `100vh`, use `height: 100%` on `html` and on `body`.
