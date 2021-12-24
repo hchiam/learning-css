@@ -12,6 +12,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 (Make VSCode ignore auto-formatting with `prettier.setting` > Prettier: Require Config. Or just temporarily turn off formatting on save: `editor.formatOnSave`.)
 
+- My CSS boilerplate: https://github.com/hchiam/css-boilerplate
+
 - <https://speakerdeck.com/dmosher/so-you-want-to-be-a-front-end-engineer>
   - Cascade Priority:
     - Browser defaults < WithOUT `!important` (user < author) < With `!important` (author < user)
