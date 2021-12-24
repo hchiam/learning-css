@@ -270,3 +270,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
       - So if you want a child to be lower down inside its parent, you might want to add top padding to the parent instead of trying to incorrectly add top margin to the child.
 
 - https://github.com/hchiam/huckleberry
+
+- CSS absolute positioning rules conflict resolution: https://codepen.io/hchiam/pen/GRMOrWV
