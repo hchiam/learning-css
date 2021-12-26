@@ -281,6 +281,9 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - `100vh` isn't always 100% of viewport for mobile because of scrolling and browsers trying to avoid flickering issues. Instead of `100vh`, use `height: 100%` on `html` and on `body`.
 
+- `height` looks at children (e.g. content), like shrinkwrap
+- `width` looks at parent
+
 - CSS margin collapse rules weirdness: https://codepen.io/hchiam/pen/WNZZqjo
   - overlapping inline-direction margins don't collapse, but
   - overlapping block-direction margins DO collapse, but only in the default flow layout (flow != flex), and only if there's no elements between them (nesting / a parent's closing tag doesn't count as blocking collapsing margins!), and no padding/border/height gap directly between (between siblings, or between parent/child depending on the side of the parent's border).
