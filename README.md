@@ -241,6 +241,27 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - `grid-column` goes on the children inside the container that you set `display: grid` on. It tells CSS the start / end columns of the item inside the grid. For example: `grid-column: 1 / span 3;` means it'll span columns 1 and 3, while just `grid-column: 1 / 3;` means it'll go from column line 1 (left-most) to column line 3 (which makes it look like it's spanning columns 1 and 2).
   - relatedly, `grid-template-areas` lets you map out grid children in a more visual way. It also goes on the container that you set `display: grid` on. You can assign something like `grid-area: A;` to each child item.
   - <https://codepen.io/hchiam/pen/PoKdVya?editors=1100>
+- colour palette generator: <https://coolors.co>
+<!-- - <https://ishadeed.com/article/defensive-css/>
+  - `overscroll-behavior-y: contain;` can be used to prevent scrolling to the end of the modal scrolling the background; lock scroll chaining
+  - CSS variable fallback value: `var(--actions-width, 70px)`
+  - don't forget `background-repeat`:
+    ```css
+    background-image: url('..');
+    background-repeat: no-repeat;
+    ```
+  - vertical media queries exist:
+    ```css
+    @media (min-height: 600px) {
+      .aside__secondary {
+        position: sticky;
+        bottom: 0;
+      }
+    }
+    ```
+  - set a `background-color` even on `<img>` elements so that even if the image fails to load, then any overlaid text still can have guaranteed contrast
+  - got layout shifts caused by scrollbar appearing? try `scrollbar-gutter: stable;` to always reserve space for the scrollbar gutter!
+  - `auto-fit`: stretch to fit. `auto-fill`: fill what can. I think I like `auto-fill` better for more cases. -->
 
 ## more recent CodePen experiments and notes made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
 
@@ -272,3 +293,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - https://github.com/hchiam/huckleberry
 
 - CSS absolute positioning rules conflict resolution: https://codepen.io/hchiam/pen/GRMOrWV
+
+<!-- - CSS - how position: absolute is positioned (relative to closest positioned ancestor): https://codepen.io/hchiam/pen/mdBqKPp -->
