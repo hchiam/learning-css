@@ -110,7 +110,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
   - `display: inline-block; /* for better horizontal scrolling */`
     - <https://www.w3schools.com/css/css_inline-block.asp>
-    - vs inline, inline-block lets you set width/height and margin/padding
+    - vs inline, inline-block lets you set width/height and margin/padding, but inline-block can't wrap
     - vs block, inline-block lets the element sit next to other elements
   - vertical centering content with unknown height:
     - `display: table;`
