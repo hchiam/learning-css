@@ -242,7 +242,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - relatedly, `grid-template-areas` lets you map out grid children in a more visual way. It also goes on the container that you set `display: grid` on. You can assign something like `grid-area: A;` to each child item.
   - <https://codepen.io/hchiam/pen/PoKdVya?editors=1100>
 - colour palette generator: <https://coolors.co>
-<!-- - <https://ishadeed.com/article/defensive-css/>
+- <https://ishadeed.com/article/defensive-css/>
   - `overscroll-behavior-y: contain;` can be used to prevent scrolling to the end of the modal scrolling the background; lock scroll chaining
   - CSS variable fallback value: `var(--actions-width, 70px)`
   - don't forget `background-repeat`:
@@ -261,7 +261,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
     ```
   - set a `background-color` even on `<img>` elements so that even if the image fails to load, then any overlaid text still can have guaranteed contrast
   - got layout shifts caused by scrollbar appearing? try `scrollbar-gutter: stable;` to always reserve space for the scrollbar gutter!
-  - `auto-fit`: stretch to fit. `auto-fill`: fill what can. I think I like `auto-fill` better for more cases. -->
+  - `auto-fit`: stretch to fit. `auto-fill`: fill what can. I think I like `auto-fill` better for more cases.
 
 ## more recent CodePen experiments and notes made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
 
