@@ -294,4 +294,4 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - CSS absolute positioning rules conflict resolution: https://codepen.io/hchiam/pen/GRMOrWV
 
-<!-- - CSS - how position: absolute is positioned (relative to closest positioned ancestor): https://codepen.io/hchiam/pen/mdBqKPp -->
+- CSS - how position: absolute is positioned (relative to closest positioned ancestor): https://codepen.io/hchiam/pen/mdBqKPp
