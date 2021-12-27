@@ -313,6 +313,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
     </div>
     <div>Some "portal"ed modal element that must always be above any content without knowing z-index values.</div>
     ```
+    example: swap `CustomLoginModal` for `ReachLoginModal` in https://codesandbox.io/s/stacking-contexts-global-contexts-zcjbt?file=/src/Header.js
 - CSS Stacking Context inspector:
   - Chrome: https://chrome.google.com/webstore/detail/css-stacking-context-insp/apjeljpachdcjkgnamgppgfkmddadcki
   - Firefox: https://addons.mozilla.org/en-US/firefox/addon/css-stacking-context-inspector/
