@@ -262,6 +262,13 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - set a `background-color` even on `<img>` elements so that even if the image fails to load, then any overlaid text still can have guaranteed contrast
   - got layout shifts caused by scrollbar appearing? try `scrollbar-gutter: stable;` to always reserve space for the scrollbar gutter!
   - `auto-fit`: stretch to fit. `auto-fill`: fill what can. I think I like `auto-fill` better for more cases.
+- HSL colour degree reference:
+  - red: 0deg
+  - orange: 30deg
+  - yellow: 60deg
+  - green: 100deg
+  - blue: 200deg (голубой) and 250deg (синий)
+  - purple: 300deg
 
 ## more recent CodePen experiments and notes made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
 
