@@ -303,6 +303,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - `z-index` only works on `position`ed elements (and can also be used with flex/grid children)
 - Note: stacking context != parent-child. Analogy: image editor layers, or semver. https://codepen.io/hchiam/pen/qBPpWyj
 - `isolation: isolate` is the purest side-effect-free way to create a **_"local/scoped"_ stacking context** (no need to set a `z-index` or `position`): https://www.joshwcomeau.com/css/stacking-contexts/
+  - instead of using implicit triggers
+  - and can solve things like layered cards unintentionally overlapping with the header when you scroll up: `isolation: isolate` works to group things so internal stacking only matters within the group and doesn't affect other things.
 - CSS Stacking Context inspector:
   - Chrome: https://chrome.google.com/webstore/detail/css-stacking-context-insp/apjeljpachdcjkgnamgppgfkmddadcki
   - Firefox: https://addons.mozilla.org/en-US/firefox/addon/css-stacking-context-inspector/
