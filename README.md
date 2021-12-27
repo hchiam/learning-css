@@ -262,7 +262,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - set a `background-color` even on `<img>` elements so that even if the image fails to load, then any overlaid text still can have guaranteed contrast
   - got layout shifts caused by scrollbar appearing? try `scrollbar-gutter: stable;` to always reserve space for the scrollbar gutter!
   - `auto-fit`: stretch to fit. `auto-fill`: fill what can. I think I like `auto-fill` better for more cases.
-- HSL colour degree reference:
+- HSL colour degree reference: (mnemonic: 0 30 60 100 200 300)
   - red: 0deg
   - orange: 30deg
   - yellow: 60deg
