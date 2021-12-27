@@ -267,7 +267,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - orange: 30deg
   - yellow: 60deg
   - green: 100deg
-  - blue: 200deg (голубой) and 250deg (синий)
+  - blue: 200deg ([голубой](https://en.wiktionary.org/wiki/%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D0%BE%D0%B9#Adjective)) and 250deg ([синий](https://en.wiktionary.org/wiki/%D1%81%D0%B8%D0%BD%D0%B8%D0%B9#Adjective))
   - purple: 300deg
 
 ## more recent CodePen experiments and notes made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
