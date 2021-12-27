@@ -325,6 +325,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - Chrome: https://chrome.google.com/webstore/detail/css-stacking-context-insp/apjeljpachdcjkgnamgppgfkmddadcki
   - Firefox: https://addons.mozilla.org/en-US/firefox/addon/css-stacking-context-inspector/
 - centering a modal:
+
   ```css
   .modal {
     /*
@@ -341,3 +342,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
     height: max-content;
   }
   ```
+
+- an ancestor using `transform` (or `will-change: transform`) un-intuitively makes any `position: fixed` descendants be relative to the ancestor, instead of (what you'd normally expect) relative to the viewport. i.e., `transform`ed ancestors can't have `fixed` descendants
