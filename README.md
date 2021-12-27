@@ -302,3 +302,4 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - Without a `z-index` escape hatch, by default, stacking order = positioned > non-positioned, then DOM order. If you're in the default flow (!= flex) layout, content will float to the front regardless of stacking.
 - `z-index` only works on `position`ed elements (and can also be used with flex/grid children)
 - Note: stacking context != parent-child. Analogy: image editor layers, or semver. https://codepen.io/hchiam/pen/qBPpWyj
+- `isolation: isolate` is the purest side-effect-free way to create a stacking context (no need to set a `z-index` or `position`): https://www.joshwcomeau.com/css/stacking-contexts/
