@@ -298,3 +298,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - CSS absolute positioning rules conflict resolution: https://codepen.io/hchiam/pen/GRMOrWV
 
 - CSS - how position: absolute is positioned (relative to closest positioned ancestor): https://codepen.io/hchiam/pen/mdBqKPp
+
+- Without a `z-index` escape hatch, by default, stacking order = positioned > non-positioned, then DOM order. If you're in the default flow (!= flex) layout, content will float to the front regardless of stacking.
+- `z-index` only works on `position`ed elements (and can also be used with flex/grid children)
+- Note: stacking context != parent-child. https://codepen.io/hchiam/pen/qBPpWyj
