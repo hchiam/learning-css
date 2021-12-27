@@ -324,3 +324,20 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - CSS Stacking Context inspector:
   - Chrome: https://chrome.google.com/webstore/detail/css-stacking-context-insp/apjeljpachdcjkgnamgppgfkmddadcki
   - Firefox: https://addons.mozilla.org/en-US/firefox/addon/css-stacking-context-inspector/
+- centering a modal:
+  ```css
+  .modal {
+    /*
+      Need for centering to work:
+      - position absolute or fixed (usually fixed for modal)
+      - all sides 0 (left, right, top, bottom)
+      - auto margins
+    */
+    position: fixed;
+    inset: 0;
+    margin: auto;
+
+    width: 85%;
+    height: max-content;
+  }
+  ```
