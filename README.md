@@ -305,6 +305,14 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - `isolation: isolate` is the purest side-effect-free way to create a **_"local/scoped"_ stacking context** (no need to set a `z-index` or `position`): https://www.joshwcomeau.com/css/stacking-contexts/
   - instead of using implicit triggers
   - and can solve things like layered cards unintentionally overlapping with the header when you scroll up: `isolation: isolate` works to group things so internal stacking only matters within the group and doesn't affect other things.
+  - set `isolation: isolate` on your React `#root` element so you can isolate the main content from any ["portal"](https://github.com/hchiam/learning-react-portals)ed modals (which get listed last in the DOM) and avoid fighting escalating `z-index` wars:
+    ```html
+    <div id="root" style="isolation: style;">
+      <header>This sticky content goes overtop main content but below modal.</header>
+      <main>Main content that could also have overlaid tooltips and cards.</main>
+    </div>
+    <div>Some "portal"ed modal element that must always be above any content without knowing z-index values.</div>
+    ```
 - CSS Stacking Context inspector:
   - Chrome: https://chrome.google.com/webstore/detail/css-stacking-context-insp/apjeljpachdcjkgnamgppgfkmddadcki
   - Firefox: https://addons.mozilla.org/en-US/firefox/addon/css-stacking-context-inspector/
