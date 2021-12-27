@@ -346,3 +346,9 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - an ancestor using `transform` (or `will-change: transform`) un-intuitively makes any `position: fixed` descendants be relative to the ancestor, instead of (what you'd normally expect) relative to the viewport. i.e., `transform`ed ancestors can't have `fixed` descendants
 
 - tip: always comment `overflow: hidden;` so future you remembers why. especially important since usually the reason for it isn't obvious from the code and has to do with elements that aren't expressed around that `overflow: hidden` declaration
+
+- warning: setting just `overflow-x: hidden` xor `overflow-y: hidden` triggers a scrollbar to show. you _can't_ clip overflow in one dimension while also allowing overflow in the other _without also_ triggering a scrollbar to show.
+  - `overflow-x` and `overflow-y` can be used to hide and show scrollbars, but you can't make content overflow in only one dimension and clip in only one dimension
+  - `overflow-x: visible` and `overflow-y: visible` = overflow, no scrollbars
+  - `overflow-x: hidden` and `overflow-y: hidden` = clipped, no scollbars
+  - `overflow-x` and `overflow-y` with 1 `hidden` and `visible` = 1 clipped, and 1 scrollbar if overflowing
