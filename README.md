@@ -344,3 +344,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   ```
 
 - an ancestor using `transform` (or `will-change: transform`) un-intuitively makes any `position: fixed` descendants be relative to the ancestor, instead of (what you'd normally expect) relative to the viewport. i.e., `transform`ed ancestors can't have `fixed` descendants
+
+- tip: always comment `overflow: hidden;` so future you remembers why
