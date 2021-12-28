@@ -375,3 +375,9 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - automatic translation services may not translate `aria-label`s, so you might have to use this solution (which also lets you bundle other related features)
 
 - note: `aria-hidden="true"` hides elements from screen readers, but doesn't remove it (nor descendants) from tabbing, so you also need to make it [`inert`](https://github.com/WICG/inert) (or `tabindex="-1"`)
+
+- regardless of styling tool, you can adjust your tactics to aim for the same conceptual strategies:
+  - avoid naming collisions
+  - avoid specificity unclear-ness
+  - keep styles strictly scoped to an element
+  - _**THEN**_ with all the above, you can easily figure out what styles apply to an element, and you can easily change styles without fear of unintentionally affecting elements you didn't know about
