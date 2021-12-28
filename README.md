@@ -354,3 +354,4 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - `overflow-x` and `overflow-y` with 1 `hidden` and `visible` = 1 clipped, and 1 scrollbar if overflowing
 
 - `position: absolute` ignores parent `overflow: hidden` unless that parent also has `position: relative`
+  - why? you'd expect `position: absolute` elements to get ignored, but like in another note (look up), a `position: absolute` child gets contained by a `position`ed ancestor, so a parent with `overflow: hidden` needs `position` something for the child to "listen" to it
