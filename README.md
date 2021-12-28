@@ -352,3 +352,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - `overflow-x: visible` and `overflow-y: visible` = overflow, no scrollbars
   - `overflow-x: hidden` and `overflow-y: hidden` = clipped, no scollbars
   - `overflow-x` and `overflow-y` with 1 `hidden` and `visible` = 1 clipped, and 1 scrollbar if overflowing
+
+- `position: absolute` ignores parent `overflow: hidden` unless that parent also has `position: relative`
