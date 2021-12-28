@@ -347,6 +347,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - an ancestor using `transform` (or `will-change: transform`) un-intuitively makes any `position: fixed` descendants be relative to the ancestor, instead of (what you'd normally expect) relative to the viewport. i.e., `transform`ed ancestors can't have `fixed` descendants
 
+- tip: always comment `position: relative;` when you add it (non-`static`) to make its `overflow` respected by its `position: absolute` descendants, so future you can see why.
 - tip: always comment `overflow: hidden;` so future you remembers why. especially important since usually the reason for it isn't obvious from the code and has to do with elements that aren't expressed around that `overflow: hidden` declaration
 
 - warning: setting just `overflow-x: hidden` xor `overflow-y: hidden` triggers a scrollbar to show. you _can't_ clip overflow in one dimension while also allowing overflow in the other _without also_ triggering a scrollbar to show.
