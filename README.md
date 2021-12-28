@@ -306,6 +306,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - `position: absolute` child is positioned relative to closest `position`ed ancestor: https://codepen.io/hchiam/pen/mdBqKPp
 
+- browser paints `position: static` (default) before `position` not `static` elements
+
 - Without a `z-index` escape hatch, by default, stacking order = positioned > non-positioned, then DOM order. If you're in the default flow (!= flex) layout, content will float to the front regardless of stacking. Importantly, if two elements are in the same stacking context and are both `position`ed, then the one that appears later in the DOM will be placed on top.
 - `z-index` only works on `position`ed elements (and can also be used with flex/grid children)
 - Note: stacking context != parent-child. Analogy: image editor layers, or semver. https://codepen.io/hchiam/pen/qBPpWyj
