@@ -369,3 +369,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - consider making React components toggle screen-reader-only text visibility in dev mode: https://www.joshwcomeau.com/snippets/react-components/visually-hidden/
   - automatic translation services may not translate `aria-label`s, so you might have to use this solution (which also lets you bundle other related features)
+
+- note: `aria-hidden="true"` hides elements from screen readers, but doesn't remove it from tabbing, so you also need to make it [`inert`](https://github.com/WICG/inert) (or `tabindex="-1"`)
