@@ -364,3 +364,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - if `position: sticky` isn't working, check if an ancestor has some `overflow` value other than visible
 - setting `overflow` makes `sticky` descendants stick within, no longer globally
+
+- you can make a hole in visibility: children visible while their parents are invisible: ancestors can have `visibility: hidden` and descendants can have `visibility: visible` (this _**doesn't**_ work with other things like `display: none`, `opacity`, `aria-hidden="true"`)
