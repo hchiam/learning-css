@@ -357,3 +357,6 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - why? you'd expect `position: absolute` elements to get ignored, but like in another note (look up), a `position: absolute` child gets contained by a `position`ed ancestor, so a parent with `overflow: hidden` needs `position` something for the child to "listen" to it
   - `position: fixed` ignores this even more!
   - a child only triggers overflow if that child is contained by the ancestor
+
+- a `position: sticky` child stays within its containing ancestor, so if its containing ancestor scrolls off-screen, then so does the `position: sticky` element
+  - sticky elements stay within their containing ancestors: https://codepen.io/hchiam/pen/wvrpPOM
