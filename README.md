@@ -361,4 +361,6 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - a `position: sticky` child stays within its containing ancestor, so if its containing ancestor scrolls off-screen, then so does the `position: sticky` element
   - sticky elements stay within their containing ancestors: https://codepen.io/hchiam/pen/wvrpPOM
   - you can create a `sticky` header with a buffer using `padding-top` and negative `top`: https://codepen.io/hchiam/pen/XWeVVqO
-  - setting `overflow` makes `sticky` descendants stick within, no longer globally
+
+- if `position: sticky` isn't working, check if an ancestor has some `overflow` value other than visible
+- setting `overflow` makes `sticky` descendants stick within, no longer globally
