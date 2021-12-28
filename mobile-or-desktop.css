@@ -1,0 +1,16 @@
+/* show mobile */
+.desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  /* show desktop */
+
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
