@@ -381,3 +381,4 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - avoid specificity unclear-ness
   - keep styles strictly scoped to an element
   - _**THEN**_ with all the above, you can easily figure out what styles apply to an element, and you can easily change styles without fear of unintentionally affecting elements you didn't know about
+  - _**BUT**_ consider [`styled-components`](https://github.com/styled-components/styled-components), since it helps encourage good dev habits and solves these problems for us. If you can't use it, consider at least learning from its strategies to apply to your own code (e.g. legacy code base).
