@@ -22,6 +22,7 @@ export const Quote = ({ by, source, children }) => {
 const QuoteContent = styled.blockquote`
   margin: 0;
   background: hsl(0deg 0% 90%);
+  color: hsl(0deg 0% 0%);
   padding: 16px 20px;
   border-radius: 8px;
   font-style: italic;
@@ -43,7 +44,7 @@ const Author = styled.cite`
 
 const SourceLink = styled.a`
   text-decoration: none;
-  color: hsl(0deg 0% 35%);
+  color: hsl(0deg 0% 75%);
 
   &::before {
     content: "—";
