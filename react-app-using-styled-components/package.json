@@ -136,6 +136,11 @@
     "resetMocks": true
   },
   "babel": {
+    "plugins": [
+      [
+        "babel-plugin-styled-components"
+      ]
+    ],
     "presets": [
       "react-app"
     ]

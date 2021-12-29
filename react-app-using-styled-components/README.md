@@ -3,13 +3,13 @@
 If you want to start from scratch:
 
 ```sh
-npx create-react-app react-app; cd react-app; npm install --save styled-components; npm install --save-dev babel-plugin-styled-components; npm run eject; npm start;
+npx create-react-app react-app; cd react-app; npm install --save styled-components; npm install --save-dev babel-plugin-styled-components; npm run eject; npm run start;
 ```
 
 If you want to use this demo:
 
 ```sh
-cd react-app-using-styled-components; npm install; npm start;
+cd react-app-using-styled-components; npm install; npm run start;
 ```
 
 To make it easier to find components when inspecting in DevTools, `npm run eject` and use `babel-plugin-styled-components` and change `import styled from 'styled-components';` to `import styled from 'styled-components/macro'`.
