@@ -9,5 +9,5 @@ npx create-react-app react-app; cd react-app; npm install --save styled-componen
 If you want to use this demo:
 
 ```sh
-cd react-app; npm install; npm start;
+cd react-app-using-styled-components; npm install; npm start;
 ```
