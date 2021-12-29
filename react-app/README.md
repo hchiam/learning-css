@@ -1,4 +1,4 @@
-# example react app using styled-components
+# example [React.js](https://github.com/hchiam/learning-reactjs) app using [`styled-components`](https://github.com/styled-components/styled-components)
 
 If you want to start from scratch:
 
