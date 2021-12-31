@@ -384,3 +384,10 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - _**BUT**_ consider [`styled-components`](https://github.com/styled-components/styled-components), since it helps encourage good dev habits and **solves these problems** for us. (It also covers vendor prefixes and lets you do things like let JS data affect CSS styles.) If you can't use it, consider at least learning from its strategies to apply to your own code (e.g. legacy code base).
     - [similar alternative that's framework agnostic](https://emotion.sh/docs/@emotion/css): [`@emotion/css`](https://emotion.sh/docs/introduction)
     - interesting React alternative that combines Tailwind classes with styled-components and sass styling for things that don't have Tailwind classes: [twin](https://github.com/ben-rogerson/twin.macro)
+
+- global styles:
+  - CSS resets for cross-browser consistency
+  - CSS resets to smooth out CSS quirks, `box-sizing: border-box`, etc.
+  - set global defaults as fallbacks in case you forget to `import` the right component
+  - `!important` is acceptable for overriding the default styles of 3rd party libraries' components
+  - aim to keep the global styles relatively short and easy to remember when you code
