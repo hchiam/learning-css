@@ -391,3 +391,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - set global defaults as fallbacks in case you forget to `import` the right component
   - `!important` is acceptable for overriding the default styles of 3rd party libraries' components
   - aim to keep the global styles relatively short and easy to remember when you code
+
+- inline styles are usually not a good idea because now you have to check multiple places for styling, and they don't work with media queries
