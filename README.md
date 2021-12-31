@@ -354,7 +354,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - `overflow-x` and `overflow-y` can be used to hide and show scrollbars, but you can't make content overflow in only one dimension and clip in only one dimension
   - `overflow-x: visible` and `overflow-y: visible` = overflow, no scrollbars
   - `overflow-x: hidden` and `overflow-y: hidden` = clipped, no scollbars
-  - `overflow-x` and `overflow-y` with 1 `hidden` and `visible` = 1 clipped, and 1 scrollbar if overflowing
+  - `overflow-x` and `overflow-y` with 1 `hidden` and 1 `visible` = 1 clipped, and 1 scrollbar if overflowing
 
 - ancestor with both `position` and `overflow` will have its overflow scroll applied to `position: absolute` descendants, otherwise the `position: absolute` descendants won't "listen" to its scroll if it only has `overflow` i.e.;
 - `position: absolute` ignores parent `overflow: hidden` unless that same parent also has `position: relative`
