@@ -376,7 +376,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - note: `aria-hidden="true"` hides elements from screen readers, but doesn't remove it (nor descendants) from tabbing, so you also need to make it [`inert`](https://github.com/WICG/inert) (or `tabindex="-1"`)
 
-- regardless of styling tool, you can adjust your tactics to aim for the same conceptual strategies:
+- **clean styling code:** regardless of styling tool, you can adjust your tactics to aim for the same conceptual strategies:
   - avoid **naming collisions** (which styles get applied?)
   - avoid **specificity unclear-ness** (which styles get applied?)
   - keep **styles strictly scoped** to an element (will I only style what I intended?)
