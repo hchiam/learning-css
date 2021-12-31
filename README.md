@@ -310,7 +310,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - Without a `z-index` escape hatch, by default, stacking order = non-positioned with be under positioned, then stacked on top in DOM order. If you're in the default flow (!= flex) layout, content will float to the front regardless of stacking. Importantly, if two elements are in the same stacking context and are both `position`ed, then the one that appears later in the DOM will be placed on top.
 - `z-index` only works on `position`ed elements (and can also be used with flex/grid children)
-- Note: stacking context != parent-child. Analogy: image editor layers, or semver. https://codepen.io/hchiam/pen/qBPpWyj
+- Note: stacking context != parent-child. Analogy: image editor layers, or semver 1.999 is always less than 2.0. https://codepen.io/hchiam/pen/qBPpWyj
 - `isolation: isolate` is the purest side-effect-free way to create a **_"local/scoped"_ stacking context** (no need to set a `z-index` or `position`): https://www.joshwcomeau.com/css/stacking-contexts/
   - instead of using implicit triggers
   - and can solve things like layered cards unintentionally overlapping with the header when you scroll up: `isolation: isolate` works to group things so internal stacking only matters within the group and doesn't affect other things.
