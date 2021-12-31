@@ -382,8 +382,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - keep **styles strictly scoped** to an element (will I only style what I intended?)
   - _**THEN**_ with all the above, you can easily **figure out what styles apply** to an element, and you can easily **change styles without fear of unintentionally affecting** elements you didn't know about
   - _**BUT**_ consider [`styled-components`](https://github.com/styled-components/styled-components), since it helps encourage good dev habits and **solves these problems** for us. (It also covers vendor prefixes and lets you do things like let JS data affect CSS styles.) If you can't use it, consider at least learning from its strategies to apply to your own code (e.g. legacy code base).
-    - [similar alternative that's framework agnostic](https://emotion.sh/docs/@emotion/css): [`@emotion/css`](https://emotion.sh/docs/introduction)
-    - interesting React alternative that combines Tailwind classes with styled-components and sass styling for things that don't have Tailwind classes: [twin](https://github.com/ben-rogerson/twin.macro)
+    - [`@emotion/css`](https://emotion.sh/docs/introduction) is a [similar alternative that's framework agnostic](https://emotion.sh/docs/@emotion/css)
+    - [twin](https://github.com/ben-rogerson/twin.macro) is an interesting React alternative that combines Tailwind classes with styled-components and sass styling for things that don't have Tailwind classes
 
 - global styles:
   - CSS resets for cross-browser consistency
