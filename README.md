@@ -272,7 +272,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 ## more recent CodePen experiments and notes made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
 
-- CSS shadow via "box-shadow" vs via "filter: drop-shadow": https://codepen.io/hchiam/pen/YzrrVGL
+- CSS shadow via `box-shadow` vs via `filter: drop-shadow`: https://codepen.io/hchiam/pen/YzrrVGL
 
 - CSS `filter: saturate(#);`: https://codepen.io/hchiam/pen/mdBBmOG
 
