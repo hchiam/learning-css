@@ -377,9 +377,9 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - note: `aria-hidden="true"` hides elements from screen readers, but doesn't remove it (nor descendants) from tabbing, so you also need to make it [`inert`](https://github.com/WICG/inert) (or `tabindex="-1"`)
 
 - regardless of styling tool, you can adjust your tactics to aim for the same conceptual strategies:
-  - avoid **naming collisions**
-  - avoid **specificity unclear-ness**
-  - keep **styles strictly scoped** to an element
+  - avoid **naming collisions** (which styles get applied?)
+  - avoid **specificity unclear-ness** (which styles get applied?)
+  - keep **styles strictly scoped** to an element (will I only style what I intended?)
   - _**THEN**_ with all the above, you can easily **figure out what styles apply** to an element, and you can easily **change styles without fear of unintentionally affecting** elements you didn't know about
   - _**BUT**_ consider [`styled-components`](https://github.com/styled-components/styled-components), since it helps encourage good dev habits and **solves these problems** for us. (It also covers vendor prefixes and lets you do things like let JS data affect CSS styles.) If you can't use it, consider at least learning from its strategies to apply to your own code (e.g. legacy code base).
     - [similar alternative that's framework agnostic](https://emotion.sh/docs/@emotion/css): [`@emotion/css`](https://emotion.sh/docs/introduction)
