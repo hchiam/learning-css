@@ -393,3 +393,22 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - aim to keep the global styles relatively short and easy to remember when you code
 
 - inline styles are usually not a good idea because now you have to check multiple places for styling, and they don't work with media queries
+
+- `styled-components` lets you do very dynamic styling with things like this:
+
+  ```jsx
+  import styled from "styled-components/macro";
+
+  export const MaxWidthWrapper = ({ children, maxWidth }) => {
+    return <Wrapper maxWidth={maxWidth}>{children}</Wrapper>;
+  };
+
+  const Wrapper = styled.div`
+    max-width: ${(props) => props.maxWidth};
+    margin-inline: auto;
+    padding-inline: 16px;
+  `;
+
+  ```
+  
+  - the `${}` can be interpolated even within a selector!
