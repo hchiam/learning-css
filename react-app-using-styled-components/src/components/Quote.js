@@ -26,7 +26,7 @@ const QuoteContent = styled.blockquote`
   padding: 16px 20px;
   border-radius: 8px;
   font-weight: ${props => props.emphasize && 'bold'};
-    /* if false, it won't write this line, you won't get font-weight: false; */
+    /* if false, it won't write this line; you won't get font-weight: false; */
   font-style: italic;
 
   &::before {
