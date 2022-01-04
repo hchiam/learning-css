@@ -401,7 +401,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   ```jsx
   import styled from "styled-components/macro";
 
-  export const MaxWidthWrapper = ({ children, maxWidth }) => {
+  export const MaxWidthWrapper = ({ children, maxWidth, someBoolean }) => {
     return <Wrapper maxWidth={maxWidth}>{children}</Wrapper>;
   };
 
@@ -409,6 +409,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
     max-width: ${(props) => props.maxWidth};
     margin-inline: auto;
     padding-inline: 16px;
+    font-weight: ${(props) => props.someBoolean && 'bold'};
+      /* if false, it won't write this line; you won't get font-weight: false; */
   `;
 
   ```
