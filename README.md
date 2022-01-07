@@ -444,3 +444,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - change `left` (layout) to `background-position` (paint) to `transform` (composite) = fastest, but avoid overusing properties that would create too many composite layers to manage
   - use Chrome DevTools "Performance" tab > (record) > find red dropped "Frames" > see "Main" for things using up time like "Layout" or "Paint" or "Recalculate style" (which can point out things like "[Forced reflow](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing?utm_source=devtools#avoid-forced-synchronous-layouts) is a likely performance bottleneck")
   - use Chrome DevTools "Rendering" panel to highlight things that are causing repaints or layout shifts.
+
+- CSS `:target` fun: https://codepen.io/hchiam/pen/vYeaxRr
