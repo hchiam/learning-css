@@ -1,0 +1,61 @@
+.overlay-scroll-shadow-y {
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --shadow-cover-color: white; /* inherit or currentColor won't work here */
+  --shadow-height: 10px;
+  padding-block: 0 !important;
+
+  &::before,
+  &::after {
+    content: "";
+    position: sticky;
+    display: block;
+    width: 100%;
+    height: var(--shadow-height);
+    background: var(--shadow-cover-color);
+    z-index: 2;
+  }
+
+  &::before {
+    top: calc(
+      -1 * var(--shadow-height)
+    ); // to UNcover .shadow-top when scrolled down
+    margin-bottom: calc(
+      -1 * var(--shadow-height)
+    ); // to pull .shadow-top under cover when scrolled to very top
+  }
+
+  &::after {
+    bottom: calc(
+      -1 * var(--shadow-height)
+    ); // to UNcover .shadow-bottom when scrolled up
+    margin-top: calc(
+      -1 * var(--shadow-height)
+    ); // to pull .shadow-bottom under cover when scrolled to very bottom
+  }
+
+  .shadow-top,
+  .shadow-bottom {
+    position: sticky;
+    width: 100%;
+    height: var(--shadow-height);
+    z-index: 1;
+  }
+
+  .shadow-top {
+    top: 0;
+    background: radial-gradient(
+      ellipse at top,
+      var(--shadow-color),
+      transparent 70%
+    );
+  }
+
+  .shadow-bottom {
+    bottom: 0;
+    background: radial-gradient(
+      ellipse at bottom,
+      var(--shadow-color),
+      transparent 70%
+    );
+  }
+}

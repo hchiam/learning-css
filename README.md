@@ -438,4 +438,4 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   
   - the `${}` can be interpolated even within a selector!
 
-- scroll indicator shadows implemented with pseudo elements + `sticky` overlay elements: https://codepen.io/hchiam/pen/gOGKzwB (as opposed to the background shadow technique https://codepen.io/hchiam/pen/bGEJweq)
+- scroll indicator shadows implemented with pseudo elements + `sticky` overlay elements: https://codepen.io/hchiam/pen/gOGKzwB or see [scroll-indicator-shadow-overlay.scss](https://github.com/hchiam/learning-css/blob/main/scroll-indicator-shadow-overlay.scss) (as opposed to the background shadow technique https://codepen.io/hchiam/pen/bGEJweq)
