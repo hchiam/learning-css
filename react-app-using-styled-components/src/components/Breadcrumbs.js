@@ -52,7 +52,9 @@ const StyledCrumb = styled.a`
   background: white;
   color: blue;
   padding: 3px;
+  border-radius: 7px;
   text-decoration: none !important;
+  transition: background 0.2s, color 0.2s;
 
   &:hover,
   &:focus,
