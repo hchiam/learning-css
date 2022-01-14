@@ -31,7 +31,10 @@ const StyledBreadcrumbWrapper = styled.nav`
 const Crumb = ({ children, href, isCurrentPage }) => {
   return (
     <>
-      <Separator tabIndex={-1}> &gt; </Separator>
+      <Separator tabIndex={-1} aria-hidden="true">
+        {" "}
+        &gt;{" "}
+      </Separator>
       <StyledCrumb href={href} aria-current={isCurrentPage && "page"}>
         {children}
       </StyledCrumb>
