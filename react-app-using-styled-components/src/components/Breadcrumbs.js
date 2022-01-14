@@ -38,10 +38,10 @@ const StyledBreadcrumbWrapper = styled.nav`
 const Crumb = ({ children, href, isCurrentPage }) => {
   return (
     <CrumbWrapper>
-      <Separator tabIndex={-1} aria-hidden="true">
+      {/* <Separator tabIndex={-1} aria-hidden="true">
         {" "}
         &gt;{" "}
-      </Separator>
+      </Separator> */}
       <StyledCrumb href={href} aria-current={isCurrentPage && "page"}>
         {children}
       </StyledCrumb>
@@ -51,14 +51,25 @@ const Crumb = ({ children, href, isCurrentPage }) => {
 
 const CrumbWrapper = styled.li`
   background: white;
-  &:first-of-type span {
+  /* &:first-of-type span {
     display: none;
-  }
-`;
+  } */
 
-const Separator = styled.span`
-  background: white;
-  color: black;
+  &:not(:first-of-type) {
+    &:before {
+      /* content: "/";
+      opacity: 0.3;
+      margin-inline: 3px;
+      color: black !important; */
+      content: "";
+      display: inline-block; /* inline to stay in line, block to be able to rotate */
+      transform: rotate(15deg); /* will rotate the border */
+      border-inline-start: 1px solid black; /* appearance of a line */
+      opacity: 0.4;
+      margin-inline: 5px;
+      height: 0.8em;
+    }
+  }
 `;
 
 const StyledCrumb = styled.a`
@@ -68,7 +79,8 @@ const StyledCrumb = styled.a`
   padding: 3px;
   border-radius: 7px;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
+  --ts: 0.2s;
+  transition: background var(--ts), color var(--ts);
 
   &:hover,
   &:focus,
