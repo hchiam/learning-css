@@ -452,3 +452,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - example of styled-components style composition: `SomeComposedStyle = styled(SomeBaseStyle)``;` instead of just `SomeBaseStyle = styled.button``;`
 
 - contrast checker: https://webaim.org/resources/contrastchecker (useful in cases like comparing button background colour to page background colour, which DevTools currently can't check)
+
+- colour-blindness: built-in DevTools in Chrome and in Firefox let you easily simulate different types of colour vision: red and yellow are a good pair of colours if you really can't use non-colour ways to distinguish items (differently dashed lines? or arrows pointing to the lines in the graph?)
