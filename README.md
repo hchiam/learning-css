@@ -449,4 +449,4 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - Gradient generator (no more grey transition middle!): https://www.joshwcomeau.com/gradient-generator (basically ["generate a bunch of midpoint colors using a custom color mode, and pass them all to our CSS gradient function. The CSS engine will use RGB interpolation, but it won't affect the final result (at least, not by enough for it to be perceptible to humans)"](https://www.joshwcomeau.com/css/make-beautiful-gradients/#:~:text=generate%20a%20bunch%20of%20midpoint%20colors%20using%20a%20custom%20color%20mode%2C%20and%20pass%20them%20all%20to%20our%20css%20gradient%20function.%20the%20css%20engine%20will%20use%20rgb%20interpolation%2C%20but%20it%20won't%20affect%20the%20final%20result%20(at%20least%2C%20not%20by%20enough%20for%20it%20to%20be%20perceptible%20to%20humans)))
 
-- example of styled-components style composition: `SomeComposedStyle = styled(SomeOtherStyle)``;` instead of just `SomeOtherStyle = styled.button``;`
+- example of styled-components style composition: `SomeComposedStyle = styled(SomeBaseStyle)``;` instead of just `SomeBaseStyle = styled.button``;`
