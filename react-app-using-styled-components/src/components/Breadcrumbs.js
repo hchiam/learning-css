@@ -67,7 +67,7 @@ const StyledCrumb = styled.a`
   color: blue;
   padding: 3px;
   border-radius: 7px;
-  text-decoration: none !important;
+  text-decoration: none;
   transition: background 0.2s, color 0.2s;
 
   &:hover,
@@ -78,7 +78,7 @@ const StyledCrumb = styled.a`
   }
 
   &[aria-current="page"] {
-    text-decoration: underline !important;
+    text-decoration: revert;
     color: lime !important;
   }
 `;
