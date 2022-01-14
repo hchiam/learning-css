@@ -1,12 +1,12 @@
 import "./App.css";
 import { Quote } from "./components/Quote";
 import GlobalStyles from "./GlobalStyles";
-import { BreadCrumbs } from "./components/Breadcrumbs";
+import { Breadcrumbs } from "./components/Breadcrumbs";
 
 function App() {
   return (
     <>
-      <BreadCrumbs />
+      <Breadcrumbs />
       <Quote
         by="Bill Gates (Allegedly)"
         source="https://quoteinvestigator.com/2011/09/08/640k-enough/"

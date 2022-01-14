@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-export const BreadCrumbs = ({ children }) => {
+export const Breadcrumbs = ({ children }) => {
   return (
     <BreadcrumbWrapper>
       <Crumb href="/">Home</Crumb>
