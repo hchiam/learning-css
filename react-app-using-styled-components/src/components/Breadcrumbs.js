@@ -16,7 +16,7 @@ export const Breadcrumbs = ({ children }) => {
 const BreadcrumbWrapper = ({ children }) => {
   return (
     <StyledBreadcrumbWrapper aria-label="breadcrumbs">
-      {children}
+      <ol>{children}</ol>
     </StyledBreadcrumbWrapper>
   );
 };
@@ -26,11 +26,18 @@ const StyledBreadcrumbWrapper = styled.nav`
   padding: 3px 0;
   margin-block: 3px;
   width: fit-content;
+  ol {
+    list-style: none;
+    background: white;
+    color: black !important;
+    display: flex;
+    padding: 0;
+  }
 `;
 
 const Crumb = ({ children, href, isCurrentPage }) => {
   return (
-    <>
+    <CrumbWrapper>
       <Separator tabIndex={-1} aria-hidden="true">
         {" "}
         &gt;{" "}
@@ -38,16 +45,20 @@ const Crumb = ({ children, href, isCurrentPage }) => {
       <StyledCrumb href={href} aria-current={isCurrentPage && "page"}>
         {children}
       </StyledCrumb>
-    </>
+    </CrumbWrapper>
   );
 };
+
+const CrumbWrapper = styled.li`
+  background: white;
+  &:first-of-type span {
+    display: none;
+  }
+`;
 
 const Separator = styled.span`
   background: white;
   color: black;
-  &:first-of-type {
-    display: none;
-  }
 `;
 
 const StyledCrumb = styled.a`
