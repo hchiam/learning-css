@@ -454,3 +454,33 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - contrast checker: https://webaim.org/resources/contrastchecker (useful in cases like comparing button background colour to page background colour, which DevTools currently can't check)
 
 - colour-blindness: built-in DevTools in Chrome and in Firefox let you easily simulate different types of colour vision: red and yellow are a good pair of colours if you really can't use non-colour ways to distinguish items (differently dashed lines? or arrows pointing to the lines in the graph?)
+
+- you can disable animations inside `@media (prefers-reduced-motion: reduce)`
+- but this is better: `@media (prefers-reduced-motion: no-preference)`: animations off by default, users enable animations, and browsers without support don't animate (good accessibility):
+
+  ```css
+  @media (prefers-reduced-motion: no-preference) {
+    .fancy-box {
+      transition: transform 0.2s;
+    }
+  }
+  ```
+
+- mnemonic: "prefer `no-preference` for `prefers-reduced-motion`"
+- in JS, we can get this value too:
+
+  ```js
+  const reduceMotionForPreferenceOrForOldBrowser = !window.matchMedia('(prefers-reduced-motion: no-preference)').matches; // note the "!"
+  ```
+
+- in JS, we can _watch_ this value too:
+
+  ```js
+  const mediaQueryList = window.matchMedia('(prefers-reduced-motion: no-preference)');
+  const listener = () => {
+    const reduceIt = !window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+    console.log('reduce animation if old browser or explicitly preferred:', reduceIt);
+  }
+  mediaQueryList.addListener(listener);
+  // mediaQueryList.removeListener(listener);
+  ```
