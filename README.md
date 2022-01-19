@@ -491,6 +491,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - elements can only have 1 layout mode at a time.
 - `display: flex` sets its _children_ to a `flex` layout mode, so a child with `display: block` will still instead behave in a `flex` layout mode, and the element itself will use flow layout.
+- note: `flex` children don't like to have content like text overflow out of them, unless you force them with a `width` intentionally smaller than the min content width
 - more common `flex` props for me to use:
   - `justify-content` = primary axis (like "justify" in Microsoft Word). Set in parent, applies to children.
   - `align-items` = cross axis (how to position items) for items ("i" for "inside"). . Set in parent, applies to children, and children can override this on an individual basis with `align-self` set on the child itself.
