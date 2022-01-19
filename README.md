@@ -485,6 +485,9 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   // mediaQueryList.removeListener(listener);
   ```
 
+- elements can only have 1 `display`/layout mode at a time
+- `display: flex` sets its _children_ to a `flex` display/layout mode, so a child with `display: block` will still instead behave in a `flex` display/layout mode
+
 - CSS Grid works like parking lot lines, and rectangular children can decide how they fill/take up spots (but also overlap, unlike in parking lots).
 - CSS Grid structure can be selectively ignored.
 - If you need to support older browsers, fallback to flexbox (and ensure tasks can be done for good UX, not necessarily identical experience):
