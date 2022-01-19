@@ -8,6 +8,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 <https://app.memrise.com/course/700033/learn-css>
 
+<https://css-for-js.dev>
+
 ## Miscellaneous notes
 
 (Make VSCode ignore auto-formatting with `prettier.setting` > Prettier: Require Config. Or just temporarily turn off formatting on save: `editor.formatOnSave`.)
