@@ -514,6 +514,12 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   }
   ```
 
+- but usually we just want to use `flex` shorthand = `flex-grow: 1`, `flex-shrink: 1`, and `flex-basis: 0` (which conceptually works like `width: 0` and filling the rest of the space like you typically want)
+  - and _NOT_ recommended: setting `flex-grow` or `flex-shrink` without setting `flex-basis`, because `flex-basis: auto` is the default
+  - `flex-basis: 0` = will "stretch" each item to fill additional space.
+    - what you'd usually want, so just use `flex`.
+  - `flex-basis: auto` = will "add" _additional_ space to items.
+
 - CSS Grid works like parking lot lines, and rectangular children can decide how they fill/take up spots (but also overlap, unlike in parking lots).
 - CSS Grid structure can be selectively ignored.
 - If you need to support older browsers, fallback to flexbox (and ensure tasks can be done for good UX, not necessarily identical experience):
