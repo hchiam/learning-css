@@ -568,6 +568,20 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 }
 ```
 
+- also:
+
+  ```css
+  /* this is UNNECESSARILY VERBOSE and misleading: */
+  .bad {
+    flex: 1 1 150px;
+    max-width: 150px;
+  }
+  /* this is CLEANER: */
+  .good {
+    flex: 0 1 150px; /* don't grow them but allow shrinking for really tiny screens */
+  }
+  ```
+
 - CSS Grid works like parking lot lines, and rectangular children can decide how they fill/take up spots (but also overlap, unlike in parking lots).
 - CSS Grid structure can be selectively ignored.
 - If you need to support older browsers, fallback to flexbox (and ensure tasks can be done for good UX, not necessarily identical experience):
