@@ -485,6 +485,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   // mediaQueryList.removeListener(listener);
   ```
 
+- you may need to set `display: block;` for an element to take `padding`
+
 - elements can only have 1 layout mode at a time.
 - `display: flex` sets its _children_ to a `flex` layout mode, so a child with `display: block` will still instead behave in a `flex` layout mode, and the element itself will use flow layout.
 - more common `flex` props for me to use:
