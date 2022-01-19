@@ -498,6 +498,19 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - **"min size":** the _content's longest word_ basically sets the _`min-width` or `min-height`_.
 - `flex-grow` and `flex-shrink` are "unitless" fractionals (ratio numerators) that say how much that element grows to fill space or shrinks when there's not enough space, but `flex-shrink` can't shrink under that element's min content size
 
+  ```css
+  section {
+    display: flex;
+  }
+  nav {
+    width: 200px;
+    flex-shrink: 1000;
+  }
+  main {
+    flex-grow: 1;
+  }
+  ```
+
 - CSS Grid works like parking lot lines, and rectangular children can decide how they fill/take up spots (but also overlap, unlike in parking lots).
 - CSS Grid structure can be selectively ignored.
 - If you need to support older browsers, fallback to flexbox (and ensure tasks can be done for good UX, not necessarily identical experience):
