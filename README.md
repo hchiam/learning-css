@@ -509,6 +509,9 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   main {
     flex-grow: 1;
   }
+  .prevent-this-from-shrinking-when-space-is-sparse {
+    flex-shrink: 0;
+  }
   ```
 
 - CSS Grid works like parking lot lines, and rectangular children can decide how they fill/take up spots (but also overlap, unlike in parking lots).
