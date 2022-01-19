@@ -494,9 +494,9 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - `align-items` = cross axis (how to position items) for items ("i" for "inside"), and can be overridden on an individual item with `align-self`
 - `align-content` = like `align-items`, except for when the line wraps around ("c" for "curve", or "content" just like `justify-content` adjusts the bigger-picture content, not individual items inside)
 - on **`display: flex` _children_**:
-  - **"max size":** the _`width` and `height` or `flex-basis`_ (with acts like `width` and `height` on the current primary axis) that you set are more like suggestions, and _act more like `max-width` or `max-height`_.
+  - **"max size":** the _`width` and `height` or `flex-basis`_ (with acts like `width` and `height` on the current primary axis) that you set are more like suggestions, and _act more like `max-width` or `max-height`_, (although width can force it shrink to less than min content width, while flex-basis can't force it).
   - **"min size":** the _content's longest word_ basically sets the _`min-width` or `min-height`_.
-- `flex-grow` and `flex-shrink` are "unitless" fractionals that say how much that element grows to fill space or shrinks when there's not enough space, but `flex-shrink` can't shrink under that element's min content size
+- `flex-grow` and `flex-shrink` are "unitless" fractionals (ratio numerators) that say how much that element grows to fill space or shrinks when there's not enough space, but `flex-shrink` can't shrink under that element's min content size
 
 - CSS Grid works like parking lot lines, and rectangular children can decide how they fill/take up spots (but also overlap, unlike in parking lots).
 - CSS Grid structure can be selectively ignored.
