@@ -494,7 +494,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - `display: flex` sets its _children_ to a `flex` layout mode, so a child with `display: block` will still instead behave in a `flex` layout mode, and the element itself will use flow layout.
 - note: `flex` children don't like to have content like text overflow out of them, unless you force them with a `width` intentionally smaller than the min content width
   - but if you use both `flex-basis` and `width`, then `flex-basis` will get used.
-  - and if you use both `flex` and `width`, then `flex-basis` will be set by `flex`.
+  - and if you use both `flex` and `width`, then `flex-basis` will be set by `flex` and ignores `width`.
 
   ```css
   /* so use THIS: */
