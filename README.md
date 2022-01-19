@@ -491,7 +491,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - `display: flex` sets its _children_ to a `flex` layout mode, so a child with `display: block` will still instead behave in a `flex` layout mode, and the element itself will use flow layout.
 - more common `flex` props for me to use:
   - `justify-content` = primary axis (like "justify" in Microsoft Word)
-  - `align-items` = cross axis (how to position items) for items ("i" for "inside")
+  - `align-items` = cross axis (how to position items) for items ("i" for "inside"), and can be overridden on an individual item with `align-self`
 - `align-content` = like `align-items`, except for when the line wraps around ("c" for "curve", or "content" just like `justify-content` adjusts the bigger-picture content, not individual items inside)
 
 - CSS Grid works like parking lot lines, and rectangular children can decide how they fill/take up spots (but also overlap, unlike in parking lots).
