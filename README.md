@@ -490,6 +490,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - you may need to set `display: block;` for an element to take `padding`
 
 - elements can only have 1 layout mode at a time.
+
 - `display: flex` sets its _children_ to a `flex` layout mode, so a child with `display: block` will still instead behave in a `flex` layout mode, and the element itself will use flow layout.
 - note: `flex` children don't like to have content like text overflow out of them, unless you force them with a `width` intentionally smaller than the min content width
   - but if you use both `flex-basis` and `width`, then `flex-basis` will get used.
