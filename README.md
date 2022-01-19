@@ -497,8 +497,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - `align-items` = cross axis (how to position items) for items ("i" for "inside"). . Set in parent, applies to children, and children can override this on an individual basis with `align-self` set on the child itself.
 - `align-content` = like `align-items`, except for when the line wraps around ("c" for "curve", or "content" just like `justify-content` adjusts the bigger-picture content, not individual items inside)
 - on **`display: flex` _children_**:
-  - **"max size":** the _`width` and `height` or `flex-basis`_ (with acts like `width` and `height` on the current primary axis) that you set are more like suggestions, and _act more like `max-width` or `max-height`_, (although width can force it shrink to less than min content width, while flex-basis can't force it).
-  - **"min size":** the _content's longest word_ basically sets the _`min-width` or `min-height`_.
+  - **"max size":** the _`width` and `height` or `flex-basis`_ (with acts like `width` and `height` on the current primary axis) that you set are more like suggestions, and _act more like `max-width` or `max-height`_, (although width can force it shrink to less than min content width, while flex-basis can't force it). But we can also set `max-width` or `max-height`, and `flex-grow` will respect those values.
+  - **"min size":** the _content's longest word_ basically sets the _`min-width` or `min-height`_. But we can also set `min-width` or `min-height`, and `flex-shrink` will respect those values.
 - `flex-grow` and `flex-shrink` are "unitless" fractionals (ratio numerators) that say how much that element grows to fill space or shrinks when there's not enough space, but `flex-shrink` can't shrink under that element's min content size
 
   ```css
