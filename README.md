@@ -499,7 +499,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   ```css
   /* so use THIS: */
   .good {
-    flex: 1 1 500px;
+    flex: 1 1 500px; /* flex-basis of 500px, basically suggested width before calc flex-grow or flex-shrink */
   }
   /* and NOT this: */
   .bad {
