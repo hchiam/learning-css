@@ -487,6 +487,10 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - elements can only have 1 layout mode at a time.
 - `display: flex` sets its _children_ to a `flex` layout mode, so a child with `display: block` will still instead behave in a `flex` layout mode, and the element itself will use flow layout.
+- more common `flex` props for me to use:
+  - `justify-content` = primary axis (like "justify" in Microsoft Word)
+  - `align-items` = cross axis (how to position items) for items ("i" for "inside")
+- `align-content` = like `align-items`, except for when the line wraps around ("c" for "curve", or "content" just like `justify-content` adjusts the bigger-picture content, not individual items inside)
 
 - CSS Grid works like parking lot lines, and rectangular children can decide how they fill/take up spots (but also overlap, unlike in parking lots).
 - CSS Grid structure can be selectively ignored.
