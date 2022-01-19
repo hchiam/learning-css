@@ -496,6 +496,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - on **`display: flex` _children_**:
   - **"max size":** the _`width` and `height` or `flex-basis`_ (with acts like `width` and `height` on the current primary axis) that you set are more like suggestions, and _act more like `max-width` or `max-height`_.
   - **"min size":** the _content's longest word_ basically sets the _`min-width` or `min-height`_.
+- `flex-grow` and `flex-shrink` are "unitless" fractionals that say how much that element grows to fill space or shrinks when there's not enough space, but `flex-shrink` can't shrink under that element's min content size
 
 - CSS Grid works like parking lot lines, and rectangular children can decide how they fill/take up spots (but also overlap, unlike in parking lots).
 - CSS Grid structure can be selectively ignored.
