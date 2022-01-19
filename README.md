@@ -517,6 +517,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   }
   ```
 
+- extra space? -> check each child's `flex-grow`, while respecting `max-width`.
+- lack space? -> check each child's `flex-shrink`, while respecting `min-width` and content width (as long as `width` isn't explicitly smaller).
 - but usually we just want to use `flex` shorthand = `flex-grow: 1`, `flex-shrink: 1`, and `flex-basis: 0` (which conceptually works like `width: 0` and filling the rest of the space like you typically want)
   - and _NOT_ recommended: setting `flex-grow` or `flex-shrink` without setting `flex-basis`, because `flex-basis: auto` is the default
   - `flex-basis: 0` = will "stretch" each item to fill additional space.
