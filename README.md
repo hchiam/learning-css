@@ -490,8 +490,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - elements can only have 1 layout mode at a time.
 - `display: flex` sets its _children_ to a `flex` layout mode, so a child with `display: block` will still instead behave in a `flex` layout mode, and the element itself will use flow layout.
 - more common `flex` props for me to use:
-  - `justify-content` = primary axis (like "justify" in Microsoft Word)
-  - `align-items` = cross axis (how to position items) for items ("i" for "inside"), and can be overridden on an individual item with `align-self`
+  - `justify-content` = primary axis (like "justify" in Microsoft Word). Set in parent, applies to children.
+  - `align-items` = cross axis (how to position items) for items ("i" for "inside"). . Set in parent, applies to children, and children can override this on an individual basis with `align-self` set on the child itself.
 - `align-content` = like `align-items`, except for when the line wraps around ("c" for "curve", or "content" just like `justify-content` adjusts the bigger-picture content, not individual items inside)
 - on **`display: flex` _children_**:
   - **"max size":** the _`width` and `height` or `flex-basis`_ (with acts like `width` and `height` on the current primary axis) that you set are more like suggestions, and _act more like `max-width` or `max-height`_, (although width can force it shrink to less than min content width, while flex-basis can't force it).
