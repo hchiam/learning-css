@@ -525,6 +525,33 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
     - what you'd usually want, so just use `flex`.
   - `flex-basis: auto` = will "add" _additional_ space to items.
 
+```css
+.wrapper {
+  display: flex;
+}
+.left, .right {
+  min-width: 100px;
+  max-width: 200px;
+  flex: 0 1000 200px; /* 
+    0: don't grow past suggested width of 200px, 
+    1000: visually shrink only .right when lacking space, 
+    until hit suggested width of 200px */
+}
+.middle {
+  flex: 1 1 500px; /* 
+    1: grow only .middle, 
+    1: let .right appear to be the only one shrinking 
+        but when .right hits its min-width then shrink .middle to not overflow body 
+        (hence flex-shrink of 1 instead of 0), 
+    suggested width of .middle of 500px */
+}
+@media (max-width: 700px) {
+  .left {
+    display: none; /* hide .left at smaller screen width */
+  }
+}
+```
+
 - CSS Grid works like parking lot lines, and rectangular children can decide how they fill/take up spots (but also overlap, unlike in parking lots).
 - CSS Grid structure can be selectively ignored.
 - If you need to support older browsers, fallback to flexbox (and ensure tasks can be done for good UX, not necessarily identical experience):
