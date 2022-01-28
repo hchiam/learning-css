@@ -615,6 +615,18 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
       "b b c" auto / 1fr 1fr 5fr;
   ```
 
+- but you might want to only use `grid-template-columns`, for the reason in the next point:
+
+  ```css
+  .parent {
+    grid-template-columns: repeat(2, 1fr); /* can't use repeat() in grid-template */
+    /* grid-template-rows: dynamically add rows and shrink height, not fixed height */
+  }
+  .child {
+    height: 2rem; /* set height here, vs stuck explicitly specifying number of rows */
+  }
+  ```
+
 - by default, CSS grid dynamically/implicitly assigns children to cells/rows and dynamically sets each row's height to be the tallest in each dynamically-generated row by default (you can explicitly set row heights if you want though), which is useful for listing out a dynamic list of data into some grid-like display, like a calendar month where you don't want/have to explicitly say how many rows to allocate space for
 - in CSS `display: grid`, `justify-content: center` makes the grid columns no longer go fill/full-width, and works like `justify-content` does in `display: flex` but affects the grid **columns** themselves
 - in CSS `display: grid`, `justify-items: center` also exists, but affects the grid **children** _inside_ the grid columns
