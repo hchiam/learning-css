@@ -613,3 +613,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
       "a a ." 80px
       "b b c" auto / 1fr 1fr 5fr;
   ```
+
+- by default, CSS grid dynamically/implicitly assigns children to cells/rows and dynamically sets each row's height to be the tallest in each dynamically-generated row by default (you can explicitly set row heights if you want though), which is useful for listing out a dynamic list of data into some grid-like display
