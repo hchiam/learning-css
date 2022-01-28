@@ -600,6 +600,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   ```
 
 - similar to `display: flex`, `display: grid` sets its _children_ to grid layout mode
+- unlike `flex-basis` "suggested" sizes, `grid-template` sets sizes as "hard limits" _by default_ (CSS grid sizes overflow by default, even with `%` sizes),
+  - _unless_ you use `1fr` etc. in a CSS grid, to set grid sizes as flexibly as `flex-grow: 1` for flexbox
 - `display: grid` from the parent means setting `display: inline` on a child is ignored for the same reason as setting `left: 200px` has no effect on a non-positioned element
 - `display: grid` from parent overrides child `display: inline`
 - `position: absolute` on child overrides parent `display: grid`
