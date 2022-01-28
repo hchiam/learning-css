@@ -621,3 +621,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - in CSS `display: grid`, `align-content: center` makes the grid rows no longer go fill/full-height, and works like `align-content` does in `display: flex` but affects the grid **row** themselves (and requires the grid to have a `height` set)
 - in CSS `display: grid`, `align-items: center` also exists, and works like `align-items` does in `display: flex`, but affects the grid **children** _inside_ the rows columns
 - in CSS `display: grid`, there's also `align-self` (for vertical), which works like it does in `display: flex`, but CSS grid also has `justify-self` (for horizontal)
+- "`-content`" = columns/rows themselves
+- "`-items`" = children in the cells
