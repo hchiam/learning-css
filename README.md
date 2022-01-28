@@ -616,3 +616,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   ```
 
 - by default, CSS grid dynamically/implicitly assigns children to cells/rows and dynamically sets each row's height to be the tallest in each dynamically-generated row by default (you can explicitly set row heights if you want though), which is useful for listing out a dynamic list of data into some grid-like display, like a calendar month where you don't want/have to explicitly say how many rows to allocate space for
+- in CSS `display: grid`, `justify-content: center` makes the grid columns no longer go fill/full-width, and works like `justify-content` does in `display: flex` but affects the grid **columns** themselves
+- in CSS `display: grid`, `justify-items: center` also exists, but affects the grid **children** _inside_ the grid columns
+- in CSS `display: grid`, `align-content: center` makes the grid rows no longer go fill/full-height, and works like `align-content` does in `display: flex` but affects the grid **row** themselves (and requires the grid to have a `height` set)
+- in CSS `display: grid`, `align-items: center` also exists, and works like `align-items` does in `display: flex`, but affects the grid **children** _inside_ the rows columns
+- in CSS `display: grid`, there's also `align-self` (for vertical), which works like it does in `display: flex`, but CSS grid also has `justify-self` (for horizontal)
