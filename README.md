@@ -488,6 +488,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   // mediaQueryList.removeListener(listener);
   ```
 
+### extra flexbox notes
+
 - you may need to set `display: block;` for an element to take `padding`
 
 - elements can only have 1 layout mode at a time.
@@ -582,6 +584,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
     flex: 0 1 150px; /* don't grow them but allow shrinking for really tiny screens */
   }
   ```
+
+### extra CSS grid notes
 
 - CSS Grid works like parking lot lines, and rectangular children can decide how they fill/take up spots (but also overlap, unlike in parking lots).
 - CSS Grid structure can be selectively ignored.
