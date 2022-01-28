@@ -598,3 +598,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
     }
   }
   ```
+
+- similar to `display: flex`, `display: grid` sets its _children_ to grid layout mode
