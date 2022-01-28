@@ -600,3 +600,6 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   ```
 
 - similar to `display: flex`, `display: grid` sets its _children_ to grid layout mode
+- `display: grid` from the parent means setting `display: inline` on a child is ignored for the same reason as setting `left: 200px` has no effect on a non-positioned element
+- `display: grid` from parent overrides child `display: inline`
+- `position: absolute` on child overrides parent `display: grid`
