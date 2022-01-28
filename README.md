@@ -616,7 +616,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   grid-template: 
       "a a ." minmax(50px, auto)
       "a a ." 80px
-      "b b c" auto / 1fr 1fr 5fr;
+      "b b c" auto / 1fr 1fr 5fr; /* / column widths on last line, like x-axis labels */
   ```
 
 - but you might want to only use `grid-template-columns`, for the reason in the next point:
