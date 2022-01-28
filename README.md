@@ -607,7 +607,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
   ```css
   grid-template: 
-            "a a ." minmax(50px, auto)
-            "a a ." 80px
-            "b b c" auto / 2em 3em auto;
+      "a a ." minmax(50px, auto)
+      "a a ." 80px
+      "b b c" auto / 1em 3em auto;
   ```
