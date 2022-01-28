@@ -611,5 +611,5 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   grid-template: 
       "a a ." minmax(50px, auto)
       "a a ." 80px
-      "b b c" auto / 1em 2em auto;
+      "b b c" auto / 1fr 1fr 5fr;
   ```
