@@ -586,6 +586,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   ```
 
 - `flex-wrap: wrap-reverse` wraps "upwards" (as opposed to `flex-wrap: wrap` wrapping "downwards" in the normal reading direction).
+- `flex`'s `order` and `flex-wrap: wrap-reverse` are good backups if you can't use CSS grid
 
 ### extra CSS grid notes
 
