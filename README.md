@@ -588,6 +588,9 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - `flex-wrap: wrap-reverse` wraps "upwards" (as opposed to `flex-wrap: wrap` wrapping "downwards" in the normal reading direction).
 - `flex`'s `order` and `flex-wrap: wrap-reverse` are good backups if you can't use CSS grid
 
+- positioned layout overrides/ignores other layouts like flex
+  - this means that when you apply both `flex` (from parent) and `position` (on the element itself), the element will ignore `justify-content`, etc.
+
 ### extra CSS grid notes
 
 - CSS Grid works like parking lot lines, and rectangular children can decide how they fill/take up spots (but also overlap, unlike in parking lots).
@@ -613,7 +616,6 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - `display: grid` from the parent means setting `display: inline` on a child is ignored for the same reason as setting `left: 200px` has no effect on a non-positioned element
 - `display: grid` from parent overrides child `display: inline`
 - `position: absolute` on child overrides parent `display: grid`
-- positioned layout overrides other layouts like flex
 - you can "paint by colour" with CSS [`grid-template`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template) while also setting `row / column` sizes:
 
   ```css
