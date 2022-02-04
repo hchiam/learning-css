@@ -295,7 +295,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - `width` looks at parent
 
 - CSS margin collapse rules weirdness: https://codepen.io/hchiam/pen/WNZZqjo
-  - (margin collapse applies to the default flow layout mode only)
+  - (margin collapse applies to the default flow layout mode only (like `display:block`), since it made sense for documents, and so margin collapse doesn't happen for `display:flex` because it doesn't make sense)
   - overlapping inline-direction margins don't collapse, but
   - overlapping block-direction margins DO collapse, but only in the default flow layout (flow != flex), and only if there's no elements between them (nesting / a parent's closing tag doesn't count as blocking collapsing margins!), and no padding/border/height gap directly between (between siblings, or between parent/child depending on the side of the parent's border).
     - The bigger margin (absolute value) will be used (think personal space or physical distancing during COVID), whether we're talking siblings or parent/child. One less intuitive example is a child with larger block-direction margin than its parent will make it look like its parent has the large margin. This means a parent with 0 block-direction margin can take on its child's block-direction margin, because whatever number >0 is a bigger absolute value than 0.
@@ -488,6 +488,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   mediaQueryList.addListener(listener);
   // mediaQueryList.removeListener(listener);
   ```
+
+- CSS has different layout modes (like flow, `position`ed, `flex`, `grid`, etc.), and each layout mode decides what each property does (if anything), like whether it ignores `z-index` (flow ignores `z-index`, while `position`ed, `flex`, `grid` respect `z-index`)
 
 ### extra flexbox notes
 
