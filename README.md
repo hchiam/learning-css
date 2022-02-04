@@ -613,6 +613,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - `display: grid` from the parent means setting `display: inline` on a child is ignored for the same reason as setting `left: 200px` has no effect on a non-positioned element
 - `display: grid` from parent overrides child `display: inline`
 - `position: absolute` on child overrides parent `display: grid`
+- positioned layout overrides other layouts like flex
 - you can "paint by colour" with CSS [`grid-template`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template) while also setting `row / column` sizes:
 
   ```css
