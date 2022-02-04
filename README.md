@@ -585,6 +585,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   }
   ```
 
+- `flex-wrap: wrap-reverse` wraps "upwards" (as opposed to `flex-wrap: wrap` wrapping "downwards" in the normal reading direction).
+
 ### extra CSS grid notes
 
 - CSS Grid works like parking lot lines, and rectangular children can decide how they fill/take up spots (but also overlap, unlike in parking lots).
