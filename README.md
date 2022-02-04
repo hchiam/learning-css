@@ -588,7 +588,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - `flex-wrap: wrap-reverse` wraps "upwards" (as opposed to `flex-wrap: wrap` wrapping "downwards" in the normal reading direction).
 - `flex`'s `order` and `flex-wrap: wrap-reverse` are good backups if you can't use CSS grid
 
-- positioned layout overrides/ignores other layouts like flex
+- fixed/absolute positioned layout overrides/ignores other layouts like flex
   - this means that when you apply both `flex` (from parent) and `position` (on the element itself), the element will ignore `justify-content`, etc.
 
 ### extra CSS grid notes
