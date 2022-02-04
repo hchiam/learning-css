@@ -589,7 +589,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - `flex`'s `order` and `flex-wrap: wrap-reverse` are good backups if you can't use CSS grid
 
 - fixed/absolute positioned layout overrides/ignores other layouts like flex
-  - this means that when you apply both `flex` (from parent) and `position` (on the element itself), the element will ignore `justify-content`, etc.
+  - this means that when you apply both `flex` (from parent) and `position:fixed` (on the element itself), the element will ignore `justify-content`, etc.
 
 ### extra CSS grid notes
 
