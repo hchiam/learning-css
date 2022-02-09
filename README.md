@@ -523,13 +523,20 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
     }
   `;
 
-  // but for one-off page stylings like for holidays, consider instead:
+  // but for one-off page stylings like for holidays, consider composition instead:
   const HolidayLink = styled(Link)`
   `;
   // to avoids perf cost of importing an entire page as context per component
   ```
 
   - you can do ["inverted control"/"inversion of control" nesting](https://www.joshwcomeau.com/css/styled-components/) in [SASS/SCSS](https://github.com/hchiam/learning-sass) too, but styled-components helps automate scoping/collision/specificity across files.
+
+- components tips with styled-components:
+  - core variant options = limited few props (or CSS variables for rapid-change perf)
+  - "one-off" variants: do composition with `styled(BaseComponent)`
+  - component-within-component contextual styles:
+    - for common/core variants: "inversion of control" nesting (see notes above) with `${Parent} & {}` in one place
+    - for "one-off" contexts: do composition with `styled(BaseComponent)`
 
 - CSS has different layout modes (like flow, `position`ed, `flex`, `grid`, etc.), and each layout mode decides what each property does (if anything), like whether it ignores `z-index` (flow ignores `z-index`, while `position`ed, `flex`, `grid` respect `z-index`)
 
