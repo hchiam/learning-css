@@ -505,25 +505,28 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   ```
   - If the component being imported (e.g. `Link` in the example above) is instead a styled-component, then make sure that the imported component has `({className})` and `<ComponentBeingImported style={styles} className={className}>`, so that styled-components can take its magically-generated class name from your `Wrapper` and inject it into your component being imported.
 
-- [You can refer to instances of styled-components within styled-components](https://styled-components.com/docs/advanced#referring-to-other-components):
+- [You can refer to instances of styled-components within styled-components](https://styled-components.com/docs/advanced#referring-to-other-components) for "contextual styles" (or ["inverted control"/"inversion of control" nesting](https://www.joshwcomeau.com/css/styled-components/)):
 
   ```jsx
-  // make a Link styled differently when inside of an Icon:
+  // NOT RECOMMENDED:
+  // we COULD make a Link styled differently when inside of an Icon:
   const Icon = styled.svg`
-    /* ... */
-    & > ${Link}:hover { /* Icon > Link:hover */
-      /* ... */
+    & > ${Link} { /* Icon > Link */
     }
   `;
 
-  // or, to keep styles related to Link in one spot:
+  // or RECOMMENDED: "inversion of control"
+  // instead keep styles related to Link in one spot (no memory/hunting needed):
   // (style Link differently when it's inside an Icon:)
   const Link = styled.svg`
-    /* ... */
-    ${Icon} > &:hover { /* Icon > Link:hover */
-      /* ... */
+    ${Icon} > & { /* Icon > Link */
     }
   `;
+
+  // but for one-off page stylings like for holidays, consider instead:
+  const HolidayLink = styled(Link)`
+  `;
+  // to avoids perf cost of importing an entire page as context per component
   ```
 
 - CSS has different layout modes (like flow, `position`ed, `flex`, `grid`, etc.), and each layout mode decides what each property does (if anything), like whether it ignores `z-index` (flow ignores `z-index`, while `position`ed, `flex`, `grid` respect `z-index`)
