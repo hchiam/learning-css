@@ -489,7 +489,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   // mediaQueryList.removeListener(listener);
   ```
 
-- you can use `as="someOtherTagName"` to make a styled-component have a different underlying tag:
+- you can use [`as="someOtherTagName"`](https://styled-components.com/docs/api#as-polymorphic-prop) to make a styled-component have a different underlying tag:
   ```jsx
   import { Link } from 'react-router-dom';
   function Button({ href, children }) {
