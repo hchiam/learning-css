@@ -508,9 +508,19 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - [You can refer to instances of styled-components within styled-components](https://styled-components.com/docs/advanced#referring-to-other-components):
 
   ```jsx
+  // make a Link styled differently when inside of an Icon:
   const Icon = styled.svg`
     /* ... */
-    ${Link}:hover & {
+    & > ${Link}:hover { /* Icon > Link:hover */
+      /* ... */
+    }
+  `;
+
+  // or, to keep styles related to Link in one spot:
+  // (style Link differently when it's inside an Icon:)
+  const Link = styled.svg`
+    /* ... */
+    ${Icon} > &:hover { /* Icon > Link:hover */
       /* ... */
     }
   `;
