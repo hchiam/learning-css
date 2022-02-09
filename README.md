@@ -489,6 +489,21 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   // mediaQueryList.removeListener(listener);
   ```
 
+- you can use `as="someOtherTagName"` to make a styled-component have a different underlying tag:
+  ```jsx
+  import { Link } from 'react-router-dom';
+  function Button({ href, children }) {
+    return (
+      <Wrapper to={href} as={href ? Link : 'button'}>
+        {children}
+      </Wrapper>
+    );
+  }
+  const Wrapper = styled.button`
+    /* ... */
+  `;
+  ```
+
 - CSS has different layout modes (like flow, `position`ed, `flex`, `grid`, etc.), and each layout mode decides what each property does (if anything), like whether it ignores `z-index` (flow ignores `z-index`, while `position`ed, `flex`, `grid` respect `z-index`)
 
 ### extra flexbox notes
