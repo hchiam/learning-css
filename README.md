@@ -529,6 +529,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   // to avoids perf cost of importing an entire page as context per component
   ```
 
+  - you can do ["inverted control"/"inversion of control" nesting](https://www.joshwcomeau.com/css/styled-components/) in [SASS/SCSS](https://github.com/hchiam/learning-sass) too, but styled-components helps automate scoping/collision/specificity across files.
+
 - CSS has different layout modes (like flow, `position`ed, `flex`, `grid`, etc.), and each layout mode decides what each property does (if anything), like whether it ignores `z-index` (flow ignores `z-index`, while `position`ed, `flex`, `grid` respect `z-index`)
 
 ### extra flexbox notes
