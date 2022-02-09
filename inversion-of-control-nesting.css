@@ -1,0 +1,6 @@
+.child {
+  color: blue;
+}
+.parent .child {
+  color: red;
+}

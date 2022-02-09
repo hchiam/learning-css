@@ -1,0 +1,8 @@
+// sass inversion-of-control-nesting.scss inversion-of-control-nesting.css
+
+.child {
+  color: blue;
+  .parent & {
+    color: red;
+  }
+}
