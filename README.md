@@ -272,6 +272,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
   - blue: 200deg ([голубой](https://en.wiktionary.org/wiki/%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D0%BE%D0%B9#Adjective)) and 250deg ([синий](https://en.wiktionary.org/wiki/%D1%81%D0%B8%D0%BD%D0%B8%D0%B9#Adjective))
   - purple: 300deg
 
+- stuff you can do without JS-heavy web frameworks: https://codepen.io/hchiam/pen/ExbmjEP
+
 ## more recent CodePen experiments and notes made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
 
 - CSS shadow via `box-shadow` vs via `filter: drop-shadow`: https://codepen.io/hchiam/pen/YzrrVGL
