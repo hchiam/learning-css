@@ -294,6 +294,9 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - `height` looks at children (e.g. content), like shrinkwrap
 - `width` looks at parent
 
+- `margin: auto` works to center or push things away because `auto` is a "greedy" value, automatically consuming all the extra available space around the element
+  - that's why `margin-block: auto` or `margin-inline: auto` trick helps center things
+
 - CSS margin collapse rules weirdness: https://codepen.io/hchiam/pen/WNZZqjo
   - (margin collapse applies to the default flow layout mode only (like `display:block`), since it made sense for documents, and so margin collapse doesn't happen for `display:flex` because it doesn't make sense)
   - overlapping inline-direction margins don't collapse, but
