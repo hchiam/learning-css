@@ -290,6 +290,13 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - `.max-width-wrapper`: https://codepen.io/hchiam/pen/dyVVLqN
 
+- `border-image-slice`:
+  - `border-image-slice` [is how much of the corners of the border image to use for the border corners and the remaining middle edges of the image for the border edges - see the 9-part grid for a conceptual hint](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-slice)
+
+  - here's an example on CodePen: https://codepen.io/hchiam/pen/YzEvpOr?editors=0100
+
+  - [there's a lot more you can do](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image)
+
 - `100vh` isn't always 100% of viewport for mobile because of scrolling and browsers trying to avoid flickering issues. Instead of `100vh`, use `height: 100%` on `html` and on `body`.
   - "`min-height: 100%` trick": `body` `height: 100%` and `main` `min-height: 100%` so that `main` can still grow to fit content inside of `main`
 
