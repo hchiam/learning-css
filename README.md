@@ -297,6 +297,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
   - [there's a lot more you can do](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image)
 
+- more easily style-able dropdown that also makes use of native `select` cross-compatible usability: https://codepen.io/hchiam/pen/OJOwrdX
+
 - `100vh` isn't always 100% of viewport for mobile because of scrolling and browsers trying to avoid flickering issues. Instead of `100vh`, use `height: 100%` on `html` and on `body`.
   - "`min-height: 100%` trick": `body` `height: 100%` and `main` `min-height: 100%` so that `main` can still grow to fit content inside of `main`
 
