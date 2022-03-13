@@ -370,6 +370,18 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   ```
 
+- ```css
+  .hero {
+    min-height: min(80vh, 500px);
+    /*
+    min-height = can grow if needed.
+    min(80vh, 500px) = respond to different screen heights:
+      tall: min-height: 500px = avoid dead space and tons of scrolling.
+      short: min-height: 80vh = text not truncated on top, and avoid dead space too.
+     */
+  }
+  ```
+
 - `height` looks at children (e.g. content), like shrinkwrap
 - `width` looks at parent
 
