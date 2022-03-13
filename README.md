@@ -361,6 +361,14 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - JS can get scrollbar width set by platform: `const scrollbarWidth =
   window.innerWidth - document.documentElement.clientWidth;` (then use cssVariables.js to set up `--full-width: calc(100vw - var(--scrollbar-width));`)
 - OR, consider always showing a scrollbar (`overflow-y: scroll;`), to avoid other problems like dynamic content overflowing and causing a scrollbar to be added later, and to avoid layout shift (which is bad UX and potentially bad perf too).
+- we can use `clamp` to set a min and max, but we can combine it with other things to enable things like setting _two_ max widths:
+
+  ```css
+  .two-max-widths { /* max width of fixed 100px or dynamic 100%: */
+    width: clamp(10px, 10%, 100px);
+    max-width: 100%;
+  }
+  ```
 
 - `height` looks at children (e.g. content), like shrinkwrap
 - `width` looks at parent
