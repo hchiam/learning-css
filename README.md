@@ -732,6 +732,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 ### other stuff
 
+["Interaction Media Features"](https://drafts.csswg.org/mediaqueries-4/#mf-interaction) let you detect user interaction type or user input type of pointer:
+
 ```css
 @media (hover: hover) and (pointer: fine) {
   /* mouse or trackpad */
@@ -751,5 +753,9 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 @media (hover: none) and (pointer: none) {
   /* keyboard-only or sip-and-puff switches */
+}
+
+@media (hover: any-hover) and (pointer: any-pointer) {
+  /* any */
 }
 ```
