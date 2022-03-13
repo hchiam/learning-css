@@ -355,7 +355,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - more easily style-able dropdown that also makes use of native `select` cross-compatible usability: https://codepen.io/hchiam/pen/OJOwrdX
 
-- `100vh` isn't always 100% of viewport for mobile because of scrolling and browsers trying to avoid flickering issues. Instead of `100vh`, use `height: 100%` on `html` and on `body`.
+- `100vh` isn't always 100% of viewport for mobile because of scrolling and browsers trying to avoid flickering issues (for mobile, `100vh` is currently set to the largest possible height, like when the URL and bottom buttons slide away when you scroll). Instead of `100vh`, use `height: 100%` on `html` and on `body`.
   - "`min-height: 100%` trick": `body` `height: 100%` and `main` `min-height: 100%` so that `main` can still grow to fit content inside of `main`
 
 - `height` looks at children (e.g. content), like shrinkwrap
