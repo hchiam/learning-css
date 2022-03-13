@@ -237,7 +237,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - Responsive Design: <https://web.dev/learn/design/>
 - Keep [learning CSS](https://web.dev/learn/css/), including CSS selector specificity calculation: <https://web.dev/learn/css/specificity/#visualizing-specificity>
 - CSS `contain: content` for better performance: <https://github.com/hchiam/learning-css-contain>
-- CSS variables and `:root` in `@media` for cleaner globally reduced motion in 1 spot <https://codepen.io/hchiam/full/wvqEQob>
+- CSS variables (AKA CSS custom properties) and `:root` in `@media` for cleaner globally reduced motion in 1 spot <https://codepen.io/hchiam/full/wvqEQob>
   - like a single source of truth (that can be locally overridden/inherited):
 
     ```css
@@ -248,6 +248,29 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
     }
     .some-button, .some-input {
       min-height: var(--min-tap-height, 32px);
+    }
+    ```
+
+  - CSS variables are evaluated when used, not when defined, and are composable:
+
+    ```css
+    /* GOOD: more flexible and concise: */
+    body {
+      --hue: 275deg;
+      --intensity: 100% 50%;
+      
+      --my-color: hsl(
+        var(--hue)
+        var(--intensity)
+      );
+    }
+    
+    /* BAD: as opposed to: */
+    body {
+      --color-blue-25: hsl(275deg 50% 25%);
+      --color-blue-50: hsl(275deg 50% 50%);
+      --color-blue-75: hsl(275deg 50% 75%);
+      --color-blue-90: hsl(275deg 50% 90%);
     }
     ```
 
