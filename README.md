@@ -238,6 +238,19 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 - Keep [learning CSS](https://web.dev/learn/css/), including CSS selector specificity calculation: <https://web.dev/learn/css/specificity/#visualizing-specificity>
 - CSS `contain: content` for better performance: <https://github.com/hchiam/learning-css-contain>
 - CSS variables and `:root` in `@media` for cleaner globally reduced motion in 1 spot <https://codepen.io/hchiam/full/wvqEQob>
+  - like a single source of truth (that can be locally overridden/inherited):
+
+    ```css
+    @media (pointer: coarse) { /* media query --> responsive CSS variable! */
+      html {
+        --min-tap-height: 44px; /* no need to manage/customize everywhere! */
+      }
+    }
+    .some-button, .some-input {
+      min-height: var(--min-tap-height, 32px);
+    }
+    ```
+
 - CSS `grid-column` vs `grid-template-columns`: <https://www.w3schools.com/cssref/tryit.asp?filename=trycss_grid-column>
   - `grid-template-columns` goes on the container that you set `display: grid` on. It tells CSS the size of the columns in the grid.
   - `grid-column` goes on the children inside the container that you set `display: grid` on. It tells CSS the start / end columns of the item inside the grid. For example: `grid-column: 1 / span 3;` means it'll span columns 1 and 3, while just `grid-column: 1 / 3;` means it'll go from column line 1 (left-most) to column line 3 (which makes it look like it's spanning columns 1 and 2).
