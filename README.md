@@ -732,30 +732,55 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 ### other stuff
 
-["Interaction Media Features"](https://drafts.csswg.org/mediaqueries-4/#mf-interaction) let you detect user interaction type or user input type of pointer:
+- pick breakpoints that are _between_ likely screen widths, instead of right at the boundaries of likely screen widths:
 
-```css
-@media (hover: hover) and (pointer: fine) {
-  /* mouse or trackpad */
-}
+  ```css
+  /* mobile by default (if your is better with desktop by default, then reverse the order below and use max-width instead) */  
 
-@media (hover: hover) and (pointer: coarse) {
-  /* kinect or wii remote */
-}
+  /* (add 350px breakpoint if you must distinguish "small"/"large" mobile) */
 
-@media (hover: none) and (pointer: fine) {
-  /* stylus digitizer or eye-tracking */
-}
+  @media (min-width: 550px) {
+    /* tablet */
+    /* (550px is to the left but spaced away from likely tablet sizes) */
+  }
 
-@media (hover: none) and (pointer: coarse) {
-  /* touchscreen */
-}
+  @media (min-width: 1100px) {
+    /* laptop */
+    /* (1100px is to the left but spaced away from likely laptop sizes) */
+  }
 
-@media (hover: none) and (pointer: none) {
-  /* keyboard-only or sip-and-puff switches */
-}
+  @media (min-width: 1500px) {
+    /* desktop */
+    /* (1500px is to the left but spaced away from likely desktop sizes) */
+  }
 
-@media (hover: any-hover) and (pointer: any-pointer) {
-  /* any */
-}
-```
+  /* note: these widths are intended for general styling, not for detecting devices, since users are able to do things like adjust screen widths or change portrait/landscape mode */
+  ```
+
+- To detect detect user interaction type or user input type of pointer,you can use ["Interaction Media Features"](https://drafts.csswg.org/mediaqueries-4/#mf-interaction):
+
+  ```css
+  @media (hover: hover) and (pointer: fine) {
+    /* mouse or trackpad */
+  }
+
+  @media (hover: hover) and (pointer: coarse) {
+    /* kinect or wii remote */
+  }
+
+  @media (hover: none) and (pointer: fine) {
+    /* stylus digitizer or eye-tracking */
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    /* touchscreen */
+  }
+
+  @media (hover: none) and (pointer: none) {
+    /* keyboard-only or sip-and-puff switches */
+  }
+
+  @media (hover: any-hover) and (pointer: any-pointer) {
+    /* any */
+  }
+  ```
