@@ -264,13 +264,14 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
         var(--intensity)
       );
     }
-    
+
     /* BAD: as opposed to: */
     body {
       --color-blue-25: hsl(275deg 50% 25%);
       --color-blue-50: hsl(275deg 50% 50%);
       --color-blue-75: hsl(275deg 50% 75%);
       --color-blue-90: hsl(275deg 50% 90%);
+      /* ... */
     }
     ```
 
