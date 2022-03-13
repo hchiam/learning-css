@@ -414,7 +414,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 - inline styles are usually not a good idea because now you have to check multiple places for styling, and they don't work with media queries
 
-- CSS variables are quick and easy for dynamic styles, but CSS variables aren't as flexible as `styled-components` interpolations (e.g. media queries and fancy dynamic styling in the context of a framework like React), and CSS variables aren't supported in IE, so if you have to support IE, consider using `styled-components` interpolations:
+- CSS variables are quick and easy for dynamic styles at runtime (not compiled away to static values like SASS/LESS variables are), but CSS variables aren't as flexible as `styled-components` interpolations (e.g. media queries and fancy dynamic styling in the context of a framework like React), and CSS variables aren't supported in IE, so if you have to support IE, consider using `styled-components` interpolations:
 
 - `styled-components` lets you do very dynamic styling with things like this:
 
