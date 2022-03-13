@@ -729,3 +729,27 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
           will grow to fill any leftover space */
   }
   ```
+
+### other stuff
+
+```css
+@media (hover: hover) and (pointer: fine) {
+  /* mouse or trackpad */
+}
+
+@media (hover: hover) and (pointer: coarse) {
+  /* kinect or wii remote */
+}
+
+@media (hover: none) and (pointer: fine) {
+  /* stylus digitizer or eye-tracking */
+}
+
+@media (hover: none) and (pointer: coarse) {
+  /* touchscreen */
+}
+
+@media (hover: none) and (pointer: none) {
+  /* keyboard-only or sip-and-puff switches */
+}
+```
