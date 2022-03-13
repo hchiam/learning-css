@@ -360,6 +360,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - `100vw` has a similar problem: it doesn't include the scrollbar, which is fine on mobile (scrollbar "floats" and adds 0 space), but it's a problem on desktop, when the scrollbar takes up its own space, which depends on platform, and may then overflow.
   - JS can get scrollbar width set by platform: `const scrollbarWidth =
   window.innerWidth - document.documentElement.clientWidth;` (then use cssVariables.js to set up `--full-width: calc(100vw - var(--scrollbar-width));`)
+- OR, consider always showing a scrollbar (`overflow-y: scroll;`), to avoid other problems like dynamic content overflowing and causing a scrollbar to be added later, and to avoid layout shift (which is bad UX and potentially bad perf too).
 
 - `height` looks at children (e.g. content), like shrinkwrap
 - `width` looks at parent
