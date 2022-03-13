@@ -758,17 +758,17 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
   /* (add 350px breakpoint if you must distinguish "small"/"large" mobile) */
 
-  @media (min-width: 550px) {
+  @media (min-width: 550px) { /* or 550/16 rem to cover user font size */
     /* tablet */
     /* (550px is to the left but spaced away from likely tablet sizes) */
   }
 
-  @media (min-width: 1100px) {
+  @media (min-width: 1100px) { /* or 1100/16 rem to cover user font size */
     /* laptop */
     /* (1100px is to the left but spaced away from likely laptop sizes) */
   }
 
-  @media (min-width: 1500px) {
+  @media (min-width: 1500px) { /* or 1500/16 rem to cover user font size */
     /* desktop */
     /* (1500px is to the left but spaced away from likely desktop sizes) */
   }
