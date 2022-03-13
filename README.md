@@ -359,7 +359,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - "`min-height: 100%` trick": `body` `height: 100%` and `main` `min-height: 100%` so that `main` can still grow to fit content inside of `main`
 - `100vw` has a similar problem: it doesn't include the scrollbar, which is fine on mobile (scrollbar "floats" and adds 0 space), but it's a problem on desktop, when the scrollbar takes up its own space, which depends on platform, and may then overflow.
   - JS can get scrollbar width set by platform: `const scrollbarWidth =
-  window.innerWidth - document.documentElement.clientWidth;`
+  window.innerWidth - document.documentElement.clientWidth;` (then use cssVariables.js to set up `--full-width: calc(100vw - var(--scrollbar-width));`)
 
 - `height` looks at children (e.g. content), like shrinkwrap
 - `width` looks at parent
