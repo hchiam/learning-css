@@ -279,6 +279,17 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
     }
     ```
 
+    or
+
+    ```css
+    :root {
+      --red-hue: 0deg;
+      --red: hsl(var(--red-hue) 100% 50);
+      --orange: hsl(calc(var(--red-hue) + 20deg) 100% 50);
+      --yellow: hsl(calc(var(--red-hue) + 40deg) 100% 50);
+    }
+    ```
+
 - CSS `grid-column` vs `grid-template-columns`: <https://www.w3schools.com/cssref/tryit.asp?filename=trycss_grid-column>
   - `grid-template-columns` goes on the container that you set `display: grid` on. It tells CSS the size of the columns in the grid.
   - `grid-column` goes on the children inside the container that you set `display: grid` on. It tells CSS the start / end columns of the item inside the grid. For example: `grid-column: 1 / span 3;` means it'll span columns 1 and 3, while just `grid-column: 1 / 3;` means it'll go from column line 1 (left-most) to column line 3 (which makes it look like it's spanning columns 1 and 2).
