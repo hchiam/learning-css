@@ -263,6 +263,10 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
         var(--hue)
         var(--intensity)
       );
+
+      --space: 8px;
+      border-radius: calc(var(--space) / 2 + 2px);
+      font-size: calc(24 / 16 * 1rem);
     }
 
     /* BAD: as opposed to: */
