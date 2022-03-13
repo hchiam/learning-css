@@ -554,6 +554,25 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
     - for common/core variants: "inversion of control" nesting (see notes above) with `${Parent} & {}` in one place
     - for "one-off" contexts: do composition with `styled(BaseComponent)`
 
+- ```jsx
+  // use ThemeProvider as a React context to wrap children so they get theme in props, instead of you importing in each child's file:
+  import { ThemeProvider } from 'styled-components';
+  import { BREAKPOINTS } from '../../constants';
+  function App() {
+    return (
+      <ThemeProvider theme={{ breakpoints: BREAKPOINTS }}>
+        {/* children */}
+      </ThemeProvider>
+    )
+  }
+  // ... and now in another file, you don't have to import BREAKPOINTS everywhere, and instead use props.theme:
+  const SomeChildInAnotherFile = styled.div`
+    @media ${props => props.theme.breakpoints.tabletAndUp} {
+      // ...
+    }
+  `;
+  ```
+
 - CSS has different layout modes (like flow, `position`ed, `flex`, `grid`, etc.), and each layout mode decides what each property does (if anything), like whether it ignores `z-index` (flow ignores `z-index`, while `position`ed, `flex`, `grid` respect `z-index`)
 
 ### extra flexbox notes
