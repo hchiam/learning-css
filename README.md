@@ -382,6 +382,12 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   ```
 
+- https://stackoverflow.com/a/21064102 JS can get you 3 different widths: `offsetWidth` vs `scrollWidth` vs `clientWidth`: https://i.stack.imgur.com/5AAyW.png
+  - `offsetWidth` includes border
+  - `scrollWidth` includes overflow stuff you can scroll to
+  - `clientWidth` includes just what you'd normally think, as long as it's inside the viewport (excludes truncated width and scrollbar width)
+- `window.outerWidth` = `window.innerWidth` + sidebar etc.
+
 - `height` looks at children (e.g. content), like shrinkwrap
 - `width` looks at parent
 
