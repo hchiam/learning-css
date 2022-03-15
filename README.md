@@ -357,7 +357,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - https://github.com/hchiam/mini-component-library
 
-- https://github.com/hchiam/sole-and-ankle
+- https://github.com/hchiam/sole-and-ankle and https://github.com/hchiam/sole-and-ankle-revisited
 
 - https://github.com/hchiam/scrollburglars
 
