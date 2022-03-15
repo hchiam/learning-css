@@ -913,13 +913,13 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     --min-font-size: 1.5rem;
     --max-font-size: 3rem;
 
-    --growth-speed: 4vw; /* also responds to screen width */
+    --growth-rate: 4vw; /* also responds to screen width */
     --earlier-offset: 1rem; /* also responds to user font size setting */
         /* --earlier-offset >= 1rem or <= -1rem so user can scale with font size settings */
 
     font-size: clamp(
       var(--min-font-size),
-      var(--growth-speed) + var(--earlier-offset),
+      var(--growth-rate) + var(--earlier-offset),
       var(--max-font-size)
     );
     min-height: 0vh; /* so Safari behaves consistently with other browsers */
