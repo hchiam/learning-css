@@ -887,3 +887,41 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     /* any */
   }
   ```
+
+- font size that intelligently scales with screen width:
+
+  ```css
+  h1 {
+    --s: 1.5rem;
+
+    /* fluid typography size is helpful for large text like headings: */
+    font-size: clamp(var(--s), 4vw + 1rem, var(--s) * 2);
+    /*
+      - 4vw to let screen width scale h1 headings
+      - clamp keeps h1 sizes sensible in big/small screens
+          (generally we should keep body font size unchanged at all widths)
+      - 1rem for accessibility: let user control font size at all clamp values
+      - calc() isn't required inside of clamp
+    */
+
+    min-height: 0vh; /* so Safari behaves consistently with other browsers */
+  }
+  ```
+
+  ```css
+  .large-text {
+    --min-font-size: 1.5rem;
+    --max-font-size: 3rem;
+
+    --growth-speed: 4vw; /* also responds to screen width */
+    --earlier-offset: 1rem; /* also responds to user font size setting */
+        /* --earlier-offset >= 1rem or <= -1rem so user can scale with font size settings */
+
+    font-size: clamp(
+      var(--min-font-size),
+      var(--growth-speed) + var(--earlier-offset),
+      var(--max-font-size)
+    );
+    min-height: 0vh; /* so Safari behaves consistently with other browsers */
+  }
+  ```
