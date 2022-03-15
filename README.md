@@ -357,6 +357,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - https://github.com/hchiam/mini-component-library
 
+- https://github.com/hchiam/sole-and-ankle
+
 - https://github.com/hchiam/scrollburglars
 
 - `100vh` isn't always 100% of viewport for mobile because of scrolling and browsers trying to avoid flickering issues (for mobile, `100vh` is currently set to the largest possible height, like when the URL and bottom buttons slide away when you scroll). Instead of `100vh`, use `height: 100%` on `html` and on `body`.
