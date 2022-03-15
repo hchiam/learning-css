@@ -888,6 +888,13 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   ```
 
+- pros/cons of **responsive** versus **fluid** design:
+
+  |     | **responsive** approach | **fluid** approach |
+  | --- | ----------------------- | ------------------ |
+  | pro | semantic grouping, totally different/unrelated styles for different sizes | "smooth" transitions, responds to containers/context                                        |
+  | con | "choppy" transitions, "global" window media queries only (can't respond to container queries unless the newest CSS features are supported) | harder to understand intent just from reading the code (must intuit test cases with a working example), harder to group/control unrelated things or have totally different/unrelated styles for different sizes |
+
 - font size that intelligently scales with screen width:
 
   ```css
