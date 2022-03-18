@@ -938,3 +938,29 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     min-height: 0vh; /* so Safari behaves consistently with other browsers */
   }
   ```
+
+- 3 `<img>` priorities (choose 2 out of the 3):
+  - maintaining aspect ratio (no distortion)
+  - showing entire image (no clipping)
+  - filling available space (no gaps around)
+
+- hard-coding the width _and_ height of an `<img>` at the same time can easily distort the aspect ratio. But CSS `object-fit` gives us other options, with different priorities (choose 2 out of the 3):
+
+  | strategy  | aspect ratio | un-clipped             | fills space                 |
+  | --------- | ------------ | ---------------------- | --------------------------- |
+  | fill      | **no**       | YES                    | YES                         |
+  | contain   | YES          | YES                    | **no** (can have side gaps) |
+  | **cover** | YES          | **no** (scaled)        | YES                         |
+  | none      | YES          | **no** (_un_-scaled)   | YES                         |
+
+- `object-position` can be used with `object-fit: cover` or `object-fit: none` to position the `<img>` with a left-top offset
+  - (`object-position` _**won't**_ work with `object-fit: fill` nor `object-fit: contain`)
+
+  ```css
+  img {
+    width: 100%; /* span full screen width */
+    min-height: 70px; /* allow shrinking down to a certain min height */
+    object-fit: cover; /* maintain aspect ratio, fill space, but clip as needed */
+    object-position: left center; /* anchor at horizontal left, vertical center */
+  }
+  ```
