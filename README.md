@@ -964,3 +964,6 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     object-position: left center; /* anchor at horizontal left, vertical center */
   }
   ```
+
+- `display-flex-parent > img` = bad, `display-flex-parent > div > img` = good:
+  - `<img>` tags will grow/not-grow in weird ways when they're a direct child of a `display: flex` container, so instead prefer treating `<img>` as content (and set `img {width: 100%;}`) and wrapping it in a divider like `<div><img></div>`, itself inside of the `display: flex` container so the flexbox styles get applied to the `<div>` wrapper instead, to behave more like how you'd expect
