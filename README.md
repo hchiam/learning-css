@@ -960,7 +960,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
   ```html
   <!-- multiple sources and multiple responsive resolutions: -->
-  
+
   <!-- NOTE: the order of <source> tags matters for fallbacks! -->
   <!-- NOTE: <img> also included for IE -->
   <!-- the <picture> tag will act as a inline <span> (or block wrapper in IE) -->
@@ -989,6 +989,22 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   </picture>
   ```
 
+  or if you're using `background-image` instead:
+
+  ```css
+  body {
+    --width: var(--width-of-standard-1x-image);
+    background-image: url('image.png'); /* @1x */
+    background-size: var(--width) var(--height); /* to avoid native image size */
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    background-image: url('image@2x.png');
+  }
+  @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+    background-image: url('image@3x.png');
+  }
+  ```
+
 - 3 `<img>` priorities (choose 2 out of the 3):
   - maintaining aspect ratio (no distortion)
   - showing entire image (no clipping)
@@ -1015,8 +1031,10 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   ```
 
-- `object-fit` is like `background-size`
+- `object-fit` is like `background-size` (except `background-image` can tile with `background-repeat`)
 - `object-position` is like `background-position`
+
+- `background-repeat`: `repeat` (= repeats with truncation as needed), `repeat-x`, `repeat-y`, `no-repeat`, `round` (= resize to fit repeats without truncation), `space` (= add space between to fit repeats without truncation)
 
 - `aspect-ratio` fallback:
 
