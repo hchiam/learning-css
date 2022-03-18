@@ -967,5 +967,30 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   ```
 
+- `aspect-ratio` fallback:
+
+  ```scss
+  /* for browsers that don't support CSS aspect-ratio: */
+  .padding-hack-container {
+    --ratio-of-height-to-width: 100%; /* 50% means width:height = 2:1 or 2/1 */
+    height: 0;
+    padding-bottom: var(--ratio-of-height-to-width);
+    position: relative;
+    img {
+      position: absolute; /* so the contained img isn't 0 height */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  /*
+  - 0 height means padding-bottom is contributing to height
+  - padding percents are always relative to width (to avoid infinite calc loops?)
+    - so padding-bottom in this case is ratio of height to width
+  */
+  ```
+
 - `display-flex-parent > img` = bad, `display-flex-parent > div > img` = good:
   - `<img>` tags will grow/not-grow in weird ways when they're a direct child of a `display: flex` container, so instead prefer treating `<img>` as content (and set `img {width: 100%;}`) and wrapping it in a divider like `<div><img></div>`, itself inside of the `display: flex` container so the flexbox styles get applied to the `<div>` wrapper instead, to behave more like how you'd expect
