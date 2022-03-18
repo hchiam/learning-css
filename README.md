@@ -967,6 +967,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   ```
 
+- `object-fit` is like `background-size`
+- `object-position` is like `background-position`
+
 - `aspect-ratio` fallback:
 
   ```scss
