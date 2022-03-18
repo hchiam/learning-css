@@ -941,6 +941,54 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   ```
 
+- to support multiple screen resolutions:
+
+  ```html
+  <!-- only one file type for multiple screen resolutions: -->
+  <img
+    alt=""
+    src="fallback_for_IE.png"
+    srcset="
+      modern.png 1x,
+      modern@2x.png 2x,
+      modern@3x.png 3x
+    "
+  />
+  ```
+
+  or if to support multiple image file types _**and**_ resolutions:
+
+  ```html
+  <!-- multiple sources and multiple responsive resolutions: -->
+  
+  <!-- NOTE: the order of <source> tags matters for fallbacks! -->
+  <!-- NOTE: <img> also included for IE -->
+  <!-- the <picture> tag will act as a inline <span> (or block wrapper in IE) -->
+  <picture>
+    <source
+      type="image/avif"
+      srcset="
+        modern.avif 1x,
+        modern@2x.avif 2x,
+        modern@3x.avif 3x
+      "
+    />
+    <source
+      type="image/png"
+      srcset="
+        modern.png 1x,
+        modern@2x.png 2x,
+        modern@3x.png 3x
+      "
+    />
+    <!-- <source> tags are invisible and act to swap the src attribute below: -->
+    <img
+      alt=""
+      src="fallback_for_IE.png"
+    />
+  </picture>
+  ```
+
 - 3 `<img>` priorities (choose 2 out of the 3):
   - maintaining aspect ratio (no distortion)
   - showing entire image (no clipping)
