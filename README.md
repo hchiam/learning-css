@@ -765,6 +765,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - `flex-wrap: wrap-reverse` wraps "upwards" (as opposed to `flex-wrap: wrap` wrapping "downwards" in the normal reading direction).
 - `flex`'s `order` and `flex-wrap: wrap-reverse` are good backups if you can't use CSS grid
 
+- `gap` can take 2 values: `gap: <row-gap> <column-gap>;`
+
 - fixed/absolute positioned layout overrides/ignores other layouts like flex
   - this means that when you apply both `flex` (from parent) and `position:fixed` (on the element itself), the element will ignore `justify-content`, etc.
 
