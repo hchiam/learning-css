@@ -964,6 +964,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   <!-- NOTE: the order of <source> tags matters for fallbacks! -->
   <!-- NOTE: <img> also included for IE -->
   <!-- the <picture> tag will act as a inline <span> (or block wrapper in IE) -->
+  <!-- consider build to generate images: https://www.npmjs.com/package/avif -->
   <picture>
     <source
       type="image/avif"
