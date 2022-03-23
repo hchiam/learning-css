@@ -1077,6 +1077,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
       
       hyphens: auto;
       -webkit-hyphens: auto; /* Safari */
+      /* note: Firefox doesn't support hyphenation on Capitalized Words */
     }
     ```
 
