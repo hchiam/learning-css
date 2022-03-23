@@ -1092,10 +1092,11 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - or if you want to have ellipses on a specific line for a multi-line-wrapping text (and don't need to support IE):
 
   ```css
-  .truncate-multi-line-wrapping-text-at-3rd-line {
+  .truncate-multi-line-wrapping-text-starting-at-3rd-line {
     display: -webkit-box; /* works as a child of a flow layout parent */
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+    overflow: hidden;
   }
   /* wrap it in a div to avoid being a child of a display:flex parent */
   /* wrap it in a div to avoid being a child of a display:grid parent */
