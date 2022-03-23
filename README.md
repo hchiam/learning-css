@@ -1064,3 +1064,52 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - `display-flex-parent > img` = bad, `display-flex-parent > div > img` = good:
   - `<img>` tags will grow/not-grow in weird ways when they're a direct child of a `display: flex` container, so instead prefer treating `<img>` as content (and set `img {width: 100%;}`) and wrapping it in a divider like `<div><img></div>`, itself inside of the `display: flex` container so the flexbox styles get applied to the `<div>` wrapper instead, to behave more like how you'd expect
+
+- text wrap: by default breaks on spaces and dashes (but really-long words overflow)
+  - you can _prevent_ overflow on spaces with `&nbsp;`
+  - `overflow-wrap: break-word; word-wrap: break-word;` lets you break words that cause overflow
+    - and when that happens, you can add `hyphens: auto; -webkit-hyphens: auto;` to add (non-selectable) hyphens at the splits (when you set `<html lang="en">`):
+
+    ```css
+    .wrap-text-better {
+      overflow-wrap: break-word;
+      word-wrap: break-word; /* IE */
+      
+      hyphens: auto;
+      -webkit-hyphens: auto; /* Safari */
+    }
+    ```
+
+  - or if you want text to cut off, replace `hyphens` with `overflow: hidden; text-overflow: ellipsis;`:
+
+  ```css
+  .truncate-long-words-instead-of-using-overflow-wrap {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  ```
+
+  - or if you want to have ellipses on a specific line for a multi-line-wrapping text (and don't need to support IE):
+
+  ```css
+  .truncate-multi-line-wrapping-text-at-3rd-line {
+    display: -webkit-box; /* works as a child of a flow layout parent */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  /* wrap it in a div to avoid being a child of a display:flex parent */
+  /* wrap it in a div to avoid being a child of a display:grid parent */
+  ```
+
+  - or if you want to avoid wrapping altogether and all users will be OK with truncated text (e.g. accessibility, or whether important info at the end can be shown):
+
+  ```css
+  .truncate-one-liner-text-with-no-wrapping {
+    white-space: nowrap; /* 1: don't wrap; don't calculate line breaks */
+    max-width: 100px; /* 2: when to trigger element overflow */
+    overflow: hidden; /* 2: how to handle element overflow */
+    text-overflow: ellipsis; /* 3: how to handle text overflow */
+  }
+  ```
+
+- the browser calculates line breaks _before_ deciding what to do about overflow
