@@ -1118,6 +1118,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - there's another layout mode: "multi-column layout", like a book or page with multiple columns like in a Word doc, but it doesn't get its own `display` name:
 
+  https://codepen.io/hchiam/pen/zYpdOXz
+
   ```scss
   .multi-column-layout {
     /* columns: 2 300px; */
