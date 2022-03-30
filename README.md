@@ -1129,3 +1129,13 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     break-inside: avoid; /* to avoid splitting up a paragraph across columns */
   }
   ```
+
+- there's also float layout mode: it feels like an outdated mode, but there are things that only `float` can do. It acts like a rock in a river:
+
+  ```css
+  .floated-element {
+    float: left; /* other stuff will go to my right */
+    /* and float-ed elements don't have margin by default, so: */
+    margin-right: 1rem; /* between me and other stuff to my right */
+  }
+  ```
