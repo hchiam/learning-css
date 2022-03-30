@@ -1127,6 +1127,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
       margin-bottom: 1rem;
       break-inside: avoid; /* to avoid splitting up a paragraph across columns */
       text-indent: 2rem; /* to indent paragraphs like in a novel */
+      /* text-align: justify; if narrow then don't justify, otherwise weird spacing or over-hyphenated */
     }
   }
   ```
