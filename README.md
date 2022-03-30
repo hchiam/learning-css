@@ -1118,15 +1118,15 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - there's another layout mode: "multi-column layout", like a book or page with multiple columns like in a Word doc, but it doesn't get its own `display` name:
 
-  ```css
+  ```scss
   .multi-column-layout {
     columns: 2;
     column-gap: 1rem;
     padding: 1rem;
-  }
-  .multi-column-layout p {
-    margin-bottom: 1rem;
-    break-inside: avoid; /* to avoid splitting up a paragraph across columns */
+    p {
+      margin-bottom: 1rem;
+      break-inside: avoid; /* to avoid splitting up a paragraph across columns */
+    }
   }
   ```
 
