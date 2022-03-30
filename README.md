@@ -1120,7 +1120,10 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
   ```scss
   .multi-column-layout {
-    columns: 2;
+    /* columns: 2 300px; */
+    --max-columns: 2;
+    --min-column-width: 300px;
+    columns: var(--max-columns) var(--min-column-width);
     column-gap: 1rem;
     padding: 1rem;
     p {
