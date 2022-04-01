@@ -566,7 +566,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - colour-blindness: built-in DevTools in Chrome and in Firefox let you easily simulate different types of colour vision: red and yellow are a good pair of colours if you really can't use non-colour ways to distinguish items (differently dashed lines? or arrows pointing to the lines in the graph?)
 
 - you can disable animations inside `@media (prefers-reduced-motion: reduce)`
-- but this is better: `@media (prefers-reduced-motion: no-preference)`: animations off by default, users enable animations, and browsers without support don't animate (good accessibility):
+- but this is better: `@media (prefers-reduced-motion: no-preference)`: animations off by default, users enable animations, and browsers without support for this media query don't animate (good accessibility):
 
   ```css
   @media (prefers-reduced-motion: no-preference) {
