@@ -1170,3 +1170,5 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   ```
 
 - `:last-of-type` (and any variant of it) actually filters by last of _HTML tag_ type, so it ignores class names: so `.some-class:last-of-type` won't actually get the last of `.some-class`, and `p:nth-last-of-type(1)` works but only gets the last `<p>` tag amongst its immediate siblings
+
+- `-webkit` prefixes exist in non-Safari browsers, for example, Chrome forked a core component of WebKit
