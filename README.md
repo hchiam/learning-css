@@ -576,6 +576,24 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   ```
 
+  ```css
+  /* this code snippet is an example pattern for motion-safe fallback animation: */
+
+  @keyframes fade-in { /* still get attention subtly but without motion */ }
+  @keyframes slide-in { /* use motion to direct attention */ }
+  .important-element {
+    animation: fade-in 0.5s; /* safe fallback that's still helpful */
+    animation-delay: 1s;
+  }
+  /* prevent motion if the user requests reduced motion: */
+  /* prevent motion if browser doesn't support checking, just to be safe: */
+  @media (prefers-reduced-motion: no-preference) {
+    .important-element {
+      animation-name: slide-in;
+    }
+  }
+  ```
+
 - mnemonic: "prefer `no-preference` for `prefers-reduced-motion`"
 - in JS, we can get this value too:
 
