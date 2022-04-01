@@ -355,6 +355,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - more easily style-able dropdown that also makes use of native `select` cross-compatible usability: https://codepen.io/hchiam/pen/OJOwrdX
 
+- auto-increase click target size with just CSS and then adding a `.click-target-helper` class to elements you want to apply it to: https://codepen.io/hchiam/pen/mdpBpme
+
 - https://github.com/hchiam/mini-component-library
 
 - https://github.com/hchiam/sole-and-ankle and https://github.com/hchiam/sole-and-ankle-revisited
