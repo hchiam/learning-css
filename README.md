@@ -595,6 +595,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   // mediaQueryList.removeListener(listener);
   ```
 
+  - and here's a [React](https://github.com/hchiam/learning-reactjs) hook version: https://www.joshwcomeau.com/react/prefers-reduced-motion/#the-hook
+
 - you can use [`as="someOtherTagName"`](https://styled-components.com/docs/api#as-polymorphic-prop) to make a styled-component have a different underlying tag:
   ```jsx
   import { Link } from 'react-router-dom';
