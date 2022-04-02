@@ -357,6 +357,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - auto-increase click target size with just CSS and then adding a `.click-target-helper` class to elements you want to apply it to: https://codepen.io/hchiam/pen/mdpBpme (or just use a `::after` element with `position: absolute;` and a negative `inset` or negative `top`, `right`, `bottom`, `left` values to increase the tap target area without affecting layout! - just make sure the button can have `position: relative;`)
 
+- Simulated Stylable Select (CSS + JS): https://codepen.io/hchiam/pen/wvprLpV
+
 - https://github.com/hchiam/mini-component-library
 
 - https://github.com/hchiam/sole-and-ankle and https://github.com/hchiam/sole-and-ankle-revisited
