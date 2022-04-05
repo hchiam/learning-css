@@ -1176,3 +1176,21 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - `-webkit` prefixes exist in non-Safari browsers, for example, Chrome forked a core component of WebKit
 
 - you might want to use `user-select: none;` to disable mobile from selecting text on a button you clicked
+
+- system font stack = no network request, no font flash, wide language coverage, works across OSs/systems/platforms, and matches user device conventions: https://systemfontstack.com
+
+  ```css
+  html {
+    --sans-serif-font-stack: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+
+    --serif-font-stack: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+    --monospace-font-stack: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; 
+
+    font-family: var(--sans-serif-font-stack);
+  }
+
+  .different-font-as-needed {
+    font-family: var(--serif-font-stack);
+  }
+  ```
