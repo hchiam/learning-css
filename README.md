@@ -1194,3 +1194,64 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     font-family: var(--serif-font-stack);
   }
   ```
+
+- Google Fonts web font example:
+
+  ```html
+  <head>
+    <!-- ... -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+    <!-- ... -->
+  </head>
+  ```
+
+  ```css
+  .using-google-web-font {
+    font-family: 'Open Sans', sans-serif;
+    /* helpful convention: 'Quotes For Web Fonts' and no-quotes-for-local-fonts */
+  }
+  ```
+
+- or self-host fonts for speed with https://fontsource.org
+
+  ```sh
+  yarn add @fontsource/open-sans # npm install @fontsource/open-sans
+  ```
+
+  ```jsx
+  // import in jsx:
+  import "@fontsource/open-sans"; // defaults to weight 400 normal variant
+  import "@fontsource/open-sans/500.css"; // weight 500
+  import "@fontsource/open-sans/900-italic.css"; // italic variant
+
+  import "@fontsource/cabin/variable-italic.css"; // variable weight italic font
+  ```
+
+  ```scss
+  // import in Sass/SCSS:
+  @import "~@fontsource/open-sans/index.css"; // defaults to weight 400 normal variant
+  @import "~@fontsource/open-sans/500.css"; // weight 500
+  @import "~@fontsource/open-sans/900-italic.css"; // italic variant
+
+  @import "~@fontsource/cabin/variable-italic.css"; // variable weight italic font
+  @include OpenSans.fontFaceVariable($weight: 500, $type: "wghtOnly");
+  ```
+
+  ```css
+  .using-self-hosted-font {
+    font-family: 'Open Sans', sans-serif;
+    /* helpful convention: 'Quotes For Web Fonts' and no-quotes-for-local-fonts */
+  }
+
+  .using-variable-self-hosted-font {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+  }
+  @supports (font-variation-settings: normal) {
+    ..using-variable-self-hosted-font {
+      font-family: 'CabinVariable';
+      font-variation-settings: 'wght' 400;
+    }
+  }
+  ```
