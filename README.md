@@ -1177,6 +1177,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - you might want to use `user-select: none;` to disable mobile from selecting text on a button you clicked
 
+- FOIT = Flash Of Invisible Text
+- FOUT = Flash Of Unstyled Text
+
 - system font stack = no network request, no font flash, wide language coverage, works across OSs/systems/platforms, and matches user device conventions: https://systemfontstack.com
 
   ```css
