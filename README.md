@@ -1199,7 +1199,6 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
   ```html
   <head>
-    <!-- ... -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
     <!-- ... -->
@@ -1254,4 +1253,25 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
       font-variation-settings: 'wght' 400;
     }
   }
+  ```
+
+- or manually create a font with a web font generator and then do:
+
+  ```html
+  <head>
+    <style>
+      /* inline to load fonts ASAP: */
+      @font-face {
+        font-family: 'Web Font Name';
+        src:
+          url('/fonts/Web_Font_Name-regular-italic.woff2') format('woff2'),
+          url('/fonts/Web_Font_Name-regular-italic.woff') format('woff');
+          /* put woff2 first since it's usually smaller */
+        font-weight: 400; /* each file usually only comes in one font weight */
+        font-style: normal;
+      }
+
+      /* and repeat for other files for different font weights */
+    </style>
+  </head>
   ```
