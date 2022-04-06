@@ -1282,6 +1282,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
         font-weight: 400; /* each file usually only comes in one font weight */
         font-style: normal;
         font-display: fallback;
+        unicode-range: U+000-5FF; /* Latin glyphs */
       }
 
       /* and repeat for other files for different font weights */
