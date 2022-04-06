@@ -1224,6 +1224,21 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   ```
 
+- or self-host fonts by getting the .woff2 file listed in the css2 code from the link above, which are optimized by doing things like sub-setting to `unicode-range`s:
+
+  ```css
+  /* don't need the <link>s anymore */
+  /* but download the .woff2 file and copy the css2 code to use the .woff2 file */
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback;
+    src: url(./local/self-hosted/path/to/filename.woff2) format('woff2');
+    unicode-range: U+000-5FF; /* Latin glyphs */
+  }
+  ```
+
 - or self-host fonts for speed with https://fontsource.org
 
   ```sh
