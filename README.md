@@ -1303,13 +1303,38 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
             url('/fonts/Web_Font_Name-regular-italic.woff2') format('woff2'),
             url('/fonts/Web_Font_Name-regular-italic.woff') format('woff');
             /* put woff2 first since it's usually smaller */
-          font-weight: 400; /* each file usually only comes in one font weight */
+          font-weight: 400; /* each non-variable font file only has one weight */
           font-style: normal;
           font-display: fallback;
           unicode-range: U+000-5FF; /* Latin glyphs */
         }
 
-        /* and repeat for other files for different font weights */
+        /* and repeat for other files for different font weights, */
+        /* OR define a variable font with a range of weights: */
+        @font-face {
+          font-family: 'Web Font Name';
+          src:
+            url('/fonts/Web_Font_Name-variable.woff2') format('woff2 supports variations'),
+            url('/fonts/Web_Font_Name-variable.woff') format('woff-variations');
+          font-weight: 300 1000; /* for 300-1000 inclusive */
+          font-style: normal;
+          font-display: fallback;
+          unicode-range: U+000-5FF; /* Latin glyphs */
+        }
+      </style>
+      <style>
+        /* then use it: */
+        .variable-font {
+          font-family: 'Web Font Name';
+          font-weight: 777;
+          font-variation-settings:
+            "slnt" -10; /* slant, and other things: wght, wdth, slnt, ital, opsz */
+            /* which correspond to font-weight, font-stretch, font-style with deg, ... */
+          font-variation-settings:
+            /* and custom-named axes/"levers" in UPPERCASE like: */
+            "CASL" 0.8, /* "casual" */
+            "CRSV" 1; /* "cursive" */
+        }
       </style>
     </head>
     ```
