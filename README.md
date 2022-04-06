@@ -1214,13 +1214,13 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     ```html
     <head>
       <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,600&display=fallback" rel="stylesheet">
 
       <!-- and for a variable font with ranges of weights for free (like SVG): -->
       <!-- for non-italic: 0,100..900 -->
       <!-- for italic:     1,100..900 -->
       <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=fallback" rel="stylesheet">
 
       <!-- ... -->
     </head>
