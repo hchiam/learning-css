@@ -1179,6 +1179,15 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - FOIT = Flash Of Invisible Text (showing no font until downloaded font)
 - FOUT = Flash Of Unstyled Text (showing fallback font until downloaded font)
+- handle FOIT/FOUT with `font-display`:
+  - `font-display: block;` to wait for critical font, like icon fonts (but avoid icon fonts).
+  - `font-display: optional;` for non-critical font for subtle enhancements, since it has a short block period, no swap period, and hence an early failure period.
+  - `font-display: swap;` to get any text showing ASAP, tho will swap as available - _including infinitely any time after the page loads_ (= might change font or cause layout shift seconds/minutes after page load).
+  - **PREFER** `font-display: fallback;` for smooth font loading UX: fast connections avoid FOUT, and slow connections avoid FOUT happening randomly while you're already using the page.
+    - and then you _could_ minimize layout shift with something like https://meowni.ca/font-style-matcher to generate CSS styles to smoothen the swap between 2 fonts (but requires some fancy logic to [remove those styles after fonts are loaded](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API)), but in future it could be easier with f-mods ("font descriptors") with overrides to add inside of `@font-face` rules, like:
+      - `size-adjust` (works like `font-size`)
+      - `ascent-override`/`descent-override` (which work like `line-height`)
+      - `advance-override` (which works like `letter-spacing`)
 
 - system font stack = no network request, no font flash, wide language coverage, works across OSs/systems/platforms, and matches user device conventions: https://systemfontstack.com
 
@@ -1251,7 +1260,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     font-weight: 400;
   }
   @supports (font-variation-settings: normal) {
-    ..using-variable-self-hosted-font {
+    .using-variable-self-hosted-font {
       font-family: 'CabinVariable';
       font-variation-settings: 'wght' 400;
     }
@@ -1272,6 +1281,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
           /* put woff2 first since it's usually smaller */
         font-weight: 400; /* each file usually only comes in one font weight */
         font-style: normal;
+        font-display: fallback;
       }
 
       /* and repeat for other files for different font weights */
