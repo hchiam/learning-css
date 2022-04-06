@@ -1207,100 +1207,102 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   ```
 
-- Google Fonts web font example:
+- web fonts notes:
 
-  ```html
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
-    <!-- ... -->
-  </head>
-  ```
+  - Google Fonts web font example:
 
-  ```css
-  .using-google-web-font {
-    font-family: 'Open Sans', sans-serif;
-    /* helpful convention: 'Quotes For Web Fonts' and no-quotes-for-local-fonts */
-  }
-  ```
+    ```html
+    <head>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+      <!-- ... -->
+    </head>
+    ```
 
-- or self-host fonts by getting the .woff2 file listed in the css2 code from the link above, which are optimized by doing things like sub-setting to `unicode-range`s:
-
-  ```css
-  /* don't need the <link>s anymore */
-  /* but download the .woff2 file and copy the css2 code to use the .woff2 file */
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-display: fallback;
-    src: url(./local/self-hosted/path/to/filename.woff2) format('woff2');
-    unicode-range: U+000-5FF; /* Latin glyphs */
-  }
-  ```
-
-- or self-host fonts for speed with https://fontsource.org
-
-  ```sh
-  yarn add @fontsource/open-sans # npm install @fontsource/open-sans
-  ```
-
-  ```jsx
-  // import in jsx:
-  import "@fontsource/open-sans"; // defaults to weight 400 normal variant
-  import "@fontsource/open-sans/500.css"; // weight 500
-  import "@fontsource/open-sans/900-italic.css"; // italic variant
-
-  import "@fontsource/cabin/variable-italic.css"; // variable weight italic font
-  ```
-
-  ```scss
-  // import in Sass/SCSS:
-  @import "~@fontsource/open-sans/index.css"; // defaults to weight 400 normal variant
-  @import "~@fontsource/open-sans/500.css"; // weight 500
-  @import "~@fontsource/open-sans/900-italic.css"; // italic variant
-
-  @import "~@fontsource/cabin/variable-italic.css"; // variable weight italic font
-  @include OpenSans.fontFaceVariable($weight: 500, $type: "wghtOnly");
-  ```
-
-  ```css
-  .using-self-hosted-font {
-    font-family: 'Open Sans', sans-serif;
-    /* helpful convention: 'Quotes For Web Fonts' and no-quotes-for-local-fonts */
-  }
-
-  .using-variable-self-hosted-font {
-    font-family: 'Cabin', sans-serif;
-    font-weight: 400;
-  }
-  @supports (font-variation-settings: normal) {
-    .using-variable-self-hosted-font {
-      font-family: 'CabinVariable';
-      font-variation-settings: 'wght' 400;
+    ```css
+    .using-google-web-font {
+      font-family: 'Open Sans', sans-serif;
+      /* helpful convention: 'Quotes For Web Fonts' and no-quotes-for-local-fonts */
     }
-  }
-  ```
+    ```
 
-- or manually create a font with a web font generator and then do:
+  - or self-host web fonts by getting the .woff2 file listed in the css2 code from the link above, which are optimized by doing things like sub-setting to `unicode-range`s:
 
-  ```html
-  <head>
-    <style>
-      /* inline to load fonts ASAP: */
-      @font-face {
-        font-family: 'Web Font Name';
-        src:
-          url('/fonts/Web_Font_Name-regular-italic.woff2') format('woff2'),
-          url('/fonts/Web_Font_Name-regular-italic.woff') format('woff');
-          /* put woff2 first since it's usually smaller */
-        font-weight: 400; /* each file usually only comes in one font weight */
-        font-style: normal;
-        font-display: fallback;
-        unicode-range: U+000-5FF; /* Latin glyphs */
+    ```css
+    /* don't need the <link>s anymore */
+    /* but download the .woff2 file and copy the css2 code to use the .woff2 file */
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-display: fallback;
+      src: url(./local/self-hosted/path/to/filename.woff2) format('woff2');
+      unicode-range: U+000-5FF; /* Latin glyphs */
+    }
+    ```
+
+  - or self-host web fonts with https://fontsource.org
+
+    ```sh
+    yarn add @fontsource/open-sans # npm install @fontsource/open-sans
+    ```
+
+    ```jsx
+    // import in jsx:
+    import "@fontsource/open-sans"; // defaults to weight 400 normal variant
+    import "@fontsource/open-sans/500.css"; // weight 500
+    import "@fontsource/open-sans/900-italic.css"; // italic variant
+
+    import "@fontsource/cabin/variable-italic.css"; // variable weight italic font
+    ```
+
+    ```scss
+    // import in Sass/SCSS:
+    @import "~@fontsource/open-sans/index.css"; // defaults to weight 400 normal variant
+    @import "~@fontsource/open-sans/500.css"; // weight 500
+    @import "~@fontsource/open-sans/900-italic.css"; // italic variant
+
+    @import "~@fontsource/cabin/variable-italic.css"; // variable weight italic font
+    @include OpenSans.fontFaceVariable($weight: 500, $type: "wghtOnly");
+    ```
+
+    ```css
+    .using-self-hosted-font {
+      font-family: 'Open Sans', sans-serif;
+      /* helpful convention: 'Quotes For Web Fonts' and no-quotes-for-local-fonts */
+    }
+
+    .using-variable-self-hosted-font {
+      font-family: 'Cabin', sans-serif;
+      font-weight: 400;
+    }
+    @supports (font-variation-settings: normal) {
+      .using-variable-self-hosted-font {
+        font-family: 'CabinVariable';
+        font-variation-settings: 'wght' 400;
       }
+    }
+    ```
 
-      /* and repeat for other files for different font weights */
-    </style>
-  </head>
-  ```
+  - or manually create a web font with a web font generator and then do:
+
+    ```html
+    <head>
+      <style>
+        /* inline to load fonts ASAP: */
+        @font-face {
+          font-family: 'Web Font Name';
+          src:
+            url('/fonts/Web_Font_Name-regular-italic.woff2') format('woff2'),
+            url('/fonts/Web_Font_Name-regular-italic.woff') format('woff');
+            /* put woff2 first since it's usually smaller */
+          font-weight: 400; /* each file usually only comes in one font weight */
+          font-style: normal;
+          font-display: fallback;
+          unicode-range: U+000-5FF; /* Latin glyphs */
+        }
+
+        /* and repeat for other files for different font weights */
+      </style>
+    </head>
+    ```
