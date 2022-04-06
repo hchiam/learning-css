@@ -1338,3 +1338,5 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
       </style>
     </head>
     ```
+  
+  - use variable fonts for a more expressive/polished look at no extra cost
