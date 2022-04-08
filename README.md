@@ -980,7 +980,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   />
   ```
 
-  or if to support multiple image file types _**and**_ resolutions:
+  or if to support multiple image file types _**and**_ resolutions: ([here's an example image fallback and optimizations for screen resolution and filetype support - hover over the `img` in Chrome DevTools and it'll tell you the actual file being used](https://github.com/hchiam/unsprinkle/commit/fb1ed7550d544fc7341b1bdf977219831c010ac7))
 
   ```html
   <!-- multiple sources and multiple responsive resolutions: -->
