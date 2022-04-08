@@ -1233,7 +1233,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     }
     ```
 
-  - or self-host web fonts by getting the .woff2 file listed in the css2 code from the link above, which are optimized by doing things like sub-setting to `unicode-range`s:
+  - or self-host web fonts by getting the .woff2 file (from Chrome Network tab, filtered by Font, opened in new tab to download the .woff2 file) and copying the relevant css2 code (from clicking the link above and can be used like the example code below), which are optimized by doing things like sub-setting to `unicode-range`s:
 
     ```css
     /* don't need the <link>s anymore */
@@ -1247,6 +1247,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
       unicode-range: U+000-5FF; /* Latin glyphs */
     }
     ```
+
+    - Example [Google-optimized but self-hosted variable web font](https://github.com/hchiam/unsprinkle/commit/7fe8cb9ed762dc3c471a0f2ae50404746e5e2174)
 
   - or self-host web fonts with https://fontsource.org
 
