@@ -63,12 +63,15 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     - don't add elements hidden underneath
     - paint deltas of bitmap rectangles
 - <https://www.slideshare.net/ysaw/html5-touch-interfaces-sxsw-extended-version>
+
   - touch: pinch: use CSS matrix transforms (instead of native pinch)
+
     - why:
       - to minimize DOM touches
       - to simplify transforms in the long run
     - how to use matrix transform to do pinch:
-      - get center of touch points as scale center, get scale factor → scale element (use `matrix` or hardware accelerate with `matrix3d`) and translateX = scalePoint * (newWidth - oldWidth) / newWidth
+
+      - get center of touch points as scale center, get scale factor → scale element (use `matrix` or hardware accelerate with `matrix3d`) and translateX = scalePoint \* (newWidth - oldWidth) / newWidth
       - nice: `transform: matrix(a, b, c, d, e, f);`
         - a = wider
         - d = taller
@@ -78,19 +81,21 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
         - f = move down
         - example: `transform: matrix(1, 0, 0, 1, 10, 10);`
       - EVEN BETTER: hardware acceleration with `transform: matrix3d`
+
         - example:
 
-          ```css
+          ```text
           transform: matrix3d(
               1,0,0,1,
               0,1,0,0,
               0,0,1,0,
               xOffset,yOffset,zOffset,1
-          ); 
+          );
           ```
 
         - example: <https://codepen.io/hchiam/pen/LYRQWOx>
         - btw, [matrix3d is faster than translate](https://stackoverflow.com/questions/23573621/why-is-css-matrix3d-rendered-faster-than-css-position)
+
 - Check/debug performance of animations/load/speed:
   - <https://developer.chrome.com/docs/devtools/evaluate-performance>
   - <https://www.debugbear.com/blog/devtools-performance#cpu-flame-chart>
@@ -101,14 +106,18 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - use hex instead of color names (color names have value decided by the browser)
   - remember print stylesheets: `<link rel="stylesheet" href="print.css" media="print" />`
 - <https://adamschwartz.co/magic-of-css>
+
   - box-sizing:
 
     ```css
-    html { /* for more intuitive widths and paddings: */
-        box-sizing: border-box
+    html {
+      /* for more intuitive widths and paddings: */
+      box-sizing: border-box;
     }
-    *, *::before, *::after {
-        box-sizing: inherit
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
     }
     ```
 
@@ -140,11 +149,12 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - you can use radio buttons + divs as accordions:
 
     ```css
-    .baffle{
-        height: 0;
+    .baffle {
+      height: 0;
     }
-    input[type="radio"]:checked + .baffle { /*when check radio!*/
-        height: 10em;
+    input[type="radio"]:checked + .baffle {
+      /*when check radio!*/
+      height: 10em;
     }
     ```
 
@@ -154,6 +164,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - big to small. top to bottom. main to details. visually grouped = mentally grouped. <https://moakgroup.com/2018/04/design-with-typography-on-your-mind>
   - improve things like business card or resume. SIZE! Colour! Different fonts! <https://visme.co/blog/visual-hierarchy>
 - <https://youtu.be/Qhaz36TZG5Y?t=263>
+
   - flexbox for lines → CSS grid for bigger picture
   - replace media queries with clamp:
 
@@ -161,7 +172,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     /* clamp isn't supported in IE */
     /* replace a bunch of media queries with clamp() */
     article {
-    width: clamp(200px, 50%, 600px);
+      width: clamp(200px, 50%, 600px);
     }
     ```
 
@@ -200,17 +211,18 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     but vary hue,
     and the colours will look like they go together: */
     .theme-one {
-    background: hsl(25, 50%, 50%);
+      background: hsl(25, 50%, 50%);
     }
     .theme-two {
-    background: hsl(50, 50%, 50%);
+      background: hsl(50, 50%, 50%);
     }
     .theme-three {
-    background: hsl(75, 50%, 50%);
+      background: hsl(75, 50%, 50%);
     }
     ```
 
 - <https://www.smashingmagazine.com/2018/05/guide-css-layout>
+
   - float
     - clear float
   - position: relative parent, absolute child
@@ -218,37 +230,43 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - display: none
   - display: contents = not the box but just its children
   - display: flex vs display: grid
+
     - display: flex = linear. think in terms of main axis and cross axis (can be reversed, so it’s different terms than for grid).
       - flex: flex-grow flex-shrink flex-basis = share-of-growth share-of-shrink start-size = 1 1 0 (for example)
     - display: grid = 2d. think in terms of inline axis and block axis.
+
       - grid-template-columns (and let grid to create rows as required) : 1fr 100px 2fr (for example).
       - grid-gap: 20px (for example).
       - .container > div:nth-child(3n) { grid-row-end: span 2; } = every 3rd div takes up 2 rows (but may only take up 1 column)
 
       ```css
       .item {
-          grid-column: 1 / 3; /* = start-line end-line */
-          grid-row: 1 / 3; /* = start-line end-line */
+        grid-column: 1 / 3; /* = start-line end-line */
+        grid-row: 1 / 3; /* = start-line end-line */
       } /* = spans 2 column tracks and 2 column rows = covers 4 grid cells */
       ```
 
       - grid items can occupy the same cells -> enables overlapping content in a grid
       - grid-template-areas (to show “map” of the grid layout) uses grid-area (which “name” elements used in the “map”)
+
 - more info on CSS Grid: <https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-row-to-control-spacing>
 - more info on CSS Flexbox: <https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox>
 - Responsive Design: <https://web.dev/learn/design/>
 - Keep [learning CSS](https://web.dev/learn/css/), including CSS selector specificity calculation: <https://web.dev/learn/css/specificity/#visualizing-specificity>
 - CSS `contain: content` for better performance: <https://github.com/hchiam/learning-css-contain>
 - CSS variables (AKA CSS custom properties) and `:root` in `@media` for cleaner globally reduced motion in 1 spot <https://codepen.io/hchiam/full/wvqEQob>
+
   - like a single source of truth (that can be locally overridden/inherited):
 
     ```css
-    @media (pointer: coarse) { /* media query --> responsive CSS variable! */
+    @media (pointer: coarse) {
+      /* media query --> responsive CSS variable! */
       html {
         --min-tap-height: 44px; /* no need to manage/customize everywhere! */
       }
     }
-    .some-button, .some-input {
+    .some-button,
+    .some-input {
       min-height: var(--min-tap-height, 32px);
     }
     ```
@@ -260,11 +278,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     body {
       --hue: 275deg;
       --intensity: 100% 50%;
-      
-      --my-color: hsl(
-        var(--hue)
-        var(--intensity)
-      );
+
+      --my-color: hsl(var(--hue) var(--intensity));
 
       --space: 8px;
       border-radius: calc(var(--space) / 2 + 2px);
@@ -303,7 +318,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - CSS variable fallback value: `var(--actions-width, 70px)`
   - don't forget `background-repeat`:
     ```css
-    background-image: url('..');
+    background-image: url("..");
     background-repeat: no-repeat;
     ```
   - vertical media queries exist:
@@ -319,6 +334,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - got layout shifts caused by scrollbar appearing? try `scrollbar-gutter: stable;` to always reserve space for the scrollbar gutter!
   - `auto-fit`: stretch to fit. `auto-fill`: fill the space with elements _or placeholder gaps_. I think I like `auto-fill` better for more cases.
 - HSL colour degree reference: (mnemonic: 0 30 60 100 200 300)
+
   - red: 0deg
   - orange: 30deg
   - yellow: 60deg
@@ -345,6 +361,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - `.max-width-wrapper`: https://codepen.io/hchiam/pen/dyVVLqN
 
 - `border-image-slice`:
+
   - `border-image-slice` [is how much of the corners of the border image to use for the border corners and the remaining middle edges of the image for the border edges - see the 9-part grid for a conceptual hint](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-slice)
 
   - here's an example on CodePen: https://codepen.io/hchiam/pen/YzEvpOr?editors=0100
@@ -368,13 +385,13 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - `100vh` isn't always 100% of viewport for mobile because of scrolling and browsers trying to avoid flickering issues (for mobile, `100vh` is currently set to the largest possible height, like when the URL and bottom buttons slide away when you scroll). Instead of `100vh`, use `height: 100%` on `html` and on `body`.
   - "`min-height: 100%` trick": `body` `height: 100%` and `main` `min-height: 100%` so that `main` can still grow to fit content inside of `main`
 - `100vw` has a similar problem: it doesn't include the scrollbar, which is fine on mobile (scrollbar "floats" and adds 0 space), but it's a problem on desktop, when the scrollbar takes up its own space, which depends on platform, and may then overflow.
-  - JS can get scrollbar width set by platform: `const scrollbarWidth =
-  window.innerWidth - document.documentElement.clientWidth;` (then use cssVariables.js to set up `--full-width: calc(100vw - var(--scrollbar-width));`)
+  - JS can get scrollbar width set by platform: `const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;` (then use cssVariables.js to set up `--full-width: calc(100vw - var(--scrollbar-width));`)
 - OR, consider always showing a scrollbar (`overflow-y: scroll;`), to avoid other problems like dynamic content overflowing and causing a scrollbar to be added later, and to avoid layout shift (which is bad UX and potentially bad perf too).
 - we can use `clamp` to set a min and max, but we can combine it with other things to enable things like setting _two_ max widths:
 
   ```css
-  .two-max-widths { /* max width of fixed 100px or dynamic 100%: */
+  .two-max-widths {
+    /* max width of fixed 100px or dynamic 100%: */
     width: clamp(10px, 10%, 100px);
     max-width: 100%;
   }
@@ -402,9 +419,11 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - `width` looks at parent
 
 - `margin: auto` works to center or push things away because `auto` is a "greedy" value, automatically consuming all the extra available space around the element
+
   - that's why `margin-block: auto` or `margin-inline: auto` trick helps center things
 
 - CSS margin collapse rules weirdness: https://codepen.io/hchiam/pen/WNZZqjo
+
   - (margin collapse applies to the default flow layout mode only (like `display:block`), since it made sense for documents, and so margin collapse doesn't happen for `display:flex` because it doesn't make sense)
   - overlapping inline-direction margins don't collapse, but
   - overlapping block-direction margins DO collapse, but only in the default flow layout (flow != flex), and only if there's no elements between them (nesting / a parent's closing tag doesn't count as blocking collapsing margins!), and no padding/border/height gap directly between (between siblings, or between parent/child depending on the side of the parent's border).
@@ -431,10 +450,17 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - set `isolation: isolate` on your React `#root` element so you can isolate the main content from any ["portal"](https://github.com/hchiam/learning-react-portals)ed modals (which get listed last in the DOM) and avoid fighting escalating `z-index` wars:
     ```html
     <div id="root" style="isolation: style;">
-      <header>This sticky content goes overtop main content but below modal.</header>
-      <main>Main content that could also have overlaid tooltips and cards.</main>
+      <header>
+        This sticky content goes overtop main content but below modal.
+      </header>
+      <main>
+        Main content that could also have overlaid tooltips and cards.
+      </main>
     </div>
-    <div>Some "portal"ed modal element that must always be above any content without knowing z-index values.</div>
+    <div>
+      Some "portal"ed modal element that must always be above any content
+      without knowing z-index values.
+    </div>
     ```
     Or use a library like [Reach UI](https://reach.tech/) to solve the stacking problem for you: swap `CustomLoginModal` for `ReachLoginModal` in https://codesandbox.io/s/stacking-contexts-global-contexts-zcjbt?file=/src/Header.js
 - CSS Stacking Context inspector:
@@ -465,6 +491,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - tip: always comment `overflow: hidden;` so future you remembers why. especially important since usually the reason for it isn't obvious from the code and has to do with elements that aren't expressed around that `overflow: hidden` declaration
 
 - warning: setting just `overflow-x: hidden` xor `overflow-y: hidden` triggers a scrollbar to show. you _can't_ clip overflow in one dimension while also allowing overflow in the other _without also_ triggering a scrollbar to show.
+
   - `overflow-x` and `overflow-y` can be used to hide and show scrollbars, but you can't make content overflow in only one dimension and clip in only one dimension
   - `overflow-x: visible` and `overflow-y: visible` = overflow, no scrollbars
   - `overflow-x: hidden` and `overflow-y: hidden` = clipped, no scollbars
@@ -472,11 +499,13 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - ancestor with both `position` and `overflow` will have its overflow scroll applied to `position: absolute` descendants, otherwise the `position: absolute` descendants won't "listen" to its scroll if it only has `overflow` i.e.;
 - `position: absolute` ignores parent `overflow: hidden` unless that same parent also has `position: relative`
+
   - why? you'd expect `position: absolute` elements to get ignored, but like in another note (look up), a `position: absolute` child gets contained by a `position`ed ancestor, so a parent with `overflow: hidden` needs `position` something for the child to "listen" to it
   - `position: fixed` ignores `overflow: hidden` even more!
   - a child only triggers overflow if that child is contained by the ancestor
 
 - a `position: sticky` child stays within its containing ancestor, so if its containing ancestor scrolls off-screen, then so does the `position: sticky` element
+
   - sticky elements stay within their containing ancestors: https://codepen.io/hchiam/pen/wvrpPOM
   - you can create a `sticky` header with a buffer using `padding-top` and negative `top`: https://codepen.io/hchiam/pen/XWeVVqO
 
@@ -486,11 +515,13 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - you can make a hole in visibility: children visible while their parents are invisible: ancestors can have `visibility: hidden` and descendants can have `visibility: visible` (this _**doesn't**_ work with other things like `display: none`, `opacity`, `aria-hidden="true"`)
 
 - consider making React components toggle screen-reader-only text visibility in dev mode: https://www.joshwcomeau.com/snippets/react-components/visually-hidden/
+
   - automatic translation services may not translate `aria-label`s, so you might have to use this solution (which also lets you bundle other related features)
 
 - note: `aria-hidden="true"` hides elements from screen readers, but doesn't remove it (nor descendants) from tabbing, so you also need to make it [`inert`](https://github.com/WICG/inert) (or `tabindex="-1"`)
 
 - **clean styling code:** regardless of styling tool, you can adjust your tactics to aim for the same conceptual strategies:
+
   - avoid **naming collisions** (which styles get applied?)
   - avoid **specificity unclear-ness** (which styles get applied?)
   - keep **styles strictly scoped** to an element (will I only style what I intended?)
@@ -500,6 +531,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     - [twin](https://github.com/ben-rogerson/twin.macro) is an interesting React alternative that combines Tailwind classes with styled-components and sass styling for things that don't have Tailwind classes
 
 - global styles:
+
   - CSS resets for cross-browser consistency
   - CSS resets to smooth out CSS quirks, `box-sizing: border-box`, etc.
   - set global defaults as fallbacks in case you forget to `import` the right component
@@ -523,14 +555,14 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     max-width: ${(props) => props.maxWidth};
     margin-inline: auto;
     padding-inline: 16px;
-    font-weight: ${(props) => props.someBoolean && 'bold'};
-      /* if false, it won't write this line; you won't get font-weight: false; */
+    font-weight: ${(props) => props.someBoolean && "bold"};
+    /* if false, it won't write this line; you won't get font-weight: false; */
   `;
 
   // ...
 
   import { createGlobalStyle } from "styled-components";
-  
+
   const GlobalStyles = createGlobalStyle`
     *, *::before, *::after {
       box-sizing: border-box;
@@ -549,21 +581,22 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   `;
   export default GlobalStyles;
   ```
-  
+
   - the `${}` can be interpolated even within a selector!
 
 - scroll indicator shadows implemented with pseudo elements + `sticky` overlay elements: https://codepen.io/hchiam/pen/gOGKzwB or see [scroll-indicator-shadow-overlay.scss](https://github.com/hchiam/learning-css/blob/main/scroll-indicator-shadow-overlay.scss) (as opposed to the background shadow technique https://codepen.io/hchiam/pen/bGEJweq)
 
 - improving animation performance: https://medium.com/@matthew.costello/frontend-web-performance-the-essentials-0-61fea500b180
+
   - change `left` (layout) to `background-position` (paint) to `transform` (composite) = fastest, but avoid overusing properties that would create too many composite layers to manage
   - use Chrome DevTools "Performance" tab > (record) > find red dropped "Frames" > see "Main" for things using up time like "Layout" or "Paint" or "Recalculate style" (which can point out things like "[Forced reflow](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing?utm_source=devtools#avoid-forced-synchronous-layouts) is a likely performance bottleneck")
   - use Chrome DevTools "Rendering" panel to highlight things that are causing repaints or layout shifts.
 
 - CSS `:target` fun: https://codepen.io/hchiam/pen/vYeaxRr
 
-- Gradient generator (no more grey transition middle!): https://www.joshwcomeau.com/gradient-generator (basically ["generate a bunch of midpoint colors using a custom color mode, and pass them all to our CSS gradient function. The CSS engine will use RGB interpolation, but it won't affect the final result (at least, not by enough for it to be perceptible to humans)"](https://www.joshwcomeau.com/css/make-beautiful-gradients/#:~:text=generate%20a%20bunch%20of%20midpoint%20colors%20using%20a%20custom%20color%20mode%2C%20and%20pass%20them%20all%20to%20our%20css%20gradient%20function.%20the%20css%20engine%20will%20use%20rgb%20interpolation%2C%20but%20it%20won't%20affect%20the%20final%20result%20(at%20least%2C%20not%20by%20enough%20for%20it%20to%20be%20perceptible%20to%20humans)))
+- Gradient generator (no more grey transition middle!): https://www.joshwcomeau.com/gradient-generator (basically ["generate a bunch of midpoint colors using a custom color mode, and pass them all to our CSS gradient function. The CSS engine will use RGB interpolation, but it won't affect the final result (at least, not by enough for it to be perceptible to humans)"](<https://www.joshwcomeau.com/css/make-beautiful-gradients/#:~:text=generate%20a%20bunch%20of%20midpoint%20colors%20using%20a%20custom%20color%20mode%2C%20and%20pass%20them%20all%20to%20our%20css%20gradient%20function.%20the%20css%20engine%20will%20use%20rgb%20interpolation%2C%20but%20it%20won't%20affect%20the%20final%20result%20(at%20least%2C%20not%20by%20enough%20for%20it%20to%20be%20perceptible%20to%20humans)>))
 
-- example of styled-components style composition: `SomeComposedStyle = styled(SomeBaseStyle)``;` instead of just `SomeBaseStyle = styled.button``;`
+- example of styled-components style composition: ` SomeComposedStyle = styled(SomeBaseStyle)``; ` instead of just ` SomeBaseStyle = styled.button``; `
 
 - contrast checker: https://webaim.org/resources/contrastchecker (useful in cases like comparing button background colour to page background colour, which DevTools currently can't check)
 
@@ -583,8 +616,12 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   ```css
   /* this code snippet is an example pattern for motion-safe fallback animation: */
 
-  @keyframes fade-in { /* still get attention subtly but without motion */ }
-  @keyframes slide-in { /* use motion to direct attention */ }
+  @keyframes fade-in {
+    /* still get attention subtly but without motion */
+  }
+  @keyframes slide-in {
+    /* use motion to direct attention */
+  }
   .important-element {
     animation: fade-in 0.5s; /* safe fallback that's still helpful */
     animation-delay: 1s;
@@ -602,17 +639,26 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - in JS, we can get this value too:
 
   ```js
-  const reduceMotionForPreferenceOrForOldBrowser = !window.matchMedia('(prefers-reduced-motion: no-preference)').matches; // note the "!"
+  const reduceMotionForPreferenceOrForOldBrowser = !window.matchMedia(
+    "(prefers-reduced-motion: no-preference)"
+  ).matches; // note the "!"
   ```
 
 - in JS, we can _watch_ this value too:
 
   ```js
-  const mediaQueryList = window.matchMedia('(prefers-reduced-motion: no-preference)');
+  const mediaQueryList = window.matchMedia(
+    "(prefers-reduced-motion: no-preference)"
+  );
   const listener = () => {
-    const reduceIt = !window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
-    console.log('reduce animation if old browser or explicitly preferred:', reduceIt);
-  }
+    const reduceIt = !window.matchMedia(
+      "(prefers-reduced-motion: no-preference)"
+    ).matches;
+    console.log(
+      "reduce animation if old browser or explicitly preferred:",
+      reduceIt
+    );
+  };
   mediaQueryList.addListener(listener);
   // mediaQueryList.removeListener(listener);
   ```
@@ -620,11 +666,12 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - and here's a [React](https://github.com/hchiam/learning-reactjs) hook version: https://www.joshwcomeau.com/react/prefers-reduced-motion/#the-hook
 
 - you can use [`as="someOtherTagName"`](https://styled-components.com/docs/api#as-polymorphic-prop) to make a styled-component have a different underlying tag:
+
   ```jsx
-  import { Link } from 'react-router-dom';
+  import { Link } from "react-router-dom";
   function Button({ href, children }) {
     return (
-      <Wrapper to={href} as={href ? Link : 'button'}>
+      <Wrapper to={href} as={href ? Link : "button"}>
         {children}
       </Wrapper>
     );
@@ -633,6 +680,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     /* ... */
   `;
   ```
+
   - If the component being imported (e.g. `Link` in the example above) is instead a styled-component, then make sure that the imported component has `({className})` and `<ComponentBeingImported style={styles} className={className}>`, so that styled-components can take its magically-generated class name from your `Wrapper` and inject it into your component being imported.
 
 - [You can refer to instances of styled-components within styled-components](https://styled-components.com/docs/advanced#referring-to-other-components) for "contextual styles" (or ["inverted control"/"inversion of control" nesting](https://www.joshwcomeau.com/css/styled-components/)):
@@ -641,7 +689,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   // NOT RECOMMENDED:
   // we COULD make a Link styled differently when inside of an Icon:
   const Icon = styled.svg`
-    & > ${Link} { /* Icon > Link */
+    & > ${Link} {
+      /* Icon > Link */
     }
   `;
 
@@ -649,19 +698,20 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   // instead keep styles related to Link in one spot (no memory/hunting needed):
   // (style Link differently when it's inside an Icon:)
   const Link = styled.svg`
-    ${Icon} > & { /* Icon > Link */
+    ${Icon} > & {
+      /* Icon > Link */
     }
   `;
 
   // but for one-off page stylings like for holidays, consider composition instead:
-  const HolidayLink = styled(Link)`
-  `;
+  const HolidayLink = styled(Link)``;
   // to avoids perf cost of importing an entire page as context per component
   ```
 
   - you can do ["inverted control"/"inversion of control" nesting](https://www.joshwcomeau.com/css/styled-components/) in [SASS/SCSS](https://github.com/hchiam/learning-sass) too, but styled-components helps automate scoping/collision/specificity across files.
 
 - components tips with styled-components:
+
   - core variant options = limited few props (or CSS variables for rapid-change perf)
   - "one-off" variants: do composition with `styled(BaseComponent)`
   - component-within-component contextual styles:
@@ -670,18 +720,18 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - ```jsx
   // use ThemeProvider as a React context to wrap children so they get theme in props, instead of you importing in each child's file:
-  import { ThemeProvider } from 'styled-components';
-  import { BREAKPOINTS } from '../../constants';
+  import { ThemeProvider } from "styled-components";
+  import { BREAKPOINTS } from "../../constants";
   function App() {
     return (
       <ThemeProvider theme={{ breakpoints: BREAKPOINTS }}>
         {/* children */}
       </ThemeProvider>
-    )
+    );
   }
   // ... and now in another file, you don't have to import BREAKPOINTS everywhere, and instead use props.theme:
   const SomeChildInAnotherFile = styled.div`
-    @media ${props => props.theme.breakpoints.tabletAndUp} {
+    @media ${(props) => props.theme.breakpoints.tabletAndUp} {
       // ...
     }
   `;
@@ -699,6 +749,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - `display: flex` sets its _children_ to a `flex` layout mode, so a child with `display: block` will still instead behave in a `flex` layout mode, and the element itself will use flow layout.
 - note: `flex` children don't like to have content like text overflow out of them, unless you force them with a `width` intentionally smaller than the min content width
+
   - but if you use both `flex-basis` and `width`, then `flex-basis` will get used.
   - and if you use both `flex` and `width`, then `flex-basis` will be set by `flex` and ignores `width`.
 
@@ -751,7 +802,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 .wrapper {
   display: flex;
 }
-.left, .right {
+.left,
+.right {
   min-width: 100px;
   max-width: 200px;
   flex: 0 1000 200px; /* 
@@ -824,17 +876,20 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - you can "paint by colour" with CSS [`grid-template`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template) while also setting `row / column` sizes:
 
   ```css
-  grid-template: 
-      "a a ." minmax(50px, auto)
-      "a a ." 80px
-      "b b c" auto / 1fr 1fr 5fr; /* / column widths on last line, like x-axis labels */
+  grid-template:
+    "a a ." minmax(50px, auto)
+    "a a ." 80px
+    "b b c" auto / 1fr 1fr 5fr; /* / column widths on last line, like x-axis labels */
   ```
 
 - but you might want to only use `grid-template-columns`, for the reason in the next point:
 
   ```css
   .parent {
-    grid-template-columns: repeat(2, 1fr); /* can't use repeat() in grid-template */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* can't use repeat() in grid-template */
     /* grid-template-rows: dynamically add rows and shrink height, not fixed height */
   }
   .child {
@@ -882,21 +937,24 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - pick breakpoints that are _between_ likely screen widths, instead of right at the boundaries of likely screen widths:
 
   ```css
-  /* mobile by default (if your is better with desktop by default, then reverse the order below and use max-width instead) */  
+  /* mobile by default (if your is better with desktop by default, then reverse the order below and use max-width instead) */
 
   /* (add 350px breakpoint if you must distinguish "small"/"large" mobile) */
 
-  @media (min-width: 550px) { /* or 550/16 rem to cover user font size */
+  @media (min-width: 550px) {
+    /* or 550/16 rem to cover user font size */
     /* tablet */
     /* (550px is to the left but spaced away from likely tablet sizes) */
   }
 
-  @media (min-width: 1100px) { /* or 1100/16 rem to cover user font size */
+  @media (min-width: 1100px) {
+    /* or 1100/16 rem to cover user font size */
     /* laptop */
     /* (1100px is to the left but spaced away from likely laptop sizes) */
   }
 
-  @media (min-width: 1500px) { /* or 1500/16 rem to cover user font size */
+  @media (min-width: 1500px) {
+    /* or 1500/16 rem to cover user font size */
     /* desktop */
     /* (1500px is to the left but spaced away from likely desktop sizes) */
   }
@@ -934,9 +992,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - pros/cons of **responsive** versus **fluid** design:
 
-  |      | **responsive** approach | **fluid** approach |
-  | ---- | ----------------------- | ------------------ |
-  | pros | semantic grouping, totally different/unrelated styles for different sizes | "smooth" transitions, responds to containers/context                                        |
+  |      | **responsive** approach                                                                                                                    | **fluid** approach                                                                                                                                                                                              |
+  | ---- | ------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | pros | semantic grouping, totally different/unrelated styles for different sizes                                                                  | "smooth" transitions, responds to containers/context                                                                                                                                                            |
   | cons | "choppy" transitions, "global" window media queries only (can't respond to container queries unless the newest CSS features are supported) | harder to understand intent just from reading the code (must intuit test cases with a working example), harder to group/control unrelated things or have totally different/unrelated styles for different sizes |
 
 - font size that intelligently scales with screen width:
@@ -966,7 +1024,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
     --growth-rate: 4vw; /* also responds to screen width */
     --earlier-offset: 1rem; /* also responds to user font size setting */
-        /* --earlier-offset >= 1rem or <= -1rem so user can scale with font size settings */
+    /* --earlier-offset >= 1rem or <= -1rem so user can scale with font size settings */
 
     font-size: clamp(
       var(--min-font-size),
@@ -984,11 +1042,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   <img
     alt=""
     src="fallback_for_IE.png"
-    srcset="
-      modern.png 1x,
-      modern@2x.png 2x,
-      modern@3x.png 3x
-    "
+    srcset="modern.png 1x, modern@2x.png 2x, modern@3x.png 3x"
   />
   ```
 
@@ -1004,25 +1058,14 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   <picture>
     <source
       type="image/avif"
-      srcset="
-        modern.avif 1x,
-        modern@2x.avif 2x,
-        modern@3x.avif 3x
-      "
+      srcset="modern.avif 1x, modern@2x.avif 2x, modern@3x.avif 3x"
     />
     <source
       type="image/png"
-      srcset="
-        modern.png 1x,
-        modern@2x.png 2x,
-        modern@3x.png 3x
-      "
+      srcset="modern.png 1x, modern@2x.png 2x, modern@3x.png 3x"
     />
     <!-- <source> tags are invisible and act to swap the src attribute below: -->
-    <img
-      alt=""
-      src="fallback_for_IE.png"
-    />
+    <img alt="" src="fallback_for_IE.png" />
   </picture>
   ```
 
@@ -1031,32 +1074,34 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   ```css
   body {
     --width: var(--width-of-standard-1x-image);
-    background-image: url('image.png'); /* @1x */
+    background-image: url("image.png"); /* @1x */
     background-size: var(--width) var(--height); /* to avoid native image size */
   }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-    background-image: url('image@2x.png');
+    background-image: url("image@2x.png");
   }
   @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
-    background-image: url('image@3x.png');
+    background-image: url("image@3x.png");
   }
   ```
 
 - 3 `<img>` priorities (choose 2 out of the 3):
+
   - maintaining aspect ratio (no distortion)
   - showing entire image (no clipping)
   - filling available space (no gaps around)
 
 - hard-coding the width _and_ height of an `<img>` at the same time can easily distort the aspect ratio. But CSS `object-fit` gives us other options, with different priorities (choose 2 out of the 3):
 
-  | strategy  | aspect ratio | un-clipped             | fills space                 |
-  | --------- | ------------ | ---------------------- | --------------------------- |
-  | fill      | **no**       | YES                    | YES                         |
-  | contain   | YES          | YES                    | **no** (can have side gaps) |
-  | **cover** | YES          | **no** (scaled)        | YES                         |
-  | none      | YES          | **no** (_un_-scaled)   | YES                         |
+  | strategy  | aspect ratio | un-clipped           | fills space                 |
+  | --------- | ------------ | -------------------- | --------------------------- |
+  | fill      | **no**       | YES                  | YES                         |
+  | contain   | YES          | YES                  | **no** (can have side gaps) |
+  | **cover** | YES          | **no** (scaled)      | YES                         |
+  | none      | YES          | **no** (_un_-scaled) | YES                         |
 
 - `object-position` can be used with `object-fit: cover` or `object-fit: none` to position the `<img>` with a left-top offset
+
   - (`object-position` _**won't**_ work with `object-fit: fill` nor `object-fit: contain`)
 
   ```css
@@ -1099,18 +1144,21 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   ```
 
 - `display-flex-parent > img` = bad, `display-flex-parent > div > img` = good:
+
   - `<img>` tags will grow/not-grow in weird ways when they're a direct child of a `display: flex` container, so instead prefer treating `<img>` as content (and set `img {width: 100%;}`) and wrapping it in a divider like `<div><img></div>`, itself inside of the `display: flex` container so the flexbox styles get applied to the `<div>` wrapper instead, to behave more like how you'd expect
 
 - text wrap: by default breaks on spaces and dashes (but really-long words overflow)
+
   - you can _prevent_ overflow on spaces with `&nbsp;`
   - `overflow-wrap: break-word; word-wrap: break-word;` lets you break words that cause overflow
+
     - and when that happens, you can add `hyphens: auto; -webkit-hyphens: auto;` to add (non-selectable) hyphens at the splits (when you set `<html lang="en">`):
 
     ```css
     .wrap-text-better {
       overflow-wrap: break-word;
       word-wrap: break-word; /* IE */
-      
+
       hyphens: auto;
       -webkit-hyphens: auto; /* Safari */
       /* note: Firefox doesn't support hyphenation on Capitalized Words */
@@ -1192,6 +1240,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - FOIT = Flash Of Invisible Text (showing no font until downloaded font)
 - FOUT = Flash Of Unstyled Text (showing fallback font until downloaded font)
 - handle FOIT/FOUT with `font-display`:
+
   - `font-display: block;` to wait for critical font, like icon fonts (but avoid icon fonts).
   - `font-display: optional;` for non-critical font for subtle enhancements, since it has a short block period, no swap period, and hence an early failure period.
   - `font-display: swap;` to get any text showing ASAP, tho will swap as available - _including infinitely any time after the page loads_ (= might change font or cause layout shift seconds/minutes after page load).
@@ -1205,11 +1254,15 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
   ```css
   html {
-    --sans-serif-font-stack: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+    --sans-serif-font-stack: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+      segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 
-    --serif-font-stack: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    --serif-font-stack: Iowan Old Style, Apple Garamond, Baskerville,
+      Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color
+        Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
-    --monospace-font-stack: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; 
+    --monospace-font-stack: Menlo, Consolas, Monaco, Liberation Mono, Lucida
+        Console, monospace;
 
     font-family: var(--sans-serif-font-stack);
   }
@@ -1225,14 +1278,20 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
     ```html
     <head>
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,600&display=fallback" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,600&display=fallback"
+        rel="stylesheet"
+      />
 
       <!-- and for a variable font with ranges of weights for free (like SVG): -->
       <!-- for non-italic: 0,100..900 -->
       <!-- for italic:     1,100..900 -->
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=fallback" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=fallback"
+        rel="stylesheet"
+      />
 
       <!-- ... -->
     </head>
@@ -1240,7 +1299,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
     ```css
     .using-google-web-font {
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Open Sans", sans-serif;
       /* helpful convention: 'Quotes For Web Fonts' and no-quotes-for-local-fonts */
     }
     ```
@@ -1251,11 +1310,11 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     /* don't need the <link>s anymore */
     /* but download the .woff2 file and copy the css2 code to use the .woff2 file */
     @font-face {
-      font-family: 'Open Sans';
+      font-family: "Open Sans";
       font-style: normal;
       font-weight: 400;
       font-display: fallback;
-      src: url(./local/self-hosted/path/to/filename.woff2) format('woff2');
+      src: url(./local/self-hosted/path/to/filename.woff2) format("woff2");
       unicode-range: U+000-5FF; /* Latin glyphs */
     }
     ```
@@ -1289,18 +1348,18 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
     ```css
     .using-self-hosted-font {
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Open Sans", sans-serif;
       /* helpful convention: 'Quotes For Web Fonts' and no-quotes-for-local-fonts */
     }
 
     .using-variable-self-hosted-font {
-      font-family: 'Cabin', sans-serif;
+      font-family: "Cabin", sans-serif;
       font-weight: 400;
     }
     @supports (font-variation-settings: normal) {
       .using-variable-self-hosted-font {
-        font-family: 'CabinVariable';
-        font-variation-settings: 'wght' 400;
+        font-family: "CabinVariable";
+        font-variation-settings: "wght" 400;
       }
     }
     ```
@@ -1312,11 +1371,10 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
       <style>
         /* inline to load fonts ASAP: */
         @font-face {
-          font-family: 'Web Font Name';
-          src:
-            url('/fonts/Web_Font_Name-regular-italic.woff2') format('woff2'),
-            url('/fonts/Web_Font_Name-regular-italic.woff') format('woff');
-            /* put woff2 first since it's usually smaller */
+          font-family: "Web Font Name";
+          src: url("/fonts/Web_Font_Name-regular-italic.woff2") format("woff2"),
+            url("/fonts/Web_Font_Name-regular-italic.woff") format("woff");
+          /* put woff2 first since it's usually smaller */
           font-weight: 400; /* each non-variable font file only has one weight */
           font-style: normal;
           font-display: fallback;
@@ -1326,10 +1384,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
         /* and repeat for other files for different font weights, */
         /* OR define a variable font with a range of weights: */
         @font-face {
-          font-family: 'Web Font Name';
-          src:
-            url('/fonts/Web_Font_Name-variable.woff2') format('woff2 supports variations'),
-            url('/fonts/Web_Font_Name-variable.woff') format('woff-variations');
+          font-family: "Web Font Name";
+          src: url("/fonts/Web_Font_Name-variable.woff2") format("woff2 supports variations"),
+            url("/fonts/Web_Font_Name-variable.woff") format("woff-variations");
           font-weight: 300 1000; /* for 300-1000 inclusive */
           font-style: normal;
           font-display: fallback;
@@ -1339,18 +1396,16 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
       <style>
         /* then use it: */
         .variable-font {
-          font-family: 'Web Font Name';
+          font-family: "Web Font Name";
           font-weight: 777;
+          font-variation-settings: "slnt" -10; /* slant, and other things: wght, wdth, slnt, ital, opsz */
+          /* which correspond to font-weight, font-stretch, font-style with deg, ... */
           font-variation-settings:
-            "slnt" -10; /* slant, and other things: wght, wdth, slnt, ital, opsz */
-            /* which correspond to font-weight, font-stretch, font-style with deg, ... */
-          font-variation-settings:
-            /* and custom-named axes/"levers" in UPPERCASE like: */
-            "CASL" 0.8, /* "casual" */
-            "CRSV" 1; /* "cursive" */
+            /* and custom-named axes/"levers" in UPPERCASE like: */ "CASL" 0.8, /* "casual" */
+              "CRSV" 1; /* "cursive" */
         }
       </style>
     </head>
     ```
-  
+
   - use variable fonts for a more expressive/polished look at no extra cost
