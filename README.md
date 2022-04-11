@@ -914,7 +914,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   ```css
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
+    --min: min(400px, 100%);
+    --max: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(var(--min), var(--max)));
     /* instead of setting a specific number in repeat's 1st parameter, */
     /* repeat with auto-fill tries to add extra columns dynamically to fit */
     /* minmax with min non-fr size and dynamic size 1fr 
