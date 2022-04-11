@@ -920,8 +920,10 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     /* minmax with min non-fr size and dynamic size 1fr 
           will have minimum size, but then 
           will grow to fill any leftover space */
+
     /* min to prevent overflow for small screens,
-          at which point 100% could become smaller than 200px */
+          at which point 100% could become smaller than 200px 
+       (or use a media query with a breakpoint that's easier to understand) */
   }
   ```
 
