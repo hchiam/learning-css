@@ -938,6 +938,15 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   ```
 
+- if you're [supporting only modern browsers for CSS grid](https://caniuse.com/css-grid), you can center things both vertically and horizontally in 2 lines of CSS grid (instead of [CSS flexbox](https://caniuse.com/flexbox) `display: flex; justify-content: center; align-items: center;`):
+
+  ```css
+  .center-both-horizontally-and-vertically {
+    display: grid;
+    place-content: center; /* shorthand for CSS grid justify-content and align-content having the same value */
+  }
+  ```
+
 ### other stuff
 
 - pick breakpoints that are _between_ likely screen widths, instead of right at the boundaries of likely screen widths:
