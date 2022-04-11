@@ -860,10 +860,20 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* instead of setting a specific number in repeat's 1st parameter, */
     /* repeat with auto-fill tries to add extra columns dynamically to fit */
     /* minmax with min size and dynamic size 1fr 
           will have minimum size, but then 
           will grow to fill any leftover space */
+  }
+  ```
+
+- CSS grid with 2 panels, 1 that grows until they're same, then both grow:
+
+  ```css
+  .panel-1-grows-then-both-grow {
+    display: grid;
+    grid-template-columns: minmax(50px, 1fr) minmax(500px, 1fr);
   }
   ```
 
