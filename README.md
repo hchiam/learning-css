@@ -518,6 +518,21 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
   - automatic translation services may not translate `aria-label`s, so you might have to use this solution (which also lets you bundle other related features)
 
+- ```css
+  /* source: https://webaim.org/techniques/css/invisiblecontent/ */
+  .sr-only {
+    /* screen-reader-only: */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+  }
+  ```
+
 - note: `aria-hidden="true"` hides elements from screen readers, but doesn't remove it (nor descendants) from tabbing, so you also need to make it [`inert`](https://github.com/WICG/inert) (or `tabindex="-1"`)
 
 - **clean styling code:** regardless of styling tool, you can adjust your tactics to aim for the same conceptual strategies:
