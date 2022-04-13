@@ -756,6 +756,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - There's also many other layout modes: https://developer.mozilla.org/en-US/docs/Web/CSS/display but including an exciting new one called [`display: contents`, which lets indirect children (2 levels down) participate in the layout mode](https://codepen.io/hchiam/pen/OJzZPqY)
 
+- Layout modes can also interact with each other: https://codepen.io/hchiam/pen/PoEdWJo - take the content inside a CSS Grid cell and wrap it inside an inner sticky div to enable it to stick then not: "`grid { sticky }`".
+
 ### extra flexbox notes
 
 - you may need to set `display: block;` for an element to take `padding`
