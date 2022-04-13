@@ -759,6 +759,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - Layout modes can also interact with each other: https://codepen.io/hchiam/pen/PoEdWJo - take the content inside a CSS Grid cell and wrap it inside an inner sticky div to enable it to stick then not: "`grid { sticky }`".
 
 - CSS Grid can be used to make text 1 middle column and make images full-width/full-bleed: https://codepen.io/hchiam/pen/vYpzgro
+  - `grid-column: 1 / -1;` means "(1st line from left) to (1st line from right)"
 
 ### extra flexbox notes
 
@@ -926,6 +927,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - "`-items`" = children in the cells
 
 - `grid-row: 1 / -1` on a child is possible: to span from top of grid to bottom of grid (track line 1 to track line -1, like negative indices in [Python](https://github.com/hchiam/learning-python)), regardless of the number of rows
+  - example: full-width image in CSS grid: https://codepen.io/hchiam/pen/vYpzgro
 - `grid-row` and `grid-column` are indexed starting at 1 (or -1 from the ends), and if you give them one value, then it's assumed to be 1 cell size (`grid-row: 1` = `grid-row: 1 / 2`)
 
 - CSS grid with dynamic number and size of columns to fill the width:
