@@ -758,6 +758,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - Layout modes can also interact with each other: https://codepen.io/hchiam/pen/PoEdWJo - take the content inside a CSS Grid cell and wrap it inside an inner sticky div to enable it to stick then not: "`grid { sticky }`".
 
+- CSS Grid can be used to make text 1 middle column and make images full-width/full-bleed: https://codepen.io/hchiam/pen/vYpzgro
+
 ### extra flexbox notes
 
 - you may need to set `display: block;` for an element to take `padding`
