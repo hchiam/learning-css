@@ -1222,6 +1222,12 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   /* wrap it in a div to avoid being a child of a display:flex parent */
   /* wrap it in a div to avoid being a child of a display:grid parent */
+  /* This line clamping algorithm doesn't actually hide the text, 
+      (so you need overflow: hidden), 
+      it just calculates its height and decides where to insert ellipses.
+      So if this element is a flex/grid child, it might get stretched
+      and end up (partially) showing lines that should be hidden.
+  */
   ```
 
   - or if you want to avoid wrapping altogether and all users will be OK with truncated text (e.g. accessibility, or whether important info at the end can be shown):
