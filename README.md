@@ -1192,6 +1192,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
   - `<img>` tags will grow/not-grow in weird ways when they're a direct child of a `display: flex` container, so instead prefer treating `<img>` as content (and set `img {width: 100%;}`) and wrapping it in a divider like `<div><img></div>`, itself inside of the `display: flex` container so the flexbox styles get applied to the `<div>` wrapper instead, to behave more like how you'd expect
 
+- if you need a random image 1000px wide and 500px tall: https://source.unsplash.com/1000x500 (here's the license: https://unsplash.com/license)
+
 - text wrap: by default breaks on spaces and dashes (but really-long words overflow)
 
   - you can _prevent_ overflow on spaces with `&nbsp;`
