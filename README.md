@@ -960,6 +960,14 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   ```
 
+- By default, CSS grid acts like a table: it grows to the width of its widest child. But you can override this default and give CSS grid permission to shrink:
+
+  ```css
+  .override-default-css-grid-width-behaviour {
+    grid-template-columns: minmax(0px, auto);
+  }
+  ```
+
 - if you're [supporting only modern browsers for CSS grid](https://caniuse.com/css-grid), you can center things both vertically and horizontally in 2 lines of CSS grid (instead of [CSS flexbox](https://caniuse.com/flexbox) `display: flex; justify-content: center; align-items: center;`):
 
   ```css
