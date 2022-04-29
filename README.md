@@ -1487,5 +1487,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - default `transform-origin: center`
 
 - `transform: translateX(var(--x)) rotate(var(--r))` is _**NOT**_ the same as `transform: rotate(var(--r)) translateX(var(--x))`:
+
   - `transform: translateX(var(--x)) rotate(var(--r))` = spin in another location
   - `transform: rotate(var(--r)) translateX(var(--x))` = move forward in another cardinal direction
+
+- how to solve "doom flicker" in CSS: have a non-moving parent `:hover` trigger a moving child `transform`, instead of having the `:hover` and `transform` both on the same element (which could move away from the cursor that hovered it)
