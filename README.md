@@ -1462,3 +1462,30 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     ```
 
   - use variable fonts for a more expressive/polished look at no extra cost
+
+- `transform` doesn't work on the default `inline`/flow layout algorithm.
+
+  - if you want to make `transform` work, try `display: inline-block` or some other layout mode
+
+- `transform: translate(var(--x), var(--y));` is like `position: relative; left: var(--x); top: var(--y);`, except `transform`'s relative percent values like `100%` are relative to the element itself, instead of relative to the element's parent (which `position: relative` does)
+
+  - so `transform: translateY(-100%);` moves an item up by it's own height
+
+  - default `transform-origin: center`
+
+- `transform: scale(var(--x), var(--y));` lets you scale x and y axes independently
+
+  - default `transform-origin: center`
+
+- `transform: rotate(1turn)` == `transform: rotate(360deg)`
+
+  - default `transform-origin: center`
+
+- `transform: skewX(25deg);` feels like pulling the jello's bottom edge to the right (like pulling a plate under it, the top moves in the opposite direction - with the default `transform-origin: center`)
+- `transform: skewY(25deg);` feels like pulling the jello's right edge to the bottom
+
+  - default `transform-origin: center`
+
+- `transform: translateX(var(--x)) rotate(var(--r))` is _**NOT**_ the same as `transform: rotate(var(--r)) translateX(var(--x))`:
+  - `transform: translateX(var(--x)) rotate(var(--r))` = spin in another location
+  - `transform: rotate(var(--r)) translateX(var(--x))` = move forward in another cardinal direction
