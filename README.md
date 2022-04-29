@@ -931,7 +931,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - example: full-width image in CSS grid: https://codepen.io/hchiam/pen/vYpzgro
 - `grid-row` and `grid-column` are indexed starting at 1 (or -1 from the ends), and if you give them one value, then it's assumed to be 1 cell size (`grid-row: 1` = `grid-row: 1 / 2`)
 
-- CSS grid with dynamic number and size of columns to fill the width:
+- "world famous" CSS grid with dynamic number and size of columns to fill the width:
 
   ```css
   .grid {
