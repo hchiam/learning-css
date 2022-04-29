@@ -312,7 +312,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - `grid-column` goes on the children inside the container that you set `display: grid` on. It tells CSS the start / end columns of the item inside the grid. For example: `grid-column: 1 / span 3;` means it'll span columns 1 and 3, while just `grid-column: 1 / 3;` means it'll go from column line 1 (left-most) to column line 3 (which makes it look like it's spanning columns 1 and 2).
   - relatedly, `grid-template-areas` lets you map out grid children in a more visual way. It also goes on the container that you set `display: grid` on. You can assign something like `grid-area: A;` to each child item.
   - <https://codepen.io/hchiam/pen/PoKdVya?editors=1100>
-- colour palette generator: <https://coolors.co>
+- curated colour palettes in context: <https://www.happyhues.co>
 - <https://ishadeed.com/article/defensive-css/>
   - `overscroll-behavior-y: contain;` can be used to prevent scrolling to the end of the modal scrolling the background; lock scroll chaining
   - CSS variable fallback value: `var(--actions-width, 70px)`
