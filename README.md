@@ -12,6 +12,17 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 <https://css-for-js.dev>
 
+- https://www.joshwcomeau.com/css/understanding-layout-algorithms
+
+  - **Mental model for CSS:**
+    - **layouts = algorithms**, and
+    - **properties = inputs to those algorithms**.
+  - (Note that layout mode isn't only set by the `display` property, it can also be set by `position`, `float`, the parent having `display:flex`, etc.)
+  - (Note that there should be 1 primary layout mode on an element, and parent/child layout modes can conflict, but `position`ed layout on the element itself usually beats all other layouts trying to be applied to that element - except for `position:relative`.)
+  - Remember that flow layout is the default, and so img tags will get extra blank space added below images because it's treated like text, which can't be easily tweaked with `padding`/`border`/`margin`. learning only about specific properties won't explain things like this!
+  - Different layout modes can have different default behaviour for any property:
+    - For example, the `width` property is implemented differently depending on the layout algorithm: e.g.: in flow layout, `width:2000px` is `2000px`, but in `flex` layout, `width:2000px` is treated as a "suggestion"!
+
 ## Miscellaneous notes
 
 (Make VSCode ignore auto-formatting with `prettier.setting` > Prettier: Require Config. Or just temporarily turn off formatting on save: `editor.formatOnSave`.)
@@ -345,17 +356,6 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - stuff you can do without JS-heavy web frameworks: https://codepen.io/hchiam/pen/ExbmjEP
 
 ## more recent CodePen experiments and notes made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
-
-- https://www.joshwcomeau.com/css/understanding-layout-algorithms
-
-  - **Mental model for CSS:**
-    - **layouts = algorithms**, and
-    - **properties = inputs to those algorithms**.
-  - (Note that layout mode isn't only set by the `display` property, it can also be set by `position`, `float`, the parent having `display:flex`, etc.)
-  - (Note that there should be 1 primary layout mode on an element, and parent/child layout modes can conflict, but `position`ed layout on the element itself usually beats all other layouts trying to be applied to that element - except for `position:relative`.)
-  - Remember that flow layout is the default, and so img tags will get extra blank space added below images because it's treated like text, which can't be easily tweaked with `padding`/`border`/`margin`. learning only about specific properties won't explain things like this!
-  - Different layout modes can have different default behaviour for any property:
-    - For example, the `width` property is implemented differently depending on the layout algorithm: e.g.: in flow layout, `width:2000px` is `2000px`, but in `flex` layout, `width:2000px` is treated as a "suggestion"!
 
 - CSS shadow via `box-shadow` vs via `filter: drop-shadow`: https://codepen.io/hchiam/pen/YzrrVGL
 
