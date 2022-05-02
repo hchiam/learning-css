@@ -1522,7 +1522,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
 
   .example {
-    animation: grow 2s infinite;
-    animation-direction: alternate; /* this will make it grow AND shrink */
+    animation: grow 2s infinite alternate;
+    /* the "alternate" keyword will make it grow AND shrink! */
   }
   ```
