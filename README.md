@@ -1503,3 +1503,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - `transform: rotate(var(--r)) translateX(var(--x))` = move forward in another cardinal direction
 
 - how to solve "doom flicker" in CSS: have a non-moving parent `:hover` trigger a moving child `transform`, instead of having the `:hover` and `transform` both on the same element (which could move away from the cursor that hovered it)
+
+- easing in CSS `@keyframes` versus JS `.animate()` frames: https://codepen.io/hchiam/pen/MWQWPdN
+  - JS frames in `.animate()` can use 1 transition _across all_ steps:
+  - CSS `@keyframes` can only transition _between_ steps:
