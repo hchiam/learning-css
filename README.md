@@ -1528,3 +1528,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   ```
 
 - animations have their own "cascade origin", so that's why their styles override styles in most regular selectors (see "CSS Rule Conflict Resolution" notes for "origins")
+
+- `animation-fill-mode: backwards;` doesn't mean the animation somehow fills backwards, it means it uses the initial state of the animation `@keyframes` and fills the timeline backwards from there! So this includes before the animation event starts, and during the `animation-delay` also.
+- `animation-fill-mode: forwards;`
+- `animation-fill-mode: both;` = most likely you'll want (persist the initial and final states of the animation, regardless of other styles)
+- `animation-fill-mode: none;` = default
