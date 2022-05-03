@@ -1522,8 +1522,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
 
   .example {
-    animation: grow 2s infinite alternate;
+    animation: grow 2s infinite alternate both;
     /* the "alternate" keyword will make it grow AND shrink! */
+    /* the "both" keyword isn't really needed, but it persists the initial/final states across the timeline */
   }
   ```
 
