@@ -1526,3 +1526,5 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     /* the "alternate" keyword will make it grow AND shrink! */
   }
   ```
+
+- animations have their own "cascade origin", so that's why their styles override styles in most regular selectors (see "CSS Rule Conflict Resolution" notes for "origins")
