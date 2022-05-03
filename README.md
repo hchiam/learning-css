@@ -1534,3 +1534,5 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - `animation-fill-mode: forwards;`
 - `animation-fill-mode: both;` = most likely you'll want (persist the initial and final states of the animation, regardless of other styles)
 - `animation-fill-mode: none;` = default
+
+- `animation-play-state: paused;` or `running`, instead of awkwardly removing animations partway thru a `@keyframes` animation (won't work on `transition` animations tho)
