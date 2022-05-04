@@ -763,6 +763,25 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   `;
   ```
 
+- `@keyframes` with `styled-components`: `keyframes`:
+
+  ```jsx
+  /** guaranteed to avoid naming conflicts:
+   * (as opposed to CSS @keyframes, which are all global)
+   */
+  const float = keyframes`
+    from {
+      /* ... */
+    }
+    to {
+      /* ... */
+    }
+  `;
+  const SomeStyledComponent = styled.div`
+    animation: ${float} 1s infinite alternate ease-in-out;
+  `;
+  ```
+
 - CSS has different layout modes (like flow, `position`ed, `flex`, `grid`, etc.), and each layout mode decides what each property does (if anything), like whether it ignores `z-index` (flow ignores `z-index`, while `position`ed, `flex`, `grid` respect `z-index`)
 
 - There's also many other layout modes: https://developer.mozilla.org/en-US/docs/Web/CSS/display but including an exciting new one called [`display: contents`, which lets indirect children (2 levels down) participate in the layout mode](https://codepen.io/hchiam/pen/OJzZPqY)
