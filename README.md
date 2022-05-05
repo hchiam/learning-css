@@ -616,6 +616,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
   - change `left` (layout) to `background-position` (paint) to `transform` (composite) = fastest, but avoid overusing properties that would create too many composite layers to manage
     - recalculate applied styles -> layout -> paint -> composite/compositing (invented to enable fast scrolling by transforming what was already calculated)
+    - use `will-change: transform;` to tell the browser to always use GPU all the time, instead of sometimes switching between CPU to GPU, which can have slight animation differences
   - use Chrome DevTools "Performance" tab > (record) > find red dropped "Frames" > see "Main" for things using up time like "Layout" or "Paint" or "Recalculate style" (which can point out things like "[Forced reflow](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing?utm_source=devtools#avoid-forced-synchronous-layouts) is a likely performance bottleneck")
   - use Chrome DevTools "Rendering" panel to highlight things that are causing repaints or layout shifts.
 
