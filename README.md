@@ -1554,4 +1554,23 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - `animation-fill-mode: both;` = most likely you'll want (persist the initial and final states of the animation, regardless of other styles)
 - `animation-fill-mode: none;` = default
 
+```css
+@keyframes rise-from-offscreen {
+  from {
+    transform: translateY(calc(100% + var(--spacing)));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.help-circle {
+  --spacing: 32px;
+  animation: rise-from-offscreen 1s both infinite;
+  animation-delay: 1s;
+  position: fixed;
+  bottom: var(--spacing);
+  right: var(--spacing);
+}
+```
+
 - `animation-play-state: paused;` or `running`, instead of awkwardly removing animations partway thru a `@keyframes` animation (won't work on `transition` animations tho)
