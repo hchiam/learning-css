@@ -1522,7 +1522,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - `transform: rotate(var(--r)) translateX(var(--x))` = move forward in another cardinal direction
 
 - `transform-origin: bottom right;`, not `bottom-right`
-- `transform-origin: 80% 75%;` means 80% of the way to the right, and 75% of the way down the element.
+- `transform-origin: 80% 75%;` means 80% of the way to the right, and 75% of the way down the element. (waving hand example: https://codepen.io/hchiam/pen/QWQjvoa)
 
 - how to solve "doom flicker" in CSS: have a non-moving parent `:hover` trigger a moving child `transform`, instead of having the `:hover` and `transform` both on the same element (which could move away from the cursor that hovered it)
 
