@@ -1581,5 +1581,12 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - `animation-play-state: paused;` or `running`, instead of awkwardly removing animations partway thru a `@keyframes` animation (won't work on `transition` animations tho)
 
 - you could create performant animations with a sprite sheet with `animation: ... steps(34) ... ;`
+
   - https://codepen.io/hchiam/pen/xxYwrNE
   - https://i.imgur.com/zLh2Pgs.png
+
+- ```js
+  element.addEventListener("onTransitionEnd", () => {
+    // called whenever a transition ends on the element
+  });
+  ```
