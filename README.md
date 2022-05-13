@@ -357,7 +357,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 ## more recent CodePen experiments and notes made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
 
-- CSS shadow via `box-shadow` vs via `filter: drop-shadow` (contoured shadow): https://codepen.io/hchiam/pen/YzrrVGL
+- CSS shadow via `box-shadow` (direction choice) vs via `filter: drop-shadow` (contoured shadow): https://codepen.io/hchiam/pen/YzrrVGL
 
 - CSS `filter: saturate(#);`: https://codepen.io/hchiam/pen/mdBBmOG
 
