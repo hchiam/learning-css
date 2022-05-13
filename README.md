@@ -399,6 +399,19 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - asymmetrical/oval border-radius: https://codepen.io/hchiam/pen/eYVdQOg?editors=1100
 
+- nested border-radiuses: https://codepen.io/hchiam/pen/xxYEQOY?editors=1100
+
+  ```css
+  .outer {
+    border-radius: var(--outer-radius);
+    padding: var(--padding);
+  }
+  .inner {
+    --inner-radius: calc(var(--outer-radius) - var(--padding));
+    border-radius: var(--inner-radius);
+  }
+  ```
+
 - Simulated Stylable Select (CSS + JS): https://codepen.io/hchiam/pen/wvprLpV
 
 - https://github.com/hchiam/mini-component-library
