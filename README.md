@@ -414,6 +414,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   ```
 
+  - `border-radius: 100vmax` makes the left/right or top/bottom ends of a box always end in circles: https://codepen.io/hchiam/pen/xxYEQOY?editors=1100
+
 - Simulated Stylable Select (CSS + JS): https://codepen.io/hchiam/pen/wvprLpV
 
 - https://github.com/hchiam/mini-component-library
