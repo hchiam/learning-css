@@ -387,6 +387,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - blurred glow: https://codepen.io/hchiam/pen/JjpRmmy?editors=1100
 
+- `backdrop-filter` to make an element semi-transparent like frosted glass: https://codepen.io/hchiam/pen/OJQRBqq?editors=1100
+
 - Simulated Stylable Select (CSS + JS): https://codepen.io/hchiam/pen/wvprLpV
 
 - https://github.com/hchiam/mini-component-library
