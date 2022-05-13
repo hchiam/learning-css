@@ -399,7 +399,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - asymmetrical/oval border-radius: https://codepen.io/hchiam/pen/eYVdQOg?editors=1100
 
-- nested border-radiuses: https://codepen.io/hchiam/pen/xxYEQOY?editors=1100
+- nested border-radiuses, calculated!: https://codepen.io/hchiam/pen/xxYEQOY?editors=1100
+
+  - inner radius = outer radius - padding
 
   ```css
   .outer {
