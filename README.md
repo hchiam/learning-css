@@ -389,6 +389,14 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - `backdrop-filter` to make an element semi-transparent like frosted glass: https://codepen.io/hchiam/pen/OJQRBqq?editors=1100 (works best on Chrome)
 
+  - ```css
+    /* (Firefox fallback semi-transparent background for contrast) */
+
+    @supports (backdrop-filter: blur(12px)) {
+      /* (styles for browsers supporting backdrop-filter) */
+    }
+    ```
+
 - Simulated Stylable Select (CSS + JS): https://codepen.io/hchiam/pen/wvprLpV
 
 - https://github.com/hchiam/mini-component-library
