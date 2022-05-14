@@ -359,6 +359,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - CSS shadow via `box-shadow` (direction choice) vs via `filter: drop-shadow` (contoured shadow): https://codepen.io/hchiam/pen/YzrrVGL
 
+  - note: it's `drop-shadow`, not `dropshadow`!
+
 - CSS `filter: saturate(#);`: https://codepen.io/hchiam/pen/mdBBmOG
 
 - CSS horizontal radiuses / vertical radiuses: https://codepen.io/hchiam/pen/bGoorOm
