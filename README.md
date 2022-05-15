@@ -383,6 +383,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - `appearance: none`: https://codepen.io/hchiam/pen/abVXZYx
 
+- CSS `::selection` styling: https://codepen.io/hchiam/pen/VwQPvQG
+
 - more easily style-able dropdown that also makes use of native `select` cross-compatible usability: https://codepen.io/hchiam/pen/OJOwrdX
 
 - auto-increase click target size with just CSS and then adding a `.click-target-helper` class to elements you want to apply it to: https://codepen.io/hchiam/pen/mdpBpme (or just use a `::after` element with `position: absolute;` and a negative `inset` or negative `top`, `right`, `bottom`, `left` values to increase the tap target area without affecting layout! - just make sure the button can have `position: relative;`)
