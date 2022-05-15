@@ -1632,7 +1632,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   });
   ```
 
-- `background: linear-gradient`s layered: (first in list is layered on top) https://codepen.io/hchiam/pen/WNMRrxR?editors=1100
+- `background: linear-gradient`s layered: (first in list is layered on top) https://codepen.io/hchiam/pen/WNMRrxR?editors=1100 (same goes for `radial-gradient`)
 
 - `background: conic-gradient`:
 
