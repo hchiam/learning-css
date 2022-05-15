@@ -1637,4 +1637,4 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - https://codepen.io/hchiam/pen/ExQZVrQ (generate pie chart with hard stops)
   - https://codepen.io/hchiam/pen/OJQWyYJ (position and angle)
 
-- tool to generate eased gradients: https://larsenwork.com/easing-gradients/#editor
+- tool to generate _**eased**_ gradients: https://larsenwork.com/easing-gradients/#editor
