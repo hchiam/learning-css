@@ -1631,3 +1631,10 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     // called whenever a transition ends on the element
   });
   ```
+
+- `background: conic-gradient`:
+
+  - https://codepen.io/hchiam/pen/ExQZVrQ (generate pie chart with hard stops)
+  - https://codepen.io/hchiam/pen/OJQWyYJ (position and angle)
+
+- tool to generate eased gradients: https://larsenwork.com/easing-gradients/#editor
