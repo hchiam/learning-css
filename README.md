@@ -1642,3 +1642,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - https://codepen.io/hchiam/pen/OJQWyYJ (position and angle)
 
 - tool to generate _**eased**_ gradients: https://larsenwork.com/easing-gradients/#editor
+
+- you can "undo" `pointer-event: none;` on element descendants!
+  - parent: `pointer-events: none;`
+  - child: `pointer-events: auto;`
