@@ -1681,3 +1681,5 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     scroll-snap-align: center; /* or scroll-snap-align: start; */
   }
   ```
+
+  - example scroll snap: https://codepen.io/hchiam/pen/OJQWNrw?editors=1100
