@@ -1644,6 +1644,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - tool to generate _**eased**_ gradients: https://larsenwork.com/easing-gradients/#editor
 
 - you can "undo" `pointer-event: none;` on element descendants!
+
   - parent: `pointer-events: none;`
   - child: `pointer-events: auto;`
   - (note: `pointer-events: none;` doesn't prevent users from tabbing to things like buttons)
+
+- `clip-path` can be animated by interpolating where its polygon points move! even with just `:hover` or `:focus`, no `@keyframes` needed! (just make sure you specify the same number of points) For example: https://codepen.io/hchiam/pen/BaYpjOW (aside note: `will-change: transform; /* as opposed to clip-path */`)
