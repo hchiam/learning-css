@@ -1655,6 +1655,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;
+      scroll-margin-top: 6rem; /* if you need to show heading below a sticky element */
     }
   }
   ```
