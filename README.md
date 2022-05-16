@@ -1650,3 +1650,17 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - (note: `pointer-events: none;` doesn't prevent users from tabbing to things like buttons)
 
 - `clip-path` can be animated by interpolating where its polygon points move! even with just `:hover` or `:focus`, no `@keyframes` needed! (just make sure you specify the same number of points) For example: https://codepen.io/hchiam/pen/BaYpjOW (aside note: `will-change: transform; /* as opposed to clip-path */`)
+
+- ```css
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  ```
+
+  ```html
+  <a href="#heading-id">Some text (link) you can click to jump to heading</a>
+  <!-- ... -->
+  <h2 id="heading-id">Some heading you can jump to</h2>
+  ```
