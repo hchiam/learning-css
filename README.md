@@ -1672,3 +1672,12 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     behavior: "smooth", // <-- !!! otherwise defaults to whatever CSS has for scroll-behavior
   });
   ```
+
+- ```css
+  .parent {
+    scroll-snap-type: x mandatory;
+  }
+  .child {
+    scroll-snap-align: center; /* or scroll-snap-align: start; */
+  }
+  ```
