@@ -1691,4 +1691,6 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - `:focus-visible` = `:focus` but only when the user is using a non-pointer input method to focus (already have nice defaults on modern browsers that differentiate for you)
 
+- `:focus-within` = `:focus` but on any descendant element (useful for styling the parent if any of its children are focused)
+
 - there's `:focus-within`, but no `:hover-within` exists
