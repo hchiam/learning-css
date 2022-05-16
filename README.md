@@ -1646,3 +1646,4 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - you can "undo" `pointer-event: none;` on element descendants!
   - parent: `pointer-events: none;`
   - child: `pointer-events: auto;`
+  - (note: `pointer-events: none;` doesn't prevent users from tabbing to things like buttons)
