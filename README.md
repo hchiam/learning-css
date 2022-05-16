@@ -1688,3 +1688,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - scrollbars are usually specific to OS, not specific to browser
 
 - to styles scrollbars to blend into app theme https://codepen.io/hchiam/pen/abqpZoB?editors=1100
+
+- `:focus-visible` = `:focus` but only when the user is using a non-pointer input method to focus (already have nice defaults on modern browsers that differentiate for you)
+
+- there's `:focus-within`, but no `:hover-within` exists
