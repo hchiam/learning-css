@@ -1694,3 +1694,27 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - `:focus-within` = `:focus` but on any descendant element (useful for styling the parent if any of its children are focused)
 
 - there's `:focus-within`, but no `:hover-within` exists
+
+- _**NEW:**_ `float`s now can be accompanied with a [`shape-outside`](https://caniuse.com/css-shapes) (like `shape-outside: circle();`, or `clip-path` or SVG or `url(...);`) and with a `shape-margin`:
+
+  ```css
+  .floated {
+    --breathing-room: 16px;
+    float: left;
+    shape-outside: url(... .png); /* instead of default square space */
+    margin-right: var(--breathing-room); /* need shape-margin too */
+    shape-margin: var(--breathing-room); /* need margin-right too */
+  }
+  ```
+
+- to make a container completely wrap around a `float`ed element:
+
+  ```css
+  /* trigger parent to grow by adding an empty element at the bottom: */
+  .parent-that-contains-floated-elements::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  /* otherwise parent height ignores float-ed elements */
+  ```
