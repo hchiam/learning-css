@@ -1664,3 +1664,13 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   <!-- ... -->
   <h2 id="heading-id">Some heading you can jump to</h2>
   ```
+
+  otherwise:
+
+  ```js
+  window.scrollTo({
+    top: top,
+    left: left,
+    behavior: "smooth", // <-- !!! otherwise defaults to whatever CSS has for scroll-behavior
+  });
+  ```
