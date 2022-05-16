@@ -1,15 +1,18 @@
 import styled from "styled-components/macro";
+import { ShiftBy } from "./ShiftBy";
 
 export const Breadcrumbs = ({ children }) => {
   return (
-    <BreadcrumbWrapper>
-      <Crumb href="/">Home</Crumb>
-      <Crumb href="/living">Living Room</Crumb>
-      <Crumb href="/living/couch">Couches</Crumb>
-      <Crumb href="/living/couch/sectional" isCurrentPage={true}>
-        Sectionals
-      </Crumb>
-    </BreadcrumbWrapper>
+    <ShiftBy y={-1}>
+      <BreadcrumbWrapper>
+        <Crumb href="/">Home</Crumb>
+        <Crumb href="/living">Living Room</Crumb>
+        <Crumb href="/living/couch">Couches</Crumb>
+        <Crumb href="/living/couch/sectional" isCurrentPage={true}>
+          Sectionals
+        </Crumb>
+      </BreadcrumbWrapper>
+    </ShiftBy>
   );
 };
 
