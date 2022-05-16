@@ -1660,17 +1660,15 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   ```
 
   ```html
-  <a href="#heading-id">Some text (link) you can click to jump to heading</a>
+  <a href="#heading_id">Some text (link) you can click to jump to heading</a>
   <!-- ... -->
-  <h2 id="heading-id">Some heading you can jump to</h2>
+  <h2 id="heading_id">Some heading you can jump to</h2>
   ```
 
   otherwise:
 
   ```js
-  window.scrollTo({
-    top: top,
-    left: left,
+  document.querySelector("#heading_id")?.scrollIntoView({
     behavior: "smooth", // <-- !!! otherwise defaults to whatever CSS has for scroll-behavior
   });
   ```
