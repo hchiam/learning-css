@@ -1719,3 +1719,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   }
   /* otherwise parent height ignores float-ed elements */
   ```
+
+- `scroll-margin-top` on the item to scroll to
+  - Why? For example, so JS `scrollIntoView()` doesn't scroll the target element underneath a `fixed`/`sticky` header
+  - (and maybe also add `margin-top` on the first child of things you could scroll to)
