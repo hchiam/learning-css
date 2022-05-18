@@ -265,6 +265,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - Responsive Design: <https://web.dev/learn/design/>
 - Keep [learning CSS](https://web.dev/learn/css/), including CSS selector specificity calculation: <https://web.dev/learn/css/specificity/#visualizing-specificity>
 - CSS `contain: content` for better performance: <https://github.com/hchiam/learning-css-contain>
+- CSS variables can be inherited by child elements and can updated dynamically with JS (unlike SCSS variables which transpile to static values).
 - CSS variables (AKA CSS custom properties) and `:root` in `@media` for cleaner globally reduced motion in 1 spot <https://codepen.io/hchiam/full/wvqEQob>
 
   - like a single source of truth (that can be locally overridden/inherited):
