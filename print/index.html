@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Print Example</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/hchiam/css-boilerplate@6.2.0/style.css"
+      integrity="sha384-3OOf6BqaPooZy0wd9x1bI3L2FYaMVCe++3HHWT3PP2rV/JR6lu51RRY74t+SwgQO"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        columns: 3;
+      }
+      p {
+        /* page-break-inside: avoid; */
+        /* try a very high orphans number: notice where the paragraphs start */
+        /* orphans: 7;  */
+        text-indent: 3rem;
+      }
+
+      blockquote {
+        background: rgb(72, 72, 72);
+        color: white;
+        padding: 0.5rem 1rem;
+        margin-block-start: 2rem;
+      }
+      blockquote + figcaption {
+        text-align: end;
+        margin-block-start: 0.25rem;
+        margin-block-end: 0.75rem;
+        font-style: italic;
+      }
+      a {
+        color: yellow;
+      }
+      cite {
+        line-break: anywhere;
+      }
+      a:hover cite,
+      a:focus cite {
+        color: var(--accent-colour);
+      }
+      code {
+        color: lime;
+        background: black;
+      }
+      footer {
+        background: red;
+        color: black;
+      }
+      dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 0.3rem solid red;
+        box-shadow: 0 0 100px 50px red;
+      }
+      dialog button {
+        background: red;
+        color: black;
+      }
+      style {
+        display: block;
+        background: black;
+        border: 1px solid deepskyblue;
+        padding: 1rem;
+        font-family: monospace;
+        white-space: pre;
+        overflow: auto;
+      }
+    </style>
+    <style>
+      @media print {
+        * {
+          color: black !important;
+        }
+        body {
+          columns: revert;
+        }
+        footer {
+          page-break-before: always;
+        }
+        dialog {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Print this page to see the page breaks. (Firefox has only partial support
+      for <code>page-break-before</code> and <code>page-break-after</code>.)
+    </p>
+    <p>
+      Resize this page (in Chrome) to look for any orphaned paragraph lines
+      (<code>orphans</code> and <code>widows</code> aren't supported in
+      Firefox). Also try printing this page (in Chrome) to see what happens.
+    </p>
+    <blockquote cite="https://css-tricks.com/almanac/properties/o/orphans/">
+      In short, in CSS specifically: widows = minimum number of lines in a
+      paragraph split on the new page. orphans = minimum number of lines in a
+      paragraph split on the old page.
+    </blockquote>
+    <figcaption>
+      Source:
+      <a
+        href="https://css-tricks.com/almanac/properties/o/orphans/"
+        target="_blank"
+        ><cite>https://css-tricks.com/almanac/properties/o/orphans/</cite></a
+      >
+    </figcaption>
+    <p>
+      Edit the following code to play with <code>orphans</code> and
+      <code>page-break-inside</code>:
+    </p>
+    <pre>
+<style contenteditable>
+/* create new lines with Shift+Enter */
+p {
+  page-break-inside: avoid;
+
+  /* orphans: 7;  */
+
+  /* Delete page-break-inside, 
+  try a very high orphans number, and 
+  notice where the paragraphs start. */
+}
+</style>
+    </pre>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium modi
+      sint et minima maxime minus accusamus consectetur consequatur sed! Impedit
+      hic nesciunt aliquid quas cum, magni dicta praesentium recusandae
+      laboriosam odit id odio similique. Odio quia voluptatem dolorem nostrum.
+      Nam et rem ad quia? Dolor maxime deserunt architecto explicabo omnis ex
+      consequuntur cupiditate, inventore rem accusantium recusandae aliquid ab,
+      accusamus vero provident vel numquam magni iste dolorem natus dolores non
+      est fuga saepe! Error odio blanditiis, veniam fugit soluta quas minima
+      culpa voluptatibus eius sint iusto necessitatibus enim aperiam doloremque
+      neque. Cum architecto quod ducimus cupiditate quisquam corporis?
+      Necessitatibus, omnis?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium modi
+      sint et minima maxime minus accusamus consectetur consequatur sed! Impedit
+      hic nesciunt aliquid quas cum, magni dicta praesentium recusandae
+      laboriosam odit id odio similique. Odio quia voluptatem dolorem nostrum.
+      Nam et rem ad quia? Dolor maxime deserunt architecto explicabo omnis ex
+      consequuntur cupiditate, inventore rem accusantium recusandae aliquid ab,
+      accusamus vero provident vel numquam magni iste dolorem natus dolores non
+      est fuga saepe! Error odio blanditiis, veniam fugit soluta quas minima
+      culpa voluptatibus eius sint iusto necessitatibus enim aperiam doloremque
+      neque. Cum architecto quod ducimus cupiditate quisquam corporis?
+      Necessitatibus, omnis?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium modi
+      sint et minima maxime minus accusamus consectetur consequatur sed! Impedit
+      hic nesciunt aliquid quas cum, magni dicta praesentium recusandae
+      laboriosam odit id odio similique. Odio quia voluptatem dolorem nostrum.
+      Nam et rem ad quia? Dolor maxime deserunt architecto explicabo omnis ex
+      consequuntur cupiditate, inventore rem accusantium recusandae aliquid ab,
+      accusamus vero provident vel numquam magni iste dolorem natus dolores non
+      est fuga saepe! Error odio blanditiis, veniam fugit soluta quas minima
+      culpa voluptatibus eius sint iusto necessitatibus enim aperiam doloremque
+      neque. Cum architecto quod ducimus cupiditate quisquam corporis?
+      Necessitatibus, omnis?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium modi
+      sint et minima maxime minus accusamus consectetur consequatur sed! Impedit
+      hic nesciunt aliquid quas cum, magni dicta praesentium recusandae
+      laboriosam odit id odio similique. Odio quia voluptatem dolorem nostrum.
+      Nam et rem ad quia? Dolor maxime deserunt architecto explicabo omnis ex
+      consequuntur cupiditate, inventore rem accusantium recusandae aliquid ab,
+      accusamus vero provident vel numquam magni iste dolorem natus dolores non
+      est fuga saepe! Error odio blanditiis, veniam fugit soluta quas minima
+      culpa voluptatibus eius sint iusto necessitatibus enim aperiam doloremque
+      neque. Cum architecto quod ducimus cupiditate quisquam corporis?
+      Necessitatibus, omnis?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium modi
+      sint et minima maxime minus accusamus consectetur consequatur sed! Impedit
+      hic nesciunt aliquid quas cum, magni dicta praesentium recusandae
+      laboriosam odit id odio similique. Odio quia voluptatem dolorem nostrum.
+      Nam et rem ad quia? Dolor maxime deserunt architecto explicabo omnis ex
+      consequuntur cupiditate, inventore rem accusantium recusandae aliquid ab,
+      accusamus vero provident vel numquam magni iste dolorem natus dolores non
+      est fuga saepe! Error odio blanditiis, veniam fugit soluta quas minima
+      culpa voluptatibus eius sint iusto necessitatibus enim aperiam doloremque
+      neque. Cum architecto quod ducimus cupiditate quisquam corporis?
+      Necessitatibus, omnis?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium modi
+      sint et minima maxime minus accusamus consectetur consequatur sed! Impedit
+      hic nesciunt aliquid quas cum, magni dicta praesentium recusandae
+      laboriosam odit id odio similique. Odio quia voluptatem dolorem nostrum.
+      Nam et rem ad quia? Dolor maxime deserunt architecto explicabo omnis ex
+      consequuntur cupiditate, inventore rem accusantium recusandae aliquid ab,
+      accusamus vero provident vel numquam magni iste dolorem natus dolores non
+      est fuga saepe! Error odio blanditiis, veniam fugit soluta quas minima
+      culpa voluptatibus eius sint iusto necessitatibus enim aperiam doloremque
+      neque. Cum architecto quod ducimus cupiditate quisquam corporis?
+      Necessitatibus, omnis?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium modi
+      sint et minima maxime minus accusamus consectetur consequatur sed! Impedit
+      hic nesciunt aliquid quas cum, magni dicta praesentium recusandae
+      laboriosam odit id odio similique. Odio quia voluptatem dolorem nostrum.
+      Nam et rem ad quia? Dolor maxime deserunt architecto explicabo omnis ex
+      consequuntur cupiditate, inventore rem accusantium recusandae aliquid ab,
+      accusamus vero provident vel numquam magni iste dolorem natus dolores non
+      est fuga saepe! Error odio blanditiis, veniam fugit soluta quas minima
+      culpa voluptatibus eius sint iusto necessitatibus enim aperiam doloremque
+      neque. Cum architecto quod ducimus cupiditate quisquam corporis?
+      Necessitatibus, omnis?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium modi
+      sint et minima maxime minus accusamus consectetur consequatur sed! Impedit
+      hic nesciunt aliquid quas cum, magni dicta praesentium recusandae
+      laboriosam odit id odio similique. Odio quia voluptatem dolorem nostrum.
+      Nam et rem ad quia? Dolor maxime deserunt architecto explicabo omnis ex
+      consequuntur cupiditate, inventore rem accusantium recusandae aliquid ab,
+      accusamus vero provident vel numquam magni iste dolorem natus dolores non
+      est fuga saepe! Error odio blanditiis, veniam fugit soluta quas minima
+      culpa voluptatibus eius sint iusto necessitatibus enim aperiam doloremque
+      neque. Cum architecto quod ducimus cupiditate quisquam corporis?
+      Necessitatibus, omnis?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium modi
+      sint et minima maxime minus accusamus consectetur consequatur sed! Impedit
+      hic nesciunt aliquid quas cum, magni dicta praesentium recusandae
+      laboriosam odit id odio similique. Odio quia voluptatem dolorem nostrum.
+      Nam et rem ad quia? Dolor maxime deserunt architecto explicabo omnis ex
+      consequuntur cupiditate, inventore rem accusantium recusandae aliquid ab,
+      accusamus vero provident vel numquam magni iste dolorem natus dolores non
+      est fuga saepe! Error odio blanditiis, veniam fugit soluta quas minima
+      culpa voluptatibus eius sint iusto necessitatibus enim aperiam doloremque
+      neque. Cum architecto quod ducimus cupiditate quisquam corporis?
+      Necessitatibus, omnis?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium modi
+      sint et minima maxime minus accusamus consectetur consequatur sed! Impedit
+      hic nesciunt aliquid quas cum, magni dicta praesentium recusandae
+      laboriosam odit id odio similique. Odio quia voluptatem dolorem nostrum.
+      Nam et rem ad quia? Dolor maxime deserunt architecto explicabo omnis ex
+      consequuntur cupiditate, inventore rem accusantium recusandae aliquid ab,
+      accusamus vero provident vel numquam magni iste dolorem natus dolores non
+      est fuga saepe! Error odio blanditiis, veniam fugit soluta quas minima
+      culpa voluptatibus eius sint iusto necessitatibus enim aperiam doloremque
+      neque. Cum architecto quod ducimus cupiditate quisquam corporis?
+      Necessitatibus, omnis?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium modi
+      sint et minima maxime minus accusamus consectetur consequatur sed! Impedit
+      hic nesciunt aliquid quas cum, magni dicta praesentium recusandae
+      laboriosam odit id odio similique. Odio quia voluptatem dolorem nostrum.
+      Nam et rem ad quia? Dolor maxime deserunt architecto explicabo omnis ex
+      consequuntur cupiditate, inventore rem accusantium recusandae aliquid ab,
+      accusamus vero provident vel numquam magni iste dolorem natus dolores non
+      est fuga saepe! Error odio blanditiis, veniam fugit soluta quas minima
+      culpa voluptatibus eius sint iusto necessitatibus enim aperiam doloremque
+      neque. Cum architecto quod ducimus cupiditate quisquam corporis?
+      Necessitatibus, omnis?
+    </p>
+    <footer>
+      This is a footer. It should show up on a separate page when printed if it
+      has <code>page-break-before: always;</code> set on it.
+    </footer>
+
+    <dialog>
+      <p>For best results, open this page in Chrome.</p>
+      <form method="dialog">
+        <button>OK</button>
+      </form>
+    </dialog>
+
+    <script>
+      var isChrome =
+        /Chrome/.test(navigator.userAgent) &&
+        /Google Inc/.test(navigator.vendor);
+      if (!isChrome) {
+        document.querySelector("dialog").setAttribute("open", true);
+      }
+    </script>
+  </body>
+</html>
