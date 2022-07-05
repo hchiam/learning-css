@@ -473,7 +473,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
   - that's why `margin-block: auto` or `margin-inline: auto` trick helps center things
 
-- CSS margin collapse rules weirdness: https://codepen.io/hchiam/pen/WNZZqjo
+- CSS margin collapse rules weirdness: https://codepen.io/hchiam/pen/WNZZqjo and https://codepen.io/hchiam/pen/ExQgjOX and https://www.joshwcomeau.com/css/rules-of-margin-collapse/
 
   - (margin collapse applies to the default flow layout mode only (like `display:block`), since it made sense for documents, and so margin collapse doesn't happen for `display:flex` because it doesn't make sense)
   - overlapping inline-direction margins don't collapse, but
@@ -483,6 +483,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
       - When one is positive and one is negative, they'll be added together to cancel each other out (instead of comparing absolute values).
       - Similarly, if there's multiple positive and negative margins to overlap, take the most positive and most negative margins and add those.
       - So if you want a child to be lower down inside its parent, you might want to add top padding to the parent instead of trying to incorrectly add top margin to the child.
+      - But where this analogy breaks down: while margin "distancing" collapses/overlaps in the block direction, but oddly "add" (don't overlap) in the inline direction.
 
 - https://github.com/hchiam/huckleberry
 
