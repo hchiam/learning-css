@@ -17,6 +17,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - **Mental model for CSS:**
     - **layouts = algorithms**, and
     - **properties = inputs to those algorithms**.
+    - Also: CSS is a collection of mini languages.
   - (Note that layout mode isn't only set by the `display` property, it can also be set by `position`, `float`, the parent having `display:flex`, etc.)
   - (Note that there should be 1 primary layout mode on an element, and parent/child layout modes can conflict, but `position`ed layout on the element itself usually beats all other layouts trying to be applied to that element - except for `position:relative`.)
   - Remember that flow layout is the default, and so img tags will get extra blank space added below images because it's treated like text, which can't be easily tweaked with `padding`/`border`/`margin`. learning only about specific properties won't explain things like this!
