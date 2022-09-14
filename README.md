@@ -1729,3 +1729,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   - Why? For example, so JS `scrollIntoView()` doesn't scroll the target element underneath a `fixed`/`sticky` header
 
   - (and maybe also add `margin-top` on the first child of things you could scroll to)
+
+- CSS environment variables: `env()`
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/env
+  - https://developer.chrome.com/docs/web-platform/virtual-keyboard/#the-css-environment-variables
