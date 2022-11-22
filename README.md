@@ -889,38 +889,41 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - extra space? -> check each child's `flex-grow`, while respecting `max-width`.
 - lack space? -> check each child's `flex-shrink`, while respecting `min-width` and content width (as long as `width` isn't explicitly smaller).
 - but usually we just want to use `flex` shorthand = `flex-grow: 1`, `flex-shrink: 1`, and `flex-basis: 0` (which conceptually works like `width: 0` and filling the rest of the space like you typically want)
+
   - and _NOT_ recommended: setting `flex-grow` or `flex-shrink` without setting `flex-basis`, because `flex-basis: auto` is the default
   - `flex-basis: 0` = will "stretch" each item to fill additional space.
     - what you'd usually want, so just use `flex`.
   - `flex-basis: auto` = will "add" _additional_ space to items.
 
-```css
-.wrapper {
-  display: flex;
-}
-.left,
-.right {
-  min-width: 100px;
-  max-width: 200px;
-  flex: 0 1000 200px; /* 
-    0: don't grow past suggested width of 200px, 
-    1000: visually shrink only .right when lacking space, 
-    until hit suggested width of 200px */
-}
-.middle {
-  flex: 1 1 500px; /* 
-    1: grow only .middle, 
-    1: let .right appear to be the only one shrinking 
-        but when .right hits its min-width then shrink .middle to not overflow body 
-        (hence flex-shrink of 1 instead of 0), 
-    suggested width of .middle of 500px */
-}
-@media (max-width: 700px) {
-  .left {
-    display: none; /* hide .left at smaller screen width */
+- ```css
+  .wrapper {
+    display: flex;
   }
-}
-```
+  .left,
+  .right {
+    min-width: 100px;
+    max-width: 200px;
+    flex: 0 1000 200px; /* 
+      0: don't grow past suggested width of 200px, 
+      1000: visually shrink only .right when lacking space, 
+      until hit suggested width of 200px */
+  }
+  .middle {
+    flex: 1 1 500px; /* 
+      1: grow only .middle, 
+      1: let .right appear to be the only one shrinking 
+          but when .right hits its min-width then shrink .middle to not overflow body 
+          (hence flex-shrink of 1 instead of 0), 
+      suggested width of .middle of 500px */
+  }
+  @media (max-width: 700px) {
+    .left {
+      display: none; /* hide .left at smaller screen width */
+    }
+  }
+  ```
+
+  - example: https://codepen.io/hchiam/pen/qBKZwON
 
 - also:
 
