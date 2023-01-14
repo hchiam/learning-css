@@ -1765,3 +1765,4 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
       transform: perspective(250px) rotateX(45deg);
     }
     ```
+  - note that certain properties turn off 3D rendering context: `overflow`, `clip-path`, `opacity`, `filter`, `mix-blend-mode` --> consider moving these to a wrapper element so the inner elements can preserve their 3D rendering context
