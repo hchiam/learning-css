@@ -1750,6 +1750,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     transform: rotateX(0.1turn);
     /* or */
     transform: translate(var(x) var(y)) rotateX(0.1turn);
+    
+    /* transform-style: preserve-3d; or more semantically: */
+    transform-style: inherit; /* pass the 3D rendering context down to the grand-children of .parent */
   }
   ```
   
