@@ -1738,3 +1738,24 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
   - https://developer.mozilla.org/en-US/docs/Web/CSS/env
   - https://developer.chrome.com/docs/web-platform/virtual-keyboard/#the-css-environment-variables
+
+- rotate/translate with 3D perspective: (parent provides perspective environment for its children)
+  
+  ```css
+  .parent {
+    perspective: 400px;
+  }
+  .child {
+    transform: rotateX(0.1turn);
+    /* or */
+    transform: translate(var(x) var(y)) rotateX(0.1turn);
+  }
+  ```
+  
+  - or for some reason you can let each element have its own perspective environment:
+  
+  ```css
+  .itself {
+    transform: perspective(250px) rotateX(45deg);
+  }
+  ```
