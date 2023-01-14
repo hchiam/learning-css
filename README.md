@@ -1743,7 +1743,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   
   ```css
   .parent {
-    perspective: 400px;
+    perspective: 400px; /* distance away from you, realistic distance perspective, vs orthographic projection */
+    transform-style: preserve-3d; /* to position children relative to each other in 3D space */
   }
   .child {
     transform: rotateX(0.1turn);
@@ -1751,6 +1752,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     transform: translate(var(x) var(y)) rotateX(0.1turn);
   }
   ```
+  
+  - example: https://codepen.io/hchiam/pen/bGjRmBj?editors=1100
   
   - or for some reason you can let each element have its own perspective environment:
   
