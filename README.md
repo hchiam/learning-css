@@ -891,6 +891,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 - but usually we just want to use `flex` shorthand = `flex-grow: 1`, `flex-shrink: 1`, and `flex-basis: 0` (which conceptually works like `width: 0` and filling the rest of the space like you typically want)
 
   - and _NOT_ recommended: setting `flex-grow` or `flex-shrink` without setting `flex-basis`, because `flex-basis: auto` is the default
+  - `flex` defaults to: `0 1 auto` (`flex-grow: 0`) (`flex-shrink: 1`) (`flex-basis: auto`) https://www.joshwcomeau.com/css/interactive-guide-to-flexbox
   - `flex-basis: 0` = will "stretch" each item to fill additional space.
     - what you'd usually want, so just use `flex`.
   - `flex-basis: auto` = will "add" _additional_ space to items.
