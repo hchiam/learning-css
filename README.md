@@ -1754,8 +1754,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
   
   - or for some reason you can let each element have its own perspective environment:
   
-  ```css
-  .itself {
-    transform: perspective(250px) rotateX(45deg);
-  }
-  ```
+    ```css
+    .itself {
+      transform: perspective(250px) rotateX(45deg);
+    }
+    ```
