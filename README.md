@@ -20,7 +20,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
     - Also: CSS is a collection of mini languages.
   - (Note that layout mode isn't only set by the `display` property, it can also be set by `position`, `float`, the parent having `display:flex`, etc.)
   - (Note that there should be 1 primary layout mode on an element, and parent/child layout modes can conflict, but `position`ed layout on the element itself usually beats all other layouts trying to be applied to that element - except for `position:relative`.)
-  - Remember that flow layout is the default, and so img tags will get extra blank space added below images because it's treated like text, which can't be easily tweaked with `padding`/`border`/`margin`. learning only about specific properties won't explain things like this!
+  - Remember that flow layout is the default, and so img tags will get extra blank space added below images because it's treated like text, which can't be easily tweaked with `padding`/`border`/`margin`. And `white-space: nowrap;` is required if you want `overflow-x: auto;` to work on a row of `<img>`s because images are treated like text by default. Learning only about specific properties won't explain things like this!
   - Different layout modes can have different default behaviour for any property:
     - For example, the `width` property is implemented differently depending on the layout algorithm: e.g.: in flow layout, `width:2000px` is `2000px`, but in `flex` layout, `width:2000px` is treated as a "suggestion"!
 
