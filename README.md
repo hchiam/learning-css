@@ -1734,7 +1734,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
   - (and maybe also add `margin-top` on the first child of things you could scroll to)
 
-- CSS environment variables: `env()`
+- CSS environment variables: `env()` (like `var()` but user-agent defined and usable in more places, like in media queries)
 
   - https://developer.mozilla.org/en-US/docs/Web/CSS/env
   - https://developer.chrome.com/docs/web-platform/virtual-keyboard/#the-css-environment-variables
