@@ -357,6 +357,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things.
 
 - stuff you can do without JS-heavy web frameworks: https://codepen.io/hchiam/pen/ExbmjEP
 
+- pure CSS speech bubble: https://codepen.io/hchiam/pen/ZEjVRjj
+
 ## more recent CodePen experiments and notes made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
 
 - CSS shadow via `box-shadow` (direction choice) vs via `filter: drop-shadow` (contoured shadow): https://codepen.io/hchiam/pen/YzrrVGL
