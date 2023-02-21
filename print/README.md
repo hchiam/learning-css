@@ -28,3 +28,14 @@ Demo of:
 ## Neither page break set nor orphans set
 
 ![Neither page break set nor orphans set](neither-page-break-nor-orphans-set.png)
+
+## More notes
+
+```css
+.cross-browser-support { /* Chrome, Firefox, Edge, but maybe not Safari */
+  break-inside: avoid;
+  page-break-inside: avoid;
+  display: inline-block;
+  width: 100%;
+}
+```
