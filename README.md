@@ -1064,7 +1064,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - pick breakpoints that are _between_ likely screen widths, instead of right at the boundaries of likely screen widths:
 
   ```css
-  /* mobile by default (if your is better with desktop by default, then reverse the order below and use max-width instead) */
+  /* mobile by default (if your app is better with desktop by default, then reverse the order below and use max-width instead) */
 
   /* (add 350px breakpoint if you must distinguish "small"/"large" mobile) */
 
