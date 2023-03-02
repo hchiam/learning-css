@@ -1089,7 +1089,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   /* note: these widths are intended for general styling, not for detecting devices, since users are able to do things like adjust screen widths or change portrait/landscape mode */
   ```
 
-- To detect detect user interaction type or user input type of pointer,you can use ["Interaction Media Features"](https://drafts.csswg.org/mediaqueries-4/#mf-interaction):
+- To detect user interaction type or user input type of pointer,you can use ["Interaction Media Features"](https://drafts.csswg.org/mediaqueries-4/#mf-interaction):
 
   ```css
   @media (hover: hover) and (pointer: fine) {
