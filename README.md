@@ -359,6 +359,10 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 
 - pure CSS speech bubble: https://codepen.io/hchiam/pen/ZEjVRjj
 
+## GUI challenges playlist with Adam Argyle
+
+https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
+
 ## more recent CodePen experiments and notes made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
 
 - CSS shadow via `box-shadow` (direction choice) vs via `filter: drop-shadow` (contoured shadow): https://codepen.io/hchiam/pen/YzrrVGL
