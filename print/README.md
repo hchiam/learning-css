@@ -33,9 +33,11 @@ Demo of:
 
 ```css
 .cross-browser-support { /* Chrome, Firefox, Edge, but maybe not Safari */
-  break-inside: avoid;
   page-break-inside: avoid;
+  break-inside: avoid;
   display: inline-block;
   width: 100%;
 }
 ```
+
+- To get `break-after: avoid;` to work cross-browser (e.g. Firefox and Safari don’t support the `avoid` value specifically for `break-after`), you’ll need to use an `:after` pseudo-element that increases the element’s effective height from the point of view of the page break algorithm, but that also doesn’t unnecessarily shift the elements below it: https://stackoverflow.com/a/53742871
