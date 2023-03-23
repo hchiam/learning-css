@@ -41,3 +41,16 @@ Demo of:
 ```
 
 - To get `break-after: avoid;` to work cross-browser (e.g. Firefox and Safari don’t support the `avoid` value specifically for `break-after`), you’ll need to use an `:after` pseudo-element that increases the element’s effective height from the point of view of the page break algorithm, but that also doesn’t unnecessarily shift the elements below it: https://stackoverflow.com/a/53742871
+
+```css
+.thing {
+  page-break-after: avoid;
+  break-after: avoid;
+}
+.thing::after {
+  content: "";
+  display: block;
+  height: 100px;
+  margin-bottom: -100px;
+}
+```
