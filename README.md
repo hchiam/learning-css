@@ -1040,6 +1040,16 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   }
   ```
 
+  - my own spin on this: css grid of fixed-size children with left align wrap, but also center grid within parent, and grid gaps stay same size across both horizontal/vertical axes:
+ 
+    ```css
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 300px);
+      justify-content: center;
+    }
+    ```
+
 - CSS grid with 2 panels, 1 that grows until they're same, then both grow:
 
   ```css
