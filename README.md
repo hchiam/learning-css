@@ -1791,5 +1791,18 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - detect Firefox:
   
   ```css
-  @-moz-document url-prefix() { .selector { /*…*/ } }
+  @-moz-document url-prefix() { .selector { /* ... */ } }
+  ```
+
+- there are media queries specific to PWA's: https://web.dev/learn/pwa/app-design/#media-queries
+
+  ```css
+  /* fallbacks: fullscreen --> standalone --> minimal --> browser */
+  @media (display-mode: browser) { /* PWA in browser mode */}
+  @media (display-mode: standalone) { /* PWA in standalone mode */}
+  @media (display-mode: minimal-ui), (display-mode: standalone), (display-mode: fullscreen) { /* PWA in all modes */ }
+  /* don't forget to consider prefers-colors-scheme https://web.dev/prefers-color-scheme */
+  /* don't forget to consider prefers-reduced-motion https://web.dev/prefers-reduced-motion */
+  /* consider user-select: none; for PWA */
+  /* consider overscroll-behavior-y: contain; for PWA (or maybe touch-action: none;?) */
   ```
