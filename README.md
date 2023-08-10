@@ -321,13 +321,14 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
     ```
 
 - CSS `grid-column` vs `grid-template-columns`: <https://www.w3schools.com/cssref/tryit.asp?filename=trycss_grid-column>
+
   - `grid-template-columns` goes on the container that you set `display: grid` on. It tells CSS the size of the columns in the grid.
   - `grid-column` goes on the children inside the container that you set `display: grid` on. It tells CSS the start / end columns of the item inside the grid. For example: `grid-column: 1 / span 3;` means it'll span columns 1 and 3, while just `grid-column: 1 / 3;` means it'll go from column line 1 (left-most) to column line 3 (which makes it look like it's spanning columns 1 and 2).
   - relatedly, `grid-template-areas` lets you map out grid children in a more visual way. It also goes on the container that you set `display: grid` on. You can assign something like `grid-area: A;` to each child item.
-  - <https://codepen.io/hchiam/pen/PoKdVya?editors=1100> placing elements in `grid-template-areas` feels like playing Battleship with just rectangles – use adjacent cells to place blocks: 
-  
+  - <https://codepen.io/hchiam/pen/PoKdVya?editors=1100> placing elements in `grid-template-areas` feels like playing Battleship with just rectangles – use adjacent cells to place blocks:
+
     ![grid-template-areas image](https://github.com/hchiam/learning-css/blob/main/grid-template-areas-is-like-battleship.png)
-  
+
 - curated colour palettes in context: <https://www.happyhues.co>
 - <https://ishadeed.com/article/defensive-css/>
   - `overscroll-behavior-y: contain;` can be used to prevent scrolling to the end of the modal scrolling the background; lock scroll chaining
@@ -494,6 +495,8 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       - Similarly, if there's multiple positive and negative margins to overlap, take the most positive and most negative margins and add those.
       - So if you want a child to be lower down inside its parent, you might want to add top padding to the parent instead of trying to incorrectly add top margin to the child.
       - But where this analogy breaks down: while margin "distancing" collapses/overlaps in the block direction, but oddly "add" (don't overlap) in the inline direction.
+  - further notes on margin collapse: [BFCs and preventing margin collapse: "Why isn't the margin applying?"](https://youtu.be/YdggbwLEuFg): create a BFC with `display:flex;` or `display:flow-root;`
+    - BFC = [Block Formatting Context](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context) <- see link for things that implicitly create a BFC, which is good for suppressing margin collapse, containing internal floats, and excluding external floats.
 
 - https://github.com/hchiam/huckleberry
 
@@ -1041,7 +1044,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   ```
 
   - my own spin on this: css grid of fixed-size children with left align wrap, but also center grid within parent, and grid gaps stay same size across both horizontal/vertical axes:
- 
+
     ```css
     .grid {
       display: grid;
@@ -1761,7 +1764,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   - https://developer.chrome.com/docs/web-platform/virtual-keyboard/#the-css-environment-variables
 
 - rotate/translate with 3D perspective: (parent provides perspective environment for its children)
-  
+
   ```css
   .parent {
     perspective: 400px; /* distance away from you, realistic distance perspective, vs orthographic projection */
@@ -1771,36 +1774,49 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     transform: rotateX(0.1turn);
     /* or */
     transform: translate(var(x) var(y)) rotateX(0.1turn);
-    
+
     /* transform-style: preserve-3d; or more semantically: */
     transform-style: inherit; /* pass the 3D rendering context down to the grand-children of .parent */
   }
   ```
-  
+
   - example: https://codepen.io/hchiam/pen/bGjRmBj?editors=1100
-  
+
   - or for some reason you can let each element have its own perspective environment:
-  
+
     ```css
     .itself {
       transform: perspective(250px) rotateX(45deg);
     }
     ```
+
   - note that certain properties turn off 3D rendering context: `overflow`, `clip-path`, `opacity`, `filter`, `mix-blend-mode` --> consider moving these to a wrapper element so the inner elements can preserve their 3D rendering context
 
 - detect Firefox:
-  
+
   ```css
-  @-moz-document url-prefix() { .selector { /* ... */ } }
+  @-moz-document url-prefix() {
+    .selector {
+      /* ... */
+    }
+  }
   ```
 
 - there are media queries specific to PWA's: https://web.dev/learn/pwa/app-design/#media-queries
 
   ```css
   /* fallbacks: fullscreen --> standalone --> minimal --> browser */
-  @media (display-mode: browser) { /* PWA in browser mode */}
-  @media (display-mode: standalone) { /* PWA in standalone mode */}
-  @media (display-mode: minimal-ui), (display-mode: standalone), (display-mode: fullscreen) { /* PWA in all modes */ }
+  @media (display-mode: browser) {
+    /* PWA in browser mode */
+  }
+  @media (display-mode: standalone) {
+    /* PWA in standalone mode */
+  }
+  @media (display-mode: minimal-ui),
+    (display-mode: standalone),
+    (display-mode: fullscreen) {
+    /* PWA in all modes */
+  }
   /* don't forget to consider prefers-colors-scheme https://web.dev/prefers-color-scheme */
   /* don't forget to consider prefers-reduced-motion https://web.dev/prefers-reduced-motion */
   /* consider user-select: none; for PWA */
