@@ -54,6 +54,7 @@ Example usage:
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  animation-fill-mode: both;
   animation-delay: calc(var(--delay) * var(--num, 0));
 }
 @keyframes move1 {
