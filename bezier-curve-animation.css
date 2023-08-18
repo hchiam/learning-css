@@ -1,0 +1,84 @@
+/** 
+References: 
+https://css-tricks.com/pure-css-bezier-curve-motion-paths/ 
+https://codepen.io/hchiam/pen/ZEVEWNE?editors=1100 
+https://codepen.io/hchiam/pen/JjwPdZE?editors=1100
+
+Example usage: 
+<div class="bezier-curve-animation" 
+     style="--p0x:0;--p0y:0;
+            --p1x:0;--p1y:100;
+            --p2x:100;--p2y:0;
+            --p3x:100;--p3y:100;
+            --unit:0.8vw;
+            --duration:3s;
+            --delay:0.6s;">
+  <div style="--num:0; background:red;">a</div>
+  <div style="--num:2; background:blue;">b</div>
+  <div style="--num:4; background:green;">c</div>
+</div>
+*/
+.bezier-curve-animation {
+  position: relative;
+  
+  /* set default Bézier curve points: */
+
+  --p0x: 0; /* start point */
+  --p0y: 0; /* start point */
+
+  --p1x: 0; /* point to bend curve from start */
+  --p1y: 100; /* point to bend curve from start */
+
+  --p2x: 100; /* point to bend curve from end */
+  --p2y: 0; /* point to bend curve from end */
+
+  --p3x: 100; /* end point */
+  --p3y: 100; /* end point */
+
+  /* extra calculations to create the Bézier curve: */
+
+  --q1x: calc(3 * var(--p1x) - 3 * var(--p2x) + var(--p3x));
+  --q1y: calc(3 * var(--p1y) - 3 * var(--p2y) + var(--p3y));
+  --q2x: calc(3 * var(--p2x) - 2 * var(--p3x));
+  --q2y: calc(3 * var(--p2y) - 2 * var(--p3y));
+  
+  /* more defaults: */
+  
+  --duration: 3s;
+  --unit: 1px;
+}
+.bezier-curve-animation > * {
+  position: absolute;
+  animation-name: move1, move2, move3, progress;
+  animation-duration: var(--duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: calc(var(--delay) * var(--num, 0));
+}
+@keyframes move1 {
+  from {
+    transform: translate3d(calc(var(--unit) * var(--p0x)), calc(var(--unit) * var(--p0y)), 0px);
+  }
+  to {
+    transform: translate3d(calc(var(--unit) * var(--q1x)), calc(var(--unit) * var(--q1y)), 0px);
+  }
+}
+@keyframes move2 {
+  to {
+    transform: translate3d(calc(var(--unit) * var(--q2x)), calc(var(--unit) * var(--q2y)), 0px);
+  }
+}
+@keyframes move3 {
+  to {
+    transform: translate3d(calc(var(--unit) * var(--p3x)), calc(var(--unit) * var(--p3y)), 0px);
+  }
+}
+@keyframes progress {
+  from {
+    z-index: 0;
+  }
+  to {
+    z-index: 1000;
+  }
+}
