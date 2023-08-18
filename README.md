@@ -1655,6 +1655,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - generate cubic-bezier animation curves to copy to clipboard: https://cubic-bezier.com
 
 - CSS Bézier curve animation, powered by CSS variables!: https://codepen.io/hchiam/pen/ZEVEWNE?editors=1100
+  - backup CSS ready for copying to reuse: https://github.com/hchiam/learning-css/blob/main/bezier-curve-animation.css
 
 - you could create performant animations with a sprite sheet with `animation: ... steps(34) ... ;`
 
