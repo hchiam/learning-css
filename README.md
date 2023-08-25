@@ -1825,3 +1825,32 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   /* consider user-select: none; for PWA */
   /* consider overscroll-behavior-y: contain; for PWA (or maybe touch-action: none;?) */
   ```
+
+- making an element's text colour automatically contrast with its parent's background:
+
+    ```html
+    <p style="background:red;">
+      <span class="text-contrasting-with-background">red background, bright aqua text</span>
+    </p>
+    <p style="background:red;">
+      <span class="black-or-white-text-contrasting-with-background">red background, white text</span>
+    </p>
+    <style>
+      @supports(mix-blend-mode: difference) {
+        .text-contrasting-with-background {
+          color: white;
+          mix-blend-mode: difference;
+        }
+      }
+    
+      @supports(background-clip: text) {
+        .black-or-white-text-contrasting-with-background {
+          background: inherit;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          filter: invert(1) grayscale(1) contrast(9);
+        }
+      }
+    </style>
+    ```
