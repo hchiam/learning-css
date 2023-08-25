@@ -1,0 +1,17 @@
+.scalloped {
+  height: 100px;
+  width: 100%;
+  background: navy;
+  --scallop-size: 40px;
+  -webkit-mask: /* two gradients: */
+    linear-gradient( /* "block" gradient */
+      to top,
+      transparent var(--scallop-size),
+      black 0%
+    ), /* then under that: */
+    radial-gradient( /* "scallop" gradient */
+      var(--scallop-size) at top, 
+      black 97%, 
+      transparent
+    ) bottom / calc(1.9 * var(--scallop-size)) var(--scallop-size); /* open-props */
+}
