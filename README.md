@@ -1854,3 +1854,5 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       }
     </style>
     ```
+
+- "RSDPV": Rule contains `Selector and { Declarations }`, Declaration contains `Property: and Value;`
