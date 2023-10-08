@@ -1863,3 +1863,5 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - SVG icon pieces easy transitions: https://codepen.io/hchiam/pen/wvRReXG
 
 - SVG commands M, L, and A (Q is harder to intuit): https://codepen.io/hchiam/pen/dywwRQE?editors=1000
+
+- SVG splash and spin where cursor is when you click: https://codepen.io/hchiam/pen/NWeevda
