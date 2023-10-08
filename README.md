@@ -367,7 +367,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 
 https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
-## more recent CodePen experiments and notes made around the time I'm taking [CSS in JS](https://css-for-js.dev/) course:
+## more recent CodePen experiments and notes made during/after taking [CSS in JS](https://css-for-js.dev/) course:
 
 - CSS shadow via `box-shadow` (direction choice) vs via `filter: drop-shadow` (contoured shadow): https://codepen.io/hchiam/pen/YzrrVGL
 
@@ -1857,3 +1857,9 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
 - "RSDPV": Rule contains `Selector and { Declarations }`, Declaration contains `Property: and Value;`
   - super summary mnemonic for my own use: R&D = Rule (the whole block including S and D) and Declarations (lines inside the brackets)
+
+- CSS motion path: https://codepen.io/hchiam/pen/JjwPdZE?editors=1100
+
+- SVG icon pieces easy transitions: https://codepen.io/hchiam/pen/wvRReXG
+
+- SVG commands M, L, and A (Q is harder to intuit): https://codepen.io/hchiam/pen/dywwRQE?editors=1000
