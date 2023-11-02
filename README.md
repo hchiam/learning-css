@@ -1144,7 +1144,9 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   | pros | semantic grouping, totally different/unrelated styles for different sizes                                                                  | "smooth" transitions, responds to containers/context                                                                                                                                                            |
   | cons | "choppy" transitions, "global" window media queries only (can't respond to container queries unless the newest CSS features are supported) | harder to understand intent just from reading the code (must intuit test cases with a working example), harder to group/control unrelated things or have totally different/unrelated styles for different sizes |
 
-  - container query is now available in Chrome/Firefox/Safari/Edge: https://codepen.io/hchiam/pen/oNPedeY
+  - container query is now available in [Chrome/Edge/Firefox/Opera/Safari](https://developer.mozilla.org/en-US/docs/Web/CSS/@container#browser_compatibility):
+    - https://codepen.io/hchiam/pen/oNPedeY
+    - https://web.dev/blog/cq-stable
 
 - font size that intelligently scales with screen width:
 
