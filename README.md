@@ -113,6 +113,12 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   - <https://www.debugbear.com/blog/devtools-performance#cpu-flame-chart>
 - CSS flexbox, hand-written visual summary on one sticky note:
   - <https://drive.google.com/file/d/1FT-EEwIou3rGAuripb-SMPyTNwhXhG0F/view>
+- interactive explanations of CSS flexbox and CSS grid:
+  - https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/
+  - https://www.joshwcomeau.com/css/interactive-guide-to-grid/
+
+    <img alt="" height="400" src="https://github.com/hchiam/learning-css/blob/main/CSS_grid-row_grid-column.png">
+    
 - <https://www.webfx.com/blog/web-design/12-common-css-mistakes-web-developers-make>
   - use CSS Reset
   - use hex instead of color names (color names have value decided by the browser)
