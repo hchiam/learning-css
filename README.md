@@ -1873,3 +1873,9 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - SVG commands M, L, and A (Q is harder to intuit): https://codepen.io/hchiam/pen/dywwRQE?editors=1000
 
 - SVG splash and spin where cursor is when you click: https://codepen.io/hchiam/pen/NWeevda
+
+- scroll-driven animations:
+  - JS-based: `IntersectionObserver` https://github.com/hchiam/learning-js/blob/main/onEnterViewport_intersectionObserver.js
+    - well-supported: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#browser_compatibility
+  - CSS-based: `animation-timeline` `scroll()` https://codepen.io/hchiam/pen/ExrzPOq?editors=0100 and `view()` https://codepen.io/hchiam/pen/LYqoGqG?editors=0100
+    - not fully supported as of July 2023 https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline#browser_compatibility
