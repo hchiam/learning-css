@@ -184,7 +184,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - <https://youtu.be/Qhaz36TZG5Y?t=263>
 
   - flexbox for lines → CSS grid for bigger picture
-  - replace media queries with clamp:
+  - replace media queries with `clamp()`: (note: not available in IE 11 https://caniuse.com/mdn-css_types_clamp)
 
     ```css
     /* clamp isn't supported in IE */
@@ -193,6 +193,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
       width: clamp(200px, 50%, 600px);
     }
     ```
+    
+    - example of using `clamp()` instead of media queries: https://codepen.io/hchiam/pen/mdrXzjg
 
   - number headers like h1 without manually typing numbers:
 
