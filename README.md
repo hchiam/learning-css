@@ -1884,3 +1884,5 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     - not fully supported as of July 2023 https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline#browser_compatibility
 
 - comparison slider: https://codepen.io/hchiam/pen/QWoLZEg (https://gui-challenges.web.app/compare/dist/)
+
+- `:lang()` can use more ways to detect language than `[lang=""]`
