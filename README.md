@@ -15,9 +15,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - https://www.joshwcomeau.com/css/understanding-layout-algorithms
 
   - **Mental model for CSS:**
+    - **CSS is a collection of mini languages/algorithms**,
     - **layouts = algorithms**, and
     - **properties = inputs to those algorithms**.
-    - Also: CSS is a collection of mini languages.
   - (Note that layout mode isn't only set by the `display` property, it can also be set by `position`, `float`, the parent having `display:flex`, etc.)
   - (Note that there should be 1 primary layout mode on an element, and parent/child layout modes can conflict, but `position`ed layout on the element itself usually beats all other layouts trying to be applied to that element - except for `position:relative`.)
   - Remember that flow layout is the default, and so img tags will get extra blank space added below images because it's treated like text, which can't be easily tweaked with `padding`/`border`/`margin`. And `white-space: nowrap;` is required if you want `overflow-x: auto;` to work on a row of `<img>`s because images are treated like text by default. Learning only about specific properties won't explain things like this!
