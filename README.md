@@ -15,7 +15,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - https://www.joshwcomeau.com/css/understanding-layout-algorithms
 
   - **Mental model for CSS:**
-    - **CSS is a collection of mini languages/algorithms**,
+    - **CSS is a collection of mini (sometimes implicit) algorithms/languages**,
     - **layouts = algorithms**, and
     - **properties = inputs to those algorithms**.
   - (Note that layout mode isn't only set by the `display` property, it can also be set by `position`, `float`, the parent having `display:flex`, etc.)
