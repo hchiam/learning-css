@@ -1886,3 +1886,5 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - comparison slider: https://codepen.io/hchiam/pen/QWoLZEg (https://gui-challenges.web.app/compare/dist/)
 
 - `:lang()` can use more ways to detect language than `[lang=""]`
+
+- lots of ways to center things in CSS, and when to use them: https://www.joshwcomeau.com/css/center-a-div/#when-to-use-which-method-11
