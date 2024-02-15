@@ -1,0 +1,9 @@
+/* https://stackoverflow.com/questions/11946098/how-to-remove-dot-after-number-in-ordered-list-items-in-ol-li */
+ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+li:before {
+  content: "(" counter(item) ") ";
+  counter-increment: item;
+}
