@@ -1888,3 +1888,5 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - `:lang()` can use more ways to detect language than `[lang=""]`
 
 - lots of ways to center things in CSS, and when to use them: https://www.joshwcomeau.com/css/center-a-div/#when-to-use-which-method-11
+
+- SVG path animation, like drawing a line: https://codepen.io/hchiam/pen/NWJQdWG
