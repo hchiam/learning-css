@@ -194,7 +194,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
     }
     ```
     
-    - example of using `clamp()` instead of media queries: https://codepen.io/hchiam/pen/mdrXzjg
+    - example of using `clamp()` instead of media queries (min width, breakpoint): https://codepen.io/hchiam/pen/mdrXzjg
+    - example of using lots of "boolean" variables ad breakpoints, instead of media queries: https://codepen.io/hchiam/pen/ZEprqVy
     - example of using `clamp()` instead of media queries, to help with accounting for ​translation lengths: https://codepen.io/hchiam/pen/PoLbJdj
 
   - number headers like h1 without manually typing numbers:
