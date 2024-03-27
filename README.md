@@ -1904,3 +1904,21 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - lots of ways to center things in CSS, and when to use them: https://www.joshwcomeau.com/css/center-a-div/#when-to-use-which-method-11
 
 - SVG path animation, like drawing a line: https://codepen.io/hchiam/pen/NWJQdWG
+
+- oklch quick reference: https://oklch.com/#50,0,0,100
+  - `oklch(var(--lightness) var(--chroma) var(--hue) / var(--opacity))`
+    - L "lightness" = _perceived_ "brightness", like putting into **brighter light**
+    - C "chroma" = "amount of colour", like the "**intensity**" of the colour given the same lighting conditions
+    - H "hue" = **colour** (see quick references below)
+  - grey: `oklch(50% 0 0)` `oklch(var(--lightness) 0 0)`
+  - **Chroma**: 0-0.37 range effectively (https://keithjgrant.com/posts/2023/04/its-time-to-learn-oklch-color/)
+  - **Hue** quick references: approximate positions:
+    - pink: 0
+    - red: 30
+    - orange: 70
+    - yellow: 90
+    - green: 140
+    - cyan: 200
+    - blue: 260
+    - purple: 300
+    - magenta: 330
