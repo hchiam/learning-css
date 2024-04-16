@@ -1932,7 +1932,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
         ```css
         --f: cyan;
         --o: black;
-        --t: 25px;
+        --t: 1.25rem;
         -webkit-text-fill-color: var(--f);
         -webkit-text-stroke: var(--t) var(--o);
         paint-order: stroke fill;
