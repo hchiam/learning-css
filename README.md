@@ -1922,3 +1922,21 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     - blue: 260
     - purple: 300
     - magenta: 330
+
+- text outline (4 techniques): https://codepen.io/hchiam/pen/dyLKxpj
+  1. text outline via **text fill + stroke + (paint order)**: PERSONAL FAVOURITE IF SUPPORT ONLY MAJOR MODERN BROWSERS:
+      - `-webkit-text-fill-color: var(--fill-color);` and `-webkit-text-stroke: var(--thickness) var(--outline-color);`
+      - pro: complete control of text outline thickness
+      - con: thicker outlines can cover the text inside fill, and outlines of neighbouring letters overlap if `letter-spacing` is small (instead of "merging") _**UNLESS you can add**_ `paint-order: stroke fill;` (but [support for `paint-order`](https://developer.mozilla.org/en-US/docs/Web/CSS/paint-order#browser_compatibility) still has some gaps: no IE 11 support, and it may not affect stroked HTML text in Edge/Opera or Samsung Internet).
+  2. text outline via **shadows in 8 directions**:
+      - `--c: black;` and `text-shadow: -1px -1px var(--c), -1px 0 var(--c), -1px 1px var(--c), 0 -1px var(--c), 0 1px var(--c), 1px -1px var(--c), 1px 0 var(--c), 1px 1px var(--c);`
+      - pro: outlines of neighbouring letters "merge" if `letter-spacing` is small, and you can add `filter: drop-shadow(0 0 1px var(--c));` to smoothen out the rough edges a little. (also simpler than the following two alternatives.)
+      - con: you can't get very thick text outlines
+  3.  text outline via **shadows in 48 directions**:
+      - `--c: black;` and `--t: 0.02px;` and `text-shadow: 0px 10px var(--t) var(--c), 9.8px 2.1px var(--t) var(--c), 4.2px -9.1px var(--t) var(--c), -8px -6px var(--t) var(--c), -7.6px 6.5px var(--t) var(--c), 4.8px 8.8px var(--t) var(--c), 9.6px -2.8px var(--t) var(--c), -0.7px -10px var(--t) var(--c), -9.9px -1.5px var(--t) var(--c), -3.5px 9.4px var(--t) var(--c), 8.4px 5.4px var(--t) var(--c), 7.1px -7px var(--t) var(--c), -5.4px -8.4px var(--t) var(--c), -9.4px 3.5px var(--t) var(--c), 1.4px 9.9px var(--t) var(--c), 10px 0.8px var(--t) var(--c), 2.9px -9.6px var(--t) var(--c), -8.7px -4.8px var(--t) var(--c), -6.6px 7.5px var(--t) var(--c), 5.9px 8px var(--t) var(--c), 9.1px -4.1px var(--t) var(--c), -2.1px -9.8px var(--t) var(--c), -10px -0.1px var(--t) var(--c), -2.2px 9.8px var(--t) var(--c), 9.1px 4.2px var(--t) var(--c), 6.1px -8px var(--t) var(--c), -6.5px -7.6px var(--t) var(--c), -8.8px 4.7px var(--t) var(--c), 2.7px 9.6px var(--t) var(--c), 10px -0.6px var(--t) var(--c), 1.5px -9.9px var(--t) var(--c), -9.3px -3.6px var(--t) var(--c), -5.5px 8.4px var(--t) var(--c), 7px 7.2px var(--t) var(--c), 8.5px -5.3px var(--t) var(--c), -3.4px -9.4px var(--t) var(--c), -9.9px 1.3px var(--t) var(--c), -0.8px 10px var(--t) var(--c), 9.6px 2.9px var(--t) var(--c), 4.9px -8.7px var(--t) var(--c), -7.5px -6.7px var(--t) var(--c), -8.1px 5.9px var(--t) var(--c), 4px 9.2px var(--t) var(--c), 9.8px -2px var(--t) var(--c), 0.2px -10px var(--t) var(--c), -9.7px -2.3px var(--t) var(--c), -4.3px 9px var(--t) var(--c), 7.9px 6.1px var(--t) var(--c);`
+      - pro: thicker outline
+      - con: you can't adjust the outline thickness (thinner = no effect. thicker = becomes more shadow-like.)
+  4.  text outline via **svg of duplicate text**:
+      - `<svg viewBox="...'><text>...</text><text>...</text></svg>`
+      - pro: complete control of text outline thickness
+      - con: requires setting up svg with duplicate text, instead of relying just on CSS
