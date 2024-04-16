@@ -1928,6 +1928,15 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       - `-webkit-text-fill-color: var(--fill-color);` and `-webkit-text-stroke: var(--thickness) var(--outline-color);`
       - pro: complete control of text outline thickness
       - con: thicker outlines can cover the text inside fill, and outlines of neighbouring letters overlap if `letter-spacing` is small (instead of "merging") _**UNLESS you can add**_ `paint-order: stroke fill;` (but [support for `paint-order`](https://developer.mozilla.org/en-US/docs/Web/CSS/paint-order#browser_compatibility) still has some gaps: no IE 11 support, and it may not affect stroked HTML text in Edge/Opera or Samsung Internet).
+      - example:
+        ```css
+        --f: cyan;
+        --o: black;
+        --t: 25px;
+        -webkit-text-fill-color: var(--f);
+        -webkit-text-stroke: var(--t) var(--o);
+        paint-order: stroke fill;
+        ```
   2. text outline via **shadows in 8 directions**:
       - `--c: black;` and `text-shadow: -1px -1px var(--c), -1px 0 var(--c), -1px 1px var(--c), 0 -1px var(--c), 0 1px var(--c), 1px -1px var(--c), 1px 0 var(--c), 1px 1px var(--c);`
       - pro: outlines of neighbouring letters "merge" if `letter-spacing` is small, and you can add `filter: drop-shadow(0 0 1px var(--c));` to smoothen out the rough edges a little. (also simpler than the following two alternatives.)
