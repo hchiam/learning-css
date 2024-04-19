@@ -1949,3 +1949,31 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       - `<svg viewBox="...'><text>...</text><text>...</text></svg>`
       - pro: complete control of text outline thickness
       - con: requires setting up svg with duplicate text, instead of relying just on CSS
+
+- wobble:
+  - ```css
+    .wobble {
+      --wobble: 10deg;
+      @media (prefers-reduced-motion: no-preference) {
+        animation: wobble 1s cubic-bezier(0.5, 0, 0.5, 1);
+      }
+    }
+    @keyframes wobble {
+      0%,
+      to {
+        transform: rotate(0);
+      }
+      20% {
+        transform: rotate(calc(-1 * var(--wobble)));
+      }
+      40% {
+        transform: rotate(var(--wobble));
+      }
+      60% {
+        transform: rotate(calc(-1 * var(--wobble)));
+      }
+      80% {
+        transform: rotate(var(--wobble));
+      }
+    }
+    ```
