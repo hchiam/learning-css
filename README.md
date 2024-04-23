@@ -1880,8 +1880,8 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     </style>
     ```
 
-- "RSDPV": Rule contains `Selector and { Declarations }`, Declaration contains `Property: and Value;`
-  - super summary mnemonic for my own use: R&D = Rule (the whole block including S and D) and Declarations (lines inside the brackets)
+- "RSDPV" or "R SaD Pav": Rule contains `Selector and { Declarations }`, Declaration contains `Property: and Value;`
+  - super summary mnemonic for my own use: `R&D` = Rule (the whole block including S and D) and Declarations (lines inside the brackets)
 
 - CSS motion path: https://codepen.io/hchiam/pen/JjwPdZE?editors=1100
 
