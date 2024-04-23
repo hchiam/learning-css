@@ -1,0 +1,10 @@
+/* https://github.com/hchiam/learning-css/blob/main/list-with-number-bracket.css */
+
+ul.dash-list > li {
+  list-style: none;
+  text-indent: -1.1rem;
+  margin-left: 1rem;
+}
+ul.dash-list > li:before {
+  content: " — "; /* em dash */
+}
