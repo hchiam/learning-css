@@ -1,0 +1,15 @@
+/* https://github.com/hchiam/learning-css/blob/main/list-with-number-bracket.css */
+
+/* https://stackoverflow.com/questions/1632005/ordered-list-html-lower-alpha-with-right-parentheses */
+
+ol.lower-alpha-brackets-list {
+    counter-reset: list;
+}
+ol.lower-alpha-brackets-list > li {
+    list-style: none;
+    margin-left: -1em;
+}
+ol.lower-alpha-brackets-list > li:before {
+    content: "(" counter(list, lower-alpha) ") ";
+    counter-increment: list;
+}
