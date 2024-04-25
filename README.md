@@ -1977,3 +1977,26 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       }
     }
     ```
+
+- count children: (if you can support just major modern browsers: https://caniuse.com/css-has)
+  - ```css
+    .container:has(.item:nth-child(3)) {
+      /* container has AT LEAST 3 items: */
+      background: red;
+    }
+    ```
+  - note: `:nth-child` isn't necessarily counting 3 `.item`s that are (in)direct children of `.container`, but rather is counting if an `.item` is the 3rd child of any immediate parent, e.g.:
+    - ```html
+      <div class="container">
+        <div class="indirect">
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
+        <div class="another-direct-parent">
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
+      </div>
+      ```
