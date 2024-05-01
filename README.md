@@ -619,6 +619,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   - _**BUT**_ consider [`styled-components`](https://github.com/styled-components/styled-components), since it helps encourage good dev habits and **solves these problems** for us. (It also covers vendor prefixes and lets you do things like let JS data affect CSS styles.) If you can't use it, consider at least learning from its strategies to apply to your own code (e.g. legacy code base).
     - [`@emotion/css`](https://emotion.sh/docs/introduction) is a [similar alternative that's framework agnostic](https://emotion.sh/docs/@emotion/css)
     - [twin](https://github.com/ben-rogerson/twin.macro) is an interesting React alternative that combines Tailwind classes with styled-components and sass styling for things that don't have Tailwind classes
+    - [linaria](https://github.com/callstack/linaria) [could be the future of working with React Server Components (note: not the same as SSR)](https://www.joshwcomeau.com/react/css-in-rsc/#linaria-6) as it lets you continue writing styled-components, but it pre-processes them at compile time into [CSS Modules](https://github.com/css-modules/css-modules) that let devs type things like `import styles from './style.css';`, which is the processed into regular but scoped CSS, also at compile time.
 
 - global styles:
 
