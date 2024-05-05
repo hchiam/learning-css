@@ -114,11 +114,12 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - CSS flexbox, hand-written visual summary on one sticky note:
   - <https://drive.google.com/file/d/1FT-EEwIou3rGAuripb-SMPyTNwhXhG0F/view>
 - interactive explanations of CSS flexbox and CSS grid:
+
   - https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/
   - https://www.joshwcomeau.com/css/interactive-guide-to-grid/
 
     <img alt="" height="400" src="https://github.com/hchiam/learning-css/blob/main/CSS_grid-row_grid-column.png">
-    
+
 - <https://www.webfx.com/blog/web-design/12-common-css-mistakes-web-developers-make>
   - use CSS Reset
   - use hex instead of color names (color names have value decided by the browser)
@@ -193,7 +194,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
       width: clamp(200px, 50%, 600px);
     }
     ```
-    
+
     - example of using `clamp()` instead of media queries (min width, breakpoint): https://codepen.io/hchiam/pen/mdrXzjg
     - example of using lots of "boolean" variables ad breakpoints, instead of media queries: https://codepen.io/hchiam/pen/ZEprqVy
     - example of using `clamp()` instead of media queries, to help with accounting for ​translation lengths: https://codepen.io/hchiam/pen/PoLbJdj
@@ -1158,16 +1159,24 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   - container query is now available in [Chrome/Edge/Firefox/Opera/Safari](https://developer.mozilla.org/en-US/docs/Web/CSS/@container#browser_compatibility):
     - https://codepen.io/hchiam/pen/oNPedeY
       - ```css
-        .element { container-type: inline-size; }
+        .element {
+          container-type: inline-size;
+        }
         @container (width < 400px) {
-          .element { ...different styles... }
+          .element {
+            ...different styles...;
+          }
         }
         ```
       - or:
         ```css
-        .element { container: container-name / inline-size; }
+        .element {
+          container: container-name / inline-size;
+        }
         @container container-name (max-width: 400px) {
-          .element { ...different styles... }
+          .element {
+            ...different styles...;
+          }
         }
         ```
     - https://web.dev/blog/cq-stable
@@ -1681,6 +1690,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - generate cubic-bezier animation curves to copy to clipboard: https://cubic-bezier.com
 
 - CSS Bézier curve animation, powered by CSS variables!: https://codepen.io/hchiam/pen/ZEVEWNE?editors=1100
+
   - backup CSS ready for copying to reuse: https://github.com/hchiam/learning-css/blob/main/bezier-curve-animation.css
 
 - you could create performant animations with a sprite sheet with `animation: ... steps(34) ... ;`
@@ -1854,34 +1864,39 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
 - making an element's text colour automatically contrast with its parent's background:
 
-    ```html
-    <p style="background:red;">
-      <span class="text-contrasting-with-background">red background, bright aqua text</span>
-    </p>
-    <p style="background:red;">
-      <span class="black-or-white-text-contrasting-with-background">red background, white text</span>
-    </p>
-    <style>
-      @supports(mix-blend-mode: difference) {
-        .text-contrasting-with-background {
-          color: white;
-          mix-blend-mode: difference;
-        }
+  ```html
+  <p style="background:red;">
+    <span class="text-contrasting-with-background"
+      >red background, bright aqua text</span
+    >
+  </p>
+  <p style="background:red;">
+    <span class="black-or-white-text-contrasting-with-background"
+      >red background, white text</span
+    >
+  </p>
+  <style>
+    @supports (mix-blend-mode: difference) {
+      .text-contrasting-with-background {
+        color: white;
+        mix-blend-mode: difference;
       }
-    
-      @supports(background-clip: text) {
-        .black-or-white-text-contrasting-with-background {
-          background: inherit;
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-          filter: invert(1) grayscale(1) contrast(9);
-        }
+    }
+
+    @supports (background-clip: text) {
+      .black-or-white-text-contrasting-with-background {
+        background: inherit;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        filter: invert(1) grayscale(1) contrast(9);
       }
-    </style>
-    ```
+    }
+  </style>
+  ```
 
 - "RSDPV" or "R SaD Pav": Rule contains `Selector and { Declarations }`, Declaration contains `Property: and Value;`
+
   - super summary mnemonic for my own use: `R&D` = Rule (the whole block including S and D) and Declarations (lines inside the brackets)
 
 - CSS motion path: https://codepen.io/hchiam/pen/JjwPdZE?editors=1100
@@ -1893,6 +1908,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - SVG splash and spin where cursor is when you click: https://codepen.io/hchiam/pen/NWeevda
 
 - scroll-driven animations:
+
   - JS-based: `IntersectionObserver` https://github.com/hchiam/learning-js/blob/main/onEnterViewport_intersectionObserver.js
     - well-supported: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#browser_compatibility
   - CSS-based: `animation-timeline` `scroll()` https://codepen.io/hchiam/pen/ExrzPOq?editors=0100 and `view()` https://codepen.io/hchiam/pen/LYqoGqG?editors=0100
@@ -1907,6 +1923,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - SVG path animation, like drawing a line: https://codepen.io/hchiam/pen/NWJQdWG
 
 - oklch quick reference: https://oklch.com/#50,0,0,100
+
   - `oklch(var(--lightness) var(--chroma) var(--hue) / var(--opacity))`
     - L "lightness" = _perceived_ "brightness", like putting into **brighter light**
     - C "chroma" = "amount of colour", like the "**intensity**" of the colour given the same lighting conditions
@@ -1925,33 +1942,35 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     - magenta: 330
 
 - text outline (4 techniques): https://codepen.io/hchiam/pen/dyLKxpj
+
   1. text outline via **text fill + stroke + (paint order)**: PERSONAL FAVOURITE IF SUPPORT ONLY MAJOR MODERN BROWSERS:
-      - `-webkit-text-fill-color: var(--fill-color);` and `-webkit-text-stroke: var(--thickness) var(--outline-color);`
-      - pro: complete control of text outline thickness
-      - con: thicker outlines can cover the text inside fill, and outlines of neighbouring letters overlap if `letter-spacing` is small (instead of "merging") _**UNLESS you can add**_ `paint-order: stroke fill;` (but [support for `paint-order`](https://developer.mozilla.org/en-US/docs/Web/CSS/paint-order#browser_compatibility) still has some gaps: no IE 11 support, and it may not affect stroked HTML text in Edge/Opera or Samsung Internet).
-      - example:
-        ```css
-        --f: cyan;
-        --o: black;
-        --t: 1.25rem;
-        -webkit-text-fill-color: var(--f);
-        -webkit-text-stroke: var(--t) var(--o);
-        paint-order: stroke fill;
-        ```
+     - `-webkit-text-fill-color: var(--fill-color);` and `-webkit-text-stroke: var(--thickness) var(--outline-color);`
+     - pro: complete control of text outline thickness
+     - con: thicker outlines can cover the text inside fill, and outlines of neighbouring letters overlap if `letter-spacing` is small (instead of "merging") _**UNLESS you can add**_ `paint-order: stroke fill;` (but [support for `paint-order`](https://developer.mozilla.org/en-US/docs/Web/CSS/paint-order#browser_compatibility) still has some gaps: no IE 11 support, and it may not affect stroked HTML text in Edge/Opera or Samsung Internet).
+     - example:
+       ```css
+       --f: cyan;
+       --o: black;
+       --t: 1.25rem;
+       -webkit-text-fill-color: var(--f);
+       -webkit-text-stroke: var(--t) var(--o);
+       paint-order: stroke fill;
+       ```
   2. text outline via **shadows in 8 directions**:
-      - `--c: black;` and `text-shadow: -1px -1px var(--c), -1px 0 var(--c), -1px 1px var(--c), 0 -1px var(--c), 0 1px var(--c), 1px -1px var(--c), 1px 0 var(--c), 1px 1px var(--c);`
-      - pro: outlines of neighbouring letters "merge" if `letter-spacing` is small, and you can add `filter: drop-shadow(0 0 1px var(--c));` to smoothen out the rough edges a little. (also simpler than the following two alternatives.)
-      - con: you can't get very thick text outlines
-  3.  text outline via **shadows in 48 directions**:
-      - `--c: black;` and `--t: 0.02px;` and `text-shadow: 0px 10px var(--t) var(--c), 9.8px 2.1px var(--t) var(--c), 4.2px -9.1px var(--t) var(--c), -8px -6px var(--t) var(--c), -7.6px 6.5px var(--t) var(--c), 4.8px 8.8px var(--t) var(--c), 9.6px -2.8px var(--t) var(--c), -0.7px -10px var(--t) var(--c), -9.9px -1.5px var(--t) var(--c), -3.5px 9.4px var(--t) var(--c), 8.4px 5.4px var(--t) var(--c), 7.1px -7px var(--t) var(--c), -5.4px -8.4px var(--t) var(--c), -9.4px 3.5px var(--t) var(--c), 1.4px 9.9px var(--t) var(--c), 10px 0.8px var(--t) var(--c), 2.9px -9.6px var(--t) var(--c), -8.7px -4.8px var(--t) var(--c), -6.6px 7.5px var(--t) var(--c), 5.9px 8px var(--t) var(--c), 9.1px -4.1px var(--t) var(--c), -2.1px -9.8px var(--t) var(--c), -10px -0.1px var(--t) var(--c), -2.2px 9.8px var(--t) var(--c), 9.1px 4.2px var(--t) var(--c), 6.1px -8px var(--t) var(--c), -6.5px -7.6px var(--t) var(--c), -8.8px 4.7px var(--t) var(--c), 2.7px 9.6px var(--t) var(--c), 10px -0.6px var(--t) var(--c), 1.5px -9.9px var(--t) var(--c), -9.3px -3.6px var(--t) var(--c), -5.5px 8.4px var(--t) var(--c), 7px 7.2px var(--t) var(--c), 8.5px -5.3px var(--t) var(--c), -3.4px -9.4px var(--t) var(--c), -9.9px 1.3px var(--t) var(--c), -0.8px 10px var(--t) var(--c), 9.6px 2.9px var(--t) var(--c), 4.9px -8.7px var(--t) var(--c), -7.5px -6.7px var(--t) var(--c), -8.1px 5.9px var(--t) var(--c), 4px 9.2px var(--t) var(--c), 9.8px -2px var(--t) var(--c), 0.2px -10px var(--t) var(--c), -9.7px -2.3px var(--t) var(--c), -4.3px 9px var(--t) var(--c), 7.9px 6.1px var(--t) var(--c);`
-      - pro: thicker outline
-      - con: you can't adjust the outline thickness (thinner = no effect. thicker = becomes more shadow-like.)
-  4.  text outline via **svg of duplicate text**:
-      - `<svg viewBox="...'><text>...</text><text>...</text></svg>`
-      - pro: complete control of text outline thickness
-      - con: requires setting up svg with duplicate text, instead of relying just on CSS
+     - `--c: black;` and `text-shadow: -1px -1px var(--c), -1px 0 var(--c), -1px 1px var(--c), 0 -1px var(--c), 0 1px var(--c), 1px -1px var(--c), 1px 0 var(--c), 1px 1px var(--c);`
+     - pro: outlines of neighbouring letters "merge" if `letter-spacing` is small, and you can add `filter: drop-shadow(0 0 1px var(--c));` to smoothen out the rough edges a little. (also simpler than the following two alternatives.)
+     - con: you can't get very thick text outlines
+  3. text outline via **shadows in 48 directions**:
+     - `--c: black;` and `--t: 0.02px;` and `text-shadow: 0px 10px var(--t) var(--c), 9.8px 2.1px var(--t) var(--c), 4.2px -9.1px var(--t) var(--c), -8px -6px var(--t) var(--c), -7.6px 6.5px var(--t) var(--c), 4.8px 8.8px var(--t) var(--c), 9.6px -2.8px var(--t) var(--c), -0.7px -10px var(--t) var(--c), -9.9px -1.5px var(--t) var(--c), -3.5px 9.4px var(--t) var(--c), 8.4px 5.4px var(--t) var(--c), 7.1px -7px var(--t) var(--c), -5.4px -8.4px var(--t) var(--c), -9.4px 3.5px var(--t) var(--c), 1.4px 9.9px var(--t) var(--c), 10px 0.8px var(--t) var(--c), 2.9px -9.6px var(--t) var(--c), -8.7px -4.8px var(--t) var(--c), -6.6px 7.5px var(--t) var(--c), 5.9px 8px var(--t) var(--c), 9.1px -4.1px var(--t) var(--c), -2.1px -9.8px var(--t) var(--c), -10px -0.1px var(--t) var(--c), -2.2px 9.8px var(--t) var(--c), 9.1px 4.2px var(--t) var(--c), 6.1px -8px var(--t) var(--c), -6.5px -7.6px var(--t) var(--c), -8.8px 4.7px var(--t) var(--c), 2.7px 9.6px var(--t) var(--c), 10px -0.6px var(--t) var(--c), 1.5px -9.9px var(--t) var(--c), -9.3px -3.6px var(--t) var(--c), -5.5px 8.4px var(--t) var(--c), 7px 7.2px var(--t) var(--c), 8.5px -5.3px var(--t) var(--c), -3.4px -9.4px var(--t) var(--c), -9.9px 1.3px var(--t) var(--c), -0.8px 10px var(--t) var(--c), 9.6px 2.9px var(--t) var(--c), 4.9px -8.7px var(--t) var(--c), -7.5px -6.7px var(--t) var(--c), -8.1px 5.9px var(--t) var(--c), 4px 9.2px var(--t) var(--c), 9.8px -2px var(--t) var(--c), 0.2px -10px var(--t) var(--c), -9.7px -2.3px var(--t) var(--c), -4.3px 9px var(--t) var(--c), 7.9px 6.1px var(--t) var(--c);`
+     - pro: thicker outline
+     - con: you can't adjust the outline thickness (thinner = no effect. thicker = becomes more shadow-like.)
+  4. text outline via **svg of duplicate text**:
+     - `<svg viewBox="...'><text>...</text><text>...</text></svg>`
+     - pro: complete control of text outline thickness
+     - con: requires setting up svg with duplicate text, instead of relying just on CSS
 
 - wobble:
+
   - ```css
     .wobble {
       --wobble: 10deg;
