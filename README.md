@@ -1999,6 +1999,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     ```
 
 - count children: (if you can support just major modern browsers: https://caniuse.com/css-has)
+
   - ```css
     .container:has(.item:nth-child(3)) {
       /* container has AT LEAST 3 items: */
@@ -2020,3 +2021,74 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
         </div>
       </div>
       ```
+
+- space toggle trick with CSS variables: https://css-tricks.com/the-css-custom-property-toggle-trick/ "branching conditonal logic and bulk feature toggling"
+
+  - `--foo: ;` is ["empty"](https://drafts.csswg.org/css-variables/#guaranteed-invalid-value)
+    - if `--foo: ;` then `var(--foo) value` = `value` "ON"
+    - if `--foo: ;` then `var(--foo, value)` = `value` "OFF"
+  - `--foo: initial;` is ["guaranteed-invalid"](https://drafts.csswg.org/css-variables/#guaranteed-invalid-value)
+    - **if `--foo: initial;` then `var(--foo) value` = `value` is "OFF"** <-- I personally like this this one (then set `--foo: ; /* ON */` to turn it on)
+    - if `--foo: initial;` then `var(--foo, value)` = `value` is "ON"
+  - this empowers an alternative for scroll shadows in Chrome: https://www.youtube.com/watch?v=4AvL5Jbd8QU (https://scroll-driven-animations.style/demos/scroll-shadows/css/)
+
+    ```css
+    .container {
+      height: 250px;
+      width: 250px;
+    }
+
+    .container::before,
+    .container::after {
+      content: "";
+      display: block;
+      position: sticky;
+      height: 0.75rem;
+    }
+
+    .container::before {
+      top: 0;
+      background: radial-gradient(
+        farthest-side at 50% 0,
+        rgb(0 0 0 / 0.25),
+        rgb(0 0 0 / 0)
+      );
+    }
+
+    .container::after {
+      bottom: 0;
+      background: radial-gradient(
+        farthest-side at 50% 100%,
+        rgb(0 0 0 / 0.25),
+        rgb(0 0 0 / 0)
+      );
+      animation-direction: reverse;
+      animation-range: calc(100% - 40px) calc(100% - 20px);
+    }
+
+    /* only show scroll shadows when can scroll: */
+    @keyframes detect-scroll {
+      from,
+      to {
+        --can-scroll: ; /* ON */
+      }
+    }
+
+    .container {
+      animation: detect-scroll; /* scroll-driven animations only active when there's scrollable overflow */
+      animation-timeline: --scroll-timeline;
+      animation-fill-mode: none;
+    }
+
+    .container::before,
+    .container::after {
+      --visibility-if-can-scroll: var(--can-scroll) visible;
+      --visibility-if-cant-scroll: hidden;
+
+      /* NOW actually either show or hide the scroll shadows: */
+      visibility: var(
+        --visibility-if-can-scroll,
+        var(--visibility-if-cant-scroll)
+      );
+    }
+    ```

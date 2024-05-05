@@ -1,0 +1,11 @@
+:root {
+  --valid: ;
+  --invalid: initial;
+}
+
+body {
+  background: var(--valid, red); /* NOT SET because INVALID */
+  background: var(--valid) red; /* red */
+  background: var(--invalid, red); /* red */
+  background: var(--invalid) red; /* NOT SET because INVALID */
+}
