@@ -2092,3 +2092,12 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       );
     }
     ```
+- CSS pile: https://www.youtube.com/watch?v=6qpEOBkDr88
+    ```css
+    .pile {
+      display: grid;
+    }
+    .pile > * {
+      grid-area: 1/1;
+    }
+    ```
