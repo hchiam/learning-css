@@ -1889,7 +1889,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        filter: invert(1) grayscale(1) contrast(9);
+        filter: invert(1) grayscale(1) contrast(1);
       }
     }
   </style>
