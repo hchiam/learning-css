@@ -2101,3 +2101,13 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       grid-area: 1/1;
     }
     ```
+- Overriding text in CSS with accessibility in mind (prevent screen readers from reading the original text):
+  ```css
+  p {
+    visibility: hidden;
+  }
+  p:before {
+    visibility: visible;
+    content: "override text - only this is announced by screen readers";
+  }
+  ```
