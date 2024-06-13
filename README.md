@@ -1750,12 +1750,39 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   .parent {
     scroll-snap-type: x mandatory;
   }
-  .child {
+  .parent > .child {
     scroll-snap-align: center; /* or scroll-snap-align: start; */
   }
   ```
 
   - example scroll snap: https://codepen.io/hchiam/pen/OJQWNrw?editors=1100
+    - ```css
+      .parent {
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 300px;
+      }
+      .parent > .child {
+        scroll-snap-align: start;
+        display: inline-block;
+        width: 300px;
+      }
+      ```
+  - example scroll snap: https://codepen.io/hchiam/pen/WNBXyMZ?editors=1100
+    - ```css
+      .parent {
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+      }
+      .parent > .child {  
+        scroll-snap-align: start;
+        flex: 0 0 100%;
+      }
+      ```
 
 - scrollbars are usually specific to OS, not specific to browser
 
