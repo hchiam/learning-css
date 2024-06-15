@@ -1769,7 +1769,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
         width: 300px;
       }
       ```
-  - example scroll snap: https://codepen.io/hchiam/pen/WNBXyMZ?editors=1100
+  - example scroll snap, minimal: https://codepen.io/hchiam/pen/WNBXyMZ?editors=1100
     - ```css
       .parent {
         scroll-snap-type: x mandatory;
@@ -1781,6 +1781,50 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       .parent > .child {  
         scroll-snap-align: start;
         flex: 0 0 100%;
+      }
+      ```
+    - You can modify this CSS to make vertical scroll trigger horizontal scroll too, as long as you have browser support and another containing ancestor element. See the next CSS code snippet:
+  - example scroll snap, with vertical scroll triggering horizontal scroll: https://codepen.io/hchiam/pen/dyEJPjq?editors=1100
+    - ```css
+      /* THIS SECTION MAKES VERTICAL TRIGGER HORIZONTAL SCROLL: */
+
+      .rotation-container {
+        --h: 200px;
+        --w: 300px;
+        height: var(--h);
+      }
+      .parent {
+        width: var(--h);
+        height: var(--w);
+        overflow-x: hidden;
+        overflow-y: scroll;
+        transform: rotate(-90deg) translateX(calc(-1 * var(--h)));
+        transform-origin: top left;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      .parent > * {
+        width: var(--w);
+        height: var(--h);
+        transform: rotate(90deg) translateX(calc(0 * var(--h))) translateY(calc(-1 * var(--h)));
+        transform-origin: top left;
+      }
+      .parent > *:not(:first-child) {
+        margin-top: calc(var(--h)/2);
+      }
+      .parent::-webkit-scrollbar {
+        display: none;
+      }
+      
+      /* THIS SECTION MAKES SCROLL SNAP (MODIFIED VERSION OF THE OTHER DEMO'S CSS): */
+      
+      .parent {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        box-sizing: border-box;
+      }
+      .parent > * {  
+        scroll-snap-align: start;
       }
       ```
 
