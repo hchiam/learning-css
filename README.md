@@ -495,7 +495,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
   - that's why `margin-block: auto` or `margin-inline: auto` trick helps center things
 
-- CSS margin collapse rules weirdness: https://codepen.io/hchiam/pen/WNZZqjo and https://codepen.io/hchiam/pen/ExQgjOX and https://www.joshwcomeau.com/css/rules-of-margin-collapse/
+- CSS margin collapse rules weirdness: https://codepen.io/hchiam/pen/jOoZYgb?editors=1100 and https://codepen.io/hchiam/pen/WNZZqjo and https://codepen.io/hchiam/pen/ExQgjOX and https://www.joshwcomeau.com/css/rules-of-margin-collapse/
 
   - (margin collapse applies to the default flow layout mode only (like `display:block`), since it made sense for documents, and so margin collapse doesn't happen for `display:flex` because it doesn't make sense)
   - overlapping inline-direction margins don't collapse, but
