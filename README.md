@@ -2092,6 +2092,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
         </div>
       </div>
       ```
+  - note: ["The `:has()` pseudo-class cannot be nested within another `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying. Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements are not valid anchors for `:has()`."](https://developer.mozilla.org/en-US/docs/Web/CSS/:has#:~:text=the%20%3Ahas()%20pseudo-class%20cannot%20be%20nested%20within%20another%20%3Ahas().)
 
 - space toggle trick with CSS variables: https://css-tricks.com/the-css-custom-property-toggle-trick/ "branching conditonal logic and bulk feature toggling"
 
