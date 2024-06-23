@@ -1829,6 +1829,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
         scroll-snap-align: start;
       }
       ```
+  - `scroll-snap-stop: always;` prevents really fast swipes from skipping elements
 
 - scrollbars are usually specific to OS, not specific to browser
 
