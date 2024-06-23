@@ -1091,7 +1091,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   }
   ```
 
-- `grid-template-columns` can have named grid lines, multiple names for the same line, and special suffixes `-start`/`-end` (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines#implicit_grid_areas_from_named_lines)
+- `grid-template-columns` can have named grid lines, multiple names for the same line, and special suffixes `-start`/`-end` for CSS grid line names (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines#implicit_grid_areas_from_named_lines)
 
 ### other stuff
 
