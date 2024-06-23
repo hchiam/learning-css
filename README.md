@@ -2188,3 +2188,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   ```
 
 - you can disable touchscreen panning (scrolling) and pinching (zooming) with `touch-action: none;` (BUT this might disable zoom accessibility), or specify what's allowed (e.g. `pan-x`, `pan-y`, `pinch-zoom`, etc., and `manipulation` = regular pan/pinch but nothing else = `pan-x pan-y pinch-zoom`)
+
+- FLIP/F.L.I.P. animation technique: https://aerotwist.com/blog/flip-your-animations/
+  - example usage: https://web.dev/patterns/components/toast#js
+    - `animation.startTime = document.timeline.currentTime` to tell animation to start immediately, don't wait for next frame, to fix a Firefox bug
