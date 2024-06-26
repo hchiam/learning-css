@@ -2201,3 +2201,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - FLIP/F.L.I.P. animation technique: (First, Last, Invert, Play) https://aerotwist.com/blog/flip-your-animations/
   - example usage: https://web.dev/patterns/components/toast#js
     - `animation.startTime = document.timeline.currentTime` to tell animation to start immediately, don't wait for next frame, to fix a Firefox bug
+
+- shadow DOM CSS:
+  - [`:host`](https://developer.mozilla.org/en-US/docs/Web/CSS/:host) is like `:root` for a shadow DOM container element
+  - [`::slotted(element)`](https://developer.mozilla.org/en-US/docs/Web/CSS/::slotted) selects **element** inside of a `<slot>` of a shadow DOM element's `<template>`
