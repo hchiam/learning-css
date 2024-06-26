@@ -2096,6 +2096,15 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       </div>
       ```
   - note: ["The `:has()` pseudo-class cannot be nested within another `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying. Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements are not valid anchors for `:has()`."](https://developer.mozilla.org/en-US/docs/Web/CSS/:has#:~:text=the%20%3Ahas()%20pseudo-class%20cannot%20be%20nested%20within%20another%20%3Ahas().)
+  - `article:has(h2, ul, ::-invalidbranch) /* :has is not forgiving, so the whole selector fails */`
+  - `article:has(:where(h2, ul, ::-invalidbranch)) /* :where adds 0 specificity (vs :is) and is forgiving, so it ignores the invalid "branch" */`
+  - ```css
+    @supports(selector(:has(p))) {
+      /* Supported! */
+    }
+    ```
+  - `:has` is more than a "parent selector", for example: `h1:has(+ p)` - it's more like a "conditional environment selector" or maybe a "family selector" - https://developer.chrome.com/blog/has-m105/
+  - limitations of `:has`: https://developer.chrome.com/blog/has-m105/#performance_and_limitations
 
 - space toggle trick with CSS variables: https://css-tricks.com/the-css-custom-property-toggle-trick/ "branching conditonal logic and bulk feature toggling"
 
