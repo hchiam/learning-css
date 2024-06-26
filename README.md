@@ -2205,3 +2205,6 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - shadow DOM CSS:
   - [`:host`](https://developer.mozilla.org/en-US/docs/Web/CSS/:host) is like `:root` for a shadow DOM container element
   - [`::slotted(element)`](https://developer.mozilla.org/en-US/docs/Web/CSS/::slotted) selects **element** inside of a `<slot>` of a shadow DOM element's `<template>`
+
+- [`video::cue`](https://developer.mozilla.org/en-US/docs/Web/CSS/::cue) = CSS for `<video>` captions `<track default>`
+  - `:cue` can only be styled with some styles related to background/color/font/line-height/opacity/outline/ruby-position/text-combine-upright/text-decoration/text-shadow/visibility/whitespace
