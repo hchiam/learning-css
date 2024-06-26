@@ -2208,3 +2208,12 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
 - [`video::cue`](https://developer.mozilla.org/en-US/docs/Web/CSS/::cue) = CSS for `<video>` captions `<track default>`
   - `:cue` can only be styled with some styles related to background/color/font/line-height/opacity/outline/ruby-position/text-combine-upright/text-decoration/text-shadow/visibility/whitespace
+
+- `ruby-position: over;` and `ruby-position: under;` = placement of ruby text, e.g. pronunciation "hints" of kanji, i.e. the `<rp>` relative to the `<rb>` in a `<ruby>`
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/ruby-position
+
+- `text-combine-upright` = what characters to combined into blocks like single chinese character spaces
+  - see the example in https://developer.mozilla.org/en-US/docs/Web/CSS/text-combine-upright
+
+- `writing-mode: horizontal-tb;` = English writing direction (rows going down, each row read left-to-right)
+- `writing-mode: vertical-rl;` = traditional Chinese writing direction (columns going left, each column read top-to-bottom)
