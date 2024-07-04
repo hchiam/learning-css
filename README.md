@@ -2217,3 +2217,5 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
 - `writing-mode: horizontal-tb;` = English writing direction (rows going down, each row read left-to-right)
 - `writing-mode: vertical-rl;` = traditional Chinese writing direction (columns going left, each column read top-to-bottom)
+
+- `@media (orientation: landscape) {} and @media (orientation: portrait) {}` https://codepen.io/hchiam/pen/xxoKGjG
