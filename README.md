@@ -2104,6 +2104,9 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     }
     ```
   - `:has` is more than a "parent selector", for example: `h1:has(+ p)` - it's more like a "conditional environment selector" or maybe a "family selector" - https://developer.chrome.com/blog/has-m105/
+    - [with `:has` you can now get both later AND previous siblings](https://youtu.be/UmDgK3OpuZc?si=HAgwLG1DDF7ZKCA3&t=1549):
+      - `ol li:hover + li` = sibling **after**, and `ol li:has(+ li:hover)` = sibling **before**
+    - nth previous sibling and nth following sibling: https://codepen.io/hchiam/pen/QWXLboz?editors=1100
   - limitations of `:has`: https://developer.chrome.com/blog/has-m105/#performance_and_limitations
 
 - space toggle trick with CSS variables: https://css-tricks.com/the-css-custom-property-toggle-trick/ "branching conditonal logic and bulk feature toggling"
