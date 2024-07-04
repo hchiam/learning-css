@@ -2222,3 +2222,6 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - `writing-mode: vertical-rl;` = traditional Chinese writing direction (columns going left, each column read top-to-bottom)
 
 - `@media (orientation: landscape) {} and @media (orientation: portrait) {}` https://codepen.io/hchiam/pen/xxoKGjG
+
+- [`:user-valid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:user-valid) = `:valid` but only after user has interacted with the input
+- [`:user-invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid) = `:invalid`/`:out-of-range`/blank-but-`:required` but only after user has interacted with the input
