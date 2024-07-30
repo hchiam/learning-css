@@ -2225,3 +2225,5 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
 - [`:user-valid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:user-valid) = `:valid` but only after user has interacted with the input
 - [`:user-invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid) = `:invalid`/`:out-of-range`/blank-but-`:required` but only after user has interacted with the input
+
+- [CSS `:visited` and JS and privacy](https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
