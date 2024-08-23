@@ -1936,7 +1936,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   /* consider overscroll-behavior-y: contain; for PWA (or maybe touch-action: none;?) */
   ```
 
-- making an element's text colour automatically contrast with its parent's background:
+- making an element's text colour automatically contrast with its parent's background: (note: both fail on grey)
 
   ```html
   <p style="background:red;">
