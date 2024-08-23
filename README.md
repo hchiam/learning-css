@@ -1936,7 +1936,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   /* consider overscroll-behavior-y: contain; for PWA (or maybe touch-action: none;?) */
   ```
 
-- making an element's text colour automatically contrast with its parent's background: (note: both fail on grey)
+- 2 ways of making an element's text colour automatically contrast with its parent's background:
 
   ```html
   <p style="background:red;">
@@ -1968,6 +1968,8 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     }
   </style>
   ```
+  - (note: both fail on grey)
+  - alternatively: APCA text/background colour contrast calculation demo: https://codepen.io/hchiam/pen/Bagxddg?editors=0010
 
 - "RSDPV" or "R SaD Pav": Rule contains `Selector and { Declarations }`, Declaration contains `Property: and Value;`
 
