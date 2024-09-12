@@ -124,6 +124,18 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   - use CSS Reset
   - use hex instead of color names (color names have value decided by the browser)
   - remember print stylesheets: `<link rel="stylesheet" href="print.css" media="print" />`
+
+- print page with margin:
+  - ```css
+    @media print {
+        @page {
+            size: auto;
+            margin-top: 1.75rem; /* 2rem starts showing margin text */
+            margin-bottom: 1.75rem;
+        }
+    }
+    ```
+
 - <https://adamschwartz.co/magic-of-css>
 
   - box-sizing:
