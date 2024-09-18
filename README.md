@@ -426,6 +426,27 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
 - blurred glow: https://codepen.io/hchiam/pen/JjpRmmy?editors=1100
 
+- how to use `@supports`:
+  ```css
+  @supports(aspect-ratio) {
+    /* won't work because aspect-ratio by itself isn't a valid CSS declaration (missing value) */
+      * {
+          background: red;
+      }
+  }
+  @supports(aspect-ratio: 1 / 1) {
+    /* this works because aspect-ratio: 1 / 1; is a valid CSS declaration with both property and value! */
+      * {
+          background: green;
+      }
+  }
+  * { /* outside works too! */
+      @supports(aspect-ratio: 1 / 1) {
+          opacity: 0.5;
+      }
+  }
+  ```
+
 - `backdrop-filter` to make an element semi-transparent like frosted glass: https://codepen.io/hchiam/pen/OJQRBqq?editors=1100 (works best on Chrome)
 
   - ```css
