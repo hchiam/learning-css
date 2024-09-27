@@ -1194,22 +1194,22 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   - container query is now available in [Chrome/Edge/Firefox/Opera/Safari](https://developer.mozilla.org/en-US/docs/Web/CSS/@container#browser_compatibility):
     - https://codepen.io/hchiam/pen/oNPedeY
       - ```css
-        .element {
+        .element-container {
           container-type: inline-size;
         }
         @container (width < 400px) {
-          .element {
+          .element-child { /* can't apply styles to the container itself */
             ...different styles...;
           }
         }
         ```
       - or:
         ```css
-        .element {
+        .element-container {
           container: container-name / inline-size;
         }
         @container container-name (max-width: 400px) {
-          .element {
+          .element-child { /* can't apply styles to the container itself */
             ...different styles...;
           }
         }
