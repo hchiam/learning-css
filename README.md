@@ -2235,6 +2235,8 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   ```
 
 - you can disable touchscreen panning (scrolling) and pinching (zooming) with `touch-action: none;` (BUT this might disable zoom accessibility), or specify what's allowed (e.g. `pan-x`, `pan-y`, `pinch-zoom`, etc., and `manipulation` = regular pan/pinch but nothing else = `pan-x pan-y pinch-zoom`)
+  - `touch-action:` `none;` `pan-x;` `pan-y;` `pinch-zoom;` `manipulation;` (`manipulation` = `pan-x pan-y pinch-zoom` only, so no additional non-standard gestures like double-tap to zoom)
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action#syntax
 
 - FLIP/F.L.I.P. animation technique: (First, Last, Invert, Play) https://aerotwist.com/blog/flip-your-animations/
   - example usage: https://web.dev/patterns/components/toast#js
