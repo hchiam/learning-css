@@ -4,6 +4,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. Or run a bookmarklet to randomly choose something on this page to review: https://github.com/hchiam/learning-js/blob/main/bookmarklets/random-css-tip-from-github-readme.js#L1
 
+<https://github.com/hchiam/learning-sass>
+
 <https://css-tricks.com>
 
 <https://codepen.io/hchiam>
