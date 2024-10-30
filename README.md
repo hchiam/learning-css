@@ -2266,3 +2266,11 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - [`:user-invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid) = `:invalid`/`:out-of-range`/blank-but-`:required` but only after user has interacted with the input
 
 - [CSS `:visited` and JS and privacy](https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
+
+- make any element especially `<textarea>` resizable on mobile touchscreen:
+  ```css
+  textarea {
+    resize: both;
+    overflow: auto;
+  }
+  ```
