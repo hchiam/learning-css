@@ -1217,6 +1217,23 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
         }
         ```
     - https://web.dev/blog/cq-stable
+    - https://www.joshwcomeau.com/css/container-queries-introduction/
+      - or:
+        ```css
+        .element-container {
+          container-type: inline-size;
+        }
+        .element-child { /* can't apply styles to the container itself */
+          /* wide styling stuff here if container is wide */
+          @container (max-width: 15rem) {
+            /* narrow styling stuff here if container is narrow */
+          }
+        }
+        ```
+      - "**The golden rule with container queries is that we can’t change what we measure.** `container-type: inline-size` lets us use `min-width`/`max-width` conditions in our container queries, but not `min-height`/`max-height`."
+      - "We don’t often think about it, but there’s a fundamental difference between width and height on the web:"
+        - "When it comes to width, elements tend to expand, filling the space provided by the _parent_."
+        - "When it comes to height, elements tend to shrinkwrap around their _children_."
 
 - font size that intelligently scales with screen width:
 
