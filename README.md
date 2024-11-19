@@ -2134,6 +2134,13 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       background: red;
     }
     ```
+  - and you can count the number of children EXACTLY with something like this:
+    - ```css
+      .container:has(.item:nth-child(3)):not(:has(.item:nth-child(4)))
+        /* container has EXACTLY 3 items: */
+        background: red;
+      }
+      ```
   - note: `:nth-child` isn't necessarily counting 3 `.item`s that are (in)direct children of `.container`, but rather is counting if an `.item` is the 3rd child of any immediate parent, e.g.:
     - ```html
       <div class="container">
