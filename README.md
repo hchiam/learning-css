@@ -2298,3 +2298,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     overflow: auto;
   }
   ```
+
+- toggle more easily between light mode and dark mode colour values with `light-dark()` https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark
+  - `color-scheme: light dark;` = setup
+  - `color: light-dark(var(--light), var(--dark));` = communicate light and dark mode colours in one line
