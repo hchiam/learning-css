@@ -354,7 +354,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 
     ![grid-template-areas image](https://github.com/hchiam/learning-css/blob/main/grid-template-areas-is-like-battleship.png)
 
-    - note: `/* need the "."s to make it work */`
+    - note: `/* need the "."s to make it work, and the grid-areas can't start with a number */`
 
 - curated colour palettes in context: <https://www.happyhues.co>
 - <https://ishadeed.com/article/defensive-css/>
@@ -1042,7 +1042,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     "a a ." minmax(50px, auto)
     "a a ." 80px
     "b b c" auto / 1fr 1fr 5fr; /* / column widths on last line, like x-axis labels */
-  /* need the "."s to make it work */
+  /* need the "."s to make it work, and the grid-areas can't start with a number */
   ```
 
 - but you might want to only use `grid-template-columns`, for the reason in the next point:
