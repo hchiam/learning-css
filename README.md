@@ -2305,3 +2305,15 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - toggle more easily between light mode and dark mode colour values with `light-dark()` https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark
   - `color-scheme: light dark;` = setup to enable using `light-dark()`
   - `color: light-dark(var(--light), var(--dark));` = communicate light and dark mode colours in one line
+
+- rounding stuff: https://web.dev/blog/css-stepped-value-functions
+  - `round()`
+    - `font-size: round(var(--my-font-size), 1rem);` (defaults to `nearest`, like JS `Math.round()`)
+      - same as `font-size: round(nearest, var(--my-font-size), 1rem);`
+    - keywords:
+      - `nearest` = JS `Math.round()`
+      - `up` = JS `Math.ceil()`
+      - `down` = JS `Math.floor()`
+      - `to-zero` = JS `Math.trunc()`
+  - `rem()` = like JS `%` remainder, and takes sign of dividend (top of fraction) likewise
+  - `mod()` = like JS `%` remainder, but takes sign of divisor (bottom of fraction)
