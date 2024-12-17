@@ -2317,3 +2317,12 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       - `to-zero` = JS `Math.trunc()`
   - `rem()` = like JS `%` remainder, and takes sign of dividend (top of fraction) likewise
   - `mod()` = like JS `%` remainder, but takes sign of divisor (bottom of fraction)
+
+- you couldn't `transition` on things like `display` or `visibility`, but as of [2024](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-behavior#browser_compatibility), you can with `transition-behavior: allow-discrete;`
+  - e.g.: `transition: display 0.25s allow-discrete;`
+  - e.g.:
+    ```css
+    transition-property: display;
+    transition-duration: 0.2s;
+    transition-behavior: allow-discrete;
+    ```
