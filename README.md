@@ -1991,7 +1991,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   /* consider overscroll-behavior-y: contain; for PWA (or maybe touch-action: none;?) */
   ```
 
-- 2 ways of making an element's text colour automatically contrast with its parent's background:
+- 3 ways of making an element's text colour automatically contrast with its parent's background:
 
   ```html
   <p style="background:red;">
@@ -2011,20 +2011,29 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
         mix-blend-mode: difference;
       }
     }
-
+    
     @supports (background-clip: text) {
       .black-or-white-text-contrasting-with-background {
         background: inherit;
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        filter: invert(1) grayscale(1) contrast(1);
+        filter: invert(1) grayscale(1) contrast(9);
+      }
+    }
+
+    /* OR: */
+    @supports (mix-blend-mode: difference) {
+        .always-shows-text-but-low-contrast { /* works for grey, but not great contrast */
+          color: grey;
+          mix-blend-mode: difference;
       }
     }
   </style>
   ```
-  - (note: both fail on grey)
+  - (note: the first two both fail on grey)
   - alternatively: APCA text/background colour contrast calculation demo: https://codepen.io/hchiam/pen/Bagxddg?editors=0010
+  - but it might be simpler to add a text outline or use white text on a black background like captions
 
 - "RSDPV" or "R SaD Pav": Rule contains `Selector and { Declarations }`, Declaration contains `Property: and Value;`
 
