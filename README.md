@@ -2024,9 +2024,9 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
     /* OR: */
     @supports (mix-blend-mode: difference) {
-        .always-shows-text-but-low-contrast { /* works for grey, but not great contrast */
-          color: grey;
-          mix-blend-mode: difference;
+      .always-shows-text-but-low-contrast { /* works for grey, but not great contrast */
+        color: grey;
+        mix-blend-mode: difference;
       }
     }
   </style>
