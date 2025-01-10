@@ -1,0 +1,32 @@
+:root {
+  /* "O -> D -> C" ; edit O values, before try using D variables, before try using C variables for exceptions. Only ever edit O values, but can use C variables in special cases. */
+  
+  /* O: */
+  --palette-overall-1: beige; /* 60% */
+  --palette-overall-2: maroon; /* 30% */
+  --palette-overall-3: red; /* 10% */
+  
+  /* D: */
+  --palette-default-background: var(--palette-contrast-light);
+  --palette-default-text: var(--palette-contrast-dark);
+  --palette-default-accent: var(--palette-contrast-accent-light);
+  --palette-default-button-background: var(--palette-contrast-dark);
+  --palette-default-button-text: var(--palette-contrast-light);
+  --palette-default-button-accent: var(--palette-contrast-accent-dark);
+  
+  /* C: */
+  --palette-contrast-dark: var(--palette-overall-2); /* "dark" as in dark colour, not dark mode */
+  --palette-contrast-light: var(--palette-overall-1); /* "light" as in light colour, not light mode */
+  --palette-contrast-accent-dark: var(--palette-overall-3); /* "dark" as in dark colour, not dark mode */
+  --palette-contrast-accent-light: var(--palette-contrast-accent-dark); /* "light" as in light colour, not light mode */
+  
+  /* dark mode: */
+  @media (prefers-color-scheme: dark) {
+    --palette-default-background: var(--palette-contrast-dark);
+    --palette-default-text: var(--palette-contrast-light);
+    --palette-default-accent: var(--palette-contrast-accent-dark);
+    --palette-default-button-background: var(--palette-contrast-light);
+    --palette-default-button-text: var(--palette-contrast-dark);
+    --palette-default-button-accent: var(--palette-contrast-accent-light);
+  }
+}
