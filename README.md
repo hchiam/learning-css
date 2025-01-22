@@ -1659,7 +1659,8 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
   - use variable fonts for a more expressive/polished look at no extra cost
 
-- `unicode-range` can be used to mix fonts or target letters to use different fonts: https://codepen.io/hchiam/pen/YPKJKMY?editors=0100
+- `unicode-range` can be used to mix fonts or target letters to use different fonts:
+  - CSS+JS mixed font `unicode-range` "animation": https://codepen.io/hchiam/pen/YPKJKMY?editors=0100
 
 - `transform` doesn't work on the default `inline`/flow layout algorithm.
 
