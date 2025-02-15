@@ -2341,3 +2341,5 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     transition-duration: 0.2s;
     transition-behavior: allow-discrete;
     ```
+
+- CSS `text-wrap: balance;` https://codepen.io/hchiam/pen/mydJWag
