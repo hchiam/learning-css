@@ -485,6 +485,24 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
 - "Moat" with inset shadow + normal shadow and nested radiuses: https://codepen.io/hchiam/pen/bGLBWej?editors=1000
 
+- inset shadows with different colours on different edges that can blend together at the corners:
+  - ```css
+    box-shadow: 
+      inset 0 10px 1rem -10px yellow, /* top */
+      inset -10px 0 1rem -10px red, /* right */
+      inset 0 -10px 1rem -10px white, /* bottom */
+      inset 10px 0px 1rem -10px blue; /* left */
+    ```
+  - ```css
+    --size: 10px;
+    --blur: var(--size);
+    box-shadow: 
+      inset 0 var(--size) var(--blur) calc(-1 * var(--size)) yellow, /* top */
+      inset calc(-1 * var(--size)) 0 var(--blur) calc(-1 * var(--size)) red, /* right */
+      inset 0 calc(-1 * var(--size)) var(--blur) calc(-1 * var(--size)) white, /* bottom */
+      inset var(--size) 0px var(--blur) calc(-1 * var(--size)) blue; /* left */
+    ```
+
 - generate shadows with coordination (low/med/hi) and realism (spread and background colour accounted for) and adaptability (`--shadow-color`): https://www.joshwcomeau.com/shadow-palette
 
 - Simulated Stylable Select (CSS + JS): https://codepen.io/hchiam/pen/wvprLpV
