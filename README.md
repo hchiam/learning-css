@@ -2361,3 +2361,5 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     ```
 
 - CSS `text-wrap: balance;` https://codepen.io/hchiam/pen/mydJWag
+
+- `@property syntax:'<...>'` to enable animating css variable
