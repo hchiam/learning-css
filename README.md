@@ -2363,3 +2363,5 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - CSS `text-wrap: balance;` https://codepen.io/hchiam/pen/mydJWag
 
 - `@property syntax:'<...>'` to enable animating css variable
+
+- `interpolate-size: allow-keywords;` to [_progressively enhance_](https://developer.mozilla.org/en-US/docs/Web/CSS/interpolate-size#browser_compatibility) to enable animating between keywords like from `height: 2.5rem;` to `height: max-content;`
