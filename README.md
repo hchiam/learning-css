@@ -2409,3 +2409,18 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   ```css
   background: hsl(from var(--some-color) h s calc(l + 20) / 0.5); /* = 20% lighter and 0.5 opacity */
   ```
+
+- "nth-of-class" with `:nth-child(... of ...)` - two different examples:
+  - <https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child#the_of_selector_syntax>
+    - Note that `:nth-child` for elements _with no parent_ isn't supported in Safari currently.
+    - but "nth-of-class" can be implemented like this in the major browsers
+
+  - ```css
+    :nth-child(-n + 3 of li.important) {
+      background: red;
+    }
+
+    tr:nth-child(even of :not(.ignore-these)) {
+      background: red;
+    }
+    ```
