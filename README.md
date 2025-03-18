@@ -2403,3 +2403,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - `@property syntax:'<...>'` to enable animating css variable
 
 - `interpolate-size: allow-keywords;` to [_progressively enhance_](https://developer.mozilla.org/en-US/docs/Web/CSS/interpolate-size#browser_compatibility) to enable animating between keywords like from `height: 2.5rem;` to `height: max-content;`
+
+- relative color transforms look like this:
+
+  ```css
+  background: hsl(from var(--some-color) h s calc(l + 20) / 0.5); /* = 20% lighter and 0.5 opacity */
+  ```
