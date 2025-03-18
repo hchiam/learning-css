@@ -2,7 +2,7 @@
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
-There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. Or run a bookmarklet to randomly choose something on this page to review: https://github.com/hchiam/learning-js/blob/main/bookmarklets/random-css-tip-from-github-readme.js#L1
+There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. Or run a bookmarklet to randomly choose something on this page to review: <https://github.com/hchiam/learning-js/blob/main/bookmarklets/random-css-tip-from-github-readme.js#L1>
 
 <https://github.com/hchiam/learning-sass>
 
@@ -14,7 +14,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 
 <https://css-for-js.dev>
 
-- https://www.joshwcomeau.com/css/understanding-layout-algorithms
+- <https://www.joshwcomeau.com/css/understanding-layout-algorithms>
 
   - **Mental model for CSS:**
     - **CSS is a collection of mini (sometimes implicit) algorithms/languages**,
@@ -30,7 +30,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 
 (Make VSCode ignore auto-formatting with `prettier.setting` > Prettier: Require Config. Or just temporarily turn off formatting on save: `editor.formatOnSave`.)
 
-- My CSS boilerplate: https://github.com/hchiam/css-boilerplate
+- My CSS boilerplate: <https://github.com/hchiam/css-boilerplate>
 
 - <https://speakerdeck.com/dmosher/so-you-want-to-be-a-front-end-engineer>
   - Cascade Priority:
@@ -117,8 +117,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   - <https://drive.google.com/file/d/1FT-EEwIou3rGAuripb-SMPyTNwhXhG0F/view>
 - interactive explanations of CSS flexbox and CSS grid:
 
-  - https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/
-  - https://www.joshwcomeau.com/css/interactive-guide-to-grid/
+  - <https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/>
+  - <https://www.joshwcomeau.com/css/interactive-guide-to-grid/>
 
     <img alt="" height="400" src="https://github.com/hchiam/learning-css/blob/main/CSS_grid-row_grid-column.png">
 
@@ -128,6 +128,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   - remember print stylesheets: `<link rel="stylesheet" href="print.css" media="print" />`
 
 - print page with margin:
+
   - ```css
     @media print {
         @page {
@@ -199,7 +200,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - <https://youtu.be/Qhaz36TZG5Y?t=263>
 
   - flexbox for lines → CSS grid for bigger picture
-  - replace media queries with `clamp()`: (note: not available in IE 11 https://caniuse.com/mdn-css_types_clamp)
+  - replace media queries with `clamp()`: (note: not available in IE 11 <https://caniuse.com/mdn-css_types_clamp>)
 
     ```css
     /* clamp isn't supported in IE */
@@ -209,9 +210,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
     }
     ```
 
-    - example of using `clamp()` instead of media queries (min width, breakpoint): https://codepen.io/hchiam/pen/mdrXzjg
-    - example of using lots of "boolean" variables ad breakpoints, instead of media queries: https://codepen.io/hchiam/pen/ZEprqVy
-    - example of using `clamp()` instead of media queries, to help with accounting for ​translation lengths: https://codepen.io/hchiam/pen/PoLbJdj
+    - example of using `clamp()` instead of media queries (min width, breakpoint): <https://codepen.io/hchiam/pen/mdrXzjg>
+    - example of using lots of "boolean" variables ad breakpoints, instead of media queries: <https://codepen.io/hchiam/pen/ZEprqVy>
+    - example of using `clamp()` instead of media queries, to help with accounting for ​translation lengths: <https://codepen.io/hchiam/pen/PoLbJdj>
 
   - number headers like h1 without manually typing numbers:
 
@@ -361,11 +362,14 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   - `overscroll-behavior-y: contain;` can be used to prevent scrolling to the end of the modal scrolling the background; lock scroll chaining
   - CSS variable fallback value: `var(--actions-width, 70px)`
   - don't forget `background-repeat`:
+
     ```css
     background-image: url("..");
     background-repeat: no-repeat;
     ```
+
   - vertical media queries exist:
+
     ```css
     @media (min-height: 600px) {
       .aside__secondary {
@@ -374,6 +378,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
       }
     }
     ```
+
   - set a `background-color` even on `<img>` elements so that even if the image fails to load, then any overlaid text still can have guaranteed contrast
   - got layout shifts caused by scrollbar appearing? try `scrollbar-gutter: stable;` to always reserve space for the scrollbar gutter!
   - `auto-fit`: stretch to fit. `auto-fill`: fill the space with elements _or placeholder gaps_. I think I like `auto-fill` better for more cases.
@@ -386,54 +391,55 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   - blue: 200deg ([голубой](https://en.wiktionary.org/wiki/%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D0%BE%D0%B9#Adjective)) and 250deg ([синий](https://en.wiktionary.org/wiki/%D1%81%D0%B8%D0%BD%D0%B8%D0%B9#Adjective))
   - purple: 300deg
 
-- stuff you can do without JS-heavy web frameworks: https://codepen.io/hchiam/pen/ExbmjEP
+- stuff you can do without JS-heavy web frameworks: <https://codepen.io/hchiam/pen/ExbmjEP>
 
-- pure CSS speech bubble: https://codepen.io/hchiam/pen/ZEjVRjj
+- pure CSS speech bubble: <https://codepen.io/hchiam/pen/ZEjVRjj>
 
 ## GUI challenges playlist with Adam Argyle
 
-https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
+<https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ>
 
-## more recent CodePen experiments and notes made during/after taking [CSS in JS](https://css-for-js.dev/) course:
+## more recent CodePen experiments and notes made during/after taking [CSS in JS](https://css-for-js.dev/) course
 
-- CSS shadow via `box-shadow` (direction choice) vs via `filter: drop-shadow` (contoured shadow): https://codepen.io/hchiam/pen/YzrrVGL
+- CSS shadow via `box-shadow` (direction choice) vs via `filter: drop-shadow` (contoured shadow): <https://codepen.io/hchiam/pen/YzrrVGL>
 
   - note: it's `drop-shadow`, not `dropshadow`!
 
-- CSS `filter: saturate(#);`: https://codepen.io/hchiam/pen/mdBBmOG
+- CSS `filter: saturate(#);`: <https://codepen.io/hchiam/pen/mdBBmOG>
 
-- CSS horizontal radiuses / vertical radiuses: https://codepen.io/hchiam/pen/bGoorOm
+- CSS horizontal radiuses / vertical radiuses: <https://codepen.io/hchiam/pen/bGoorOm>
 
-- CSS border auto-uses text color. Also CSS has `currentColor` keyword: https://codepen.io/hchiam/pen/qBPPQVg
+- CSS border auto-uses text color. Also CSS has `currentColor` keyword: <https://codepen.io/hchiam/pen/qBPPQVg>
 
-- Fancy hover link (but must be one-liner link): https://codepen.io/hchiam/pen/LYzzaow (Note that `display: inline` elements act weird because they're treated like text: extra line-height spacing underneath (which you can get rid of with `line-height:0`), or automatically filling the width, not responding to top/bottom margins.)
+- Fancy hover link (but must be one-liner link): <https://codepen.io/hchiam/pen/LYzzaow> (Note that `display: inline` elements act weird because they're treated like text: extra line-height spacing underneath (which you can get rid of with `line-height:0`), or automatically filling the width, not responding to top/bottom margins.)
 
-- CSS fit-content: https://codepen.io/hchiam/pen/eYGGoNQ (`fit-content` is an intelligent in-between for `min-content` and `max-content`)
+- CSS fit-content: <https://codepen.io/hchiam/pen/eYGGoNQ> (`fit-content` is an intelligent in-between for `min-content` and `max-content`)
 
-- `.max-width-wrapper`: https://codepen.io/hchiam/pen/dyVVLqN
+- `.max-width-wrapper`: <https://codepen.io/hchiam/pen/dyVVLqN>
 
 - `border-image-slice`:
 
   - `border-image-slice` [is how much of the corners of the border image to use for the border corners and the remaining middle edges of the image for the border edges - see the 9-part grid for a conceptual hint](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-slice)
 
-  - here's an example on CodePen: https://codepen.io/hchiam/pen/YzEvpOr?editors=0100
+  - here's an example on CodePen: <https://codepen.io/hchiam/pen/YzEvpOr?editors=0100>
 
   - [there's a lot more you can do](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image)
 
-- `appearance: none`: https://codepen.io/hchiam/pen/abVXZYx
+- `appearance: none`: <https://codepen.io/hchiam/pen/abVXZYx>
 
-- CSS `::selection` styling: https://codepen.io/hchiam/pen/VwQPvQG
+- CSS `::selection` styling: <https://codepen.io/hchiam/pen/VwQPvQG>
 
 - styling dropdowns:
-  - slightly style-able dropdown that also makes use of native `select` cross-compatible usability: https://codepen.io/hchiam/pen/OJOwrdX
-  - Somewhat more styling `<select>` dropdown `<option>`s: https://codepen.io/hchiam/pen/wBwQJMB
-  - even more stylable select dropdowns and option: https://github.com/hchiam/stylable-select
+  - slightly style-able dropdown that also makes use of native `select` cross-compatible usability: <https://codepen.io/hchiam/pen/OJOwrdX>
+  - Somewhat more styling `<select>` dropdown `<option>`s: <https://codepen.io/hchiam/pen/wBwQJMB>
+  - even more stylable select dropdowns and option: <https://github.com/hchiam/stylable-select>
 
-- auto-increase click target size with just CSS and then adding a `.click-target-helper` class to elements you want to apply it to: https://codepen.io/hchiam/pen/mdpBpme (or just use a `::after` element with `position: absolute;` and a negative `inset` or negative `top`, `right`, `bottom`, `left` values to increase the tap target area without affecting layout! - just make sure the button can have `position: relative;`)
+- auto-increase click target size with just CSS and then adding a `.click-target-helper` class to elements you want to apply it to: <https://codepen.io/hchiam/pen/mdpBpme> (or just use a `::after` element with `position: absolute;` and a negative `inset` or negative `top`, `right`, `bottom`, `left` values to increase the tap target area without affecting layout! - just make sure the button can have `position: relative;`)
 
-- blurred glow: https://codepen.io/hchiam/pen/JjpRmmy?editors=1100
+- blurred glow: <https://codepen.io/hchiam/pen/JjpRmmy?editors=1100>
 
 - how to use `@supports`:
+
   ```css
   @supports(aspect-ratio) {
     /* won't work because aspect-ratio by itself isn't a valid CSS declaration (missing value) */
@@ -454,7 +460,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   }
   ```
 
-- `backdrop-filter` to make an element semi-transparent like frosted glass: https://codepen.io/hchiam/pen/OJQRBqq?editors=1100 (works best on Chrome)
+- `backdrop-filter` to make an element semi-transparent like frosted glass: <https://codepen.io/hchiam/pen/OJQRBqq?editors=1100> (works best on Chrome)
 
   - ```css
     /* (Firefox fallback semi-transparent background for contrast) */
@@ -464,9 +470,9 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     }
     ```
 
-- asymmetrical/oval border-radius: https://codepen.io/hchiam/pen/eYVdQOg?editors=1100
+- asymmetrical/oval border-radius: <https://codepen.io/hchiam/pen/eYVdQOg?editors=1100>
 
-- nested border-radiuses, calculated!: https://codepen.io/hchiam/pen/xxYEQOY?editors=1100
+- nested border-radiuses, calculated!: <https://codepen.io/hchiam/pen/xxYEQOY?editors=1100>
 
   - inner radius = outer radius - padding
 
@@ -481,11 +487,12 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   }
   ```
 
-  - `border-radius: 100vmax` makes the left/right or top/bottom ends of a box always end in circles: https://codepen.io/hchiam/pen/xxYEQOY?editors=1100
+  - `border-radius: 100vmax` makes the left/right or top/bottom ends of a box always end in circles: <https://codepen.io/hchiam/pen/xxYEQOY?editors=1100>
 
-- "Moat" with inset shadow + normal shadow and nested radiuses: https://codepen.io/hchiam/pen/bGLBWej?editors=1000
+- "Moat" with inset shadow + normal shadow and nested radiuses: <https://codepen.io/hchiam/pen/bGLBWej?editors=1000>
 
 - inset shadows with different colours on different edges that can blend together at the corners:
+
   - ```css
     box-shadow: 
       inset 0 10px 1rem -10px yellow, /* top */
@@ -493,6 +500,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       inset 0 -10px 1rem -10px white, /* bottom */
       inset 10px 0px 1rem -10px blue; /* left */
     ```
+
   - ```css
     --size: 10px;
     --blur: var(--size);
@@ -503,15 +511,15 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       inset var(--size) 0px var(--blur) calc(-1 * var(--size)) blue; /* left */
     ```
 
-- generate shadows with coordination (low/med/hi) and realism (spread and background colour accounted for) and adaptability (`--shadow-color`): https://www.joshwcomeau.com/shadow-palette
+- generate shadows with coordination (low/med/hi) and realism (spread and background colour accounted for) and adaptability (`--shadow-color`): <https://www.joshwcomeau.com/shadow-palette>
 
-- Simulated Stylable Select (CSS + JS): https://codepen.io/hchiam/pen/wvprLpV
+- Simulated Stylable Select (CSS + JS): <https://codepen.io/hchiam/pen/wvprLpV>
 
-- https://github.com/hchiam/mini-component-library
+- <https://github.com/hchiam/mini-component-library>
 
-- https://github.com/hchiam/sole-and-ankle and https://github.com/hchiam/sole-and-ankle-revisited
+- <https://github.com/hchiam/sole-and-ankle> and <https://github.com/hchiam/sole-and-ankle-revisited>
 
-- https://github.com/hchiam/scrollburglars
+- <https://github.com/hchiam/scrollburglars>
 
 - `100vh` isn't always 100% of viewport for mobile because of scrolling and browsers trying to avoid flickering issues (for mobile, `100vh` is currently set to the largest possible height, like when the URL and bottom buttons slide away when you scroll). Instead of `100vh`, use `height: 100%` on `html` and on `body`.
   - "`min-height: 100%` trick": `body` `height: 100%` and `main` `min-height: 100%` so that `main` can still grow to fit content inside of `main`
@@ -540,7 +548,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   }
   ```
 
-- https://stackoverflow.com/a/21064102 JS can get you 3 different widths: `offsetWidth` vs `scrollWidth` vs `clientWidth`: https://i.stack.imgur.com/5AAyW.png
+- <https://stackoverflow.com/a/21064102> JS can get you 3 different widths: `offsetWidth` vs `scrollWidth` vs `clientWidth`: <https://i.stack.imgur.com/5AAyW.png>
   - `offsetWidth` includes border
   - `scrollWidth` includes overflow stuff you can scroll to
   - `clientWidth` includes just what you'd normally think, as long as it's inside the viewport (excludes truncated width and scrollbar width)
@@ -553,7 +561,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
   - that's why `margin-block: auto` or `margin-inline: auto` trick helps center things
 
-- CSS margin collapse rules weirdness: https://codepen.io/hchiam/pen/jOoZYgb?editors=1100 and https://codepen.io/hchiam/pen/WNZZqjo and https://codepen.io/hchiam/pen/ExQgjOX and https://www.joshwcomeau.com/css/rules-of-margin-collapse/
+- CSS margin collapse rules weirdness: <https://codepen.io/hchiam/pen/jOoZYgb?editors=1100> and <https://codepen.io/hchiam/pen/WNZZqjo> and <https://codepen.io/hchiam/pen/ExQgjOX> and <https://www.joshwcomeau.com/css/rules-of-margin-collapse/>
 
   - (margin collapse applies to the default flow layout mode only (like `display:block`), since it made sense for documents, and so margin collapse doesn't happen for `display:flex` because it doesn't make sense)
   - overlapping inline-direction margins don't collapse, but
@@ -567,21 +575,22 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   - further notes on margin collapse: [BFCs and preventing margin collapse: "Why isn't the margin applying?"](https://youtu.be/YdggbwLEuFg): create a BFC with `display:flex;` or `display:flow-root;`
     - BFC = [Block Formatting Context](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context) <- see link for things that implicitly create a BFC, which is good for suppressing margin collapse, containing internal floats, and excluding external floats.
 
-- https://github.com/hchiam/huckleberry
+- <https://github.com/hchiam/huckleberry>
 
-- CSS absolute positioning rules conflict resolution: https://codepen.io/hchiam/pen/GRMOrWV
+- CSS absolute positioning rules conflict resolution: <https://codepen.io/hchiam/pen/GRMOrWV>
 
-- `position: absolute` child is positioned relative to closest `position`ed ancestor: https://codepen.io/hchiam/pen/mdBqKPp
+- `position: absolute` child is positioned relative to closest `position`ed ancestor: <https://codepen.io/hchiam/pen/mdBqKPp>
 
 - browser paints `position: static` (default) before elements with `position` != `static`
 
 - Without a `z-index` escape hatch, by default, stacking order = non-positioned with be under positioned, then stacked on top in DOM order. If you're in the default flow (!= flex) layout, content will float to the front regardless of stacking. Importantly, if two elements are in the same stacking context and are both `position`ed, then the one that appears later in the DOM will be placed on top.
 - `z-index` only works on `position`ed elements (and can also be used with flex/grid children without `position`ing them)
-- Note: stacking context != parent-child. Analogy: image editor layers, or semver 1.999 is always less than 2.0. https://codepen.io/hchiam/pen/qBPpWyj
-- `isolation: isolate` is the purest side-effect-free way to create a **_"local/scoped"_ stacking context** with an element (no need to set a `z-index` or `position` on that element): https://www.joshwcomeau.com/css/stacking-contexts/
+- Note: stacking context != parent-child. Analogy: image editor layers, or semver 1.999 is always less than 2.0. <https://codepen.io/hchiam/pen/qBPpWyj>
+- `isolation: isolate` is the purest side-effect-free way to create a **_"local/scoped"_ stacking context** with an element (no need to set a `z-index` or `position` on that element): <https://www.joshwcomeau.com/css/stacking-contexts/>
   - instead of using implicit triggers
   - and can solve things like layered cards unintentionally overlapping with the header when you scroll up: `isolation: isolate` works to group things so internal stacking only matters within the group and doesn't affect other things.
   - set `isolation: isolate` on your React `#root` element so you can isolate the main content from any ["portal"](https://github.com/hchiam/learning-react-portals)ed modals (which get listed last in the DOM) and avoid fighting escalating `z-index` wars:
+
     ```html
     <div id="root" style="isolation: isolate;">
       <header>
@@ -596,10 +605,11 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       without knowing z-index values.
     </div>
     ```
-    Or use a library like [Reach UI](https://reach.tech/) to solve the stacking problem for you: swap `CustomLoginModal` for `ReachLoginModal` in https://codesandbox.io/s/stacking-contexts-global-contexts-zcjbt?file=/src/Header.js
+
+    Or use a library like [Reach UI](https://reach.tech/) to solve the stacking problem for you: swap `CustomLoginModal` for `ReachLoginModal` in <https://codesandbox.io/s/stacking-contexts-global-contexts-zcjbt?file=/src/Header.js>
 - CSS Stacking Context inspector:
-  - Chrome: https://chrome.google.com/webstore/detail/css-stacking-context-insp/apjeljpachdcjkgnamgppgfkmddadcki
-  - Firefox: https://addons.mozilla.org/en-US/firefox/addon/css-stacking-context-inspector/
+  - Chrome: <https://chrome.google.com/webstore/detail/css-stacking-context-insp/apjeljpachdcjkgnamgppgfkmddadcki>
+  - Firefox: <https://addons.mozilla.org/en-US/firefox/addon/css-stacking-context-inspector/>
 - centering a modal:
 
   ```css
@@ -640,15 +650,15 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
 - a `position: sticky` child stays within its containing ancestor, so if its containing ancestor scrolls off-screen, then so does the `position: sticky` element
 
-  - sticky elements stay within their containing ancestors: https://codepen.io/hchiam/pen/wvrpPOM
-  - you can create a `sticky` header with a buffer using `padding-top` and negative `top`: https://codepen.io/hchiam/pen/XWeVVqO
+  - sticky elements stay within their containing ancestors: <https://codepen.io/hchiam/pen/wvrpPOM>
+  - you can create a `sticky` header with a buffer using `padding-top` and negative `top`: <https://codepen.io/hchiam/pen/XWeVVqO>
 
 - if `position: sticky` isn't working, check if an ancestor has some `overflow` value other than visible
 - setting `overflow` makes `sticky` descendants stick within, no longer globally
 
 - you can make a hole in visibility: children visible while their parents are invisible: ancestors can have `visibility: hidden` and descendants can have `visibility: visible` (this _**doesn't**_ work with other things like `display: none`, `opacity`, `aria-hidden="true"`)
 
-- consider making React components toggle screen-reader-only text visibility in dev mode: https://www.joshwcomeau.com/snippets/react-components/visually-hidden/
+- consider making React components toggle screen-reader-only text visibility in dev mode: <https://www.joshwcomeau.com/snippets/react-components/visually-hidden/>
 
   - automatic translation services may not translate `aria-label`s, so you might have to use this solution (which also lets you bundle other related features)
 
@@ -734,9 +744,9 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
   - the `${}` can be interpolated even within a selector!
 
-- scroll indicator shadows implemented with pseudo elements + `sticky` overlay elements: https://codepen.io/hchiam/pen/gOGKzwB or see [scroll-indicator-shadow-overlay.scss](https://github.com/hchiam/learning-css/blob/main/scroll-indicator-shadow-overlay.scss) (as opposed to the background shadow technique https://codepen.io/hchiam/pen/bGEJweq)
+- scroll indicator shadows implemented with pseudo elements + `sticky` overlay elements: <https://codepen.io/hchiam/pen/gOGKzwB> or see [scroll-indicator-shadow-overlay.scss](https://github.com/hchiam/learning-css/blob/main/scroll-indicator-shadow-overlay.scss) (as opposed to the background shadow technique <https://codepen.io/hchiam/pen/bGEJweq>)
 
-- improving animation performance: https://medium.com/@matthew.costello/frontend-web-performance-the-essentials-0-61fea500b180
+- improving animation performance: <https://medium.com/@matthew.costello/frontend-web-performance-the-essentials-0-61fea500b180>
 
   - change `left` (layout) to `background-position` (paint) to `transform` (composite) = fastest, but avoid overusing properties that would create too many composite layers to manage
     - recalculate applied styles -> layout -> paint -> composite/compositing (invented to enable fast scrolling by transforming what was already calculated)
@@ -744,15 +754,15 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   - use Chrome DevTools "Performance" tab > (record) > find red dropped "Frames" > see "Main" for things using up time like "Layout" or "Paint" or "Recalculate style" (which can point out things like "[Forced reflow](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing?utm_source=devtools#avoid-forced-synchronous-layouts) is a likely performance bottleneck")
   - use Chrome DevTools "Rendering" panel to highlight things that are causing repaints or layout shifts.
 
-- CSS `:target` fun: https://codepen.io/hchiam/pen/vYeaxRr
+- CSS `:target` fun: <https://codepen.io/hchiam/pen/vYeaxRr>
 
-- CSS `^` vs `|` (caret vs pipe) selectors: https://codepen.io/hchiam/pen/abqrxXG?editors=1100
+- CSS `^` vs `|` (caret vs pipe) selectors: <https://codepen.io/hchiam/pen/abqrxXG?editors=1100>
 
-- Gradient generator (no more grey transition middle!): https://www.joshwcomeau.com/gradient-generator (basically ["generate a bunch of midpoint colors using a custom color mode, and pass them all to our CSS gradient function. The CSS engine will use RGB interpolation, but it won't affect the final result (at least, not by enough for it to be perceptible to humans)"](<https://www.joshwcomeau.com/css/make-beautiful-gradients/#:~:text=generate%20a%20bunch%20of%20midpoint%20colors%20using%20a%20custom%20color%20mode%2C%20and%20pass%20them%20all%20to%20our%20css%20gradient%20function.%20the%20css%20engine%20will%20use%20rgb%20interpolation%2C%20but%20it%20won't%20affect%20the%20final%20result%20(at%20least%2C%20not%20by%20enough%20for%20it%20to%20be%20perceptible%20to%20humans)>))
+- Gradient generator (no more grey transition middle!): <https://www.joshwcomeau.com/gradient-generator> (basically ["generate a bunch of midpoint colors using a custom color mode, and pass them all to our CSS gradient function. The CSS engine will use RGB interpolation, but it won't affect the final result (at least, not by enough for it to be perceptible to humans)"](<https://www.joshwcomeau.com/css/make-beautiful-gradients/#:~:text=generate%20a%20bunch%20of%20midpoint%20colors%20using%20a%20custom%20color%20mode%2C%20and%20pass%20them%20all%20to%20our%20css%20gradient%20function.%20the%20css%20engine%20will%20use%20rgb%20interpolation%2C%20but%20it%20won't%20affect%20the%20final%20result%20(at%20least%2C%20not%20by%20enough%20for%20it%20to%20be%20perceptible%20to%20humans)>))
 
 - example of styled-components style composition: ` SomeComposedStyle = styled(SomeBaseStyle)``; ` instead of just ` SomeBaseStyle = styled.button``; `
 
-- contrast checker: https://webaim.org/resources/contrastchecker (useful in cases like comparing button background colour to page background colour, which DevTools currently can't check)
+- contrast checker: <https://webaim.org/resources/contrastchecker> (useful in cases like comparing button background colour to page background colour, which DevTools currently can't check)
 
 - colour-blindness: built-in DevTools in Chrome and in Firefox let you easily simulate different types of colour vision: red and yellow are a good pair of colours if you really can't use non-colour ways to distinguish items (differently dashed lines? or arrows pointing to the lines in the graph?)
 
@@ -817,7 +827,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   // mediaQueryList.removeListener(listener);
   ```
 
-  - and here's a [React](https://github.com/hchiam/learning-reactjs) hook version: https://www.joshwcomeau.com/react/prefers-reduced-motion/#the-hook
+  - and here's a [React](https://github.com/hchiam/learning-reactjs) hook version: <https://www.joshwcomeau.com/react/prefers-reduced-motion/#the-hook>
 
 - you can use [`as="someOtherTagName"`](https://styled-components.com/docs/api#as-polymorphic-prop) to make a styled-component have a different underlying tag:
 
@@ -912,11 +922,11 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
 - CSS has different layout modes (like flow, `position`ed, `flex`, `grid`, etc.), and each layout mode decides what each property does (if anything), like whether it ignores `z-index` (flow ignores `z-index`, while `position`ed, `flex`, `grid` respect `z-index`)
 
-- There's also many other layout modes: https://developer.mozilla.org/en-US/docs/Web/CSS/display but including an exciting new one called [`display: contents`, which lets indirect children (2 levels down) participate in the layout mode](https://codepen.io/hchiam/pen/OJzZPqY)
+- There's also many other layout modes: <https://developer.mozilla.org/en-US/docs/Web/CSS/display> but including an exciting new one called [`display: contents`, which lets indirect children (2 levels down) participate in the layout mode](https://codepen.io/hchiam/pen/OJzZPqY)
 
-- Layout modes can also interact with each other: https://codepen.io/hchiam/pen/PoEdWJo - take the content inside a CSS Grid cell and wrap it inside an inner sticky div to enable it to stick then not: "`grid { sticky }`".
+- Layout modes can also interact with each other: <https://codepen.io/hchiam/pen/PoEdWJo> - take the content inside a CSS Grid cell and wrap it inside an inner sticky div to enable it to stick then not: "`grid { sticky }`".
 
-- CSS Grid can be used to make text 1 middle column and make images full-width/full-bleed: https://codepen.io/hchiam/pen/vYpzgro
+- CSS Grid can be used to make text 1 middle column and make images full-width/full-bleed: <https://codepen.io/hchiam/pen/vYpzgro>
   - `grid-column: 1 / -1;` means "(1st line from left) to (1st line from right)"
 
 ### extra flexbox notes
@@ -973,7 +983,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - but usually we just want to use `flex` shorthand = `flex-grow: 1`, `flex-shrink: 1`, and `flex-basis: 0` (which conceptually works like `width: 0` and filling the rest of the space like you typically want)
 
   - and _NOT_ recommended: setting `flex-grow` or `flex-shrink` without setting `flex-basis`, because `flex-basis: auto` is the default
-  - `flex` defaults to: `0 1 auto` (`flex-grow: 0`) (`flex-shrink: 1`) (`flex-basis: auto`) https://www.joshwcomeau.com/css/interactive-guide-to-flexbox
+  - `flex` defaults to: `0 1 auto` (`flex-grow: 0`) (`flex-shrink: 1`) (`flex-basis: auto`) <https://www.joshwcomeau.com/css/interactive-guide-to-flexbox>
   - `flex-basis: 0` = will "stretch" each item to fill additional space.
     - what you'd usually want, so just use `flex`.
   - `flex-basis: auto` = will "add" _additional_ space to items.
@@ -1006,7 +1016,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   }
   ```
 
-  - example: https://codepen.io/hchiam/pen/qBKZwON
+  - example: <https://codepen.io/hchiam/pen/qBKZwON>
 
 - also:
 
@@ -1091,7 +1101,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - "`-items`" = children in the cells
 
 - `grid-row: 1 / -1` on a child is possible: to span from top of grid to bottom of grid (track line 1 to track line -1, like negative indices in [Python](https://github.com/hchiam/learning-python)), regardless of the number of rows
-  - example: full-width image in CSS grid: https://codepen.io/hchiam/pen/vYpzgro
+  - example: full-width image in CSS grid: <https://codepen.io/hchiam/pen/vYpzgro>
 - `grid-row` and `grid-column` are indexed starting at 1 (or -1 from the ends), and if you give them one value, then it's assumed to be 1 cell size (`grid-row: 1` = `grid-row: 1 / 2`)
 
 - "world famous" CSS grid with dynamic number and size of columns to fill the width:
@@ -1150,7 +1160,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   }
   ```
 
-- `grid-template-columns` can have named grid lines, multiple names for the same line, and special suffixes `-start`/`-end` for CSS grid line names (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines#implicit_grid_areas_from_named_lines)
+- `grid-template-columns` can have named grid lines, multiple names for the same line, and special suffixes `-start`/`-end` for CSS grid line names (<https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines#implicit_grid_areas_from_named_lines>)
 
 ### other stuff
 
@@ -1218,7 +1228,8 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   | cons | "choppy" transitions, "global" window media queries only (can't respond to container queries unless the newest CSS features are supported) | harder to understand intent just from reading the code (must intuit test cases with a working example), harder to group/control unrelated things or have totally different/unrelated styles for different sizes |
 
   - container query is now available in [Chrome/Edge/Firefox/Opera/Safari](https://developer.mozilla.org/en-US/docs/Web/CSS/@container#browser_compatibility):
-    - https://codepen.io/hchiam/pen/oNPedeY
+    - <https://codepen.io/hchiam/pen/oNPedeY>
+
       - ```css
         .element-container {
           container-type: inline-size;
@@ -1229,7 +1240,9 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
           }
         }
         ```
+
       - or:
+
         ```css
         .element-container {
           container: container-name / inline-size;
@@ -1240,9 +1253,11 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
           }
         }
         ```
-    - https://web.dev/blog/cq-stable
-    - https://www.joshwcomeau.com/css/container-queries-introduction/
+
+    - <https://web.dev/blog/cq-stable>
+    - <https://www.joshwcomeau.com/css/container-queries-introduction/>
       - or:
+
         ```css
         .element-container {
           container-type: inline-size;
@@ -1254,6 +1269,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
           }
         }
         ```
+
       - "**The golden rule with container queries is that we can’t change what we measure.** `container-type: inline-size` lets us use `min-width`/`max-width` conditions in our container queries, but not `min-height`/`max-height`."
       - "We don’t often think about it, but there’s a fundamental difference between width and height on the web:"
         - "When it comes to width, elements tend to expand, filling the space provided by the _parent_."
@@ -1409,7 +1425,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
   - `<img>` tags will grow/not-grow in weird ways when they're a direct child of a `display: flex` container, so instead prefer treating `<img>` as content (and set `img {width: 100%;}`) and wrapping it in a divider like `<div><img></div>`, itself inside of the `display: flex` container so the flexbox styles get applied to the `<div>` wrapper instead, to behave more like how you'd expect
 
-- if you need a random image 1000px wide and 500px tall: https://source.unsplash.com/1000x500 (here's the license: https://unsplash.com/license)
+- if you need a random image 1000px wide and 500px tall: <https://source.unsplash.com/1000x500> (here's the license: <https://unsplash.com/license>)
 
 - text wrap: by default breaks on spaces and dashes (but really-long words overflow)
 
@@ -1472,7 +1488,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
 - there's another layout mode: "multi-column layout", like a book or page with multiple columns like in a Word doc, but it doesn't get its own `display` name:
 
-  https://codepen.io/hchiam/pen/zYpdOXz
+  <https://codepen.io/hchiam/pen/zYpdOXz>
 
   ```scss
   .multi-column-layout {
@@ -1515,12 +1531,12 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   - `font-display: optional;` for non-critical font for subtle enhancements, since it has a short block period, no swap period, and hence an early failure period.
   - `font-display: swap;` to get any text showing ASAP, tho will swap as available - _including infinitely any time after the page loads_ (= might change font or cause layout shift seconds/minutes after page load).
   - **PREFER** `font-display: fallback;` for smooth font loading UX: fast connections avoid FOUT, and slow connections avoid FOUT happening randomly while you're already using the page.
-    - and then you _could_ minimize layout shift with something like https://meowni.ca/font-style-matcher to generate CSS styles to smoothen the swap between 2 fonts (but requires some fancy logic to [remove those styles after fonts are loaded](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API)), but in future it could be easier with f-mods ("font descriptors") with overrides to add inside of `@font-face` rules, like:
+    - and then you _could_ minimize layout shift with something like <https://meowni.ca/font-style-matcher> to generate CSS styles to smoothen the swap between 2 fonts (but requires some fancy logic to [remove those styles after fonts are loaded](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API)), but in future it could be easier with f-mods ("font descriptors") with overrides to add inside of `@font-face` rules, like:
       - `size-adjust` (works like `font-size`)
       - `ascent-override`/`descent-override` (which work like `line-height`)
       - `advance-override` (which works like `letter-spacing`)
 
-- system font stack = no network request, no font flash, wide language coverage, works across OSs/systems/platforms, and matches user device conventions: https://systemfontstack.com
+- system font stack = no network request, no font flash, wide language coverage, works across OSs/systems/platforms, and matches user device conventions: <https://systemfontstack.com>
 
   ```css
   html {
@@ -1591,7 +1607,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
     - Example [Google-optimized but self-hosted variable web font](https://github.com/hchiam/unsprinkle/commit/7fe8cb9ed762dc3c471a0f2ae50404746e5e2174)
 
-  - or self-host web fonts with https://fontsource.org
+  - or self-host web fonts with <https://fontsource.org>
 
     ```sh
     yarn add @fontsource/open-sans # npm install @fontsource/open-sans
@@ -1681,7 +1697,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   - use variable fonts for a more expressive/polished look at no extra cost
 
 - `unicode-range` can be used to mix fonts or target letters to use different fonts:
-  - CSS+JS mixed font `unicode-range` "animation": https://codepen.io/hchiam/pen/YPKJKMY?editors=0100
+  - CSS+JS mixed font `unicode-range` "animation": <https://codepen.io/hchiam/pen/YPKJKMY?editors=0100>
 
 - `transform` doesn't work on the default `inline`/flow layout algorithm.
 
@@ -1712,11 +1728,11 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   - `transform: rotate(var(--r)) translateX(var(--x))` = move forward in another cardinal direction
 
 - `transform-origin: bottom right;`, not `bottom-right`
-- `transform-origin: 80% 75%;` means 80% of the way to the right, and 75% of the way down the element. (waving hand example: https://codepen.io/hchiam/pen/QWQjvoa)
+- `transform-origin: 80% 75%;` means 80% of the way to the right, and 75% of the way down the element. (waving hand example: <https://codepen.io/hchiam/pen/QWQjvoa>)
 
 - how to solve "doom flicker" in CSS: have a non-moving parent `:hover` trigger a moving child `transform`, instead of having the `:hover` and `transform` both on the same element (which could move away from the cursor that hovered it)
 
-- easing in CSS `@keyframes` versus JS `.animate()` frames: https://codepen.io/hchiam/pen/MWQWPdN
+- easing in CSS `@keyframes` versus JS `.animate()` frames: <https://codepen.io/hchiam/pen/MWQWPdN>
 
   - JS frames in `.animate()` can use 1 transition _across all_ steps (by default - but this can be tweaked per step with an additional property per object in the frames array)
   - CSS `@keyframes` can only transition _between_ steps
@@ -1768,16 +1784,16 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
 - `animation-play-state: paused;` or `running`, instead of awkwardly removing animations partway thru a `@keyframes` animation (won't work on `transition` animations tho)
 
-- generate cubic-bezier animation curves to copy to clipboard: https://cubic-bezier.com
+- generate cubic-bezier animation curves to copy to clipboard: <https://cubic-bezier.com>
 
-- CSS Bézier curve animation, powered by CSS variables!: https://codepen.io/hchiam/pen/ZEVEWNE?editors=1100
+- CSS Bézier curve animation, powered by CSS variables!: <https://codepen.io/hchiam/pen/ZEVEWNE?editors=1100>
 
-  - backup CSS ready for copying to reuse: https://github.com/hchiam/learning-css/blob/main/bezier-curve-animation.css
+  - backup CSS ready for copying to reuse: <https://github.com/hchiam/learning-css/blob/main/bezier-curve-animation.css>
 
 - you could create performant animations with a sprite sheet with `animation: ... steps(34) ... ;`
 
-  - https://codepen.io/hchiam/pen/xxYwrNE
-  - https://i.imgur.com/zLh2Pgs.png
+  - <https://codepen.io/hchiam/pen/xxYwrNE>
+  - <https://i.imgur.com/zLh2Pgs.png>
 
 - ```js
   element.addEventListener("onTransitionEnd", () => {
@@ -1785,16 +1801,16 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   });
   ```
 
-- `background: linear-gradient`s layered: (first in list is layered on top) https://codepen.io/hchiam/pen/WNMRrxR?editors=1100 (same goes for `radial-gradient`)
+- `background: linear-gradient`s layered: (first in list is layered on top) <https://codepen.io/hchiam/pen/WNMRrxR?editors=1100> (same goes for `radial-gradient`)
 
   - a gradient can be (used for) more than blended colours!
 
 - `background: conic-gradient`:
 
-  - https://codepen.io/hchiam/pen/ExQZVrQ (generate pie chart with hard stops)
-  - https://codepen.io/hchiam/pen/OJQWyYJ (position and angle)
+  - <https://codepen.io/hchiam/pen/ExQZVrQ> (generate pie chart with hard stops)
+  - <https://codepen.io/hchiam/pen/OJQWyYJ> (position and angle)
 
-- tool to generate _**eased**_ gradients: https://larsenwork.com/easing-gradients/#editor
+- tool to generate _**eased**_ gradients: <https://larsenwork.com/easing-gradients/#editor>
 
 - you can "undo" `pointer-event: none;` on element descendants!
 
@@ -1802,7 +1818,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   - child: `pointer-events: auto;`
   - (note: `pointer-events: none;` doesn't prevent users from tabbing to things like buttons)
 
-- `clip-path` can be animated by interpolating where its polygon points move! even with just `:hover` or `:focus`, no `@keyframes` needed! (just make sure you specify the same number of points) For example: https://codepen.io/hchiam/pen/BaYpjOW (aside note: `will-change: transform; /* as opposed to clip-path */`)
+- `clip-path` can be animated by interpolating where its polygon points move! even with just `:hover` or `:focus`, no `@keyframes` needed! (just make sure you specify the same number of points) For example: <https://codepen.io/hchiam/pen/BaYpjOW> (aside note: `will-change: transform; /* as opposed to clip-path */`)
 
 - ```css
   @media (prefers-reduced-motion: no-preference) {
@@ -1836,7 +1852,8 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   }
   ```
 
-  - example scroll snap: https://codepen.io/hchiam/pen/OJQWNrw?editors=1100
+  - example scroll snap: <https://codepen.io/hchiam/pen/OJQWNrw?editors=1100>
+
     - ```css
       .parent {
         scroll-snap-type: x mandatory;
@@ -1850,7 +1867,9 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
         width: 300px;
       }
       ```
-  - example scroll snap, minimal: https://codepen.io/hchiam/pen/WNBXyMZ?editors=1100
+
+  - example scroll snap, minimal: <https://codepen.io/hchiam/pen/WNBXyMZ?editors=1100>
+
     - ```css
       .parent {
         scroll-snap-type: x mandatory;
@@ -1864,8 +1883,10 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
         flex: 0 0 100%;
       }
       ```
+
     - You can modify this CSS to make vertical scroll trigger horizontal scroll too, as long as you have browser support and another containing ancestor element. See the next CSS code snippet:
-  - example scroll snap, with vertical scroll triggering horizontal scroll: https://codepen.io/hchiam/pen/dyEJPjq?editors=1100
+  - example scroll snap, with vertical scroll triggering horizontal scroll: <https://codepen.io/hchiam/pen/dyEJPjq?editors=1100>
+
     - ```css
       /* THIS SECTION MAKES VERTICAL TRIGGER HORIZONTAL SCROLL: */
 
@@ -1908,13 +1929,14 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
         scroll-snap-align: start;
       }
       ```
+
   - `scroll-snap-stop: always;` prevents really fast swipes from skipping elements
 
 - scrollbars are usually specific to OS, not specific to browser
 
-- to styles scrollbars to blend into app theme https://codepen.io/hchiam/pen/abqpZoB?editors=1100
+- to styles scrollbars to blend into app theme <https://codepen.io/hchiam/pen/abqpZoB?editors=1100>
 
-- `:focus-visible` = `:focus` but only when the user is using a non-pointer input method to focus (already have nice defaults on modern browsers that differentiate for you) = focused via keyboard, not mouse, as determined partially by heuristics https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+- `:focus-visible` = `:focus` but only when the user is using a non-pointer input method to focus (already have nice defaults on modern browsers that differentiate for you) = focused via keyboard, not mouse, as determined partially by heuristics <https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible>
 
 - `:focus-within` = `:focus` but on any descendant element (useful for styling the parent if any of its children are focused)
 
@@ -1952,8 +1974,8 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
 - CSS environment variables: `env()` (like `var()` but user-agent defined and usable in more places, like in media queries)
 
-  - https://developer.mozilla.org/en-US/docs/Web/CSS/env
-  - https://developer.chrome.com/docs/web-platform/virtual-keyboard/#the-css-environment-variables
+  - <https://developer.mozilla.org/en-US/docs/Web/CSS/env>
+  - <https://developer.chrome.com/docs/web-platform/virtual-keyboard/#the-css-environment-variables>
 
 - rotate/translate with 3D perspective: (parent provides perspective environment for its children)
 
@@ -1972,7 +1994,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   }
   ```
 
-  - example: https://codepen.io/hchiam/pen/bGjRmBj?editors=1100
+  - example: <https://codepen.io/hchiam/pen/bGjRmBj?editors=1100>
 
   - or for some reason you can let each element have its own perspective environment:
 
@@ -1994,7 +2016,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   }
   ```
 
-- there are media queries specific to PWA's: https://web.dev/learn/pwa/app-design/#media-queries
+- there are media queries specific to PWA's: <https://web.dev/learn/pwa/app-design/#media-queries>
 
   ```css
   /* fallbacks: fullscreen --> standalone --> minimal --> browser */
@@ -2055,45 +2077,46 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     }
   </style>
   ```
+
   - (note: the first two both fail on grey)
-  - alternatively: APCA text/background colour contrast calculation demo: https://codepen.io/hchiam/pen/Bagxddg?editors=0010
+  - alternatively: APCA text/background colour contrast calculation demo: <https://codepen.io/hchiam/pen/Bagxddg?editors=0010>
   - but it might be simpler to add a text outline or use white text on a black background like captions
 
 - "RSDPV" or "R SaD Pav": Rule contains `Selector and { Declarations }`, Declaration contains `Property: and Value;`
 
   - super summary mnemonic for my own use: `R&D` = Rule (the whole block including S and D) and Declarations (lines inside the brackets)
 
-- CSS motion path: https://codepen.io/hchiam/pen/JjwPdZE?editors=1100
+- CSS motion path: <https://codepen.io/hchiam/pen/JjwPdZE?editors=1100>
 
-- SVG icon pieces easy transitions: https://codepen.io/hchiam/pen/wvRReXG
+- SVG icon pieces easy transitions: <https://codepen.io/hchiam/pen/wvRReXG>
 
-- SVG commands M, L, and A (Q is harder to intuit): https://codepen.io/hchiam/pen/dywwRQE?editors=1000
+- SVG commands M, L, and A (Q is harder to intuit): <https://codepen.io/hchiam/pen/dywwRQE?editors=1000>
 
-- SVG splash and spin where cursor is when you click: https://codepen.io/hchiam/pen/NWeevda
+- SVG splash and spin where cursor is when you click: <https://codepen.io/hchiam/pen/NWeevda>
 
 - scroll-driven animations:
 
-  - JS-based: `IntersectionObserver` https://github.com/hchiam/learning-js/blob/main/onEnterViewport_intersectionObserver.js
-    - well-supported: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#browser_compatibility
-  - CSS-based: `animation-timeline` `scroll()` https://codepen.io/hchiam/pen/ExrzPOq?editors=0100 and `view()` https://codepen.io/hchiam/pen/LYqoGqG?editors=0100
-    - not fully supported as of July 2023 https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline#browser_compatibility
+  - JS-based: `IntersectionObserver` <https://github.com/hchiam/learning-js/blob/main/onEnterViewport_intersectionObserver.js>
+    - well-supported: <https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#browser_compatibility>
+  - CSS-based: `animation-timeline` `scroll()` <https://codepen.io/hchiam/pen/ExrzPOq?editors=0100> and `view()` <https://codepen.io/hchiam/pen/LYqoGqG?editors=0100>
+    - not fully supported as of July 2023 <https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline#browser_compatibility>
 
-- comparison slider: https://codepen.io/hchiam/pen/QWoLZEg (https://gui-challenges.web.app/compare/dist/)
+- comparison slider: <https://codepen.io/hchiam/pen/QWoLZEg> (<https://gui-challenges.web.app/compare/dist/>)
 
 - `:lang()` can use more ways to detect language than `[lang=""]`
 
-- lots of ways to center things in CSS, and when to use them: https://www.joshwcomeau.com/css/center-a-div/#when-to-use-which-method-11
+- lots of ways to center things in CSS, and when to use them: <https://www.joshwcomeau.com/css/center-a-div/#when-to-use-which-method-11>
 
-- SVG path animation, like drawing a line: https://codepen.io/hchiam/pen/NWJQdWG
+- SVG path animation, like drawing a line: <https://codepen.io/hchiam/pen/NWJQdWG>
 
-- oklch quick reference: https://oklch.com/#50,0,0,100
+- oklch quick reference: <https://oklch.com/#50,0,0,100>
 
   - `oklch(var(--lightness) var(--chroma) var(--hue) / var(--opacity))`
     - L "lightness" = _perceived_ "brightness", like putting into **brighter light**
     - C "chroma" = "amount of colour", like the "**intensity**" of the colour given the same lighting conditions
     - H "hue" = **colour** (see quick references below)
   - grey: `oklch(50% 0 0)` `oklch(var(--lightness) 0 0)`
-  - **Chroma**: 0-0.37 range effectively (https://keithjgrant.com/posts/2023/04/its-time-to-learn-oklch-color/)
+  - **Chroma**: 0-0.37 range effectively (<https://keithjgrant.com/posts/2023/04/its-time-to-learn-oklch-color/>)
   - **Hue** quick references: approximate positions:
     - pink: 0
     - red: 30
@@ -2105,13 +2128,14 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     - purple: 300
     - magenta: 330
 
-- text outline (4 techniques): https://codepen.io/hchiam/pen/dyLKxpj
+- text outline (4 techniques): <https://codepen.io/hchiam/pen/dyLKxpj>
 
   1. text outline via **text fill + stroke + (paint order)**: PERSONAL FAVOURITE IF SUPPORT ONLY MAJOR MODERN BROWSERS:
      - `-webkit-text-fill-color: var(--fill-color);` and `-webkit-text-stroke: var(--thickness) var(--outline-color);`
      - pro: complete control of text outline thickness
      - con: thicker outlines can cover the text inside fill, and outlines of neighbouring letters overlap if `letter-spacing` is small (instead of "merging") _**UNLESS you can add**_ `paint-order: stroke fill;` (but [support for `paint-order`](https://developer.mozilla.org/en-US/docs/Web/CSS/paint-order#browser_compatibility) still has some gaps: no IE 11 support, and it may not affect stroked HTML text in Edge/Opera or Samsung Internet).
      - example:
+
        ```css
        --f: cyan;
        --o: black;
@@ -2120,6 +2144,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
        -webkit-text-stroke: var(--t) var(--o);
        paint-order: stroke fill;
        ```
+
   2. text outline via **shadows in 8 directions**:
      - `--c: black;` and `text-shadow: -1px -1px var(--c), -1px 0 var(--c), -1px 1px var(--c), 0 -1px var(--c), 0 1px var(--c), 1px -1px var(--c), 1px 0 var(--c), 1px 1px var(--c);`
      - pro: outlines of neighbouring letters "merge" if `letter-spacing` is small, and you can add `filter: drop-shadow(0 0 1px var(--c));` to smoothen out the rough edges a little. (also simpler than the following two alternatives.)
@@ -2162,7 +2187,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
     }
     ```
 
-- count children: (if you can support just major modern browsers: https://caniuse.com/css-has)
+- count children: (if you can support just major modern browsers: <https://caniuse.com/css-has>)
 
   - ```css
     .container:has(.item:nth-child(3)) {
@@ -2170,14 +2195,18 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       background: red;
     }
     ```
+
   - and you can count the number of children EXACTLY with something like this:
+
     - ```css
       .container:has(.item:nth-child(3)):not(:has(.item:nth-child(4)))
         /* container has EXACTLY 3 items: */
         background: red;
       }
       ```
+
   - note: `:nth-child` isn't necessarily counting 3 `.item`s that are (in)direct children of `.container`, but rather is counting if an `.item` is the 3rd child of any immediate parent, e.g.:
+
     - ```html
       <div class="container">
         <div class="indirect">
@@ -2192,21 +2221,24 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
         </div>
       </div>
       ```
+
   - note: ["The `:has()` pseudo-class cannot be nested within another `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying. Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements are not valid anchors for `:has()`."](https://developer.mozilla.org/en-US/docs/Web/CSS/:has#:~:text=the%20%3Ahas()%20pseudo-class%20cannot%20be%20nested%20within%20another%20%3Ahas().)
   - `article:has(h2, ul, ::-invalidbranch) /* :has is not forgiving, so the whole selector fails */`
   - `article:has(:where(h2, ul, ::-invalidbranch)) /* :where adds 0 specificity (vs :is) and is forgiving, so it ignores the invalid "branch" */`
+
   - ```css
     @supports(selector(:has(p))) {
       /* Supported! */
     }
     ```
-  - `:has` is more than a "parent selector", for example: `h1:has(+ p)` - it's more like a "conditional environment selector" or maybe a "family selector" - https://developer.chrome.com/blog/has-m105/
+
+  - `:has` is more than a "parent selector", for example: `h1:has(+ p)` - it's more like a "conditional environment selector" or maybe a "family selector" - <https://developer.chrome.com/blog/has-m105/>
     - [with `:has` you can now get both later AND previous siblings](https://youtu.be/UmDgK3OpuZc?si=HAgwLG1DDF7ZKCA3&t=1549):
       - `ol li:hover + li` = sibling **after**, and `ol li:has(+ li:hover)` = sibling **before**
-    - nth previous sibling and nth following sibling: https://codepen.io/hchiam/pen/QWXLboz?editors=1100
-  - limitations of `:has`: https://developer.chrome.com/blog/has-m105/#performance_and_limitations
+    - nth previous sibling and nth following sibling: <https://codepen.io/hchiam/pen/QWXLboz?editors=1100>
+  - limitations of `:has`: <https://developer.chrome.com/blog/has-m105/#performance_and_limitations>
 
-- space toggle trick with CSS variables: https://css-tricks.com/the-css-custom-property-toggle-trick/ "branching conditonal logic and bulk feature toggling"
+- space toggle trick with CSS variables: <https://css-tricks.com/the-css-custom-property-toggle-trick/> "branching conditonal logic and bulk feature toggling"
 
   - `--foo: ;` is ["empty"](https://drafts.csswg.org/css-variables/#guaranteed-invalid-value)
     - if `--foo: ;` then `var(--foo) value` = `value` "ON"
@@ -2214,7 +2246,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   - `--foo: initial;` is ["guaranteed-invalid"](https://drafts.csswg.org/css-variables/#guaranteed-invalid-value)
     - **if `--foo: initial;` then `var(--foo) value` = `value` is "OFF"** <-- I personally like this this one (then set `--foo: ; /* ON */` to turn it on)
     - if `--foo: initial;` then `var(--foo, value)` = `value` is "ON"
-  - this empowers an alternative for scroll shadows in Chrome: https://www.youtube.com/watch?v=4AvL5Jbd8QU (https://scroll-driven-animations.style/demos/scroll-shadows/css/)
+  - this empowers an alternative for scroll shadows in Chrome: <https://www.youtube.com/watch?v=4AvL5Jbd8QU> (<https://scroll-driven-animations.style/demos/scroll-shadows/css/>)
 
     ```css
     .container {
@@ -2276,7 +2308,9 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       );
     }
     ```
-- CSS pile: https://www.youtube.com/watch?v=6qpEOBkDr88
+
+- CSS pile: <https://www.youtube.com/watch?v=6qpEOBkDr88>
+
     ```css
     .pile {
       display: grid;
@@ -2285,7 +2319,9 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
       grid-area: 1/1;
     }
     ```
+
 - Overriding text in CSS with accessibility in mind (prevent screen readers from reading the original text):
+
   ```css
   p {
     visibility: hidden;
@@ -2298,10 +2334,10 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 
 - you can disable touchscreen panning (scrolling) and pinching (zooming) with `touch-action: none;` (BUT this might disable zoom accessibility), or specify what's allowed (e.g. `pan-x`, `pan-y`, `pinch-zoom`, etc., and `manipulation` = regular pan/pinch but nothing else = `pan-x pan-y pinch-zoom`)
   - `touch-action:` `none;` `pan-x;` `pan-y;` `pinch-zoom;` `manipulation;` (`manipulation` = `pan-x pan-y pinch-zoom` only, so no additional non-standard gestures like double-tap to zoom)
-  - https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action#syntax
+  - <https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action#syntax>
 
-- FLIP/F.L.I.P. animation technique: (First, Last, Invert, Play) https://aerotwist.com/blog/flip-your-animations/
-  - example usage: https://web.dev/patterns/components/toast#js
+- FLIP/F.L.I.P. animation technique: (First, Last, Invert, Play) <https://aerotwist.com/blog/flip-your-animations/>
+  - example usage: <https://web.dev/patterns/components/toast#js>
     - `animation.startTime = document.timeline.currentTime` to tell animation to start immediately, don't wait for next frame, to fix a Firefox bug
 
 - shadow DOM CSS:
@@ -2312,15 +2348,15 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   - `:cue` can only be styled with some styles related to background/color/font/line-height/opacity/outline/ruby-position/text-combine-upright/text-decoration/text-shadow/visibility/whitespace
 
 - `ruby-position: over;` and `ruby-position: under;` = placement of ruby text, e.g. pronunciation "hints" of kanji, i.e. the `<rp>` relative to the `<rb>` in a `<ruby>`
-  - https://developer.mozilla.org/en-US/docs/Web/CSS/ruby-position
+  - <https://developer.mozilla.org/en-US/docs/Web/CSS/ruby-position>
 
 - `text-combine-upright` = what characters to combined into blocks like single chinese character spaces
-  - see the example in https://developer.mozilla.org/en-US/docs/Web/CSS/text-combine-upright
+  - see the example in <https://developer.mozilla.org/en-US/docs/Web/CSS/text-combine-upright>
 
 - `writing-mode: horizontal-tb;` = English writing direction (rows going down, each row read left-to-right)
 - `writing-mode: vertical-rl;` = traditional Chinese writing direction (columns going left, each column read top-to-bottom)
 
-- `@media (orientation: landscape) {} and @media (orientation: portrait) {}` https://codepen.io/hchiam/pen/xxoKGjG
+- `@media (orientation: landscape) {} and @media (orientation: portrait) {}` <https://codepen.io/hchiam/pen/xxoKGjG>
 
 - [`:user-valid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:user-valid) = `:valid` but only after user has interacted with the input
 - [`:user-invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid) = `:invalid`/`:out-of-range`/blank-but-`:required` but only after user has interacted with the input
@@ -2328,6 +2364,7 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - [CSS `:visited` and JS and privacy](https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
 
 - make any element especially `<textarea>` resizable on mobile touchscreen:
+
   ```css
   textarea {
     resize: both;
@@ -2335,11 +2372,11 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
   }
   ```
 
-- toggle more easily between light mode and dark mode colour values with `light-dark()` https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark
+- toggle more easily between light mode and dark mode colour values with `light-dark()` <https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark>
   - `color-scheme: light dark;` = setup to enable using `light-dark()`
   - `color: light-dark(var(--light), var(--dark));` = communicate light and dark mode colours in one line
 
-- rounding stuff: https://web.dev/blog/css-stepped-value-functions
+- rounding stuff: <https://web.dev/blog/css-stepped-value-functions>
   - `round()`
     - `font-size: round(var(--my-font-size), 1rem);` (defaults to `nearest`, like JS `Math.round()`)
       - same as `font-size: round(nearest, var(--my-font-size), 1rem);`
@@ -2354,13 +2391,14 @@ https://youtube.com/playlist?list=PLNYkxOF6rcIAaV1wwI9540OC_3XoIzMjQ
 - you couldn't `transition` on things like `display` or `visibility`, but as of [2024](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-behavior#browser_compatibility), you can with `transition-behavior: allow-discrete;`
   - e.g.: `transition: display 0.25s allow-discrete;`
   - e.g.:
+
     ```css
     transition-property: display;
     transition-duration: 0.2s;
     transition-behavior: allow-discrete;
     ```
 
-- CSS `text-wrap: balance;` https://codepen.io/hchiam/pen/mydJWag
+- CSS `text-wrap: balance;` <https://codepen.io/hchiam/pen/mydJWag>
 
 - `@property syntax:'<...>'` to enable animating css variable
 
