@@ -1228,6 +1228,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   | cons | "choppy" transitions, "global" window media queries only (can't respond to container queries unless the newest CSS features are supported) | harder to understand intent just from reading the code (must intuit test cases with a working example), harder to group/control unrelated things or have totally different/unrelated styles for different sizes |
 
   - container query is now available in [Chrome/Edge/Firefox/Opera/Safari](https://developer.mozilla.org/en-US/docs/Web/CSS/@container#browser_compatibility):
+    - <https://web.dev/blog/cq-stable>
+    - <https://www.joshwcomeau.com/css/container-queries-introduction/>
     - <https://codepen.io/hchiam/pen/oNPedeY>
 
       - ```css
@@ -1235,8 +1237,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
           container-type: inline-size;
         }
         @container (width > 400px) { /* use min-width for backwards-compatibility/mobile-first, see other example */
-          .element-child { /* can't apply styles to the container itself */
-            ...different styles...;
+          .element-child {
+            ...different styles...; /* can't apply styles to the container itself */
           }
         }
         ```
@@ -1248,28 +1250,26 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
           container: container-name / inline-size;
         }
         @container container-name (min-width: 400px) { /* use min-width for backwards-compatibility/mobile-first */
-          .element-child { /* can't apply styles to the container itself */
-            ...different styles...;
+          .element-child {
+            ...different styles...; /* can't apply styles to the container itself */
           }
         }
         ```
-
-    - <https://web.dev/blog/cq-stable>
-    - <https://www.joshwcomeau.com/css/container-queries-introduction/>
-      - or:
-
+        
+      - or more explicitly: _(**favourite_**)
+        
         ```css
         .element-container {
+          container-name: container-name;
           container-type: inline-size;
         }
-        .element-child { /* can't apply styles to the container itself */
-          /* narrow styling stuff here if container is narrow */
-          @container (min-width: 15rem) { /* use min-width for backwards-compatibility/mobile-first */
-            /* wide styling stuff here if container is wide */
+        @container container-name (min-width: 400px) { /* use min-width for backwards-compatibility/mobile-first */
+          .element-child {
+            ...different styles...; /* can't apply styles to the container itself */
           }
         }
         ```
-
+        
       - "**The golden rule with container queries is that we can’t change what we measure.** `container-type: inline-size` lets us use `min-width`/`max-width` conditions in our container queries, but not `min-height`/`max-height`."
       - use `@container (min-width: ...)` for backwards-compatibility/mobile-first
         - so browsers that don't support container queries won't apply the `@container (...) { ... }` styles, and will fail gracefully with mobile styles (vs trying to fit desktop styles into mobile/small screens)
