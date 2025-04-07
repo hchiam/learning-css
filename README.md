@@ -1234,14 +1234,14 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
         .element-container {
           container-type: inline-size;
         }
-        @container (width > 400px) { /* use min-width for backwards-compatibility/mobile-first */
+        @container (width > 400px) { /* use min-width for backwards-compatibility/mobile-first, see other example */
           .element-child { /* can't apply styles to the container itself */
             ...different styles...;
           }
         }
         ```
 
-      - or:
+      - or specify/use a container name (otherwise defaults to nearest container):
 
         ```css
         .element-container {
