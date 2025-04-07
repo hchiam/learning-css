@@ -1234,7 +1234,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
         .element-container {
           container-type: inline-size;
         }
-        @container (width < 400px) {
+        @container (width > 400px) { /* use min-width for backwards-compatibility/mobile-first */
           .element-child { /* can't apply styles to the container itself */
             ...different styles...;
           }
@@ -1247,7 +1247,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
         .element-container {
           container: container-name / inline-size;
         }
-        @container container-name (max-width: 400px) {
+        @container container-name (min-width: 400px) { /* use min-width for backwards-compatibility/mobile-first */
           .element-child { /* can't apply styles to the container itself */
             ...different styles...;
           }
@@ -1263,14 +1263,16 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
           container-type: inline-size;
         }
         .element-child { /* can't apply styles to the container itself */
-          /* wide styling stuff here if container is wide */
-          @container (max-width: 15rem) {
-            /* narrow styling stuff here if container is narrow */
+          /* narrow styling stuff here if container is narrow */
+          @container (min-width: 15rem) { /* use min-width for backwards-compatibility/mobile-first */
+            /* wide styling stuff here if container is wide */
           }
         }
         ```
 
       - "**The golden rule with container queries is that we can’t change what we measure.** `container-type: inline-size` lets us use `min-width`/`max-width` conditions in our container queries, but not `min-height`/`max-height`."
+      - use `@container (min-width: ...)` for backwards-compatibility/mobile-first
+        - so browsers that don't support container queries won't apply the `@container (...) { ... }` styles, and will fail gracefully with mobile styles (vs trying to fit desktop styles into mobile/small screens)
       - use `container-type: inline-size`, and don't use `container-type: size`:
         - `inline-size` is "logical properties" lingo for `width` that doesn't tie itself to a specific language's reading direction
           - `container-type: inline-size;` = this parent/container doesn't depend on the _width_ of its children/content, _but importantly_ its height is free to use the default behaviour of depending on the height of its children/content
