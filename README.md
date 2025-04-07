@@ -1271,6 +1271,12 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
         ```
 
       - "**The golden rule with container queries is that we can’t change what we measure.** `container-type: inline-size` lets us use `min-width`/`max-width` conditions in our container queries, but not `min-height`/`max-height`."
+      - use `container-type: inline-size`, and don't use `container-type: size`:
+        - `inline-size` is "logical properties" lingo for `width` that doesn't tie itself to a specific language's reading direction
+          - `container-type: inline-size;` = this parent/container doesn't depend on the _width_ of its children/content, _but importantly_ its height is free to use the default behaviour of depending on the height of its children/content
+          - i.e., `container-type: inline-size;` is like "`container-type: [just width, i didn't saying anything about height]`"
+        - if you instead use `container-type: size` on the parent container to enable container queries on a child, then you still "disconnect" the parent's sizing from relying on the size of its children/content, which prevents the infinite loop problem, but you can also get some weird behaviour where the children act like 0px height content or absolutely-positioned children taken out of flow
+          - because `container-type: size` is like "`container-type: [both width and height]`"
       - "We don’t often think about it, but there’s a fundamental difference between width and height on the web:"
         - "When it comes to width, elements tend to expand, filling the space provided by the _parent_."
         - "When it comes to height, elements tend to shrinkwrap around their _children_."
