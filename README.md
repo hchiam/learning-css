@@ -25,6 +25,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   - Remember that flow layout is the default, and so img tags will get extra blank space added below images because it's treated like text, which can't be easily tweaked with `padding`/`border`/`margin`. And `white-space: nowrap;` is required if you want `overflow-x: auto;` to work on a row of `<img>`s because images are treated like text by default. Learning only about specific properties won't explain things like this!
   - Different layout modes can have different default behaviour for any property:
     - For example, the `width` property is implemented differently depending on the layout algorithm: e.g.: in flow layout, `width:2000px` is `2000px`, but in `flex` layout, `width:2000px` is treated as a "suggestion"!
+    - if you notice that things like `height: 50%;` aren't working, [you might need to set a fixed parent height or switch from flow layout ("Microsoft Word Doc layout") to another layout algorithm like flexbox or grid](https://www.joshwcomeau.com/css/height-enigma/), because if flow layout, width is based on parent, but height is based on children.
 
 ## Miscellaneous notes
 
