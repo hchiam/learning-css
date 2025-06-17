@@ -1256,9 +1256,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
           }
         }
         ```
-        
+
       - or more explicitly: _(**favourite_**)
-        
+
         ```css
         .element-container {
           container-name: container-name;
@@ -1270,7 +1270,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
           }
         }
         ```
-        
+
       - "**The golden rule with container queries is that we can’t change what we measure.** `container-type: inline-size` lets us use `min-width`/`max-width` conditions in our container queries, but not `min-height`/`max-height`."
       - use `@container (min-width: ...)` for backwards-compatibility/mobile-first
         - so browsers that don't support container queries won't apply the `@container (...) { ... }` styles, and will fail gracefully with mobile styles (vs trying to fit desktop styles into mobile/small screens)
