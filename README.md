@@ -2247,7 +2247,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
     - nth previous sibling and nth following sibling: <https://codepen.io/hchiam/pen/QWXLboz?editors=1100>
   - limitations of `:has`: <https://developer.chrome.com/blog/has-m105/#performance_and_limitations>
 
-- space toggle trick with CSS variables: <https://css-tricks.com/the-css-custom-property-toggle-trick/> "branching conditonal logic and bulk feature toggling"
+- space toggle trick with CSS variables: <https://css-tricks.com/the-css-custom-property-toggle-trick/> "branching conditonal logic and bulk feature toggling" (see my own thoughts in my notes further down below)
 
   - `--foo: ;` is ["empty"](https://drafts.csswg.org/css-variables/#guaranteed-invalid-value)
     - if `--foo: ;` then `var(--foo) value` = `value` "ON"
@@ -2317,6 +2317,45 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
       );
     }
     ```
+
+  - and adding my own thoughts on using CSS variables for conditional logic/features (<https://css-tricks.com/the-css-custom-property-toggle-trick/> and <https://css-tricks.com/logical-operations-with-css-variables/>):
+    - as an alternative to
+
+      ```css
+      --is-true: ;
+      ```
+
+    - you can instead do the following to prevent a code editor from automatically removing the space if it does so when you make edits (e.g. when you paste code elsewhere in the same file). and also so the CSS variable doesn't disappear from Chrome DevTools when you manually clear/toggle the value between filled and empty space:
+
+      ```css
+      `--is-true: /**/;`
+      ```
+
+    - or even do this to communicate intent to other devs:
+
+      ```css
+      --is-true: /* intentionally blank - fill this with an invalid value to make it false - https://css-tricks.com/the-css-custom-property-toggle-trick */;
+      ```
+
+      - for example:
+
+        ```css
+        --has-gradient: /* intentionally blank - fill this with an invalid value to make it false - https://css-tricks.com/the-css-custom-property-toggle-trick */;
+        background-image: var(--has-gradient) linear-gradient(var(--gradient-angle), var(--gradient-color-1) var(--gradient-stop-1), var(--gradient-color-2) var(--gradient-stop-2));
+        ```
+
+      - and to handle more complex things, you might need an intermediate variable to "fail properly" if you find a property like background needs a fallback or is evaluating incorrectly, so that it works both when you do and when you don't set `--is-true: /**/;`
+
+        ```css
+        --intermediate-variable: var(--is-true) green;
+        background: var(--intermediate-variable, red);
+        ```
+
+    - a nice shorthand for "OR" is:
+
+      ```css
+      --is-a-or-b: var(--is-a, var(--is-b));
+      ```
 
 - CSS pile: <https://www.youtube.com/watch?v=6qpEOBkDr88>
 
