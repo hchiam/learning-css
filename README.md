@@ -2357,6 +2357,14 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
       --is-a-or-b: var(--is-a, var(--is-b));
       ```
 
+      or
+
+      ```css
+      --row-start-A: var(--is-A) 1;
+      --row-start-A-or-B-or-C: var(--row-start-A, var(--is-B-or-C) 2);
+      grid-row-start: var(--row-start-A-or-B-or-C); /* = 1 or 2 or auto default */
+      ```
+
 - CSS pile: <https://www.youtube.com/watch?v=6qpEOBkDr88>
 
     ```css
