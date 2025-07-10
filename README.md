@@ -2231,21 +2231,23 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
       </div>
       ```
 
-  - note: ["The `:has()` pseudo-class cannot be nested within another `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying. Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements are not valid anchors for `:has()`."](https://developer.mozilla.org/en-US/docs/Web/CSS/:has#:~:text=the%20%3Ahas()%20pseudo-class%20cannot%20be%20nested%20within%20another%20%3Ahas().)
-  - `article:has(h2, ul, ::-invalidbranch) /* :has is not forgiving, so the whole selector fails */`
-  - `article:has(:where(h2, ul, ::-invalidbranch)) /* :where adds 0 specificity (vs :is) and is forgiving, so it ignores the invalid "branch" */`
+- note: ["The `:has()` pseudo-class cannot be nested within another `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying. Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements are not valid anchors for `:has()`."](https://developer.mozilla.org/en-US/docs/Web/CSS/:has#:~:text=the%20%3Ahas()%20pseudo-class%20cannot%20be%20nested%20within%20another%20%3Ahas().)
+- `article:has(h2, ul, ::-invalidbranch) /* :has is not forgiving, so the whole selector fails */`
+- `article:has(:where(h2, ul, ::-invalidbranch)) /* :where adds 0 specificity (vs :is) and is forgiving, so it ignores the invalid "branch" */`
 
-  - ```css
-    @supports(selector(:has(p))) {
-      /* Supported! */
-    }
-    ```
+- `:where()` adds 0 specificity, e.g. `button:not(#hi-specificity)` vs `button:not(:where(#hi-specificity))`
 
-  - `:has` is more than a "parent selector", for example: `h1:has(+ p)` - it's more like a "conditional environment selector" or maybe a "family selector" - <https://developer.chrome.com/blog/has-m105/>
-    - [with `:has` you can now get both later AND previous siblings](https://youtu.be/UmDgK3OpuZc?si=HAgwLG1DDF7ZKCA3&t=1549):
-      - `ol li:hover + li` = sibling **after**, and `ol li:has(+ li:hover)` = sibling **before**
-    - nth previous sibling and nth following sibling: <https://codepen.io/hchiam/pen/QWXLboz?editors=1100>
-  - limitations of `:has`: <https://developer.chrome.com/blog/has-m105/#performance_and_limitations>
+- ```css
+  @supports(selector(:has(p))) {
+    /* Supported! */
+  }
+  ```
+
+- `:has` is more than a "parent selector", for example: `h1:has(+ p)` - it's more like a "conditional environment selector" or maybe a "family selector" - <https://developer.chrome.com/blog/has-m105/>
+  - [with `:has` you can now get both later AND previous siblings](https://youtu.be/UmDgK3OpuZc?si=HAgwLG1DDF7ZKCA3&t=1549):
+    - `ol li:hover + li` = sibling **after**, and `ol li:has(+ li:hover)` = sibling **before**
+  - nth previous sibling and nth following sibling: <https://codepen.io/hchiam/pen/QWXLboz?editors=1100>
+- limitations of `:has`: <https://developer.chrome.com/blog/has-m105/#performance_and_limitations>
 
 - space toggle trick with CSS variables: <https://css-tricks.com/the-css-custom-property-toggle-trick/> "branching conditonal logic and bulk feature toggling" (see my own thoughts in my notes further down below)
 
