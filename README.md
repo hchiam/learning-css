@@ -1951,7 +1951,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 
 - there's `:focus-within`, but no `:hover-within` exists
 
-- _**NEW:**_ `float`s now can be accompanied with a [`shape-outside`](https://caniuse.com/css-shapes) (like `shape-outside: circle();`, or `clip-path` or SVG or `url(...);`) and with a `shape-margin`:
+- _**NEW:**_ `float`s now can be accompanied with a [`shape-outside`](https://caniuse.com/css-shapes) (like `shape-outside: circle();`, or `clip-path` or SVG or `url(...);`) and with a `shape-margin`: https://codepen.io/hchiam/pen/VwaoVwX
 
   ```css
   .floated {
@@ -1962,6 +1962,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
     shape-margin: var(--breathing-room); /* need margin-right too */
   }
   ```
+
+  - and if you want something like a "shape-inside", that is, a custom shape that affects the wrapping of text _inside_ of it, you can use two `float`s and have one left side `shape-outside` and one right side `shape-outside`: https://codepen.io/hchiam/pen/ByoNrOG
 
 - to make a container completely wrap around a `float`ed element:
 
