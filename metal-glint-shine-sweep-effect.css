@@ -1,0 +1,28 @@
+/* live demo: https://codepen.io/hchiam/pen/ZYbpQoN */
+
+.metal-glint-shine-sweep-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.metal-glint-shine-sweep-effect::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 50%;
+    height: 300%;
+    background: linear-gradient(90deg, transparent, #ffffff80, transparent);
+    animation: glint-shine-sweep 2s ease-in-out infinite alternate;
+    transform: rotate(-0.125turn);
+}
+
+@keyframes glint-shine-sweep {
+    0% {
+        left: -150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
