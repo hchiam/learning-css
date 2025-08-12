@@ -763,7 +763,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 
 - example of styled-components style composition: ` SomeComposedStyle = styled(SomeBaseStyle)``; ` instead of just ` SomeBaseStyle = styled.button``; `
 
-- contrast checker: <https://webaim.org/resources/contrastchecker> (useful in cases like comparing button background colour to page background colour, which DevTools currently can't check)
+- contrast checker: <https://webaim.org/resources/contrastchecker> (useful in cases like comparing button background colour to page background colour)
 
 - colour-blindness: built-in DevTools in Chrome and in Firefox let you easily simulate different types of colour vision: red and yellow are a good pair of colours if you really can't use non-colour ways to distinguish items (differently dashed lines? or arrows pointing to the lines in the graph?)
 
@@ -2092,6 +2092,20 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   - (note: the first two both fail on grey)
   - alternatively: APCA text/background colour contrast calculation demo: <https://codepen.io/hchiam/pen/Bagxddg?editors=0010>
   - but it might be simpler to add a text outline or use white text on a black background like captions
+
+- APCA isn't currently available in Wave or DevTools, but is in [VisBug](https://github.com/GoogleChromeLabs/ProjectVisBug) with a helpful icon to indicate pass/fail:
+  - quick rule of thumb to know if you're doing better than before: "bigger absolute value of APCA = better" (and smaller font size requires bigger APCA absolute value)
+  - https://github.com/GoogleChromeLabs/ProjectVisBug/blob/main/app/features/accessibility.js :
+    - tspx = font size in px
+    - abs_apca = absolute value of APCA
+    ```js
+      if (parseInt(tspx) <= 24 && abs_apca >= 75)
+        apca_compliance = true
+      else if (parseInt(tspx) >= 24 && abs_apca >= 60)
+        apca_compliance = true
+      else if (parseInt(tspx) >= 36 && abs_apca >= 45)
+        apca_compliance = true
+    ```
 
 - "RSDPV" or "R SaD Pav": Rule contains `Selector and { Declarations }`, Declaration contains `Property: and Value;`
 
