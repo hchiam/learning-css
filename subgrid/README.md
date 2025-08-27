@@ -7,9 +7,11 @@
 
 ```css
 parent {
+  display: grid;
   grid-template-columns: repeat(2,1fr);
 }
-child {
-  grid-template-columns: subgrid;
+parent > direct-child {
+  display: grid;
+  grid-template-columns: subgrid; /* inherits parent's grid "lines" */
 }
 ```
