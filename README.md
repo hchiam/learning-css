@@ -1528,20 +1528,22 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 
 - `:last-of-type` (and any variant of it) actually filters by last of _HTML tag_ type, so it ignores class names: so `.some-class:last-of-type` won't actually get the last of `.some-class`, and `p:nth-last-of-type(1)` works but only gets the last `<p>` tag amongst its immediate siblings
 
-  - BUT nth of class/"nth-of-class" can be achieved with `:nth-child(... of ...)` - two different examples:
-    - <https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child#the_of_selector_syntax>
-      - Note that `:nth-child` for elements _with no parent_ isn't supported in Safari currently.
-      - but "nth-of-class" can be implemented like this in the major browsers
-  
-    - ```css
-      :nth-child(-n + 3 of li.important) {
-        background: red;
-      }
-  
-      tr:nth-child(even of :not(.ignore-these)) {
-        background: red;
-      }
-      ```
+  - BUT nth of class/"nth-of-class" can be achieved with `:nth-child(... of ...)`
+    - this explains it faster: https://developer.chrome.com/docs/css-ui/css-nth-child-of-s#pre-filtering_selections_with_the_of_s_syntax
+    - two different examples:
+      - <https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child#the_of_selector_syntax>
+        - Note that `:nth-child` for elements _with no parent_ isn't supported in Safari currently.
+        - but "nth-of-class" can be implemented like this in the major browsers
+    
+      - ```css
+        :nth-child(-n + 3 of li.important) {
+          background: red;
+        }
+    
+        tr:nth-child(even of :not(.ignore-these)) {
+          background: red;
+        }
+        ```
 
 - `-webkit` prefixes exist in non-Safari browsers, for example, Chrome forked a core component of WebKit
 
