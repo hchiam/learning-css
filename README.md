@@ -2518,3 +2518,5 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
       "mid right" /* middle */
       "bot right"; /* bottom */
     ```
+
+- styled border lines between columns (e.g. grid): `column-rule: dotted;` or `column-rule: solid 3px blue;`
