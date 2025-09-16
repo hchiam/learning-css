@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "deploy": "surge random-css-note https://random-css-note.surge.sh; open https://random-css-note.surge.sh;"
+    }
+}

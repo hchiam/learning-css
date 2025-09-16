@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random CSS Note</title>
+  </head>
+  <body>
+    <pre id="pre"></pre>
+    <style>
+      html,
+      body {
+        height: 100%;
+        background: black;
+        margin: 0;
+        font-family: monospace;
+      }
+      body {
+        padding: 3rem;
+      }
+      pre {
+        text-wrap: auto;
+        background: #333;
+        color: lime;
+        margin: 0;
+        padding: 3rem;
+        border-radius: 3rem;
+      }
+    </style>
+    <script>
+      javascript: (function () {
+        const GITHUB_RAW_URL =
+          "https://raw.githubusercontent.com/hchiam/learning-css/refs/heads/main/README.md";
+
+        fetch(GITHUB_RAW_URL)
+          .then((response) => response.text())
+          .then((content) => {
+            const lines = content.split("\n");
+            const notes = [];
+            let currentNote = null;
+
+            for (const line of lines) {
+              const isTopLevelBullet = line.startsWith("- ");
+              if (isTopLevelBullet) {
+                if (currentNote) {
+                  // previous full note
+                  notes.push(currentNote);
+                }
+                currentNote = line; // start new note
+              } else if (
+                currentNote &&
+                (line.startsWith(" ") || line.trim() === "")
+              ) {
+                // sub
+                currentNote += "\n" + line;
+              } else if (currentNote) {
+                // end
+                notes.push(currentNote);
+                currentNote = null;
+              }
+            }
+
+            if (currentNote) {
+              // final full note
+              notes.push(currentNote);
+            }
+
+            if (notes.length > 0) {
+              const randomNote =
+                notes[Math.floor(Math.random() * notes.length)];
+              pre.innerText = randomNote;
+            } else {
+              pre.innerText = "No notes found";
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching notes:", error);
+            pre.innerText = error;
+          });
+      })();
+    </script>
+  </body>
+</html>
