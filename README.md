@@ -40,8 +40,9 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
     - limit `!important` —> becomes messy
   - CSS Specificity:
     - `!important` (10,000) > inline (1000) > ID (100) > class (10) > element (1)
-    - tip: use classes more than IDs = this means you’re doing a healthy amount of reuse/abstraction of visual patterns
-    - tip: keep specificity as low as possible ("ECII"! sounds like "easy!", 5 symbols)
+      - mnemonic: "iminid clel"
+    - usage tip: use classes more than IDs = this means you’re doing a healthy amount of reuse/abstraction of visual patterns
+    - usage tip: keep specificity as low as possible ("ECII"! sounds like "easy!", 5 symbols)
   - CSS Rule Conflict Resolution:
     - If different CSS selectors have the same specificity then browsers check other things too:
       - `!important`
