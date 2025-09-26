@@ -2525,3 +2525,6 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - styled border lines between columns (e.g. grid): `column-rule: dotted;` or `column-rule: solid 3px blue;`
 
 - `::target-text`​ "The ::target-text CSS pseudo-element represents the text that has been scrolled to if the browser supports text fragments. It allows authors to choose how to highlight that section of text.​" https://developer.mozilla.org/en-US/docs/Web/CSS/::target-text
+
+- how to "Stop fighting with CSS" (Kevin Powell) https://www.youtube.com/shorts/Kf7hzcoylXk :
+  - only make a few constraints, instead of lots of absolutes
