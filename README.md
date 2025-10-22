@@ -2528,3 +2528,5 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 
 - how to "Stop fighting with CSS" (Kevin Powell) https://www.youtube.com/shorts/Kf7hzcoylXk :
   - only make a few constraints, instead of lots of absolutes
+
+- `@layer` notes/demo: https://codepen.io/hchiam/pen/zxrWvNM?editors=1000
