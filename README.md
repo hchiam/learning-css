@@ -2532,3 +2532,4 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - `@layer` notes/demo: https://codepen.io/hchiam/pen/zxrWvNM?editors=1000
 
 - spinning button outline gradient that can pause and continue where it stopped: https://codepen.io/hchiam/pen/EaPEVoM?editors=0100 (uses a custom `@property` and gradients with `padding-box` (for "inside") and `border-box` (to "make border continuous with a background") and `animation-play-state` to animate the angle)
+  - i.e., a rotating rounded border that pauses instead of snapping back to 0 degrees turn
