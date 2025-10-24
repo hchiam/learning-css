@@ -2174,7 +2174,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - text outline (4 techniques): <https://codepen.io/hchiam/pen/dyLKxpj>
 
   1. text outline via **text fill + stroke + (paint order)**: PERSONAL FAVOURITE IF SUPPORT ONLY MAJOR MODERN BROWSERS:
-     - `-webkit-text-fill-color: var(--fill-color);` and `-webkit-text-stroke: var(--thickness) var(--outline-color);`
+     - `-webkit-text-fill-color: var(--fill-color);` and `-webkit-text-stroke: var(--thickness) var(--outline-color);` and `paint-order: stroke fill;`
      - pro: complete control of text outline thickness
      - con: thicker outlines can cover the text inside fill, and outlines of neighbouring letters overlap if `letter-spacing` is small (instead of "merging") _**UNLESS you can add**_ `paint-order: stroke fill;` (but [support for `paint-order`](https://developer.mozilla.org/en-US/docs/Web/CSS/paint-order#browser_compatibility) still has some gaps: no IE 11 support, and it may not affect stroked HTML text in Edge/Opera or Samsung Internet).
      - example:
