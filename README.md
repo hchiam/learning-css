@@ -2233,7 +2233,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - count children, "quantity query": (if you can support just major modern browsers: <https://caniuse.com/css-has>)
 
   - ```css
-    .container:has(> .item:nth-child(3)) > .item {
+    .container:has(> .item:nth-child(3)) /* > .item*/ {
       /* container has AT LEAST 3 items: */
       background: red;
     }
@@ -2242,7 +2242,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   - and you can count the number of children EXACTLY with something like this:
 
     - ```css
-      .container:has(> .item:nth-child(3)):not(:has(> .item:nth-child(4))) > .item {
+      .container:has(> .item:nth-child(3)):not(:has(> .item:nth-child(4))) /* > .item */ {
         /* container has EXACTLY 3 items: */
         background: red;
       }
