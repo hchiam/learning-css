@@ -2230,10 +2230,10 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
     }
     ```
 
-- count children: (if you can support just major modern browsers: <https://caniuse.com/css-has>)
+- count children, "quantity query": (if you can support just major modern browsers: <https://caniuse.com/css-has>)
 
   - ```css
-    .container:has(.item:nth-child(3)) {
+    .container:has(> .item:nth-child(3)) > .item {
       /* container has AT LEAST 3 items: */
       background: red;
     }
@@ -2242,7 +2242,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   - and you can count the number of children EXACTLY with something like this:
 
     - ```css
-      .container:has(.item:nth-child(3)):not(:has(.item:nth-child(4)))
+      .container:has(> .item:nth-child(3)):not(:has(> .item:nth-child(4))) > .item {
         /* container has EXACTLY 3 items: */
         background: red;
       }
@@ -2251,16 +2251,20 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   - note: `:nth-child` isn't necessarily counting 3 `.item`s that are (in)direct children of `.container`, but rather is counting if an `.item` is the 3rd child of any immediate parent, e.g.:
 
     - ```html
-      <div class="container">
+      <<div class="container">
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+      <!--   <div class="item">d</div> -->
         <div class="indirect">
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
+          <div class="item">d</div>
+          <div class="item">e</div>
+          <div class="item">f</div>
         </div>
         <div class="another-direct-parent">
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
+          <div class="item">g</div>
+          <div class="item">h</div>
+          <div class="item">i</div>
         </div>
       </div>
       ```
