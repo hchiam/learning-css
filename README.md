@@ -2541,3 +2541,6 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - new math functions now with wide support in 2025:
   - trigonometry functions like `cos()`, `sin()`, `tan()`, `atan2()`, `asin()`, `acos()` are now widely available on major browsers,
   - as well as `pow(base, exponent)` for power/exponents that could be helpful for heading sizes
+
+- [`color()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color) lets you specify and convert a colour for a colour space
+- [`color-mix()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix) lets you mix 2 colours in a colour space by a given amount
