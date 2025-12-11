@@ -2544,3 +2544,5 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 
 - [`color()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color) lets you specify and convert a colour for a colour space
 - [`color-mix()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix) lets you mix 2 colours in a colour space by a given amount
+
+- [CodePen demo of a CSS trick to auto-style different link types, like download links](https://codepen.io/hchiam/pen/VYagGrR)
