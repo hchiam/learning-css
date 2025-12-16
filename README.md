@@ -1272,6 +1272,22 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
         }
         ```
 
+      - height container query? but apparently block-size container query requires container to have explicit absolute-value height
+   
+        ```css
+        .container {
+          container: example-name / size; /* size is for both width and height, and block-size isn't valid for container-type */
+          height: 100px; /* apparently block-size container query requires container to have explicit absolute-value height */
+        }
+        @container example-name (height < 300px) {
+          .child {
+            background: red;
+          }
+        }
+        ```
+
+      - see more container query notes below:
+
       - "**The golden rule with container queries is that we can’t change what we measure.** `container-type: inline-size` lets us use `min-width`/`max-width` conditions in our container queries, but not `min-height`/`max-height`."
       - use `@container (min-width: ...)` for backwards-compatibility/mobile-first
         - so browsers that don't support container queries won't apply the `@container (...) { ... }` styles, and will fail gracefully with mobile styles (vs trying to fit desktop styles into mobile/small screens)
