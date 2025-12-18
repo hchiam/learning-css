@@ -1273,7 +1273,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
         ```
 
       - height container query? but apparently block-size container query requires container to have explicit absolute-value height
-   
+
         ```css
         .container {
           container: example-name / size; /* size is for both width and height, and block-size isn't valid for container-type */
@@ -1546,12 +1546,12 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - `:last-of-type` (and any variant of it) actually filters by last of _HTML tag_ type, so it ignores class names: so `.some-class:last-of-type` won't actually get the last of `.some-class`, and `p:nth-last-of-type(1)` works but only gets the last `<p>` tag amongst its immediate siblings
 
   - BUT nth of class/"nth-of-class" can be achieved with `:nth-child(... of ...)`
-    - this explains it faster: https://developer.chrome.com/docs/css-ui/css-nth-child-of-s#pre-filtering_selections_with_the_of_s_syntax
+    - this explains it faster: <https://developer.chrome.com/docs/css-ui/css-nth-child-of-s#pre-filtering_selections_with_the_of_s_syntax>
     - two different examples:
       - <https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child#the_of_selector_syntax>
         - Note that `:nth-child` for elements _with no parent_ isn't supported in Safari currently.
         - but "nth-of-class" can be implemented like this in the major browsers
-    
+
       - ```css
         :nth-child(-n + 3 of li.important) {
           background: red;
@@ -1985,7 +1985,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 
 - there's `:focus-within`, but no `:hover-within` exists
 
-- _**NEW:**_ `float`s now can be accompanied with a [`shape-outside`](https://caniuse.com/css-shapes) (like `shape-outside: circle();`, or `clip-path` or SVG or `url(...);`) and with a `shape-margin`: https://codepen.io/hchiam/pen/VwaoVwX
+- _**NEW:**_ `float`s now can be accompanied with a [`shape-outside`](https://caniuse.com/css-shapes) (like `shape-outside: circle();`, or `clip-path` or SVG or `url(...);`) and with a `shape-margin`: <https://codepen.io/hchiam/pen/VwaoVwX>
 
   ```css
   .floated {
@@ -1997,7 +1997,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
   }
   ```
 
-  - and if you want something like a "shape-inside", that is, a custom shape that affects the wrapping of text _inside_ of it, you can use two `float`s and have one left side `shape-outside` and one right side `shape-outside`: https://codepen.io/hchiam/pen/ByoNrOG
+  - and if you want something like a "shape-inside", that is, a custom shape that affects the wrapping of text _inside_ of it, you can use two `float`s and have one left side `shape-outside` and one right side `shape-outside`: <https://codepen.io/hchiam/pen/ByoNrOG>
 
 - to make a container completely wrap around a `float`ed element:
 
@@ -2129,9 +2129,10 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 
 - APCA isn't currently available in Wave or DevTools, but is in [VisBug](https://github.com/GoogleChromeLabs/ProjectVisBug) with a helpful icon to indicate pass/fail:
   - quick rule of thumb to know if you're doing better than before: "bigger absolute value of APCA = better" (and smaller font size requires bigger APCA absolute value)
-  - https://github.com/GoogleChromeLabs/ProjectVisBug/blob/main/app/features/accessibility.js :
+  - <https://github.com/GoogleChromeLabs/ProjectVisBug/blob/main/app/features/accessibility.js> :
     - tspx = font size in px
     - abs_apca = absolute value of APCA
+
     ```js
       if (parseInt(tspx) <= 24 && abs_apca >= 75)
         apca_compliance = true
@@ -2544,14 +2545,14 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 
 - styled border lines between columns (e.g. grid): `column-rule: dotted;` or `column-rule: solid 3px blue;`
 
-- `::target-text`​ "The ::target-text CSS pseudo-element represents the text that has been scrolled to if the browser supports text fragments. It allows authors to choose how to highlight that section of text.​" https://developer.mozilla.org/en-US/docs/Web/CSS/::target-text
+- `::target-text`​ "The ::target-text CSS pseudo-element represents the text that has been scrolled to if the browser supports text fragments. It allows authors to choose how to highlight that section of text.​" <https://developer.mozilla.org/en-US/docs/Web/CSS/::target-text>
 
-- how to "Stop fighting with CSS" (Kevin Powell) https://www.youtube.com/shorts/Kf7hzcoylXk :
+- how to "Stop fighting with CSS" (Kevin Powell) <https://www.youtube.com/shorts/Kf7hzcoylXk> :
   - only make a few constraints, instead of lots of absolutes
 
-- `@layer` notes/demo: https://codepen.io/hchiam/pen/zxrWvNM?editors=1000
+- `@layer` notes/demo: <https://codepen.io/hchiam/pen/zxrWvNM?editors=1000>
 
-- spinning button outline gradient that can pause and continue where it stopped: https://codepen.io/hchiam/pen/EaPEVoM?editors=0100 (uses a custom `@property` and gradients with `padding-box` (for "inside") and `border-box` (to "make border continuous with a background") and `animation-play-state` to animate the angle)
+- spinning button outline gradient that can pause and continue where it stopped: <https://codepen.io/hchiam/pen/EaPEVoM?editors=0100> (uses a custom `@property` and gradients with `padding-box` (for "inside") and `border-box` (to "make border continuous with a background") and `animation-play-state` to animate the angle)
   - i.e., a rotating rounded border that pauses instead of snapping back to 0 degrees turn
 
 - new math functions now with wide support in 2025:
