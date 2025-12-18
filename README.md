@@ -1644,6 +1644,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
       font-weight: 400;
       font-display: fallback;
       src: url(./local/self-hosted/path/to/filename.woff2) format("woff2");
+      /* src: url(./font/Fredoka-SemiBold.ttf) format("truetype"); */
       unicode-range: U+000-5FF; /* Latin glyphs */
     }
     ```
@@ -1703,6 +1704,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
           font-family: "Web Font Name";
           src: url("/fonts/Web_Font_Name-regular-italic.woff2") format("woff2"),
             url("/fonts/Web_Font_Name-regular-italic.woff") format("woff");
+            /* src: url(./font/Fredoka-SemiBold.ttf) format("truetype"); */
           /* put woff2 first since it's usually smaller */
           font-weight: 400; /* each non-variable font file only has one weight */
           font-style: normal;
@@ -1716,6 +1718,7 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
           font-family: "Web Font Name";
           src: url("/fonts/Web_Font_Name-variable.woff2") format("woff2 supports variations"),
             url("/fonts/Web_Font_Name-variable.woff") format("woff-variations");
+            /* src: url(./font/Fredoka-SemiBold.ttf) format("truetype"); */
           font-weight: 300 1000; /* for 300-1000 inclusive */
           font-style: normal;
           font-display: fallback;
