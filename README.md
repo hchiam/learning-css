@@ -2200,11 +2200,11 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
      - example:
 
        ```css
-       --f: cyan;
-       --o: black;
-       --t: 1.25rem;
-       -webkit-text-fill-color: var(--f);
-       -webkit-text-stroke: var(--t) var(--o);
+       --fill: currentColor;
+       --outline-color: black;
+       --thickness: 0.2em;
+       -webkit-text-fill-color: var(--fill);
+       -webkit-text-stroke: var(--thickness) var(--outline-color);
        paint-order: stroke fill;
        ```
 
