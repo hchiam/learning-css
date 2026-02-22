@@ -1,0 +1,28 @@
+<!-- references: -->
+<!-- https://github.com/hchiam/learning-html -->
+<!-- https://stackoverflow.com/questions/31765345/how-to-round-out-corners-when-using-css-clip-path -->
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" 
+	viewBox="0 0 682 672" width="682" height="672" 
+	role="img" aria-label="example with rounded corners">
+	<style>
+		.background {
+            fill: #5aeab1;
+            
+            <!-- hexagon: -->
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+		}
+		.rounded-corners {
+			filter: url('#rounded-corners');
+		}
+	</style>
+	<defs>
+		<filter id="rounded-corners">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="25" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="rounded-corners" />
+            <feComposite in="SourceGraphic" in2="rounded-corners" operator="atop" />
+        </filter>
+    </defs>
+    <g class="rounded-corners">
+        <path class="background" d="m0 0h682v670H0z"/>
+    </g>
+</svg>
