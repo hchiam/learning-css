@@ -1099,8 +1099,8 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
 - in CSS `display: grid`, `align-content: center` makes the grid rows no longer go fill/full-height, and works like `align-content` does in `display: flex` but affects the grid **row** themselves (and requires the grid to have a `height` set)
 - in CSS `display: grid`, `align-items: center` also exists, and works like `align-items` does in `display: flex`, but affects the grid **children** _inside_ the rows columns
 - in CSS `display: grid`, there's also `align-self` (for vertical), which works like it does in `display: flex`, but CSS grid also has `justify-self` (for horizontal)
-- "`-content`" = columns/rows themselves
-- "`-items`" = children in the cells
+- "`-content`" = columns/rows themselves. mnemonic: longer word = bigger/parent
+- "`-items`" = children in the cells. nemonic: shorter word = smaller/child
 
 - `grid-row: 1 / -1` on a child is possible: to span from top of grid to bottom of grid (track line 1 to track line -1, like negative indices in [Python](https://github.com/hchiam/learning-python)), regardless of the number of rows
   - example: full-width image in CSS grid: <https://codepen.io/hchiam/pen/vYpzgro>
