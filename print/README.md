@@ -42,6 +42,8 @@ Demo of:
 
 - Firefox respects `break-inside: avoid;` but silently ignores [`break-after: avoid;`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/break-after#browser_compatibility) and [`break-before: avoid;`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/break-before#browser_compatibility) ("The value is recognized, but has no effect.")
 
+  - so you might want to add `break-inside: avoid;` to the direct parent of the elements you're trying to keep together during printing
+
 - To get `break-after: avoid;` to work cross-browser (e.g. Firefox and Safari don’t support the `avoid` value specifically for `break-after`), you’ll need to use an `:after` pseudo-element that increases the element’s effective height from the point of view of the page break algorithm, but that also doesn’t unnecessarily shift the elements below it: <https://stackoverflow.com/a/53742871>
 
   - _**UPDATE:**_ Firefox can't have a `display: flex;` flexbox container for the element or for any of its parents/ancestors if you want page breaks - <https://stackoverflow.com/questions/26036663/page-break-after-not-working-in-flexboxes> - so you might want to add `display: table; width: 100%;` to your element, and maybe also add `break-inside: avoid;` to the direct parent of your element
