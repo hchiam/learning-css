@@ -47,6 +47,7 @@ Demo of:
 - To get `break-after: avoid;` to work cross-browser (e.g. Firefox and Safari don’t support the `avoid` value specifically for `break-after`), you’ll need to use an `:after` pseudo-element that increases the element’s effective height from the point of view of the page break algorithm, but that also doesn’t unnecessarily shift the elements below it: <https://stackoverflow.com/a/53742871>
 
   - _**UPDATE:**_ Firefox can't have a `display: flex;` flexbox container for the element or for any of its parents/ancestors if you want page breaks - <https://stackoverflow.com/questions/26036663/page-break-after-not-working-in-flexboxes> - so you might want to add `display: table; width: 100%;` to your element, and maybe also add `break-inside: avoid;` to the direct parent of your element
+    - Based on [a conversation with Claude](https://claude.ai/share/b69ca7a8-8855-4c0a-be6b-a22271310465), basically the elements in question need to not have display flex, and none of their ancestor/container elements, for the page-break-related CSS properties to work in Firefox.
 
 ```css
 .thing {
