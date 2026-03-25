@@ -2580,3 +2580,5 @@ There's a lot of notes here! Intended use: Ctrl+F to help myself recall things. 
       ```
 
   - <https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning>
+
+- `minmax(min,max)` treats first param as hard-enforced min and second param as optional max if first param > second param (i.e. if "`min` > `max`")
