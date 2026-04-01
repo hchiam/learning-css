@@ -61,3 +61,5 @@ Demo of:
   margin-bottom: -100px;
 }
 ```
+
+- firefox prints select dropdowns with options expanded, chrome does not: <https://codepen.io/hchiam/pen/LERdqMM>
